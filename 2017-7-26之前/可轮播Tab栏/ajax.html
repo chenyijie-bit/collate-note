@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        *{padding: 0;margin: 0;}
+           .content-tabs {
+                position: relative;
+                height: 42px;
+                background: #fafafa;
+                line-height: 40px
+            }
+            .page-tabs a {
+                display: block;
+                float: left;
+                border-right: solid 1px #eee;
+                padding: 0 15px;
+                color: #fff;
+                background: #EC0D35;
+                text-decoration: none;
+            }
+            nav.page-tabs {
+                margin-left: 40px;
+                width: 100000px;
+                height: 40px;
+                overflow: hidden
+            }
+            nav.page-tabs .page-tabs-content {
+                float: left
+            }
+            .content-tabs button {
+                background: #fff;
+                border: 0;
+                height: 40px;
+                width: 40px;
+                outline: 0;
+                cursor: pointer;
+            }
+            .content-tabs .roll-nav,.page-tabs-list {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                color: #999;
+                z-index: 2;
+                top: 0
+            }
+            .content-tabs .roll-left {
+                left: 0;
+                border-right: solid 1px #eee
+            }
+            .content-tabs .roll-right {
+                right: 0;
+                border-left: solid 1px #eee
+            }
+            .page-tabs a.active {
+                background: #2f4050;
+                color: #a7b1c2
+            }
+        </style>
+        <script src="jquery-3.2.0.min.js"></script>
+    </head>
+    <body>
+   <div class="content-tabs">
+         <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"><<</i></button>
+        <nav class="page-tabs J_menuTabs">
+           <div class="page-tabs-content">
+           </div>
+        </nav>
+        <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward">>></i></button>
+</div>
+<script>
+	 for(var i=0; i<30; i++){
+    $('.page-tabs-content').append("<a href='javascript:;' class='J_menuTab'>Tab"+(i+1)+"</a>");
+}
+$('.page-tabs-content').children().first().addClass('active');
+
+(function($){
+    var TabElement = function(option){
+        this.option = option;
+    }
+    TabElement.prototype = {
+        'f': function(l){
+            var k = 0;
+            $(l).each(function() {
+                k += $(this).outerWidth(true);
+            });
+            return k;
+        },
+        'prevTab': function(){
+            var that = this;
+            var o = Math.abs(parseInt($(that.option.tab_list).css("margin-left")));
+            //获取该tab的margin-left
+            var l = that.f($(that.option.content_tab).children().not(that.option.nav_tab));//获取两个按钮的宽度（向前/向后）
+            var k = $(that.option.content_tab).outerWidth(true) - l;//.content-tabs这个div的宽度
+            var p = 0;
+            if ($(that.option.tab_list).width() < k) {
+                return false
+            } else {
+                var m = $(that.option.tab_list).children().first();//tab中的第一个
+                var n = 0;
+                while ((n + $(m).outerWidth(true)) <= o) {//当遍历的tab的宽度小于该tab的margin-left是
+                    n += $(m).outerWidth(true);
+                    m = $(m).next()//从第一个tab往后走
+                }
+                n = 0;
+                if (that.f($(m).prevAll()) > k) {
+                    while ((n + $(m).outerWidth(true)) < (k) && m.length > 0) {
+                        n += $(m).outerWidth(true);
+                        m = $(m).prev()
+                    }
+                    p = that.f($(m).prevAll())
+                }
+            }
+            $(that.option.tab_list).animate({
+                marginLeft: 0 - p + "px"
+            }, "fast")
+        },
+        'nextTab': function(){
+            var that = this;
+            var o = Math.abs(parseInt($(that.option.tab_list).css("margin-left")));
+            var l = that.f($(that.option.content_tab).children().not(that.option.nav_tab));
+            var k = $(that.option.content_tab).outerWidth(true) - l;
+            var p = 0;
+            if ($(that.option.tab_list).width() < k) {
+                return false
+            } else {
+                var m = $(that.option.tab_list).children().first();
+                var n = 0;
+                while ((n + $(m).outerWidth(true)) <= o) {
+                    n += $(m).outerWidth(true);
+                    m = $(m).next()
+                }
+                n = 0;
+                while ((n + $(m).outerWidth(true)) < (k) && m.length > 0) {
+                    n += $(m).outerWidth(true);
+                    m = $(m).next()
+                }
+                p = that.f($(m).prevAll());
+                if (p > 0) {
+                    $(that.option.tab_list).animate({
+                        marginLeft: 0 - p + "px"
+                    }, "fast")
+                }
+            }
+        },
+        'goTab': function(n){
+            var that = this;
+            var o = that.f($(n).prevAll()), q = that.f($(n).nextAll());
+            var l = that.f($(that.option.content_tab).children().not(that.option.nav_tab));
+            var k = $(that.option.content_tab).outerWidth(true) - l;
+            var p = 0;
+            if ($(that.option.tab_list).outerWidth() < k) {
+                p = 0
+            } else {
+                if (q <= (k - $(n).outerWidth(true) - $(n).next().outerWidth(true))) {
+                    if ((k - $(n).next().outerWidth(true)) > q) {
+                        p = o;
+                        var m = n;
+                        while ((p - $(m).outerWidth()) > ($(that.option.tab_list).outerWidth() - k)) {
+                            p -= $(m).prev().outerWidth();
+                            m = $(m).prev()
+                        }
+                    }
+                } else {
+                    if (o > (k - $(n).outerWidth(true) - $(n).prev().outerWidth(true))) {
+                        p = o - $(n).prev().outerWidth(true)
+                    }
+                }
+            }
+            $(that.option.tab_list).animate({
+                marginLeft: 0 - p + "px"
+            }, "fast")
+        }
+    };
+    $.fn.menuTab = function(option){
+        var opt = $.extend({},option);
+        return new TabElement(opt);
+    }
+})(jQuery);
+  var TabMenu = $('.content-tabs').menuTab({
+            'content_tab':'.content-tabs',
+            'nav_tab':'.page-tabs',
+            'tab_list':'.page-tabs-content'
+        });
+        $('.J_tabRight').on('click',function(){
+            TabMenu.nextTab();
+        })
+        $('.J_tabLeft').on('click',function(){
+            TabMenu.prevTab();
+        })
+        $('.J_menuTab').on('click',function(){
+            $('.J_menuTab.active').removeClass('active');
+            $(this).addClass('active');
+            TabMenu.goTab($(this));
+        })
+</script>
+   
+    </body>
+</html>

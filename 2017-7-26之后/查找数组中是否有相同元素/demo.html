@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	
+ function uniqueArray(data){  
+   data = data || [];  
+   var a = {};  
+   for (var i=0; i<data.length; i++) {  
+       var v = data[i];  
+       if (typeof(a[v]) == 'undefined'){  
+            a[v] = 1;  
+       }else{
+       	alert("123")
+       } 
+   };  
+   data.length=0;  
+   for (var i in a){  
+        data[data.length] = i;  
+   }  
+   return data;  
+}  
+var abb = [1,2,3,4,5];
+uniqueArray(abb);
+</script>
+</html>

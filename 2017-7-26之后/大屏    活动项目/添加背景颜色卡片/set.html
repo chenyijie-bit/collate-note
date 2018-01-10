@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/app-shake.js"></script>
+    <script src="js/jquery.colorpicker.js"></script>
+</head>
+<style>
+@media only screen and (min-width:960px) {
+	html {
+		font-size: 12px;
+	}
+}
+@media only screen and (min-width:960px) and (max-width:1200px) {
+	html {
+		font-size: 14px;
+	}
+}
+@media only screen and (min-width:1200px) and (max-width:1400px) {
+	html {
+		font-size: 15.5px;
+	}
+}
+@media only screen and (min-width:1400px) and (max-width:1600px) {
+	html {
+		font-size: 17.5px;
+	}
+}
+@media only screen and (min-width:1600px) and (max-width:1800px) {
+	html {
+		font-size: 19px;
+	}
+}
+@media only screen and (min-width:1800px){
+	html {
+		font-size: 21px;
+	}
+}
+	
+
+.appscontainer{
+    height: 100%;
+    width: 100%;
+    min-width: 450px;
+    /* max-width: 650px !important; */
+    min-height: 650px;
+    padding:1em 1.5em 1.5em;
+    background: #252C36;
+    color: #fcffff;
+}
+.appscon-top{
+    position: relative;
+    height: 2.5em;
+    width: 100%;
+    margin-top: 3em;
+    border-bottom: 1px solid #9397a0;
+}
+.appscon-top .apps-top-l{
+    height: 100%;
+    width: 6em;
+    line-height: 100%;
+    display: inline-block;
+    font-size: 1.2em;
+}
+.appscon-top .apps-top-r{
+    height: 0.5em;
+    width: 0.5em;
+    border-bottom: 1px solid #c7ced6;
+    border-right: 1px solid #c7ced6;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);     /* IE 9 */
+    -moz-transform:rotate(45deg);    /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg);  /* Opera */
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out; /* Safari 和 Chrome */  
+    position: absolute;
+    top: 0.4em;
+    right: 0.7em
+}
+.appscon-mid{
+    display: none;
+    height: auto;
+    width: 100%;
+    padding-top: 2.5em;
+}
+.apps-welcome{
+    height: 3em;
+    width: 100%;
+    position: relative;
+}
+#inputnum{
+    position: absolute;
+    right: 0.3em;
+    top: 0.3em;
+    font-size: 1em;
+    color: #fff;
+}
+
+.apps-wel-name{
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    width: 20%;
+    min-width: 7em;
+    float: left;
+    font-size: 1.1em;
+}
+.select-randgeColor{
+	 width: 30%;
+	 min-width: 150px;
+}
+.apps-wel-text{
+    background: #252c36;
+    border: 1px solid #f9ffff;
+    border-radius: 3px;
+    float: right;
+    width: 72%;
+    height: 2em;
+}
+.background-img{
+    height: 12em;
+    width: 100%;
+    padding-top: 3em;
+}
+.addback-img{
+    position: relative;
+    display: inline-block;
+    width: 12%;
+    max-width: 120px;
+    min-width: 100px;
+    float: left;
+    height: 9em;
+    position: relative;
+}
+.addback-img-mb{
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    max-width: 170px;
+    min-width: 140px;
+    float: left;
+    height: 9em;
+    position: relative;
+}
+#add-img{
+   width: 0;
+   height: 0;
+}
+#add-img-mb{
+   width: 0;
+   height: 0;
+}
+.apps-welcome input{
+	float: left;
+   padding: 0 0 0 0.3em;
+}
+.apps-settop,.apps-setbot{
+    height: 5em;
+    width: 100%;
+    padding: 0.5em 0 0 0;
+}
+.apps-settop-top{
+	 height: 4em;
+}
+.apps-settop-bot{
+	padding: 1.2em 0 0 0 ;
+}
+.apps-setbot-but{
+    height: 2em;
+    float: right;
+    width: 65%;
+    padding: 0.25em 0 0 0;
+}
+.but-set,.but-push,.but-save,.but-rest{
+    height: 1.8em;
+    width: 28%;
+    margin-left: 10%;
+    float: right;
+    border:none;
+    appearance:none;
+    -webkit-appearance:none;
+}
+.but-save{
+    background: #5cb85c;
+    color: #e6ffff;
+}
+.but-rest{
+     background: #d9534f;
+    color: #e6ffff;
+}
+.but-set{
+    background: #fff;
+    color: #678096;
+   
+}
+.but-push{
+    background: #3279b7;
+    color: #e6ffff;
+}
+
+.apps-swich{
+    height: 2em;
+    width: 3.15em;
+    padding-top: 0.3em;
+    display: inline-block;
+    float: right;
+}
+/* 按钮 */
+.btn_fath{ 
+cursor: pointer; 
+position: relative; 
+border-radius: 0.8em; 
+padding: 0.1em;
+height: 1.2em;
+} 
+.btn1{ 
+float: left; 
+} 
+.btn2{ 
+float: right; 
+} 
+.btnSwitch{ 
+    padding: 0.15em;
+height: 1.6em; 
+width: 2em; 
+border:none; 
+color: #fff; 
+line-height: 1.6em; 
+font-size: 0.6em; 
+text-align: center; 
+z-index: 1; 
+} 
+.move,.move-system{ 
+z-index: 100; 
+width: 1.1em; 
+border-radius: 50%; 
+height: 1.1em; 
+position: absolute; 
+top: 0.04em;
+
+border: 1px solid #828282; 
+background-color: #f1eff0; 
+/* box-shadow: 1px 2px 2px 1px #fff inset,0 0 5px 1px #999;  */
+} 
+.on .move{
+ background-color:#22981d; 
+left: 1.9em; 
+border: none;
+} 
+.on .move-system{
+ background-color:#22981d; 
+left: 1.9em; 
+border: none;
+} 
+.on.btn_fath{ 
+background-color: #fff; 
+} 
+.off.btn_fath{ 
+background-color: #fff; 
+} 
+.appreimg{
+    height: 100px;
+    width: 100px;
+    z-index: 100;
+}
+.apps-top-ra{
+    height: 100%;
+    width: 2em;
+    display: block;
+    float: right;
+}
+.apps-bot-ra{
+    height: 100%;
+    width: 2em;
+    display: block;
+    float: right;
+}
+.Anti{  
+    transform:rotate(-45deg) !important;  
+    -webkit-transform:rotate(-45deg) !important; /* Safari 和 Chrome */  
+    -ms-transform:rotate(-45deg) !important;     /* IE 9 */
+    -moz-transform:rotate(-45deg) !important;    /* Firefox */
+    transition: all 0.2s ease-in-out;  
+    -webkit-transition: all 0.2s ease-in-out; /* Safari 和 Chrome */  
+}  
+.apps-bot-contain{
+    display: none;
+}
+.apps-top-toggle{
+    display: block;
+}
+.col-li{
+	height: 3em;
+	width: 3em;
+	position: relative;
+	border: 1px solid #aaa;
+	display: inline-block;
+}
+.color-list{
+	padding: 0 15px !important;
+	height: auto;
+	width: 100%;
+	
+	margin: 0 !important;
+}
+.color-list li{
+	margin-right: 15px;
+	margin-bottom: 15px;
+	border-radius: 3px;
+	list-style: none;
+	background: #D8D8D8;
+	float: left;
+}
+#del{
+	cursor: pointer;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+#del img{
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}	
+#save-cancel{
+	height: 2.5em;
+	width: 50%;
+	max-width: 30em;
+	margin: 0 auto;
+	padding: 2em 0;
+}
+#save-cancel button{
+	outline: none;
+	text-align: center;
+	vertical-align: middle;
+	height: 70% !important;
+	line-height: 70%;
+	width: 40% !important;
+	min-height: 2em !important;
+	min-width: 3em !important;
+	max-height: 1.5em;
+	max-width: 7em;
+}
+#save-cancel button:nth-child(1){
+	float: left;
+	background: #1DACFB;
+}
+#save-cancel button:nth-child(2){
+	float: right;
+}
+.col-li-cle{
+	cursor: pointer;
+}
+</style>
+	<body>
+		 <div id="home_child" class="appscontainer">
+	        <div class="appscon-top">
+	            <span class="apps-top-l">基础配置</span>
+	            <a href="javascript:;" class="apps-top-ra">
+	            <div class="apps-top-r apps-top-base"></div>
+	            </a>
+	        </div>
+	        <div class="appscon-mid apps-top-toggle">
+	        	<div class="apps-settop apps-settop-top"> 
+	                <span class="apps-wel-name select-randgeColor">选择卡片随机色</span>
+	                <div class="apps-swich">
+	                    <div class="btn_fath clearfix off" id="btn_first" onclick="toogle(this)">  
+	                        <div class="move" data-state="off"></div>
+	                    </div> 
+	                </div>
+	            </div>
+	            <div id="select-color">
+	            	<ul class="color-list">
+	            		<div class="clearfix"></div>
+	            		<li class="col-li">
+	            			<span id="del">
+	            				<img src="imgs/del-no.png" class="del-no"/>
+	            			</span>
+	            		</li>
+	            		<li class="col-li">
+	            			<span id="del">
+	            				<img src="imgs/del-no.png" class="del-no"/>
+	            			</span>
+	            		</li><li class="col-li">
+	            			<span id="del">
+	            				<img src="imgs/del-no.png" class="del-no"/>
+	            			</span>
+	            		</li>
+	            		<li class="col-li col-li-cle" id="col-li-add">
+	            			<img src="imgs/add-card.png" alt="" />
+	            		</li>
+	            		<div class="clearfix"></div>
+	            	</ul>
+	            </div>
+	            
+	            
+	            <div class="apps-settop apps-settop-bot"> 
+	                <span class="apps-wel-name select-randgeColor">系统默认卡片随机色</span>
+	                <div class="apps-swich">
+	                    <div class="btn_fath clearfix off" id="btn_first" onclick="toogle(this)"> 
+	                        <div class="move-system" data-state="off"></div> 
+                        </div> 
+                    </div>
+	           </div>
+	            <div class="apps-mid-top">
+	                <div class="apps-welcome">
+	                    <span class="apps-wel-name">卡片标题</span>
+	                    <input class="apps-wel-text" type="text" maxlength="15" onkeyup="inputControl(this,15,'inputnum')"/>
+	                    <span id="inputnum"></span>
+	                </div>
+	                <div class="apps-welcome">
+	                    <span class="apps-wel-name">卡片随机字</span>
+	                    <input class="apps-wel-text" type="text" maxlength="15" onkeyup="inputControl(this,15,'inputnum')"/>
+	                    <span id="inputnum"></span>
+	                </div>
+	                <div class="background-img">
+	                    <span class="apps-wel-name">卡片缩略图</span>
+	                    <!-- src="/data/default/actives/imgs/addback-img.jpg" -->
+	                    <img class="addback-img" src="imgs/addback-img.jpg"  onclick="getElementById('add-img').click()" style="cursor:pointer;" title="点击添加图片" alt="点击添加图片">
+	                    <input id="add-img" type="file">
+	                </div>
+	                 <div class="background-img">
+	                    <span class="apps-wel-name">大图开屛图</span>
+	                    <!-- src="/data/default/actives/imgs/addback-img.jpg" -->
+	                    <img class="addback-img-mb" src="imgs/addback-img.jpg"  onclick="getElementById('add-img-mb').click()" style="cursor:pointer;" title="点击添加图片" alt="点击添加图片">
+	                    <input id="add-img-mb" type="file">
+	                </div>
+	            </div> 
+	        <div class="save-cancel-bot">
+	        	<div id="save-cancel">
+	        		<button class="shake-save btn btn-primary">确认</button>
+	        		<button class="shake-cancel btn btn-default">取消</button>
+	        	</div>
+	        </div>
+	        </div>
+	       
+	    </div>
+	</body>
+	<script type="text/javascript">
+		
+		$(".apps-top-ra").on("click",function(){
+			$(".apps-top-r").toggleClass("Anti");
+        	$(".appscon-mid").toggleClass('apps-top-toggle');
+    	});
+  
+     // 限制输入框字数 
+    $(".apps-wel-text").blur(function() {
+    	$("#inputnum")[0].style.display="none";
+    	console.log(1)
+    }).focus(function() {
+    	console.log(2)
+        $("#inputnum")[0].style.display="inline-block";
+    });   
+  // 页面上传图片
+    // 点击传图片
+    function fileToBase64(file, callback, outputFormat) {
+        var file = file[0];
+        if (file.files && file.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                callback.call(this, evt.target.result);
+            }
+            reader.readAsDataURL(file.files[0]);
+        }
+    }
+    $("#add-img").on('change', function () {
+        fileToBase64($(this), function (imgBase64) {
+            $('.addback-img').attr('src', imgBase64);
+        });
+    });
+	
+	 $("#add-img-mb").on('change', function () {
+        fileToBase64($(this), function (imgBase64) {
+            $('.addback-img-mb').attr('src', imgBase64);
+        });
+    });
+
+
+    function toogle(th){ 
+        var ele = $(th).children(".move"); 
+        if(ele.attr("data-state") == "on"){ 
+        	ele.animate({left: "0.08em"}, 300, function(){ 
+        		ele.attr("data-state", "off");
+       			ispass='0'; 
+         		ele.attr("ispass", ispass); 
+        		$('.tab-pane.active .push1').removeClass('pushTogglerColor');
+        	}); 
+        	$(th).removeClass("on").addClass("off"); 
+        }else if(ele.attr("data-state") == "off"){ 
+        	ele.animate({left: '1.9em'}, 300, function(){ 
+        		ele.attr("data-state", "on");
+        		ispass='1';  
+        		ele.attr("ispass", ispass); 
+        		$('.tab-pane.active .push1').addClass('pushTogglerColor');;
+        	}); 
+        	$(th).removeClass("off").addClass("on"); 
+        }
+    } ;    
+    // function toogle(bh){ 
+    //     var ele = $(bh).children(".move-system");
+    //     if(ele.attr("data-state") == "on"){ 
+    //     	ele.animate({left: "0.08em"}, 300, function(){ 
+    //     		ele.attr("data-state", "off");
+    //    			ispass='0'; 
+    //      		ele.attr("ispass", ispass); 
+    //     		$('.tab-pane.active .push1').removeClass('pushTogglerColor');
+    //     	}); 
+    //     	$(bh).removeClass("on").addClass("off"); 
+    //     }else if(ele.attr("data-state") == "off"){ 
+    //     	ele.animate({left: '1.9em'}, 300, function(){ 
+    //     		ele.attr("data-state", "on");
+    //     		ispass='1';  
+    //     		ele.attr("ispass", ispass); 
+    //     		$('.tab-pane.active .push1').addClass('pushTogglerColor');
+    //     	}); 
+    //     	$(bh).removeClass("off").addClass("on"); 
+    //     }
+    // } ;  
+//	判断系统与指定随机颜色按钮互斥
+	// if($(".move-system").data("state")){
+	// 	$(".move").data("state")=="off"
+	// }
+
+
+
+    function inputControl(obj, maxlength, id) {
+        var has = maxlength - obj.value.length; 
+        var wid = id; 
+        if (has < 0){ 
+          has = 0; 
+        } 
+        document.getElementById(wid).innerHTML = has ; 
+    };   
+
+	$(".color-list").on("click","#del",function(){
+		($(this).parent()).remove();
+	})
+	$(".col-li-cle").on("click",function(){
+		
+	})
+
+//	选取颜色
+	$("#col-li-add").colorpicker({
+	    fillcolor:false,
+	    success:function(o,color){
+	    	console.log(color)
+	    	if(color=="#fff"||color=="#FFF"||color=="#FFFFFF"||color=="#ffffff"){
+	    		alert("由于设定随机字字体为白色，您选择的背景色会使字体无效，请更换背景色");
+	    		return;
+	    	}else{
+	        $("#col-li-add").before("<li class='col-li' style='background-color:"+color+"'><span id='del'><img src='imgs/del-no.png' class='del-no';/></span></li>");  
+	    		
+	    	}
+
+			
+				
+
+	            			
+	            		
+	    }
+	})
+
+
+	</script>
+</html>

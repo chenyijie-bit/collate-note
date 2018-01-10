@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./swiper.min.css">
+    <style>
+    *{
+    	padding: 0;
+    	margin: 0;
+    }
+    .swiper-container-top {
+        width: 100%;
+        height: 30%;
+        background-color: #666;
+        position: relative;
+    }
+   .swiper-container-top .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        height: 90px;
+        width: 100%;
+        background-color: orange;
+    }
+
+    /* doc */
+
+    .swiper-container {
+        width: 100%;
+        height: 130px;
+    }
+    .swiper-slide {
+    	padding-top: 6px;
+        text-align: center;
+        background: #fff;
+    }
+    
+   .swiper-container-doctor .swiper-slide p{
+    	display: block;
+    	height: 20px;
+    	line-height: 20px;
+    	padding: 0 9px;
+    	font-size: 12px;
+    }
+     .swiper-slide a{
+     	display: block;
+     	text-decoration: none;
+     	color: #111;
+     }
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">1</div>
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div>
+            <div class="swiper-slide">4</div>
+        </div>
+        <!-- 轮播图下方点点 -->
+        <div class="swiper-pagination"></div>
+    </div>
+	
+		<!-- 医生列表滑动 -->
+		<div class="swiper-container-doctor">
+        <div class="swiper-wrapper">
+           <div class="swiper-slide">
+            <a href="">
+            	 <img src="./images/person.png" height="45" width="45" alt="">
+                <p>刘大富</p>
+                <p>主治骨科</p>
+                <p>治愈上千位患者</p>
+            </a>             
+            </div>
+            <div class="swiper-slide">
+            <a href="">
+            	 <img src="./images/person.png" height="45" width="45" alt="">
+                <p>刘大富</p>
+                <p>主治骨科</p>
+                <p>治愈上千位患者</p>
+            </a>             
+            </div>
+            <div class="swiper-slide">
+            <a href="">
+            	 <img src="./images/person.png" height="45" width="45" alt="">
+                <p>刘大富</p>
+                <p>主治骨科</p>
+                <p>治愈上千位患者</p>
+            </a>             
+            </div>
+            <div class="swiper-slide">
+            <a href="">
+            	 <img src="./images/person.png" height="45" width="45" alt="">
+                <p>刘大富</p>
+                <p>主治骨科</p>
+                <p>治愈上千位患者</p>
+            </a>             
+            </div>
+            <div class="swiper-slide">
+            <a href="">
+            	 <img src="./images/person.png" height="45" width="45" alt="">
+                <p>刘大富</p>
+                <p>主治骨科</p>
+                <p>治愈上千位患者</p>
+            </a>             
+            </div>
+            <div class="swiper-slide">
+            <a href="">
+            	 <img src="./images/person.png" height="45" width="45" alt="">
+                <p>刘大富</p>
+                <p>主治骨科</p>
+                <p>治愈上千位患者</p>
+            </a>             
+            </div>           
+            <div class="swiper-slide">
+            <a href="">
+            	 <img src="./images/person.png" height="45" width="45" alt="">
+                <p>刘大富</p>
+                <p>主治骨科</p>
+                <p>治愈上千位患者</p>
+            </a>             
+            </div>            
+        </div>
+    </div>
+
+
+
+    <!-- Swiper JS -->
+    <script src="./js/swiper.min.js"></script>
+    <script>
+    var swiper_top = new Swiper('.swiper-container-top', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        loop: true,
+        autoplay: 1500,
+        autoplayDisableOnInteraction: false
+    });
+
+    var swiper_doc = new Swiper('.swiper-container-doctor', {
+        slidesPerView:3,
+        paginationClickable: true,
+        spaceBetween: 0,
+        freeMode: true
+    });
+    </script>
+</body>
+</html>

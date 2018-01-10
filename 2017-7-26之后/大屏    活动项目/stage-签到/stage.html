@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	@media only screen and (max-width:960px) {
+		html {
+			font-size: 12px;
+		}
+	}
+
+	@media only screen and (min-width:960px) and (max-width:1200px) {
+		html {
+			font-size: 14px;
+		}
+	}
+
+	@media only screen and (min-width:1200px) and (max-width:1400px){
+		html {
+			font-size: 16px;
+		}
+	}
+@media only screen and (min-width:1400px) and (max-width:1600px){
+		html {
+			font-size: 18px;
+		}
+	}
+	@media only screen and (min-width:1600px) and (max-width:1800px){
+		html {
+			font-size: 20px;
+		}
+	}
+	@media only screen and (min-width:1800px) and (max-width:2000px){
+		html {
+			font-size: 23px;
+		}
+	}
+	@media only screen and (min-width:2000px) and (max-width:2200px){
+		html {
+			font-size: 25.5px;
+		}
+	}
+		.contain-satage{
+			height: 100%;
+			width: 100%;
+		}
+		.stage-start{
+			height: 100%;
+			width: 100%;
+			min-width: 650px;
+			position: relative;
+		}
+		.stage-img{
+			/* height: 100%; */
+			width: 100%;
+		}
+		.dn{
+			display: none;
+		}
+		#actor{
+			
+			position: absolute;
+		/* 	width: 0;
+			height: 0; */
+			height: 44%;
+			width: 24.904%;
+			bottom:21% ;
+			left: 50%;
+			margin-left: -12.45%;
+			border-radius: 50%;
+			overflow: hidden;
+			z-index: 1000;
+			-webkit-animation: revolving 1s  cubic-bezier(0.1, 0.4, 0.8, 0.9);
+  			animation: revolving 1s  cubic-bezier(0.1, 0.4, 0.8, 0.9);
+  			
+		}
+		/**/
+		.actor .actor-it{
+			height: 100%;
+			width: 100%;
+			position: relative;
+			
+		}
+		.actor  .actor-name{
+		 	position: absolute;
+			bottom: 0;
+			display: inline-block;
+			height: 20%;
+			width: 100%;
+			background: #ccc;
+			opacity: 0.9;
+			text-align: center;
+			font-size: 1.5em;
+			line-height: 2.5em;
+			font-weight: 700;
+		}
+		 .actor-img{
+			height: 100%;
+			width: 100%;
+			
+		}
+		.stage-magerTL{
+			position: absolute;
+			top: 20%;
+			left: 0;
+			height: 20%;
+			width: 39%;
+			/*border: 2px solid red;*/
+		}
+		.stage-ult{
+			padding: ;
+			height: 100%;
+			width: 100%;
+		}
+		.stage-ult{
+			display:inline-block;
+			
+		}
+		@-webkit-keyframes revolving{
+		  0%{
+
+		  	filter: alpha(opacity=0.3);	
+			-moz-opacity: 0.3;
+			-khtml-opacity: 0.3;
+			opacity: 0.3;
+			
+		    -webkit-transform:scale(0);
+		  }
+		  25%{
+		  
+		    -webkit-transform:scale(0);
+		  }
+		  50%{
+		 
+		    -webkit-transform:scale(2.5);
+		  }
+		  65%{
+		  
+		    -webkit-transform:scale(2.8);
+		  }
+		  100%{		  	
+		  	filter: alpha(opacity=1);					
+			-moz-opacity: 1;
+			-khtml-opacity: 1;
+			opacity: 1;
+		    -webkit-transform: scale(1);
+		  }
+		  }
+  
+		.line-per{
+			display: inline-block;
+			float: left;
+			list-style: none;
+			height:37%;
+			width: 10.752%;
+			border-radius: 50%;
+			overflow: hidden;
+			position: relative;
+			
+		}	
+		.line-per span{
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			height: 30%;
+			background: #ccc;
+			opacity: 0.6;
+			font-size: 0.5em;
+		}
+		.stage-ult li:nth-child(1){
+			margin-top: -6%;
+			
+		}
+		.stage-ult li:nth-child(2){
+			margin-top: 1.5%;
+			margin-left: -3%;
+			transform: scale(0.98,0.98);
+			-webkit-transform: scale(0.98,0.98);	
+		}
+		.stage-ult li:nth-child(3){
+			margin-top: 7.5%;
+			margin-left: -2%;
+			transform: scale(0.95,0.95);
+			-webkit-transform: scale(0.95,0.95);
+		}
+		.stage-ult li:nth-child(4){
+			margin-top: 14%;
+			margin-left: -2.5%;
+			transform: scale(0.92,0.92);
+			-webkit-transform: scale(0.92,0.92);
+		}
+		.stage-ult li:nth-child(5){
+			margin-top: 19%;
+			margin-left: -2%;
+			transform: scale(0.9,0.9);
+			-webkit-transform: scale(0.9,0.9);
+		}
+		.stage-ult li:nth-child(6){
+			margin-top: 23%;
+			margin-left: -2%;
+			
+			transform: scale(0.88,0.88);
+			-webkit-transform: scale(0.88,0.88);			
+		}
+		.stage-ult li:nth-child(7){
+			margin-left: -2%;
+			margin-top: 27%;
+			transform: scale(0.86,0.86);
+			-webkit-transform: scale(0.86,0.86);
+			
+		}
+		.stage-ult li:nth-child(8){
+			margin-top: 30%;
+			margin-left: -2%;
+			transform: scale(0.84,0.84);
+			-webkit-transform: scale(0.84,0.84);
+			/*transform: rotateY(18deg);
+			-webkit-transform: rotateY(18deg);*/
+
+		}
+		.stage-ult li:nth-child(9){
+			margin-top: 32.5%;
+			margin-left: -2%;
+			transform: scale(0.82,0.82);
+			-webkit-transform: scale(0.82,0.82);
+
+		}
+		.stage-ult li:nth-child(10){
+			margin-top: 34.5%;
+			margin-left: -2%;
+			transform: scale(0.80,0.8);
+			-webkit-transform: scale(0.8,0.8);
+
+		}
+		.stage-ult li:nth-child(11){
+			margin-top: 36%;
+			margin-left: -2%;
+			transform: scale(0.78,0.78);
+			-webkit-transform: scale(0.78,0.78);
+
+		}
+		
+		
+		.stage-magerTR{
+			position: absolute;
+			top: 20%;
+			right: 0;
+			height: 20%;
+			width: 39%;
+		}
+		.stage-magerTR .line-per{
+			display: inline-block;
+			float:right;
+			list-style: none;
+			height:37%;
+			width: 10.752%;
+			border-radius: 50%;
+			overflow: hidden;
+			position: relative;
+			
+		}	
+		.stage-magerTR  .stage-ult li:nth-child(1){
+			margin-left: -2.4%;
+		}
+		.stage-magerTR  .stage-ult li:nth-child(2){
+			margin-left: -2.4%;
+		}
+		.stage-magerML{
+			position: absolute;
+			top: 45%;
+			left: 0;
+			height: 20%;
+			width: 39%;		
+		}
+		
+		.stage-magerML .stage-ult li{
+			margin-left: -0.2%;
+		}
+		.stage-magerML .stage-ult li:nth-child(1){
+			margin-top: -1.5%;	
+		}
+		.stage-magerML .stage-ult li:nth-child(2){
+			margin-top: 3.5%;		
+			transform: scale(0.98,0.98);
+			-webkit-transform: scale(0.98,0.98);
+		}
+		.stage-magerML .stage-ult li:nth-child(3){
+			margin-top: 6.5%;
+
+			transform: scale(0.95,0.95);
+			-webkit-transform: scale(0.95,0.95);
+
+		}
+		.stage-magerML .stage-ult li:nth-child(4){
+			margin-top: 9.5%;
+
+			transform: scale(0.92,0.92);
+			-webkit-transform: scale(0.92,0.92);
+		}
+		.stage-magerML .stage-ult li:nth-child(5){
+			margin-top:12.5%;
+
+			transform: scale(0.9,0.9);
+			-webkit-transform: scale(0.9,0.9);
+		}
+		.stage-magerML .stage-ult li:nth-child(6){
+			margin-top: 14.5%;	
+			transform: scale(0.88,0.88);
+			-webkit-transform: scale(0.88,0.88);
+		}
+		.stage-magerML .stage-ult li:nth-child(7){
+			margin-top: 16%;		
+			transform: scale(0.86,0.86);
+			-webkit-transform: scale(0.86,0.86);	
+		}
+		.stage-magerML .stage-ult li:nth-child(8){
+			margin-top: 17%;
+
+			transform: scale(0.84,0.84);
+			-webkit-transform: scale(0.84,0.84);
+		}
+		.stage-magerML .stage-ult li:nth-child(9){
+			margin-top: 17.8%;
+
+			transform: scale(0.82,0.82);
+			-webkit-transform: scale(0.82,0.82);
+
+		}
+		
+		.stage-start .stage-magerMR {
+			position: absolute;
+			top: 45%;
+			right: 0;
+			height: 20%;
+			width: 39%;
+		}
+		.stage-start .stage-magerMR  .line-per{
+			display: inline-block;
+			float:right;
+			list-style: none;
+			height:37%;
+			width: 10.752%;
+			border-radius: 50%;
+			overflow: hidden;
+			position: relative;
+			
+		}	
+		
+		.stage-magerMR .stage-ult li{
+			margin-left: -0.2%;
+			float: right;
+		}
+		.stage-magerMR .stage-ult li:nth-child(1){
+			margin-top: -1.5%;				
+		}
+		.stage-magerMR .stage-ult li:nth-child(2){
+			margin-top: 3.5%;
+			
+			transform: scale(0.98,0.98);
+			-webkit-transform: scale(0.98,0.98);	
+		}
+		.stage-magerMR .stage-ult li:nth-child(3){
+			margin-top: 6.5%;
+			transform: scale(0.95,0.95);
+			-webkit-transform: scale(0.95,0.95);
+
+		}
+		.stage-magerMR .stage-ult li:nth-child(4){
+			margin-top: 9.5%;
+			transform: scale(0.92,0.92);
+			-webkit-transform: scale(0.92,0.92);			
+		}
+		.stage-magerMR .stage-ult li:nth-child(5){
+			margin-top:12.5%;
+			transform: scale(0.9,0.9);
+			-webkit-transform: scale(0.9,0.9);	
+		}
+		.stage-magerMR .stage-ult li:nth-child(6){
+			margin-top: 14.5%;		
+			transform: scale(0.88,0.88);
+			-webkit-transform: scale(0.88,0.88);
+		}
+		.stage-magerMR .stage-ult li:nth-child(7){
+			margin-top: 16%;		
+			transform: scale(0.86,0.86);
+			-webkit-transform: scale(0.86,0.86);	
+		}
+		.stage-magerMR .stage-ult li:nth-child(8){
+			margin-top: 17%;
+
+			transform: scale(0.84,0.84);
+			-webkit-transform: scale(0.84,0.84);
+		}
+		.stage-magerMR .stage-ult li:nth-child(9){
+			margin-top: 17.8%;
+
+			transform: scale(0.82,0.82);
+			-webkit-transform: scale(0.82,0.82);
+		}
+		
+		.stage-magerBL{
+			position: absolute;
+			top: 67%;
+			left: 0;
+			height: 20%;
+			width: 39%;
+		}
+		.stage-magerBL .stage-ult li{
+			margin-left: 0%;
+		}
+		.stage-magerBL .stage-ult li:nth-child(1){
+			margin-top: -1.5%;
+		}
+		.stage-magerBL .stage-ult li:nth-child(2){
+			margin-top: -1.3%;
+			
+			transform: scale(0.98,0.98);
+			-webkit-transform: scale(0.98,0.98);			
+		}
+		.stage-magerBL .stage-ult li:nth-child(3){
+			margin-top: -1.15%;
+
+			transform: scale(0.95,0.95);
+			-webkit-transform: scale(0.95,0.95);
+		}
+		.stage-magerBL .stage-ult li:nth-child(4){
+			margin-top: -1.2%;
+			transform: scale(0.92,0.92);
+			-webkit-transform: scale(0.92,0.92);
+		}
+		.stage-magerBL .stage-ult li:nth-child(5){
+			margin-top:-1.35%;
+
+			transform: scale(0.9,0.9);
+			-webkit-transform: scale(0.9,0.9);
+		}
+		.stage-magerBL .stage-ult li:nth-child(6){
+			margin-top: -1.4%;			
+			transform: scale(0.88,0.88);
+			-webkit-transform: scale(0.88,0.88);
+					
+		}
+		.stage-magerBL .stage-ult li:nth-child(7){
+			margin-top: -1.45%;			
+			transform: scale(0.86,0.86);
+			-webkit-transform: scale(0.86,0.86);			
+		}
+		.stage-magerBL .stage-ult li:nth-child(8){
+			margin-top: -1.48%;
+
+			transform: scale(0.84,0.84);
+			-webkit-transform: scale(0.84,0.84);
+		
+		}
+		.stage-magerBL .stage-ult li:nth-child(9){
+			margin-top: -1.5%;
+
+			transform: scale(0.82,0.82);
+			-webkit-transform: scale(0.82,0.82);
+		}
+		
+		
+		.stage-magerBR{
+			position: absolute;
+			top: 67%;
+			right: 0;
+			height: 20%;
+			width: 39%;
+		}
+		.stage-magerBR .stage-ult li{
+			float: right;
+		}
+		.stage-magerBR .stage-ult li{
+			margin-left: 0%;
+		}
+		.stage-magerBR .stage-ult li:nth-child(1){
+			margin-top: -1.5%;	
+		}
+		.stage-magerBR .stage-ult li:nth-child(2){
+			margin-top: -1.3%;
+			
+			transform: scale(0.98,0.98);
+			-webkit-transform: scale(0.98,0.98);	
+		}
+		.stage-magerBR .stage-ult li:nth-child(3){
+			margin-top: -1.15%;
+
+			transform: scale(0.95,0.95);
+			-webkit-transform: scale(0.95,0.95);
+		}
+		.stage-magerBR .stage-ult li:nth-child(4){
+			margin-top: -1.2%;
+
+			transform: scale(0.92,0.92);
+			-webkit-transform: scale(0.92,0.92);		
+		}
+		.stage-magerBR .stage-ult li:nth-child(5){
+			margin-top:-1.35%;
+
+			transform: scale(0.9,0.9);
+			-webkit-transform: scale(0.9,0.9);	
+		}
+		.stage-magerBR .stage-ult li:nth-child(6){
+			margin-top: -1.4%;		
+			transform: scale(0.88,0.88);
+			-webkit-transform: scale(0.88,0.88);	
+		}
+		.stage-magerBR .stage-ult li:nth-child(7){
+			margin-top: -1.45%;	
+			transform: scale(0.86,0.86);
+			-webkit-transform: scale(0.86,0.86);	
+		}
+		.stage-magerBR .stage-ult li:nth-child(8){
+			margin-top: -1.48%;
+
+			transform: scale(0.84,0.84);
+			-webkit-transform: scale(0.84,0.84);
+		}
+		.stage-magerBR .stage-ult li:nth-child(9){
+			margin-top: -1.5%;
+
+			transform: scale(0.82,0.82);
+			-webkit-transform: scale(0.82,0.82);
+		}
+
+
+		.lianimate{
+			/*opacity: 0;*/
+			-webkit-animation: anirotate 0.95s  linear;
+		}
+	
+		@-webkit-keyframes anirotate{
+		  0%{
+		    -webkit-transform:rotateY(0);
+		  }
+		 50%{
+		 	 -webkit-transform:rotateY(90deg);
+		 }
+		  100%{	
+		  	-webkit-transform:rotateY(0deg);	  	
+		  		  }
+		  }
+	</style>
+</head>
+<body>
+	
+	<div class="contain-stage">
+		<div class="stage-start">
+			<img src="imgs/stage.png" class="stage-img" alt="">
+			<div class="actor dn" id="actor">
+				<div class="actor-it">
+					<img src="imgs/actor.png"  alt="" class="actor-img">
+					<span class="actor-name">NAME</span>
+				</div>
+			</div>
+			<div class="stage-magerTL">
+				<ul class="stage-ult">
+					<li class="line-per" id="li_1" >
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img ">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_2">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_3">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_4">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_5">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_6">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_7">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_8">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_9">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_10">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_11">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+				</ul>
+			</div>
+			<div class="stage-magerTR">
+				<ul class="stage-ult">
+					<li class="line-per" id="li_12">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_13">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_14">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_15">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_16">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_17">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_18">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_19">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_20">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_21">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_22">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+				</ul>
+			</div>
+			<div class="stage-magerML">
+				<ul class="stage-ult">
+					<li class="line-per" id="li_23">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_24">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_25">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_26">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_27">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_28">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_29">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_30">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_31">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					
+				</ul>
+			</div>		
+			<div class="stage-magerMR">
+				<ul class="stage-ult">
+					<li class="line-per" id="li_32">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_33">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_34">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_35">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_36">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_37">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_38">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_39">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_40">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="stage-magerBL">
+				<ul class="stage-ult">
+					<li class="line-per" id="li_41">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_42">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_43">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_44">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_45">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_46">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_47">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_48">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_49">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="stage-magerBR">
+				<ul class="stage-ult">
+					<li class="line-per" id="li_50">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_51">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_52">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_53">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_54">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_55">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_56">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_57">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+					<li class="line-per" id="li_58">
+							<div class="actor-it">
+								<img src="imgs/actor.png"  alt="" class="actor-img">
+								<span class="actor-name">NAME</span>
+							</div>
+					</li>
+				
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	
+		
+	
+</body>
+<script>
+	var liboxL =[];
+	var liboxR =[];
+	for (var i = 1; i <= 3 ;i++) {
+		liboxL.push(i);
+		liboxR.push(i);
+	};
+	var randNum = Math.floor(Math.random()*liboxL.length);
+	var liid = liboxL[randNum];
+	function showHead(aT){
+		$("#actor span").text(aT.nickname);
+		$("#actor img").attr("src",aT.weixin_avatar_url)
+		$("#"+"li_"+liid).removeClass('lianimate');
+		$("#actor").removeClass("dn")
+		var a =	$("#"+"li_"+liid).offset();
+		var al =a.left;
+		var at = a.top;	
+		var com =$("#actor").offset();
+		var coml =com.left;
+		var comt = com.top;
+		var c = document.getElementById("li_"+liid);
+		var cH=c.clientHeight-5;
+		var e = document.getElementById("actor");
+		var eleH=e.clientHeight;
+		e.addEventListener("animationend", endHandler);	
+		function endHandler() {	
+			$(e).stop(true).delay(2000).animate({"left":eleH-(eleH-cH/2)/2+al-cH/3.5,"top":at+cH/2-cH/2,width:cH,height:cH},1000,"linear",function(){
+			$("#"+"li_"+liid).addClass('lianimate');
+			$("#"+"li_"+liid)[0].addEventListener("animationend",func);
+			function func(){
+				$("#"+"li_"+liid).stop();
+			}
+			$("#actor").addClass("dn");
+			$("#actor").attr("style","");
+			$("#"+"li_"+liid+" img").attr("src",$("#actor img").attr("src"));
+			$("#"+"li_"+liid+" span").text($("#actor span").text());
+			liboxL.splice(randNum,1);
+			if (liboxL.length<=0) {
+				Array.prototype.push.apply(liboxL,liboxR);
+			};
+			randNum = Math.floor(Math.random()*liboxL.length);
+			liid = liboxL[randNum];
+			blog = true;	
+			});
+		};
+	}
+	var  arr = [];
+	arr.push({"weixin_avatar_url":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504077538929&di=d8f91d80b09f911136226f9d93d74f3e&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20170720%2Ftooopen_sy_217426757833.jpg","nickname":"你好啊啊"});
+	function delTop(){
+		var getTop = arr[0];
+		if(!getTop){return;}
+		arr.shift();
+		showHead(getTop);
+	}	
+	var blog = true;
+	var pudelTop = setInterval(function(){
+		if(arr.length>0&&blog){
+			blog = false;
+			delTop();
+		}
+	},2000)
+		
+</script>
+</html>

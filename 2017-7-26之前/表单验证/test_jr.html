@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+  function $(id) {
+    return document.getElementById(id);
+  }
+  window.onload = function () {
+    $("myform").onsubmit = function(e) {
+      e = e || window.event;
+      var target = e.target || e.srcElement
+          nameInput = target.name,
+          phoneInput = target.phone;
+      if(!/^[\u4e00-\u9fa5]{2,4}$/.test(nameInput.value)) {
+        alert("姓名汉子组成，且长度在2位到4位之间");
+        return false;
+      }
+      if(!/^(134|135|136|137|138|139|147|150|151|152|157|158|159|182|183|184|187|188|130|131|132|145|155|156|185|186|133|153|180|181|189)\d{8}$/.test(phoneInput.value)) {
+        alert("手机号必须是11位数字，且头三位应该以如下数字开头：134、135、136、137、138、139、147、150、151、152、157、158、159、182、183、184、187、188、130、131、132、145、155、156、185、186、133、153、180、181、189");
+        return false;
+      }
+      alert("您的请求已接受！");
+    };
+  }
+
+</script>
+</head>
+
+<body>
+<FORM id="myform" encType=multipart/form-data method=post action=../plus/diy.php>
+  <INPUT 
+value=post type=hidden name=action>
+  <INPUT value=1 type=hidden name=diyid>
+  <INPUT value=2 type=hidden name=do>
+  <TABLE style="WIDTH: 97%" cellSpacing=1 cellPadding=0>
+    <TBODY>
+      <TR>
+        <TD vAlign=top align=right>姓名：</TD>
+        <TD><INPUT style="WIDTH: 250px" id=name class=intxt name=name>
+        </TD>
+      </TR>
+      <TR>
+        <TD vAlign=top align=right>手机号码：</TD>
+        <TD><INPUT style="WIDTH: 250px" id=phone class=intxt name=phone>
+        </TD>
+      </TR>
+    <INPUT value=name,text;phone,text type=hidden name=dede_fields>
+    <INPUT value=de0b385b4405933d625e26c53f9a7db2 type=hidden 
+  name=dede_fieldshash>
+    </TBODY>
+    
+  </TABLE>
+  <DIV style="HEIGHT: 30px; PADDING-TOP: 10px" align=center>
+    <INPUT class=coolbg value="提 交" type=submit name=submit>
+    &nbsp;
+    <INPUT class=coolbg value="重 置" type=reset name=reset>
+  </DIV>
+</FORM>
+
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+@media only screen and (min-width:960px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media only screen and (min-width:960px) and (max-width:1200px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width:1200px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+a {
+	text-decoration: none !important;
+}
+p a {
+	padding: 0 !important;
+}
+li {
+	list-style: none;
+}
+body {
+	background-color: #F2F2F7;
+}
+.container-box {
+	min-width: 760px;
+	padding: 1.5em 3em;
+	background-color: #fff;
+}
+.container .img_text img {
+	float: left;
+	width: 5em;
+	height: 5em;
+}
+.container .img_text {
+	padding: 10px;
+}
+.container .con-text {
+	padding: 0 2em;
+}
+.container .con-text b {
+	font-size: 1.5em;
+	color: #787A7D;
+	font-weight: 600;
+}
+.container .con-text h6 {
+	padding-top: 0.6em;
+}
+.container .con-text h6 b {
+	font-size: 1em;
+}
+.item-conbut {
+	float: right;
+}
+.item-control .con-top-but {
+	min-width: 100px;
+	background-color: #00AAFF;
+	border-radius: 0;
+	margin-left: 15px;
+	color: #fff;
+}
+
+
+/*swiper*/
+
+.swiper-container {
+	width: 100%;
+	height: 90px;
+	margin: 20px auto;
+}
+.swiper-slide {
+	margin-top: 6px;
+	margin-right: 0.8em !important;
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+
+/*非*/
+
+.swiper-box {
+	height: auto;
+	width: 100%;
+	min-width: 710px;
+}
+.swiper-container .item-list img {
+	height: 3.5em;
+	width: 3.5em;
+	/*float: left;*/
+	margin: 0 auto;
+}
+.swiper-container .item-list p {
+	text-align: center;
+	margin-top: 12px;
+	font-size: 0.7em;
+}
+.box-line {
+	width: 100%;
+	border-bottom: 1px solid #E6E6E6;
+}
+.border-add {
+	padding: 0.6em;
+	margin-top: 2em;
+	border-radius: 0.35em;
+	width: 100%;
+	height: 8em;
+	background-color: #E6E6E6;
+}
+.border-add .main-add {
+	border-radius: 0.3em;
+	height: 100%;
+	width: 100%;
+	border: 2px dashed #676A6D;
+}
+.add-but {
+	display: block;
+	padding: 0.8em;
+	height: 5em;
+	width: 5em;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.addbut-i img {
+	width: 3.4em;
+}
+.addbut-p {
+	text-align: center;
+	padding-top: 0.3em;
+	color: #000;
+	font-size: 1em;
+}
+/*Produce.html*/
+
+#dropdownMenu1,
+#dropdownMenu2 {
+	width: 100%;
+	background: #EDEDED;
+	/* margin-bottom: 2.8em; */
+	text-align: left;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+}
+#dropdownMenu1 .caret,
+#dropdownMenu2 .caret {
+	float: right;
+	margin-top: 0.6em;
+}
+.open .dropdown-menu {
+	width: 100%;
+}
+.dropdown-menu li {
+	width: 100%;
+}
+.btn-flole {
+	display: inline-block;
+	height: 100%;
+	width: 5.7em;
+	line-height: 100%;
+	text-align: justify;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	font-weight: 700;
+}
+.btn-dateconle {
+	display: inline-block;
+	height: 100%;
+	width: 5.7em;
+	position: absolute;
+	top: 10px;
+	z-index: 10;
+	padding-left: 12px;
+	line-height: 100%;
+	vertical-align: middle;
+}
+#menu_class {
+	display: inline-block;
+	height: 100%;
+	line-height: 100%;
+	font-size: 1em;
+}
+#menu_scale {
+	display: inline-block;
+	height: 100%;
+	line-height: 100%;
+	font-size: 1em;
+}
+.loading_img {
+	position: absolute;
+	display: inline-block;
+	left: 50%;
+	top: 0;
+	height: 2em;
+	width: 2em;
+	margin-left: -1em;
+}
+.but-loading {
+	position: relative;
+	display: none;
+}
+#reservation {
+	border-radius: 3px;
+	width: 100%;
+}
+.input-group {
+	width: 100%;
+}
+.datepicker {
+	width: 100%;
+}
+form .high-import {
+	position: absolute;
+	top: 0.6em;
+	right: 0.8em;
+	color: red;
+}
+.form-onError {
+	color: red;
+	padding: 0.5em 0.5em;
+	display: block;
+}
+.form-onSuccess {
+	color: green;
+	padding: 0.5em 0.5em;
+	display: block;
+}
+.container-childbox {
+	padding: 1.5em 3em 2.5em 3em;
+	background-color: #FFF;
+	display: block;
+	margin: 2em 0;
+	width: 100%;
+	min-width: 720px;
+}
+.return-pre {
+	height: 1.3em;
+	width: 25%;
+	float: right;
+}
+.return-pre a {
+	display: block;
+	float: right;
+	padding: 0.5em 0.6em;
+	text-decoration: none;
+	color: #646464;
+	font-weight: 600;
+}
+.container-childbox form {
+	width: 88%;
+	/*min-width: 990px;*/
+}
+.container-childbox .container-childmain {
+	margin-top: 2.5em;
+}
+.form-control {
+	padding: 20px 0;
+}
+
+.container-childbox .container-childmain input,
+select.form-control {
+	height: 34px;
+	line-height: 34px;
+	background-color: #EDEDED;
+	padding: 0px 0 0px 7em;
+	position: relative;
+}
+.container-childbox .container-childmain .form-group {
+	position: relative;
+	margin-bottom: 2.8em;
+	/*min-width: 929px !important;*/
+}
+.container-childbox .container-childmain form .form-group label {
+	width: 5.5em;
+	position: absolute;
+	display: inline-block;
+	top: 0.5em;
+	left: 0.8em;
+	z-index: 1000;
+	text-align: justify;
+}
+.container-childbox .container-childmain form .form-group .Act-date {
+	width: 52%;
+	float: left;
+	display: inline-block;
+	padding: 0.45em 0 0.45em 7em;
+}
+.container-childbox .container-childmain form .form-group .Act-date-mid {
+	display: block;
+	height: 2.3em;
+	width: 3.5%;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 2.3em;
+	float: left;
+}
+.container-childbox .container-childmain form .form-group .Act-date-r {
+	width: 44%;
+	display: inline-block;
+	float: left;
+	margin-left: 4em;
+	padding: 0.45em 0;
+}
+.container-childbox .container-childmain form .form-group .pro-act-datr {
+	float: left !important;
+	padding-left: 0.5em;
+	width: 45%;
+	margin: 0;
+}
+.con-child-botbut {
+	height: 6em;
+	padding-top: 3.6em;
+	width: 100%;
+}
+.container-childbox .con-child-botbut button.cheess {
+	min-width: 110px;
+	display: block;
+	background: #00AAFF !important;
+	border-radius: 2px;
+	margin: 0 auto 3em;
+	color: #fff;
+}
+.container-childbox-bot {
+	background-color: #FFF;
+	display: block;
+	width: 100%;
+	padding: 5em 0em;
+}
+.container-childbox-bot p {
+	margin-bottom: 20px;
+}
+.container-childbox-bot p span:nth-child(1) {
+	width: 100px;
+	display: inline-block;
+	font-size: 1em;
+	font-family: "微软雅黑";
+	margin-right: 3em;
+}
+
+/*SaveActivity*/
+
+div.input-append {
+	display: inline-block;
+}
+.Save-activity-bot {
+	position: relative;
+}
+.Save-activity-bot .return-pre {
+	position: absolute;
+	top: 1em;
+	right: 1.8em;
+}
+.Save-activity-bot .Save-dbbut {
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0.4em 0 2em 0;
+}
+.Save-activity-bot .Save-acbot-sure {
+	border-radius: 0;
+	width: 7em;
+	margin-right: 2em;
+}
+.Save-activity-bot .Save-acbot-no {
+	width: 7em;
+	border-radius: 0;
+}
+.Save-activity-bot p {
+	margin-bottom: 3.6em;
+}
+/*ActivityList*/
+
+.sortable-ghost {
+	opacity: .2;
+}
+#gbin2-list .Actlist-main-it span {
+	display: none;
+}
+.Gohide {
+	display: none;
+	border: 2px solid red;
+}
+.container .Actlist-box {
+	height: 100%;
+	width: 100%;
+	margin-top: 2em;
+	padding: 1.8em 2em;
+	background-color: #fff;
+}
+.Actlist-btop-list {
+	padding: 0 0.6em;
+}
+.Actlist-btop-list .return-pre a {
+	padding: 0;
+}
+.container .Actlist-box ul {
+	padding: 0;
+	display: block;
+	height: 8em;
+	width: 100%;
+}
+.container .Actlist-box ul li {
+	padding: 2em 0 0;
+	width: 10%;
+	box-sizing: border-box;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+}
+.Actlist-box-top .Actlist-main-l {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	height: 3.5em;
+	width: 3.5em;
+	border: 1px solid #E6E6E6;
+	border-radius: 3px;
+}
+.Actlist-box-top .Actlist-main-l span {
+	display: inline-block;
+	position: absolute;
+	height: 1.6em;
+	width: 1.6em;
+	top: -0.65em;
+	right: -0.65em;
+	text-align: center;
+	vertical-align: middle;
+}
+.Actlist-box-top .Actlist-main-l span img {
+	height: 1.6em;
+	width: 1.6em;
+}
+.container .Actlist-box ul li p {
+	padding: 1em 0 0 0;
+	font-size: 0.8em;
+}
+.Actlist-box-mid {
+	margin: 0 auto 1.5em;
+	height: 0;
+	width: 97%;
+	border-bottom: 1px solid #E5E5E5;
+}
+.Actlist-box-bot .Actlist-boxbot-title {
+	padding: 0 0.6em;
+}
+.Actlist-boxbot-main ul {
+	width: 100%;
+}
+.Actlist-boxbot-main ul li {
+	display: inline-block;
+	width: 10%;
+	height: 7.5em;
+	text-align: center;
+}
+.Actlist-main-l {
+	margin: 0 auto;
+	height: 3.5em;
+	width: 3.5em;
+	border: 1px solid #E6E6E6;
+	border-radius: 3px;
+}
+.Actlist-main-l img {
+	height: 3.5em;
+	width: 3.5em
+}
+.Actlist-main-l p {
+	text-align: center;
+}

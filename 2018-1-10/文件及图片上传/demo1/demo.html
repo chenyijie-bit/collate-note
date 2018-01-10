@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.goods-img{
+		height: 10em;
+		width: 100%;
+		padding: 10px;
+		}
+		#add-img{
+		width: 0;
+		height: 0;
+		}
+		.addback-img {
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		border: 1px solid #ccc;
+		margin-right: 10px;
+		}
+
+		.imgBox{
+		float: left;
+		position: relative;
+		}
+	</style>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="goods-img">
+	    <div class="showimg"> 
+	    </div>
+	    <img class="addback-img" src="./bot.png"    onclick="getElementById('add-img').click()" style="cursor:pointer; border: none;" title="点击添加图片" alt="点击添加图片">
+	    <input id="add-img" type="file" name="logo" >
+	</div> 
+	 <div class="col-sm-2 col-sm-offset-3" style='float: left;'>
+        <p id="signupForm_submit" class="btn btn-primary ">确定修改</p>
+    </div>
+</body>
+    <script type="text/javascript">
+    window.onload=function(){
+        // window.parent.get_notices_num(); 
+
+    }
+    var _thisFile;
+    function getObjectURL(file) {
+            var url = null;
+            if (window.createObjectURL != undefined) {
+                url = window.createObjectURL(file)
+            } else if (window.URL != undefined) {
+                url = window.URL.createObjectURL(file)
+            } else if (window.webkitURL != undefined) {
+                url = window.webkitURL.createObjectURL(file)
+            }
+            return url
+        };
+    $("#add-img").on('change', function () {
+        if($('.showimg .imgBox').length>=1){
+            // swal('您只能上传一张图片', "", "warning");
+            return false;
+        }
+        var _this = this;
+
+        _thisFile = _this.files[0];
+        // console.log(_thisFile);
+
+
+        var srcs=getObjectURL(_thisFile);
+
+        console.log(srcs);
+        if (!$(_this).val()) {
+            return false;
+        }
+        $('.addback-img').attr('src',srcs)
+        $(_this).val(''); 
+    });
+    
+        $('#signupForm_submit').click(function(){
+            var formData = new FormData();
+            formData.append('file',_thisFile);
+            // formData.append('exchange_name',$("input[name=exchange_name]").val());
+            // console.log(formData);
+            // console.log(_thisFile);
+            // console.log($("input[name=exchange_name]").val())
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"www.baidu.com",
+                data:formData,
+                dataType: 'json',
+                async: false,
+                processData: false,
+                contentType: false,
+                error: function(data) {
+                    console.log('网络错误，请重试！', "", "error");
+                    return false;
+                },
+                success: function(data) {      
+                    if (data.error == 0) {
+                        console.log(data.error, "", "success");
+                        setTimeout("window.location.reload();",1000);
+                        return false;
+                    }else if(data.error == 2){
+                        console.log(data.msg, "", "error");
+                        return false;
+                    }else{
+                        console.log(data.msg, "", "warning");
+                        return false;
+                    }
+                }
+            });
+        });
+    
+    </script>
+</html>
+
+
+
+
+                                

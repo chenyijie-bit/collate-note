@@ -1,0 +1,161 @@
+<!DOCTYPE html>   
+<html>   
+<head>   
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<title>获取当前位置</title>   
+<style type="text/css">   
+html{height:100%}   
+body{height:100%;margin:0px;padding:0px}   
+#container{height:500px; width: 500px; margin: 0 auto;}   
+</style>   
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"> 
+//v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥" 
+//v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize" 
+</script> 
+</head>   
+  
+<body> 
+    <div style="text-align: center; margin: 20px auto;"> 
+            <p id="demo">点击这个按钮，获得您的经纬度：</p> 
+            <p id="position"></p> 
+<button onclick="getLocation()">获取位置</button> 
+        </div> 
+<div id="container"></div>  
+<script type="text/javascript">    
+        var map;   
+        var ggPoint; 
+        var marker; 
+function getLocation(){ 
+    //根据IP获取城市   
+    var myCity = new BMap.LocalCity();   
+    myCity.get(getCityByIP); 
+    var options={ 
+       enableHighAccuracy:true,  
+       maximumAge:1000 
+    } 
+    if(navigator.geolocation){ 
+       //浏览器支持geolocation 
+       navigator.geolocation.getCurrentPosition(onSuccess,onError,options); 
+        
+    }else{ 
+        //浏览器不支持geolocation 
+        console.log("浏览器不支持"); 
+    } 
+} 
+ 
+function onSuccess(position){ 
+     
+    var longitude =position.coords.longitude;//经度 
+    var latitude = position.coords.latitude;//纬度 
+    document.getElementById("demo").innerHTML = "程序已获取你所在的位置为：<br>经度"+longitude+"，纬度"+latitude; 
+     
+    //--------------设置地图显示---------------- 
+    map = new BMap.Map("container");          // 创建地图实例 
+    ggPoint = new BMap.Point(longitude, latitude);  // 创建点坐标   
+    map.centerAndZoom(ggPoint, 15);                 // 初始化地图，设置中心点坐标和地图级别  
+    //--------------设置地图显示---------------- 
+     
+     
+    var convertor = new BMap.Convertor(); 
+    var pointArr = []; 
+    pointArr.push(ggPoint); 
+    convertor.translate(pointArr, 1, 5, translateCallback); 
+     
+     
+     
+     
+     
+    //--------------设置标注相关------------------- 
+    /*var marker = new BMap.Marker(point); // 创建点 
+    map.addOverlay(marker); 
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画 
+    marker.enableDragging();//设置点可拖动 
+    //--------------设置标注相关--------------------- 
+     
+     
+    //--------------获取地理位置--------------------- 
+    var geoc = new BMap.Geocoder(); 
+    geoc.getLocation(point, function(rs){ 
+        var addComp = rs.addressComponents; 
+        alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber); 
+    });*/   
+    //--------------获取地理位置---------------------- 
+     
+     
+     
+     
+     
+     
+     
+}            
+ 
+ 
+ 
+//坐标转换完之后的回调函数 
+function translateCallback(data){ 
+    if(data.status === 0) { 
+        marker = new BMap.Marker(data.points[0]); 
+        map.addOverlay(marker); 
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画 
+        marker.enableDragging();//设置点可拖动 
+        marker.addEventListener("dragend",getAttr); 
+        //alert(marker.getPosition()); 
+        map.setCenter(data.points[0]); 
+        getPosit(data.points[0]); 
+    } 
+} 
+ 
+function getAttr(){ 
+    var p = marker.getPosition();       //获取marker的位置 
+    //alert("marker的位置是" + p.lng + "," + p.lat);  
+    getPosit(new BMap.Point(p.lng, p.lat)); 
+} 
+ 
+ 
+function getPosit(obj){ 
+    var geoc = new BMap.Geocoder(); 
+    geoc.getLocation(obj, function(rs){ 
+        var addComp = rs.addressComponents; 
+        //alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber); 
+        var address = "您的地址：" + addComp.province + "," + addComp.city + "," + addComp.district + "," + addComp.street + "," + addComp.streetNumber;  
+        document.getElementById("position").innerHTML = address; 
+        //var labelbaidu = new BMap.Label(address, { offset: new BMap.Size(20, -10) }); 
+        //marker.setLabel(labelbaidu); //添加百度标注  
+    }); 
+} 
+ 
+ 
+ 
+//根据IP获取城市   
+function getCityByIP(rs) {   
+    var cityName = rs.name;   
+    alert("根据IP定位您所在的城市为:" + cityName);   
+}  
+ 
+//失败时 
+function onError(error){ 
+    switch(error.code){ 
+       case 1: 
+       alert("位置服务被拒绝"); 
+       break; 
+ 
+       case 2: 
+       alert("暂时获取不到位置信息"); 
+       break; 
+ 
+       case 3: 
+       alert("获取信息超时"); 
+       break; 
+ 
+       case 4: 
+        alert("未知错误"); 
+       break; 
+    } 
+ 
+} 
+ 
+ 
+</script>   
+</body>   
+</html> 

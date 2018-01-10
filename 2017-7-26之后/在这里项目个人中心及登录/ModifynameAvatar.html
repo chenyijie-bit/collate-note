@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+   
+    <title></title>
+    <script src="js/mui.js"></script>
+    <script src="js/zepto.js"></script>
+    <script src="js/main.js"></script> 
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <!-- 本页面有个生日选择,我已注释,如果需要这个功能解开注释加上这个style即可使用.否则删除注释即可 -->
+    <!-- <style>
+     .sw_logo {
+            position: relative;
+            /* padding: 2.58rem 0; */
+            margin: 0 auto;
+            height: 4rem;
+            width: 100%;
+            background-color: #eee;
+        }
+
+		 .in_file {
+            position: absolute;
+           top: 1rem;
+           left: 4rem;
+            z-index: 2;
+            width: 2rem;
+            height: 2rem;
+            opacity: 0;
+        }
+        .imgLogo {
+        	position: absolute;
+        	top: 1rem;
+           left: 4rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: .3rem;
+            -webkit-border-radius: .3rem;
+        }
+        .birthday{
+        	height: 0.5rem;
+        	width: 5rem;
+        	display: inline-block;
+        }
+        
+    </style> -->
+    </head>
+    <body>
+    <div class="regist-all">
+
+		<div class="re-it">
+    		<div class="re-t mona-re-t">
+    			<a href="">
+                    <div class="mi-return"></div>
+                </a>
+    			<span class="login-l">修改信息</span>
+    		</div>
+    	</div>
+    <div class="mona-borer">	
+  		<form action="" method="post" enctype="multipart/form-data">	
+  		      <div class="sw_logo">
+           			<input type="file" id="logofile" class="in_file">
+            		<img class="imgLogo" src="./image/logo.png">
+        	</div>	
+
+    		<div class="mona-ipb">
+    			<span class="mona-p">昵称:</span>
+    			<input type="text" class="mona-nicheng" placeholder="" name="res-name">
+  		  	</div>
+
+  		  	<div class="mona-sex">
+  		  		<span class="mona-p">性别:</span>
+  		  		<input type="radio" value="" class="sex" name="sex">男
+  		  		<input type="radio" value="" class="sex" name="sex">女
+  		  	</div>
+  		  
+
+    		<!-- <div class="mona-ipb">
+  		  <span class="mona-p">生日:</span>
+ 			 <input type="date" class="birthday">
+ 		</div>  -->
+ 			<div class="mona-ipb">
+    			<span class="mona-p">电话:</span>
+    			<input type="text" class="mona-nicheng" placeholder="" name="">
+  		  	</div>
+
+    		<div class="re-ck-but mona-ck-but">
+    			<input type="submit" class="re-in-but" value="保存">
+    		</div>
+			</form>
+		
+	</div>
+	
+	<div class="per-bot">
+        <div class="re-bot-font" id="re-bot-font">
+            <div class="bot-bor"></div>
+            <div class="bot-font">
+                <img src="./image/bot.png" alt="">
+                <div class="bot-font-p">
+                    <p class="big">在这里</p>
+                    <p class="small">zzlhiwqw</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+	<script>
+    // 点击头像传图片
+		 function fileToBase64(file, callback, outputFormat) {
+                var file = file[0];
+                if (file.files && file.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (evt) {
+                        callback.call(this, evt.target.result);
+                    }
+                    reader.readAsDataURL(file.files[0]);
+                } else { // ie
+
+                    //callback.call(this, false);
+               }
+            } 
+              $("#logofile").on('change', function () {
+                fileToBase64($(this), function (imgBase64) {
+                    $('.imgLogo').attr('src', imgBase64);
+                   
+                });
+            });
+
+	</script>
+    </body>
+</html>

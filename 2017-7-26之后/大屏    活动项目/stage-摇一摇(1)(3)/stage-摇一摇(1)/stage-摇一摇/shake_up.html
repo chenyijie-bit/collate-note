@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/animate.css" />
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		@media only screen and (max-width:960px) {
+			html {
+				font-size: 12px;
+			}
+		}
+
+		@media only screen and (min-width:960px) and (max-width:1200px) {
+			html {
+				font-size: 12px;
+			}
+		}
+	
+		@media only screen and (min-width:1200px) and (max-width:1400px){
+			html {
+				font-size: 13px;
+			}
+		}
+		@media only screen and (min-width:1400px) and (max-width:1600px){
+			html {
+				font-size: 14px;
+			}
+		}
+		@media only screen and (min-width:1600px) and (max-width:1800px){
+			html {
+				font-size: 15px;
+			}
+		}
+		@media only screen and (min-width:1800px) and (max-width:2000px){
+			html {
+				font-size: 16px;
+			}
+		}
+		@media only screen and (min-width:2000px) and (max-width:2200px){
+			html {
+				font-size: 17.5px;
+			}
+		}
+		body{
+			overflow-x:hidden;
+			overflow-y:hidden;  
+		}
+		.shake-container{
+			height: 100%;
+			width: 100%;
+		}
+		.cont-box{
+			height: 100%;
+			width: 100%;
+			position: relative;
+		}
+		.cont-box .bG-img{
+			height: 100%;
+			width: 100%;
+		}
+		.top-first{
+			box-shadow: 0px 0px 34px 7px #6198AD;
+			position: absolute;
+			width: 31.5%;
+			height: 32%;
+			z-index: 100;
+			top: 30%;
+			left: 34%;
+			transform: translate3d(10,0,50deg);
+		}
+		.top-f-position{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+
+		.top1_BG{
+			height: 100%;
+			width: 100%;
+		}
+		.actor-fir{
+			height: 88%;
+			/* width: 10%; */
+			position: absolute;
+			top: 6%;
+			left: 3%;
+			z-index: 80;
+			border-radius: 50%;
+		}
+		.actor-topi{
+			height: 34%;
+			width: 114%;
+			position: absolute;
+			top: 5%;
+			left: 3%;
+		}
+		.fir-votes{
+			height: 22%;
+		    display: inline-block;
+		    font-size: 3em;
+		    font-weight: 700;
+		    color: #FFF;
+		    position: absolute;
+		    right: 9%;
+		    width: 38%;
+		    bottom: 30%;
+		    text-align: center;
+		    overflow: hidden;
+		
+		}
+		.fir-name{
+			height: 20%;
+		    font-size: 2.5em;
+		    font-weight: 700;
+		    color: #FFF;
+		    position: absolute;
+		    right: 12%;
+		    bottom: 7%;
+		    display: inline-block;
+		    width: 32%;
+		    overflow: hidden;
+		    text-align: center;
+		    text-shadow: 5px 5px 12px #FFFFFF;
+		}
+		.top-sec{
+			box-shadow: 3px 2px 24px 8px #527B97;
+			position: absolute;
+		    width: 19.5%;
+		    height: 24%;
+		    z-index: 100;
+		    top: 16.8%;
+		    left: 0;		   
+		}
+		.top-sec-trans{	
+			animation:secmove 0.5s ;
+			-moz-animation:secmove 0.5s ; /* Firefox */
+			-webkit-animation:secmove 0.5s ; /* Safari and Chrome */
+			-o-animation:secmove 0.5s ; /* Opera */
+			 transform: skew(-8deg,0deg);
+		}
+		
+		@-webkit-keyframes secmove{
+			0%{
+				transform: skew(0deg,0deg);
+			}
+			100%{
+				transform: skew(-8deg,0deg);
+			}
+		}	
+		.fir-ran-bar{
+			height: 80%;
+			width: 54%;
+			position: absolute;
+			bottom: 3%;
+			right: -5%;
+		}
+		.actor-sec{
+			position: absolute;
+			height: 70%;
+			top: 10%;
+			left: 13%;
+			border-radius: 50%;
+		}
+		.top2_BG{
+			height: 100%;
+			width: 100%;
+		}
+		.actor-seci{
+		    height: 20%;
+		    width: 25%;
+		    position: absolute;
+		    top: 2%;
+		    left: 1%;
+		}
+		.ran-num{
+			height: 10%;
+		    width: 10%;
+		    font-size: 1.2em;
+		    position: absolute;
+		    top: 4.2%;
+		    left: 12%;
+		}
+		.sec-ran-bar{
+			height: 57%;
+		    width: 42%;
+		    position: absolute;
+		    bottom: 3%;
+		    right: 3%;
+		}
+		.sec-votes{
+			height: 20%;
+		    width: 40%;
+		    display: inline;
+		    font-size: 2em;
+		    font-weight: 700;
+		    color: #FFF;
+		    position: absolute;
+		    right: 2%;
+		    bottom: 27%;
+		    text-align: center;
+		}
+		.sec-name{
+			height: 15%;
+		    width: 40%;
+		    display: inline;
+		    font-size: 1.5em;
+		    font-weight: 700;
+		    color: #FFF;
+		    position: absolute;
+		    right: 5%;
+		    bottom: 8%;
+		    text-align: center;
+		}
+		.top-thi{
+			box-shadow: -1px 3px 24px 8px #527B97;
+			position: absolute;
+		    width: 19.5%;
+		    height: 24%;
+		    z-index: 100;
+		    top: 17%;
+		    right: 1%;
+		    transform: skew(8deg,0deg);
+		}
+		.top-thi-trans{
+			animation:thimove 0.5s ;
+			-moz-animation:thimove 0.5s ; /* Firefox */
+			-webkit-animation:thimove 0.5s ; /* Safari and Chrome */
+			-o-animation:thimove 0.5s ; /* Opera */
+		}
+		
+		@-webkit-keyframes thimove{
+			0%{
+				transform: skew(0deg,0deg);
+			}
+			100%{
+				transform: skew(8deg,0deg);
+			}		
+		}
+		.actor-thi{
+			position: absolute;
+		    height: 68%;
+		    top: 13%;
+		    right: 13%;
+		    border-radius: 50%;
+		}
+		.top3_BG{
+			height: 100%;
+			width: 100%;
+		}
+		.actor-thii{
+		    height: 20%;
+		    width: 25%;
+		    position: absolute;
+		    top: 2%;
+		    right: 1%;
+		}
+		.top-thi .ran-num-thi{
+		    height: 10%;
+		    width: 10%;
+		    font-size: 1.2em;
+		    position: absolute;
+		    top: 4.5%;
+		    color: #2f2b2b;
+		    right: 5%;
+		}
+		.thi-ran-bar{
+			height: 57%;
+		    width: 42%;
+		    position: absolute;
+		    bottom: 3%;
+		    left: 3%;
+		}
+		.thi-votes{
+			height: 20%;
+		    width: 40%;
+		    display: inline;
+		    font-size: 2em;
+		    font-weight: 700;
+		    color: #FFF;
+		    position: absolute;
+		    left: 2%;
+		    bottom: 26%;
+		    text-align: center;
+		}
+		.thi-name{
+			height: 15%;
+		    width: 40%;
+		    display: inline;
+		    font-size: 1.5em;
+		    font-weight: 700;
+		    color: #FFF;
+		    position: absolute;
+		    left: 5%;
+		    bottom: 8%;
+		    text-align: center;
+		}
+		.top-fou{
+			box-shadow: 0px 0px 30px 8px #726F8A;
+		    position: absolute;
+		    width: 14.5%;
+		    height: 9%;
+		    top: 18.5%;
+		    left: 20.5%;
+		   
+
+		   /* transform: skew(-2deg,24deg);
+			-ms-transform: skew(-2deg,24deg);	
+		    -webkit-transform: skew(-2deg,24deg);	
+			-o-transform: skew(-2deg,24deg);	
+			-moz-transform: skew(-2deg,24deg);	*/
+		}
+		.top-four{
+			animation:mymove 1s ;
+			-moz-animation:mymove 1s ; /* Firefox */
+			-webkit-animation:mymove 1s ; /* Safari and Chrome */
+			-o-animation:mymove 1s ; /* Opera */
+			 transform: rotate3d(2,3,1,50deg);
+		}
+		
+		@-webkit-keyframes mymove{
+			0%{
+				 transform: rotate3d(0,0,0,50deg);
+			}
+			100%{
+				 transform: rotate3d(2,3,1,50deg);
+			}
+		}
+		.topL_BG{
+			height: 100%;
+			width: 100%;
+			
+		}
+		.actor-L{
+			position: absolute;
+		    top: 15%;
+		    left: 31%;
+		    border-radius: 50%;
+		    height: 76%;
+		    width: 26.5%;
+		}
+		.L-votes{
+		    display: inline-block;
+		    position: absolute;
+		    width: 35%;
+		    overflow: hidden;
+		    top: 13%;
+		    right: 6%;
+		    font-weight: 700;
+		    font-size: 1.35em;
+		    color: #FFf;
+		    text-align: right;
+		}
+		.L-name{
+			display: inline-block;
+		    position: absolute;
+		    top: 55%;
+		    right: 8%;
+		    color: #FFF;
+		    font-size: 0.95em;
+		    width: 30%;
+		    font-weight: 700;
+		    text-align: right;
+		}
+		.actor-top-L{
+			position: absolute;
+		    top: 12%;
+		    left: 7%;
+		    width: 25%;
+		    height: 53%;
+		}
+		.ran-num-L{
+			height: 34%;
+		    width: 15%;
+		    display: inline-block;
+		    position: absolute;
+		    top: 6%;
+		    text-align: center;
+		    left: 12%;
+		    color: #fff;
+		    font-weight: 700;
+		    font-size: 1.5em;
+		}
+		.top-fiv{
+		    top: 30%;
+		}
+		
+		
+		
+		
+		.top-six{
+		    top: 40.5%;
+		}
+		.top-sev{
+		    top: 52%;
+		}
+		
+		.top-eig{
+			box-shadow: 0px 0px 30px 8px #726F8A;
+		    position: absolute;
+		    width: 14%;
+		    height: 8%;
+		    top: 19.5%;
+		    right: 21.5%;
+		    transform: rotate3d(-3.5,7,-2,50deg);
+  		}
+		.stage-five-trans{
+			animation:fivmove 1s ;
+			-moz-animation:fivmove 1s ; /* Firefox */
+			-webkit-animation:fivmove 1s ; /* Safari and Chrome */
+			-o-animation:fivmove 1s ; /* Opera */		
+		}
+
+		@-webkit-keyframes fivmove{
+			0%{
+				 transform: rotate3d(0,0,0,50deg);
+			}
+			100%{
+				 transform: rotate3d(-3.5,7,-2,50deg);
+			}
+		}
+		
+		.topR_BG{
+			height: 100%;
+			width: 100%;
+			
+		}
+		.actor-R{
+			position: absolute;
+		    top: 15%;
+		    right: 31%;
+		    border-radius: 50%;
+		    height: 76%;
+		    width: 26.5%;
+		}
+		.R-votes{
+		    display: inline-block;
+		    position: absolute;
+		    width: 35%;
+		    overflow: hidden;
+		    top: 13%;
+		    left: 6%;
+		    font-weight: 700;
+		    font-size: 1.35em;
+		    color: #FFf;
+		    text-align: left;
+		}
+		.R-name{
+			display: inline-block;
+		    position: absolute;
+		    top: 55%;
+		    left: 8%;
+		    color: #FFF;
+		    font-size: 0.95em;
+		    width: 30%;
+		    font-weight: 700;
+		    text-align: left;
+		}
+		.actor-top-R{
+			position: absolute;
+		    top: 20%;
+		    right: 7%;
+		    width: 25%;
+		    height: 53%;
+		}
+		.ran-num-R{
+		    height: 34%;
+		    width: 15%;
+		    display: inline-block;
+		    position: absolute;
+		    top: 12%;
+		    text-align: center;
+		    right: 12%;
+		    color: #fff;
+		    font-weight: 700;
+		    font-size: 1.35em;
+		}
+		.top-nin{
+		    top: 30.5%;
+		}
+		.top-ten{
+		    top: 41%;
+		}
+		.top-ele{
+		    top: 52%;
+		}
+
+
+		.current-people{
+			height: 16%;
+			width: 100%;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 2%;
+			left: 0;
+		}
+		.current-people ul{
+			
+			height: 48%;
+			width: 100%;
+		}
+		.current-people li{
+			height: 100%;
+			width: 3%;
+			text-align: center;
+			list-style: none;
+			display: inline-block;
+		}
+		.curren-top-box{
+			overflow: hidden;
+			height: 44%;
+			width: 100%;
+			margin: 0 auto;
+		}
+		.curren-bottom-box{
+			overflow: hidden;
+
+			height: 44%;
+			width: 100%;
+			margin: 10px auto 0;
+		}
+		.current-people img{
+			width: 85%;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="shake-container">
+		<div class="cont-box">
+			<img  class="bG-img" src="imgs/backG.png"  alt="">
+			<div class="ranking">
+				<div class="rank-top">
+					<div class="top-first" >
+						<img class="top1_BG" src="imgs/top1_BG.png" alt="">
+						<img class="actor-fir" src="imgs/actor.jpg" alt="">
+						<img class="actor-topi"  src="imgs/first.png"  alt="">
+						<img class="fir-ran-bar" src="imgs/xuanguang.png" alt="" />
+						<span class="fir-votes">19802</span>
+						<span class="fir-name">NAME</span>
+					</div>
+					<div class="top-sec">
+						<img class="top2_BG" src="imgs/top2_BG.png" alt="">
+						<img class="actor-sec" src="imgs/actor.jpg" alt="">
+						<img class="actor-seci"  src="imgs/second.png"  alt="">
+						<span class="ran-num">2</span>
+						<img class="sec-ran-bar" src="imgs/origin.png" alt="" />
+						<span class="sec-votes">1864</span>
+						<span class="sec-name">NAME</span>
+					</div>
+					<div class="top-thi">
+						<img class="top3_BG" src="imgs/top3_BG.png" alt="">
+						<img class="actor-thi" src="imgs/actor.jpg" alt="">
+						<img class="actor-thii"  src="imgs/second.png"  alt="">
+						<span class="ran-num-thi">3</span>
+						<img class="thi-ran-bar" src="imgs/origin.png" alt="" />
+						<span class="thi-votes">1864</span>
+						<span class="thi-name">NAME</span>
+					</div>
+				</div>
+			</div>
+			<div class="rank-list">
+				<div class="top-fou " id="stage-four">
+					<img class="topL_BG" src="imgs/top4_BG.png" alt="">
+					<img class="actor-L" src="imgs/actor.jpg" alt="">
+					<img class="actor-top-L"  src="imgs/third.png"  alt="">
+					<span class="ran-num-L">4</span>
+					<span class="L-votes">19802</span>
+					<span class="L-name">NAME</span>
+				</div>
+				<div class="top-fou top-fiv" id="stage-six">
+					<img class="topL_BG" src="imgs/top4_BG.png" alt="">
+					<img class="actor-L" src="imgs/actor.jpg" alt="">
+					<img class="actor-top-L"  src="imgs/third.png"  alt="">
+					<span class="ran-num-L">4</span>
+					<span class="L-votes">19802</span>
+					<span class="L-name">NAME</span>
+				</div>
+				<div class="top-fou top-six" id="stage-eight">
+					<img class="topL_BG" src="imgs/top4_BG.png" alt="">
+					<img class="actor-L" src="imgs/actor.jpg" alt="">
+					<img class="actor-top-L"  src="imgs/third.png"  alt="">
+					<span class="ran-num-L">4</span>
+					<span class="L-votes">19802</span>
+					<span class="L-name">NAME</span>
+				</div>
+				<div class="top-fou top-sev" id="stage-ten">
+					<img class="topL_BG" src="imgs/top4_BG.png" alt="">
+					<img class="actor-L" src="imgs/actor.jpg" alt="">
+					<img class="actor-top-L"  src="imgs/third.png"  alt="">
+					<span class="ran-num-L">4</span>
+					<span class="L-votes">19802</span>
+					<span class="L-name">NAME</span>
+				</div>
+				<div class="top-eig" id="stage-five">
+					<img class="topR_BG" src="imgs/top4_BG.png" alt="">
+					<img class="actor-R" src="imgs/actor.jpg" alt="">
+					<img class="actor-top-R"  src="imgs/third.png"  alt="">
+					<span class="ran-num-R">4</span>
+					<span class="R-votes">19802</span>
+					<span class="R-name">NAME</span>
+				</div>
+				<div class="top-eig top-nin" id="stage-seven">
+					<img class="topR_BG" src="imgs/top4_BG.png" alt="">
+					<img class="actor-R" src="imgs/actor.jpg" alt="">
+					<img class="actor-top-R"  src="imgs/third.png"  alt="">
+					<span class="ran-num-R">4</span>
+					<span class="R-votes">19802</span>
+					<span class="R-name">NAME</span>
+				</div>
+				<div class="top-eig top-ten" id="stage-nine">
+					<img class="topR_BG" src="imgs/top4_BG.png" alt="">
+					<img class="actor-R" src="imgs/actor.jpg" alt="">
+					<img class="actor-top-R"  src="imgs/third.png"  alt="">
+					<span class="ran-num-R">4</span>
+					<span class="R-votes">19802</span>
+					<span class="R-name">NAME</span>
+				</div>
+				<div class="top-eig top-ele" id="stage-eleven">
+					<img class="topR_BG" src="imgs/top4_BG.png" alt="">
+					<img class="actor-R" src="imgs/actor.jpg" alt="">
+					<img class="actor-top-R"  src="imgs/third.png"  alt="">
+					<span class="ran-num-R">4</span>
+					<span class="R-votes">19802</span>
+					<span class="R-name">NAME</span>
+				</div>
+			</div>
+			<div class="current-people">
+		<div class="curren-top-box">
+			<ul class="current-top">
+				<!-- <li class="cur-li" id="1"><div id="div_1"><img src="imgs/actor.jpg" alt=""></div></li>
+				<li class="cur-li" id="2"><div id="div_2"><img src="imgs/actor.jpg" alt=""></div></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li" id="4"><div id="div_4"><img src="imgs/actor.jpg" alt=""></div></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>				
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li> -->
+		
+			</ul>
+		</div>
+		<div class="curren-bottom-box">
+			<ul class="current-bottom">
+			<!-- 	<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>				
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li>
+				<li class="cur-li"><img src="imgs/actor.jpg" alt=""></li> -->
+
+			</ul>
+		</div>
+	</div>
+
+
+		</div>
+	</div>
+
+<style>
+	.current-top li:nth-child(1){
+		position: absolute;
+		left:-2.5%;
+		top: -220%
+	}
+	.current-top li:nth-child(2){
+		position: absolute;
+		top: -150%;
+		left: 0.3%;
+	}
+	.current-top li:nth-child(3){
+		position: absolute;
+		top: -95%;
+		left: 3.1%;
+	}
+	.current-top li:nth-child(4){
+		position: absolute;
+		top: -45%;
+		left: 6.1%;
+	}
+	.current-top li:nth-child(5){
+		position: absolute;
+		left: 9.2%;
+	}
+	.current-top li:nth-child(6){
+		position: absolute;
+		left: 12.3%;
+	}
+	.current-top li:nth-child(7){
+		position: absolute;
+		left:15.4%;
+	}
+	.current-top li:nth-child(8){
+		position: absolute;
+		left: 18.5%;
+	}
+	.current-top li:nth-child(9){
+		position: absolute;
+		left: 21.6%;
+	}
+	.current-top li:nth-child(10){
+		position: absolute;
+		left: 24.7%;
+	}
+	.current-top li:nth-child(11){
+		position: absolute;
+		left:27.8%;
+	}
+	.current-top li:nth-child(12){
+		position: absolute;
+		left: 30.8%;
+	}
+	.current-top li:nth-child(13){
+		position: absolute;
+		left:33.8%;
+	}
+	.current-top li:nth-child(14){
+		position: absolute;
+		left:36.8%;
+	}
+	.current-top li:nth-child(15){
+		position: absolute;
+		left: 39.7%;
+	}
+	.current-top li:nth-child(16){
+		position: absolute;
+		left:42.7%;
+	}
+	.current-top li:nth-child(17){
+		position: absolute;
+		left: 45.7%;
+	}
+	.current-top li:nth-child(18){
+		position: absolute;
+		left: 48.7%;
+	}
+	.current-top li:nth-child(19){
+		position: absolute;
+		left:51.7%;
+	}
+	.current-top li:nth-child(20){
+		position: absolute;
+		left: 54.7%;
+	}
+	.current-top li:nth-child(21){
+		position: absolute;
+		left: 57.7%;
+	}
+	.current-top li:nth-child(22){
+		position: absolute;
+		left: 60.7%;
+	}
+	.current-top li:nth-child(23){
+		position: absolute;
+		left:63.7%;
+	}
+	.current-top li:nth-child(24){
+		position: absolute;
+		left: 66.7%;
+	}
+	.current-top li:nth-child(25){
+		position: absolute;
+		left:69.7%;
+	}
+	.current-top li:nth-child(26){
+		position: absolute;
+		left:72.7%;
+	}
+	.current-top li:nth-child(27){
+		position: absolute;
+		left: 75.7%;
+	}
+	.current-top li:nth-child(28){
+		position: absolute;
+		left:78.7%;
+	}
+	.current-top li:nth-child(29){
+		position: absolute;
+		left: 81.7%;
+		
+	}
+	.current-top li:nth-child(30){
+		position: absolute;
+		left: 84.7%;
+		
+	}
+	.current-top li:nth-child(31){
+		position: absolute;
+		left:87.7%;
+		
+	}
+	.current-top li:nth-child(32){
+		position: absolute;
+		left:90.7%;
+		top: -45%;
+	}
+	.current-top li:nth-child(33){
+		position: absolute;
+		left: 93.7%;
+		top: -95%;
+	}
+	.current-top li:nth-child(34){
+		position: absolute;
+		left:96.7%;
+		top: -150%
+	}
+	
+	.current-top li:nth-child(35){
+		position: absolute;
+		left:100%;
+		top: -200%
+	}
+	.current-top{
+		position: absolute;
+	}
+
+
+
+	.current-bottom li:nth-child(1){
+		position: absolute;
+		left:-3.5%;
+		top: -220%
+	}
+	.current-bottom li:nth-child(2){
+		position: absolute;
+		top: -150%;
+		left: 0.3%;
+	}
+	.current-bottom li:nth-child(3){
+		position: absolute;
+		top: -95%;
+		left: 3.1%;
+	}
+	.current-bottom li:nth-child(4){
+		position: absolute;
+		top: -45%;
+		left: 6.1%;
+	}
+	.current-bottom li:nth-child(5){
+		position: absolute;
+		left: 9.2%;
+	}
+	.current-bottom li:nth-child(6){
+		position: absolute;
+		left: 12.3%;
+	}
+	.current-bottom li:nth-child(7){
+		position: absolute;
+		left:15.4%;
+	}
+	.current-bottom li:nth-child(8){
+		position: absolute;
+		left: 18.5%;
+	}
+	.current-bottom li:nth-child(9){
+		position: absolute;
+		left: 21.6%;
+	}
+	.current-bottom li:nth-child(10){
+		position: absolute;
+		left: 24.7%;
+	}
+	.current-bottom li:nth-child(11){
+		position: absolute;
+		left:27.8%;
+	}
+	.current-bottom li:nth-child(12){
+		position: absolute;
+		left: 30.8%;
+	}
+	.current-bottom li:nth-child(13){
+		position: absolute;
+		left:33.8%;
+	}
+	.current-bottom li:nth-child(14){
+		position: absolute;
+		left:36.8%;
+	}
+	.current-bottom li:nth-child(15){
+		position: absolute;
+		left: 39.7%;
+	}
+	.current-bottom li:nth-child(16){
+		position: absolute;
+		left:42.7%;
+	}
+	.current-bottom li:nth-child(17){
+		position: absolute;
+		left: 45.7%;
+	}
+	.current-bottom li:nth-child(18){
+		position: absolute;
+		left: 48.7%;
+	}
+	.current-bottom li:nth-child(19){
+		position: absolute;
+		left:51.7%;
+	}
+	.current-bottom li:nth-child(20){
+		position: absolute;
+		left: 54.7%;
+	}
+	.current-bottom li:nth-child(21){
+		position: absolute;
+		left: 57.7%;
+	}
+	.current-bottom li:nth-child(22){
+		position: absolute;
+		left: 60.7%;
+	}
+	.current-bottom li:nth-child(23){
+		position: absolute;
+		left:63.7%;
+	}
+	.current-bottom li:nth-child(24){
+		position: absolute;
+		left: 66.7%;
+	}
+	.current-bottom li:nth-child(25){
+		position: absolute;
+		left:69.7%;
+	}
+	.current-bottom li:nth-child(26){
+		position: absolute;
+		left:72.7%;
+	}
+	.current-bottom li:nth-child(27){
+		position: absolute;
+		left: 75.7%;
+	}
+	.current-bottom li:nth-child(28){
+		position: absolute;
+		left:78.7%;
+	}
+	.current-bottom li:nth-child(29){
+		position: absolute;
+		left: 81.7%;
+		
+	}
+	.current-bottom li:nth-child(30){
+		position: absolute;
+		left: 84.7%;
+		
+	}
+	.current-bottom li:nth-child(31){
+		position: absolute;
+		left:87.7%;
+		
+	}
+	.current-bottom li:nth-child(32){
+		position: absolute;
+		left:90.7%;
+		top: -45%;
+	}
+	.current-bottom li:nth-child(33){
+		position: absolute;
+		left: 93.7%;
+		top: -95%;
+	}
+	.current-bottom li:nth-child(34){
+		position: absolute;
+		left:96.7%;
+		top: -150%
+	}
+	.current-bottom li:nth-child(35){
+		position: absolute;
+		left:102%;
+		top: -220%
+	}
+	.current-bottom{
+		position: absolute;
+	}
+	.current-top li div,.current-bottom li div{
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+	}
+	.current-top li div img,.current-bottom li div img{
+		/*display: none;*/
+	}
+	
+</style>
+</body>
+<script>
+	window.onload = function(){		
+		for (var i =1 ; i <= 35; i++) {
+			$(".current-top").append('<li class="cur-li" id='+i+'><div id="div_'+i+'"><img src="imgs/actor.png" alt=""></div></li>');		
+		};	
+		for (var j =70 ; j >= 36; j--) {
+			$(".current-bottom").append('<li class="cur-li" id='+j+'><div id="div_'+j+'"><img src="imgs/actor.png" alt=""></div></li>');
+		};
+		
+//		var originA = [];//All
+		var originB = [];//旋转木马
+		var originC = [];//top11
+		var originD = [];//木马池
+		var originA = [{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},{"name":"dahong","rank":456,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"}]
+    	var origin = [{"name":"liming","rank":123,"img":"imgs/actor.jpg"},{"name":"liming","rank":123,"img":"imgs/actor.jpg"}]
+    	for(var c=1;c<=11;c++){
+    		var dataA = originA.shift();
+    		originC.push(dataA);
+    	}
+    	console.log(originC)
+    	originD = originD.concat(originA);
+    	originA = [];
+    	
+    	
+    	
+		var y = 1;
+		var moveL =[];
+		var moveT = [];
+		function repeat() {
+			var x;
+			if(originD.length>0){
+				originB.push(originD.shift());
+			}
+			if(originB[y-1]){
+				$("#div_"+(71-y)+" img").attr("src",originB[y-1].img);
+				$("#div_"+(71-y)+" img").css("display","block");
+			}
+			
+			if(originB.length>70){
+				originD.push(originB.shift());	
+			};
+			
+			console.log(originB)
+			console.log(originD)
+			for(var z = 1; z <= 70; z++) {
+				x = (z+y)%70;
+				if(x==0){
+					x = 70;
+				};
+			
+				
+				(function(z) {	
+					var com2 = $("#div_"+z).offset();
+					var coml2 = com2.left;
+					var comt2 = com2.top;
+					var com = $("#"+x).offset();
+					var coml = com.left;
+					var comt = com.top;
+					if(Number(moveL[z])){
+						moveL[z]=Number(moveL[z])+(coml-coml2);
+					}else{
+						moveL[z]=coml-coml2;
+					};
+					if(Number(moveT[z])){
+						moveT[z]=Number(moveT[z])+(comt-comt2);
+					}else{
+						moveT[z]=comt-comt2;
+					}					
+					$("#div_"+z).stop().animate({"left":moveL[z],"top":moveT[z]},1000,"linear");					
+			    })(z);			
+			};
+			if(y%70==0){		
+				moveL=[];
+				moveT=[];				
+			}
+			y++;
+			if(y>70){
+				y=1;
+			};
+		};
+		var int=setInterval(repeat,1000)
+		
+		
+		// $.ajax({
+		// 	url: '',
+		// 	type: 'GET',
+		// 	dataType: '',
+		// 	data: {},
+		// 	success:function(data) {
+		// 		console.log(data)},
+		// 	error:function() {
+		// 		console.log("cuo")
+		// 	}
+		// })
+
+		$(".top-first").css("display","none");
+		 setTimeout(function(){
+		 	$(".top-first").css("display","block");
+        $(".top-first").addClass("animated bounceInDown");
+   		 }, 2000);
+    
+    
+    $(".top-sec").css("display","none");
+		 setTimeout(function(){
+		 	$(".top-sec").css("display","block");
+	        $(".top-sec").addClass("animated bounceInLeft");
+	        $(".top-sec")[0].addEventListener("animationend",aniend_sec);
+	        function aniend_sec(){
+	         	 $(".top-sec").addClass("top-sec-trans");
+	         }
+        
+    }, 3000);
+    $(".top-thi").css("display","none");
+		 setTimeout(function(){
+		 	$(".top-thi").css("display","block");
+        $(".top-thi").addClass("animated bounceInRight");
+        $(".top-thi")[0].addEventListener("animationend",aniend_thi);
+	        function aniend_thi(){
+	         	 $(".top-thi").addClass("top-thi-trans");
+	         }
+    }, 3500);
+	     
+	$("#stage-four").css("display","none");
+		 setTimeout(function(){
+		 	$("#stage-four").css("display","block");
+        $("#stage-four").addClass("animated bounceInRight");
+         $("#stage-four")[0].addEventListener("animationend",aniend);
+         function aniend(){
+         	 $("#stage-four").addClass("top-four");
+         }
+    }, 4000);	
+	
+	$("#stage-six").css("display","none");
+		 setTimeout(function(){
+		 	$("#stage-six").css("display","block");
+        $("#stage-six").addClass("animated bounceInRight");
+         $("#stage-six")[0].addEventListener("animationend",aniend);
+         function aniend(){
+         	 $("#stage-six").addClass("top-four");
+         }
+    }, 5200);
+	
+	$("#stage-eight").css("display","none");
+		 setTimeout(function(){
+		 	$("#stage-eight").css("display","block");
+        $("#stage-eight").addClass("animated bounceInRight");
+         $("#stage-eight")[0].addEventListener("animationend",aniend);
+         function aniend(){
+         	 $("#stage-eight").addClass("top-four");
+         }
+    }, 6400);
+	$("#stage-ten").css("display","none");
+		 setTimeout(function(){
+		 	$("#stage-ten").css("display","block");
+        $("#stage-ten").addClass("animated bounceInRight");
+         $("#stage-ten")[0].addEventListener("animationend",aniend);
+         function aniend(){
+         	 $("#stage-ten").addClass("top-four");
+         }
+    }, 7600);
+	
+	
+	$("#stage-five").css("display","none");
+		 setTimeout(function(){
+		 	$("#stage-five").css("display","block");
+	        $("#stage-five").addClass("animated bounceInLeft");
+	        $("#stage-five")[0].addEventListener("animationend",stage_five);
+	        function stage_five(){
+	         	$("#stage-five").addClass("stage-five-trans");
+	        }
+    }, 4600);		
+	$("#stage-seven").css("display","none");
+		 setTimeout(function(){
+		 	$("#stage-seven").css("display","block");
+	        $("#stage-seven").addClass("animated bounceInLeft");
+	        $("#stage-seven")[0].addEventListener("animationend",stage_five);
+	        function stage_five(){
+	         	$("#stage-seven").addClass("stage-five-trans");
+	        }
+    }, 5800);	
+	$("#stage-nine").css("display","none");
+		 setTimeout(function(){
+		 	$("#stage-nine").css("display","block");
+	        $("#stage-nine").addClass("animated bounceInLeft");
+	        $("#stage-nine")[0].addEventListener("animationend",stage_five);
+	        function stage_five(){
+	         	$("#stage-nine").addClass("stage-five-trans");
+	        }
+    }, 7000);
+    $("#stage-eleven").css("display","none");
+		 setTimeout(function(){
+		 	$("#stage-eleven").css("display","block");
+	        $("#stage-eleven").addClass("animated bounceInLeft");
+	        $("#stage-eleven")[0].addEventListener("animationend",stage_five);
+	        function stage_five(){
+	         	$("#stage-eleven").addClass("stage-five-trans");
+	        }
+    }, 8200);
+    
+    var data = [{"first":{"name":"liming","rank":123,"img":"imgs/actor.jpg"},"second":{"name":"xiaoning","rank":1223,"img":"imgs/actor.jpg"},"third":{"name":"dahong","rank":456,"img":"imgs/actor.jpg"}}]
+    
+    
+    
+	
+    }
+
+    
+    
+    
+    
+    
+    
+    
+
+	
+	
+</script>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="container-box">
+				<div class="img_text">
+					<img src="img/erweima.png" alt="" />
+					<div class="con-text" style="float: left;">
+						<h5><b>在这里服务号</b></h5>
+						<h6>创建时间：<b>2017/03/05</b></h6>
+					</div>
+				</div>
+				<div class="item-control item-conbut">
+					<button type="button" class="btn btn-small  con-top-but">信息</button>
+					<button type="button" class="btn btn-small  con-top-but">配置</button>
+					<button type="button" class="btn btn-small  con-top-but">播控</button>
+				</div>
+				<div class="clearfix"></div>
+				<div class="swiper-box">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="item-list">
+									<img src="img/exam.fw.png" alt="" />
+									<p class="item-is">嘀嘀打船</p>
+								</div>
+							</div>
+							
+							
+						</div>
+						<!-- Add Pagination -->
+						<!--<div class="swiper-pagination"></div>-->
+					</div>
+				</div>
+				<div class="box-line"></div>
+				<div class="border-add">
+					<div class="main-add">
+						<a class="add-but">
+							<div class="addbut-i">
+								<img src="img/add.png" alt="" />
+							</div>
+							<p class="addbut-p">添加</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/swiper.min.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				slidesPerView: 8.5,
+				paginationClickable: true,
+				spaceBetween: 30,
+				freeMode: true
+			});
+		</script>
+	</body>
+
+</html>

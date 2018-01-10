@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>简单的Select联动菜单代码</title>
+</head>
+<body>
+<FORM name="F1">
+<SELECT NAME="select1" onChange="set_list(this.options.selectedIndex)">
+<OPTION SELECTED>流行音乐</OPTION>
+<OPTION>网上书籍</OPTION>
+<OPTION>软件下载</OPTION>
+</SELECT>
+<SELECT NAME="select2" >  
+<OPTION SELECTED>请选网站</OPTION> 
+</SELECT>
+ 
+<SCRIPT LANGUAGE="JavaScript"> 
+var l=document.F1.select1.options.length;
+//取得第一下拉菜单的选项数目
+var group=new Array(l)
+//根据这个数目创建数组
+for (i=0; i<l; i++)
+//上一个数组的每一个元素也是数组
+group[i]=new Array() 
+//接下来创建选项，为第二下拉菜单定义内容
+group[0][0]=new Option("CNTV","http://www.cntv.cn") 
+group[0][1]=new Option("音乐天堂","#") 
+group[0][2]=new Option("搜狗音乐","http://mp3.sogou.com/") 
+ 
+group[1][0]=new Option("网页特效","/jscss") 
+group[1][1]=new Option("白鹿书院","http://www.readlink.net") 
+ 
+group[2][0]=new Option("华军软件园","http://www.newhua.com") 
+group[2][1]=new Option("搜狐下载 ","http://it.sohu.com/download/") 
+group[2][2]=new Option("中国下载","http://www.download.com.cn") 
+ 
+var selobj=document.F1.select2; //设定需要动态改变的对象是第二下拉菜单
+  
+function set_list(x) //x表示第一菜单被选定的内容
+{ 
+for (m=selobj.options.length-1;m>0;m--) //先清除第二菜单的选项
+selobj.options[m]=null
+ 
+for (i=0;i<group[x].length;i++){
+//根据第一菜单的选定序号，丛控件数组中提取菜单选项放进第二菜单
+selobj.options[i]=group[x][i]
+//这里也可以创建新的对象，例如：selobj.options[i]=new Option(group[x][i].text,group[x][i].value) 
+} 
+selobj.options[0].selected=true
+//选定第0号选项
+} 
+function go(){
+//这个函数用来将窗口导航到指定的URL
+location=selobj.options[selobj.selectedIndex].value
+} 
+</SCRIPT> 
+ 
+</FORM> 
+<p><INPUT TYPE="BUTTON" NAME="Button" VALUE="go" onclick="go()" style="background-color: #FFFFFF; float: left; font-family: Arial Black; font-size: 10pt; font-weight: bold; text-decoration: blink; color: #000000; font-style: italic; border-style: solid; border-width: 1"></p>
+<p>　</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function uniqueArray(data){  
+   data = data || [];  
+   var a = {};  
+   var trueTy = true;
+   for (var u=0; u<data.length; u++) {  
+       var v = data[u];  
+       if (typeof(a[v]) == 'undefined'){  
+            a[v] = 1; 
+       }else{
+        
+        trueTy =false;
+        break;
+       } 
+   }
+   return trueTy; 
+} 
+</script>
+</html>

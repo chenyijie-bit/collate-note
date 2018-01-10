@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+		
+		<!-- <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/daterangepicker-bs3.css" />
+		
+		
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+	</head>
+<body>
+	<div class="container">
+		<div class="container-childbox">
+			<div class="return-pre">
+				<a href="">
+					<img src="img/preve.png" alt="" />
+					<span>返回</span>
+				</a>
+			</div>
+			<div class="clearfix"></div>
+			<div class="container-childmain">
+				<form id="produceActive">
+					<div class="form-group">
+						<label for="name">名称:</label>
+						<input type="text" class="form-control required" id="name" name="name" autofocus="autofocus" value="">
+					</div>
+					<div class="dropdown form-group">
+						<button  class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+							<span class="btn-flole">类型:</span>
+							<span id='menu_class'></span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-class" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" data-id="1" href="#">萝卜</a></li>
+							<li role="presentation"><a role="menuitem" data-id="2" href="#">萝卜</a></li>
+							<li role="presentation"><a role="menuitem" data-id="3" href="#">茄子</a></li>
+							<li role="presentation"><a role="menuitem" data-id="4" href="#">米饭</a></li>
+							<li role="presentation"><a role="menuitem" data-id="5" href="#">馒头</a></li>
+							<li role="presentation"><a role="menuitem" data-id="6" href="#">面条</a></li>
+						</ul>
+					</div> 
+					<div class="dropdown form-group" >
+					    <button type="button" class="btn dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">
+						    <span class="btn-flole">人数规模:</span>
+						    <span id='menu_scale'></span>
+					        <span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu dropdown-menu-scale" role="menu" aria-labelledby="dropdownMenu2">
+					        <li role="presentation">
+					            <a role="menuitem" data-id="100" href="#">100</a>
+					        </li>
+					        <li role="presentation">
+					            <a role="menuitem" data-id="200" href="#">200</a>
+					        </li>
+					        <li role="presentation">
+					            <a role="menuitem" data-id="300" href="#">300</a>
+					        </li>
+					     
+					        <li role="presentation">
+					            <a role="menuitem" data-id="400" href="#">400</a>
+					        </li>
+					    </ul>
+					</div>
+<!-- 时间控件 -->
+					
+
+               <form class="form-horizontal">
+                 <fieldset>
+                  <div class="control-group">
+                    <div class="controls">
+                    <div class="input-prepend input-group">
+
+                    <span class="btn-flole btn-dateconle">活动日期:</span>
+                      <input type="text" readonly name="reservation" id="reservation" class="form-control" value=""/>  
+                     </div>
+                    </div>
+                  </div>
+                 </fieldset>
+               </form>
+            
+
+
+
+
+					<div class="clearfix"></div>
+					<div class="item-control con-child-botbut">
+						<button type="button" id="ProduceActive-but" class="btn con-top-but cheess">生成活动 </button>
+						<!--创建时间create_time-->
+						<div class="but-loading" id="ProduceActive-but">
+							<img src="img/loding.gif"  class="loading_img" >
+						</div>
+					</div>
+				</form>
+
+				</div>
+		
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/DateMoment.js"></script>
+	<script type="text/javascript" src="js/daterangepicker.js"></script>
+	
+	<script type="text/javascript">
+		window.onload = function() {
+				var datestr    =  $('#reservation').val().slice(0,10);//开始时间
+				var datestrT    =  $('#reservation').val().slice(13);//结束时间
+				
+
+// 可以放入common.js
+Date.prototype.Format = function (fmt) { //author: meizz 
+    var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+
+
+
+var formatime = new Date().Format("yyyy-MM-dd");
+
+// var formatime2 = new Date().Format("yyyy-MM-dd HH:mm:ss"); 
+
+
+$(function() {
+    $('#reservation ').daterangepicker({
+        applyClass : 'btn-sm btn-success',
+        cancelClass : 'btn-sm btn-default',
+        startDate: formatime,
+    	endDate: formatime,
+        locale: {
+            applyLabel: '确认',
+            cancelLabel: '取消',
+            fromLabel : '起始时间',
+            toLabel : '结束时间',
+            customRangeLabel : '自定义',
+            firstDay : 1
+        },
+        separator : ' ~ ',
+        format: 'YYYY-MM-DD'
+ 
+    }, function(start, end, label) { // 格式化日期显示框
+        $('#beginTime').val(start.format('YYYY-MM-DD'));
+        $('#endTime').val(end.format('YYYY-MM-DD'));
+    })
+    .next().on('click', function(){
+        $(this).prev().focus();
+    });
+});
+
+
+
+
+
+	var menu_li = $(".dropdown-menu-class li a");
+
+$("#menu_class").text($(".dropdown-menu-class li a[data-id='3']").text());//根据获得的data-id去给but赋值
+
+$(".dropdown-menu-class").on("click",function(e){
+	var $target = $(e.target);
+	 $("#menu_class").text($target.text());
+	 console.log($target.data('id'))//获取选项的data-id;
+})
+$(".dropdown-menu-scale").on("click",function(e){
+	var $target = $(e.target);
+	 $("#menu_scale").text($target.text());
+
+})
+
+
+
+
+var host = window.location.host;
+	var token ="zzltoken";
+
+
+		// 时间控件
+		
+	  $('#reservation').daterangepicker(null, function(start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
+                  });
+
+				
+					$("form :input.required").each(function() {
+						var $required = $("<strong class='high-import'> *</strong>"); 
+						$(this).parent().append($required); 
+					});
+					$('form :input').blur(function() {
+						var $parent = $(this).parent();
+						$parent.find(".formtips").remove();
+						if($(this).is('#name')) {
+							if(this.value == "" || this.value.length > 35) {
+								var errorMsg = '请输入长度在1-35之间的有效名称.';
+								$parent.append('<span class="formtips form-onError">' + errorMsg + '</span>');
+							} else {
+								var okMsg = '输入正确.';
+								$parent.append('<span class="formtips form-onSuccess">' + okMsg + '</span>');
+							}
+						}
+		
+					})
+			
+				$("#ProduceActive-but").on("click", function() {
+				
+
+					if($("form :input.required").val() == "" || $("form :input.required").val().length > 35) {
+						alert("请规范输入活动名称")
+					} else if($(".Act-date").val() == "") {
+						alert("请填写活动开始时间")
+					} else if($(".Act-date-r").val() == "") {
+						alert("请填写活动结束时间")
+					} else {
+						$("#ProduceActive-but").attr("disabled", "disabled")
+							$(".cheess")[0].style.display="none"
+					$(".but-loading")[0].style.display="block"
+						$.ajax({
+							type: "POST",
+							url: "http://"+host+"/rest/actives?token="+token,
+							headers:{Accept:"text/json"},
+							data: {
+								"name" : $('input[name="name"]').val(),
+								"class" : $("#menu_class").text(),
+								"scale" : $("#menu_scale").text(),
+								"start_time" : Date.parse(datestr.replace(/-/g,"/"))/1000, 
+								"end_time" : Date.parse(datestrT.replace(/-/g,"/"))/1000, 
+								"wxtoken" : 'wx9a995632b65cc2f0'
+							},
+							success: function(data) {							
+								var data =	JSON.parse(data);
+								console.log(data);
+								if (data.result){
+									window.location.href="/actives/index";
+								}else{
+									alert(data.message);
+									$(".cheess")[0].style.display="block"
+					$(".but-loading")[0].style.display="none"
+									$("#ProduceActive-but").removeAttr("disabled");
+								}
+							},															
+							error: function() {
+								$(".cheess")[0].style.display="block"
+					$(".but-loading")[0].style.display="none"
+								alert("网络错误");
+								$("#ProduceActive-but").removeAttr("disabled");
+							},
+						})
+		
+					}
+				})
+	}
+	</script>
+
+</html>

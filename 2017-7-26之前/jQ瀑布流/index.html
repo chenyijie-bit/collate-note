@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery 制作多列瀑布流布局鼠标滚动页面图片无限加载(插件waterfall.js) - 在线演示www.bcty365.com</title>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+.clear{display:block;overflow:hidden;clear:both;height:0;line-height:0;font-size:0}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-table}
+*html .clearfix{height:1%}
+.clearfix{display:block}
+*+html .clearfix{min-height:1%}
+/* stage */
+#stage{margin:0 auto;width:880px;}
+#stage li{float:left;width:220px;}
+#stage li div{font-size:12px;padding:10px;color:#999999;}
+#stage li div span{display:block;padding:10px 0 0 0;line-height:22px;}
+</style>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/waterfall.js"></script>
+
+</head>
+
+<body>
+
+<style>
+ul#bcty365_nav{padding-left:50px; margin-bottom:10px; border-bottom:2px solid #ccc; overflow:hidden; _zoom:1;}
+ul#bcty365_nav li{float:left; display:inline; margin:10px;}
+ul#bcty365_nav li a{display:block;color:#000000; font-size:16px;}
+ul#bcty365_nav li a,#wimoban_p,#wimoban_p a{ font-family:"微软雅黑";}
+ul#bcty365_nav li a:hover,#wimoban_p a:hover{color:red;}
+</style>	
+
+	<ul id="bcty365_nav">
+     <li><a target="top,_self" title="首页" href="http://www.bcty365.com/">首页</a></li>
+    <li><a target="top,_self"  title="网站开发" href="http://www.bcty365.com/list-9-1.html">网站开发</a></li>
+   <li><a target="top,_self" title="CMS教程" href="http://www.bcty365.com/list-100-1.html">CMS教程</a></li>
+    <li><a target="top,_self" title="数据库" href="http://www.bcty365.com/list-34-1.html">数据库</a></li>
+    <li><a target="top,_self" title="js特效代码" href="http://www.bcty365.com/list-12-1.html">js特效代码</a></li>
+    <li><a target="top,_self" title="网页特效" href="http://www.bcty365.com/list-61-1.html">网页特效</a></li>
+    <li><a target="top,_self" title="jQuery插件" href="http://www.bcty365.com/list-86-1.html">jQuery插件</a></li>
+    <li><a target="top,_self" title="站长学院" href="http://www.bcty365.com/list-96-1.html">站长学院</a></li>
+<li><script type="text/javascript" src="http://www.bcty365.com/statics/js/ad/show_400x25.js"></script></li></ul>
+
+<ul class="clearfix" id="stage">
+	<li>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="300" alt="B5教程网" src="images/1.jpg" /></a></div>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="624" alt="B5教程网" src="images/2.jpg" /></a></div>
+	</li>
+	<li>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="300" alt="B5教程网" src="images/4.jpg" /></a></div>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="200" alt="B5教程网" src="images/5.jpg" /></a></div>
+	</li>
+	<li>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="696" alt="B5教程网" src="images/6.jpg" /></a></div>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="300" alt="B5教程网" src="images/7.jpg" /></a></div>
+	</li>
+	<li>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="133" alt="B5教程网" src="images/8.jpg" /></a></div>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="300" alt="B5教程网" src="images/9.jpg" /></a></div>
+		<div><a href="http://www.bcty365.com/"><img width="200" height="432" alt="B5教程网" src="images/3.jpg" /></a></div>
+	</li>
+</ul>
+
+</body>
+</html>
+
+
