@@ -1,7 +1,7 @@
 document.documentElement和document.body的区别
  
 
-网页中获取滚动条卷去部分的高度，可以通过 document.body.scrollTop 来获取，比如使div跟着滚动条滚动：
+网页中获取滚动条卷去部分的高度，可以通过 document.body.scrollTop 来获取，比如使div跟着滚动条滚动
 
 
 
