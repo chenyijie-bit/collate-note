@@ -10,38 +10,41 @@
 <script>
 	// 'use strict';
 
-var r,
+// var r,
     
-    arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
-    r = arr.filter(function (element, index, self) {
-    return self.indexOf(element)==index;
-});
-    console.log(r)
+//     arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
+//     r = arr.filter(function (element, index, self) {
+//     return self.indexOf(element)==index;
+// });
+//     console.log(r)
 
 
-    var  arr1 = [1,2,1,1,2,1,1,5,7];
-    s=arr1.filter(function(element,index,self){
-    	return self.indexOf(element)===index;
-    });
-    console.log(s);
+//     var  arr1 = [1,2,1,1,2,1,1,5,7];
+//     s=arr1.filter(function(element,index,self){
+//     	return self.indexOf(element)===index;
+//     });
+//     console.log(s);
 
 
 
-    var arr2= [2,5,8,8,5,4,1,32,58];
-    Array.prototype.unique1=function(){
-    	 var obj = {};
-    var asd = [];
-    var flag;
-    for (var i = this.length - 1; i >= 0; i--) {
+//     var arr2= [2,5,8,8,5,4,1,32,58];
+//     Array.prototype.unique1=function(){
+//     	 var obj = {};
+//     var asd = [];
+//     var flag;
+//     for (var i = this.length - 1; i >= 0; i--) {
     	
-    	if (!obj[this[i]]) {
-    		asd.push(this[i]);
-    		obj[this[i]] = true;
-    	}
-    }
-    return asd;
-    }
+//     	if (!obj[this[i]]) {
+//     		asd.push(this[i]);
+//     		obj[this[i]] = true;
+//     	}
+//     }
+//     return asd;
+//     }
    
-   console.log(arr2.unique1()) ;
+//    console.log(arr2.unique1()) ;
+var arr = [1,2,5,4,8,7,8,8,8];
+var cc = new Set(arr);
+console.log(cc)
 </script>
 </html>
