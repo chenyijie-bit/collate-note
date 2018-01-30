@@ -1,0 +1,432 @@
+/*全局样式*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    /* -webkit-appearance: none; */
+}
+
+.f_r {
+    float: right;
+}
+
+.f_l {
+    float: left;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.b_t {
+    border-top: 1px solid gray;
+}
+
+.b_b {
+    border-bottom: 1px solid gray;
+}
+
+.b_l {
+    border-left: 1px solid gray;
+}
+
+.b_r {
+    border-right: 1px solid gray;
+}
+
+
+
+
+/*导航页样式*/
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.navpage-content {
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 10rem;
+    height: 90%;
+    background: url("../images/navpage2.png") fixed no-repeat;
+    background-size: cover;
+}
+.navpage-content .nav-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 3.125rem;
+}
+.navpage-content .nav-header .nav_logo {
+    float: left;
+    border-radius: 0.546875rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/logo (2).png") no-repeat;
+    text-indent: -31.25rem;
+    background-size: cover;
+    margin-left: 0.46875rem;
+    margin-top: 0.36875rem;
+    box-shadow: 0 0.078125rem 0.3125rem 0.125rem #bbbbbb;
+}
+.navpage-content .nav-header .nav-tatle {
+    float: left;
+    font-size: 0.6875rem;
+    font-family: "迷你简菱心";
+    color: #FFFFFF;
+    margin-top: 0.759375rem;
+    margin-left: 0.37037037rem;
+    font-weight: 700;
+    text-shadow: -0.0625rem 0.15625rem 0.3125rem #aaaaaa;
+}
+
+.navpage-content .nav-container {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 12.46875rem;
+}
+.navpage-content .nav-container .nav-left {
+    width: 8.15625rem;
+}
+.navpage-content .nav-container .nav-right{
+    width: 3.84375rem;
+    height: 5.421875rem ;
+}
+.navpage-content .nav-container a {
+    margin-left: 0.234375rem;
+    display: block;
+    width: 3.84375rem;
+    height: 2.59375rem;
+    background-color: #2ac845;
+    margin-bottom: 0.234375rem;
+    border-radius: 0.09375rem;
+    color: #FFFFFF;
+    box-shadow: -0.03125rem 0.03125rem 0.15625rem 0.03125rem #cccccc;
+}
+.navpage-content .nav-container a img {
+    width: 0.78125rem;
+    height: 0.78125rem;
+    margin-left: 0.390625rem;
+    margin-top: 0.390625rem;
+}
+.navpage-content .nav-container a span {
+    display: block;
+    font-size: 0.375rem;
+    margin-left: 0.390625rem;
+    margin-top: 0.390625rem;
+    margin-bottom: 0;
+}
+.navpage-content .nav-container .video {
+    background-color: #ffbf44;
+}
+.navpage-content .nav-container .chat {
+    background-color: #7db238;
+}
+.navpage-content .nav-container .free {
+    background-color: #578ffe;
+}
+.navpage-content .nav-container .nav-ask {
+    background-color: #ff7ea2;
+}
+.navpage-content .nav-container .nav-login {
+    position: absolute;
+    height: 5.421875rem;
+    right: 0.234375rem;
+    background-color: #8e9efd;
+}
+.navpage-content .nav-container .nav-login span {
+    margin-top: 3.203125rem;
+}
+.nav-foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 10%;
+    width: 10rem;
+    background-color: #E6FCFA;
+}
+.nav-foot .line-left {
+    float: left;
+    margin-left: 0.46875rem;
+    margin-top: 0.53125rem;
+    width: 2.8125rem;
+    border-bottom: 2px solid  #B8CAC8 ;
+}
+.nav-foot .moddle-logo {
+    float: left;
+    width: 2.8125rem;
+    margin-left: 0.3125rem;
+    margin-top: 0rem;
+}
+.nav-foot .moddle-logo img {
+    float: left;
+    width: 0.9375rem;
+    height: 0.9375rem;
+}
+.nav-foot .moddle-logo p {
+    font-size: 0.390625rem;
+    margin-top: -0.13625rem;
+    margin-left: 0.15625rem;
+    color: #B8CAC8;
+}
+.nav-foot .moddle-logo .small {
+    margin-top: -0.546875rem;
+    margin-left: 1.09375rem;
+}
+.nav-foot .line-right {
+    float: left;
+    margin-top: 0.53125rem;
+    margin-left: 0.3125rem;
+    width: 2.8125rem;
+    border-bottom: 2px solid  #B8CAC8 ;
+}
+/*导航跳转页样式*/
+
+.select-container .sele-area-header {
+    height: 1.453125rem;
+    line-height: 1.453125rem;
+    text-align: center;
+    font-size: 0.45rem;
+    color: #1a1a1a;
+}
+.select-container .sele-area-header a {
+    float: left;
+    color: #007aff;
+    font-size: 0.8rem;
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 0.46875rem;
+    margin-top: 0.390625rem;
+}
+.select-container .sele-area-header span {
+    float: left;
+    display: block;
+    margin-left: 2.8125rem;
+    margin-top: 0.1rem;
+}
+.select-container .sele-banner {
+    display: block;
+    width: 10rem;
+    height: 4.375rem;
+}
+.select-container .sele-banner img {
+    display: block;
+    width: 10rem;
+    height: 4.375rem;
+}
+.select-container .sele-content {
+    margin-top: 1.5625rem;
+}
+.select-container .sele-content .title-sele {
+    width: 100%;
+    height: 0.9375rem;
+}
+.sele-foot{
+    width: 100%;
+    height: 1rem;
+    margin-top: 2rem;
+}
+.sele-foot input{
+    margin-left: 3rem;
+    width: 4rem;
+    border-radius: 0.1rem;
+    height: 1rem;
+    background-color: #007aff;
+    color: #ffffff;
+    font-size: 0.45rem;
+    text-align: center;
+
+}
+
+/*个人资料卡*/
+
+.per-container {
+  width: 10rem;
+  min-height: 18rem;
+  overflow: hidden;
+}
+.per-container .person-bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.609375rem;
+  background: url("/Public/Index/index/images/bg.png") no-repeat;
+  background-size: cover;
+  margin-bottom: 3.515625rem;
+}
+.per-container .person-bg a {
+  padding-left: 0.46875rem;
+  padding-top: 0.46875rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.per-container .person-bg .headimg {
+  position: absolute;
+  left: 50%;
+  margin-left: -1.28125rem;
+  margin-top: 4.34375rem;
+}
+.per-container .person-bg .headimg img {
+  border: 4px solid #FEFDFF;
+  width: 2.4375rem;
+  height: 2.4375rem;
+  display: block;
+  border-radius: 50%;
+}
+.per-container .person-bg .username {
+  padding-top: 7.234375rem;
+  padding-bottom: 0.78125rem;
+  text-align: center;
+}
+.per-container .person-bg .username span {
+  display: block;
+  width: 100%;
+  font-size: 0.375rem;
+  color: #ADADAD;
+  margin-top: 0.375rem;
+}
+.per-container .person-content ul li {
+  padding: 0 0.46875rem;
+  height: 1.09375rem;
+  line-height: 1.09375rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+.per-container .person-content ul li span {
+  font-size: 0.375rem;
+  color: #ADADAD;
+}
+.per-container .person-content ul li span img {
+  margin-top: 0.234375rem;
+  margin-right: 0.3125rem;
+  display: block;
+  width: 0.46875rem;
+  height: 0.625rem;
+}
+.per-container .person-content ul li span:nth-child(2) {
+  color: #ADADAD;
+}
+.per-container .person-btn {
+  position: relative;
+  width: 6.78125rem;
+  height: 1.6rem;
+  left: 50%;
+  margin-left: -3.390625rem;
+  top: 1.5625rem;
+  padding-bottom: 0.5rem;
+}
+.per-container .person-btn a {
+  display: block;
+  width: 6.78125rem;
+  height: 0.9375rem;
+  background-color: #2196F3;
+  color: #ffffff;
+  font-size: 0.46875rem;
+  line-height: 0.9375rem;
+  text-align: center;
+  border-radius: 0.125rem;
+}
+
+/*个人资料首页*/
+
+.per-cen {
+    /* height: 5.75rem;*/
+    width: 100%;
+}
+.per-cen ul {
+    /* height: 2.8125rem;*/
+    width: 100%;
+    background-color: #fff;
+}
+.per-cen ul::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+}
+.per-cen li {
+    list-style: none;
+    ; float: left;
+    width: 2.5rem;
+    height: 2.8125rem;
+    border-right: 1px solid #F4F4F4;
+    border-bottom: 0.125rem solid #F4F4F4;
+    /* margin-bottom: 6px;*/
+    
+}
+.per-cen li a {
+    display: block;
+}
+.per-cen li img {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    margin: 0.59375rem 0.78125rem 0.43750rem 0.78125rem;
+}
+.per-cen .per-cen-li {
+    border-right: none;
+}
+.per-cen li span {
+    font-size: 0.3125rem;
+    color: #999999;
+    height: 0.3125rem;
+    line-height: 0.3125rem;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+/*退出登录按钮*/
+
+.tuichu{
+    display: block;
+    padding: 0rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 0.1rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    background-color: rgba(0, 188, 212, 0.5);
+    color: #FFFFFF;
+    font-size: 0.35rem;
+    text-align: center;
+    top: 0.6rem;
+    left: 8rem;
+    position: relative;
+    width: 1.25rem;
+}
