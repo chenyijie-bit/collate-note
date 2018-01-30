@@ -1,0 +1,55 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+    <body>
+		<div class="person" >
+			<div class="per-top">
+				<div class="pre-t-t">
+    				<a href="/Hospital" class="fa fa-angle-left"></a>
+    			</div>
+    			<div class="per-head">
+    				<img src="<?php echo $base64_con; ?>" old-src="/Public/Hospital/index/images/person.png" alt="" class="per-head-i"> 
+    				<p class="per-head-t"><?php echo $memberInfo['nick_name']; ?></p>
+    			</div>
+			</div>
+			<div class="per-cen">
+				<ul>
+					<li>
+						<a href="/Hospital/My/myDoctor" class="per-cen-a">
+							<img src="/Public/Hospital/index/images/yisheng.png" alt="" class="per-sen-t">
+							<span class="per-sen-t">我的医生</span>
+						</a>
+					</li>
+					<li>
+						<a href="/Hospital/My/myAdvice">
+							<img src="/Public/Hospital/index/images/zixun.png" alt="" class="per-sen-t">
+							<span class="per-sen-t">我的咨询</span>
+						</a>
+					</li>
+					<li>
+						<a href="/Hospital/My/myRegister">
+							<img src="/Public/Hospital/index/images/guahao.png" alt="" class="per-sen-t">
+							<span class="per-sen-t">我的挂号</span>
+						</a>
+					</li>
+					<li class="per-cen-li" >
+						<a href="/Hospital/My/patients" >
+							<img src="/Public/Hospital/index/images/jiuzhenren.png" alt="" class="per-sen-t">
+							<span class="per-sen-t">常用就诊人</span>
+						</a>
+					</li>
+					</ul>
+			</div>
+      <div class="introduce-footer clearfix">
+		 <div class="tab-bar">
+        <ul class="clearfix">
+            <li class="tab-group  f_l  "><a href="/Hospital/Advice/lists">
+                <span>会诊室</span></a></li>
+            <li class="tab-home f_l "><a href="/Hospital/Index/index">
+                <span>首页</span></a></li>
+            <li class="tab-personal f_l personal-currunt"><a href="#">
+                <span>我</span></a></li>
+        </ul>
+    </div>
+	</div>
+		</div>	
+    </body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

@@ -1,0 +1,117 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style type="text/css">
+    body{
+        background-color: #fff;
+    }
+    .doc-cont-bottom{
+        margin-bottom: 1.7rem;
+    }
+    .doc-cont-bottom .cont-bot-le {
+        padding-right: 0rem;
+    }
+    .doc-cont-bottom ul li {
+        height: 100%;
+    } 
+</style>
+<body>
+<div class="doc-list-all" id="doc-list-all">
+    <div class="doc-li-header" id="doc-li-header">
+        <i class="fa fa-angle-left f_l" onclick="javascript:window.location.href='/Hospital/My';" aria-hidden="true"></i> 
+        <span>我的医生</span>
+    </div>
+    <div class="doc-section-list">
+        <div class="doc-li-contain">
+            <div class="doc-cont-bottom">
+                <ul id='z_ul'>
+                    <?php foreach ($doctors as $key => $val){ ?>    
+                    <li>
+                    	<a href="/Hospital/Doctor/detail?doctor_id=<?php echo $val['doctor_id']; ?>" class="cont-bot-a">
+	                            <div class="cont-bot-le">
+	                                <img src="<?php echo $val['head_img'] ?>" alt="">
+	                            </div>
+	                            <div class="cont-bot-ri">
+	                                <div class="bot-ri-text">
+	                                    <span><?php echo $val['doctor_name'] ?></span>
+	                                    <span class="ri-text-t"><?php echo $val['ranks_name'] ?></span>
+	                                    <div class="bot-ri-zan">
+	                                        <img src="/Public/Hospital/index/images/handzan.png" alt="">
+	                                        <span><?php echo $val['count_zan'] ?></span>
+	                                    </div>
+	                                </div>
+	                                <p class="bot-ri-sec"><span><?php echo $val['hospital_name'] ?></span><span><?php echo $val['department_name'] ?></span></p>
+	                                <p class="bot-ri-thi"><?php echo $val['adept'] ?></p>
+	                            </div>
+	                     </a>
+                    </li>
+                    <?php } ?>
+                </ul>
+                <?php if (count($doctors) == 0){ ?>
+                <div class="load-more" id="get-more" style="background-color:#fff;margin-top:50%">暂时没有收藏医生</div>
+                <?php }else{ ?>
+                <div class="load-more" id="get-more" onclick="get_more()">点击加载更多...</div>
+            	<?php } ?>
+            </div>
+            <div style='visibility:hidden' id="page" num='2'></div>
+        </div>
+    </div>
+</div>
+<div class="introduce-footer clearfix">
+    <!-- <div class="footer-top">
+        <a href="#" class="footer-left f_l ask"> <img src="/Public/Hospital/index/images/icon/ask%20button.png" alt=""><span>免费问诊</span></a>
+        <a href="#" class="footer-righter f_r order"><img src="/Public/Hospital/index/images/icon/book%20button.png"alt=""><span>预约挂号</span></a>
+    </div> -->
+    <div class="tab-bar">
+        <ul class="clearfix">
+            <li class="tab-group  f_l  ">
+                <a href="/Hospital/Advice/lists">
+                    <span>会诊室</span>
+                </a>
+            </li>
+            <li class="tab-home f_l ">
+                <a href="/Hospital/Index/index">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li class="tab-personal f_l">
+                <a href="/Hospital/My/index">
+                    <span>我</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>  
+
+//获取更多
+function get_more(){
+    var page = $("#page").attr("num");
+    $.ajax({
+        type:"post",
+        url:"/Hospital/My/myDoctor",
+        data:{'page':page},
+        success:function(data){
+            if(data.status == 1){
+                $("#page").attr("num",parseInt(page)+parseInt(1));
+                //console.log(data.data);
+                var data = data.data;
+                for (var i = 0; i <= data.length-1; i++) {
+                    //console.log(data[i]);
+                    in_comment(data[i]);
+                };
+            }else if(data.status == 0){
+                $("#get-more").html(data.data);
+            }
+        }
+    })
+}
+
+//将获取的更多的数据放入页面中
+function in_comment(data){
+    var str = '<li> <a href=/Hospital/Doctor/detail?doctor_id='+data.doctor_id+' class="cont-bot-a"> <div class="cont-bot-le"> <img src="'+data.head_img+'" alt=""> </div> <div class="cont-bot-ri"> <div class="bot-ri-text"> <span>'+data.doctor_name+'</span> <span class="ri-text-t">'+data.ranks_name+'</span> <div class="bot-ri-zan"> <img src="/Public/Hospital/index/images/handzan.png" alt=""> <span>'+data.count_zan+'</span> </div> </div> <p class="bot-ri-sec"> <span>'+data.hospital_name+'</span> <span>'+data.department_name+'</span> </p> <p class="bot-ri-thi">'+data.adept+'</p> </div> </a> </li>';
+    $('#z_ul').append(str);
+}
+
+
+</script>
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

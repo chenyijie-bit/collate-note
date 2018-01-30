@@ -1,0 +1,43 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<body>
+<div class="common-person-content">
+<div class="com-header">
+    <div class="com-head-left">
+        <a href="/Hospital/My/index" class="fa fa-angle-left"></a>   <span>常用就诊人</span>
+    </div>
+     <div class="com-head-right">
+         <a href="/Hospital/My/add_patients" class=""><img src="/Public/Hospital/index/images/icon/add.png" alt=""></a>
+     </div>
+</div>
+    <div class="com-con-tableheader">
+        <table>
+            <thead>
+                <tr>
+                    <td >姓名</td>
+                    <td >年龄</td>
+                    <td >手机号</td>
+                    <td colspan="2">操作</td>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($patients as $key => $value): ?>                
+            <tr>
+                <td><a href="javascript:;"><?php echo $value['patients_name'] ?></a></td>
+                <td><a href="javascript:;"><?php echo $value['patients_age'] ?>岁</a></td>
+                <td><a href="javascript:;"><?php echo $value['patients_phone'] ?></a></td>
+                <td>
+                    <a style="color:#007AFF;" href="/Hospital/My/edit_patients?patients_id=<?php echo $value['patients_id'] ?>">修改</a>
+
+                </td>
+                <td>
+                    <a style="color:#007AFF;" href="/Hospital/My/see_patients?patients_id=<?php echo $value['patients_id'] ?>">查看</a>
+
+                </td>
+            </tr>
+            <?php endforeach ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

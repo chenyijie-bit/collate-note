@@ -1,0 +1,63 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<style type="text/css">
+		.afflist{
+			border:black 1px solid;
+		}
+	</style>
+<body class="container">
+	<div style="top: 5rem;position: relative;;">
+		<div align="center" style="font-size:0.5rem;margin-top:10px;">
+			<div class="price-cell on" id="price-cell-20" >购买本视频，共需支付&nbsp;<?php echo $pay_num ?>&nbsp;元</div>
+			<div style="clear:both;"></div>
+		</div>
+
+		<div align="center" style="margin-top:1rem;">
+		  	<button style="width:90%; height:40px; border-radius: 4px;background-color:green; border:0px red solid; cursor: pointer;  color:white;  font-size:16px;" type="button" onClick="jsApiCall()" >确认支付</button>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+		//调用微信JS api 支付
+		function jsApiCall(){
+			var order_id = <?php echo $order_id ?>
+
+			$.post('/Video/Order/charges',{
+		        'order_id':order_id
+		      },function(response){
+		      	response = eval('('+ response +')');
+		      	//alert(response);
+		        if(response.indexOf('appId') !== -1){
+		          WeixinJSBridge.invoke(
+		          'getBrandWCPayRequest',
+		          JSON.parse(response),
+		          function(res){
+		          	//alert(JSON.stringify(res));
+		            if(res.err_msg.indexOf('request:ok')!== -1){
+		            	alert('支付成功！正在处理订单，请稍后');
+		            	window.location.href = "http://<?php echo $oldHost; ?>/video/user/orders";
+		            }
+		          }
+		          );
+		        }else{
+		          alert('网络异常请重试');
+		        }
+		      },'text');		
+		}
+
+	    function callpay()
+	    {
+	      if (typeof WeixinJSBridge == "undefined"){
+	        if( document.addEventListener ){
+	          document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+	        }else if (document.attachEvent){
+	          document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+	          document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+	        }
+	      }else{
+	        jsApiCall();
+	      }
+	    }
+
+	</script>

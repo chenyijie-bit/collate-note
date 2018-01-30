@@ -1,0 +1,452 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<style>
+
+
+.footable > thead > tr > th.footable-sorted-desc > span.footable-sort-indicator:before {
+     content: "\e012";
+}
+.footable > thead > tr > th > span.footable-sort-indicator:before {
+     content: "\e022";
+}
+.footable > thead > tr > th.footable-sorted > span.footable-sort-indicator:before {
+    content: "\e013";
+}
+.modal-backdrop{
+    display: none;
+}
+</style>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>会员列表</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="">
+                                
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-12">
+                                    <form method="get" action="/business/member/lists" class="pull-left" style="width:75%;min-width: 750px;">
+                                        <div class="form-group" style="width:30%;float: left;min-width: 240px;margin-left: -10px;">
+                                            <label class="col-sm-4 control-label" style="padding-right: 0;margin-top: 6px;">入会时间：</label>
+                                            <div class="col-sm-8"  style="padding-left: 0;padding-right: 10px;">
+                                                <input placeholder="开始日期" name="join_start_time" value="<?php if($_GET['join_start_time']){echo $_GET['join_start_time'];} ?>" class="form-control layer-date" id="start" style="width:50%;height: 30px;font-size: 12px;" >
+                                                <input placeholder="结束日期" name="join_end_time" value="<?php if($_GET['join_end_time']){echo $_GET['join_end_time'];} ?>" class="form-control layer-date " id="end" style="width:50%;height: 30px;font-size: 12px;" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="width:30%;float: left;min-width: 235px;margin-left: -10px;">
+                                        <label class="col-sm-3 control-label" style="padding-right: 0;margin-top: 6px;">生日：</label>
+                                        <div class="col-sm-8"  style="padding-left: 0;padding-right: 10px;">
+                                            <input placeholder="开始日期" name="birth_start_time" value="<?php if($_GET['birth_start_time']){echo $_GET['birth_start_time'];} ?>" class="form-control layer-date" id="start1" style="width:50%;height: 30px;font-size: 12px;" >
+                                            <input placeholder="结束日期" name="birth_end_time" value="<?php if($_GET['birth_end_time']){echo $_GET['birth_end_time'];} ?>" class="form-control layer-date " id="end1" style="width:50%;height: 30px;font-size: 12px;" >
+                                        </div>
+                                        </div> 
+                                        <select name="sex" class="input-sm form-control input-s-sm inline sex-select" style="float: left; width:8%;font-size:12px;margin-right: 5px;    margin-left: -10px;margin-left: -15px; min-width: 68px;">
+                                            <option value="">性别</option>
+                                            <option <?php echo $_GET['sex'] == 1 ? 'selected' : ''; ?> value="1">男</option>
+                                            <option <?php echo is_numeric($_GET['sex']) && $_GET['sex'] == 0 ? 'selected' : ''; ?> value="0">女</option>
+                                        </select>
+                                        <select name="level" class="input-sm form-control input-s-sm inline sex-select" style="float: left; font-size:12px;width:8%;margin-right: 5px;min-width: 68px;">
+                                            <option value="">级别</option>
+                                            <option <?php echo $_GET['level'] == 'A' ? 'selected' : ''; ?> value="A">A</option>
+                                            <option <?php echo $_GET['level'] == 'B' ? 'selected' : ''; ?> value="B">B</option>
+                                            <option <?php echo $_GET['level'] == 'C' ? 'selected' : ''; ?> value="C">C</option>
+                                            <option <?php echo $_GET['level'] == 'D' ? 'selected' : ''; ?> value="D">D</option>
+                                        </select>
+                                        <input type="text" name="keywords" value="<?php if($_GET['keywords']){echo $_GET['keywords'];} ?>" placeholder="姓名或手机号" class="input-sm form-control " style="width:15%;font-size:12px;" >
+                                        <span class="input-group-btn pull-left">
+                                            <button type="submit" class="btn btn-sm btn-primary search-btn"> 搜索</button>
+                                        </span>
+                                    </form>
+                                    <div  style="width:20%;min-width:180px;"  class="pull-left">
+                                    <button type="button" onclick="javascript:window.location.href = '/business/member/lists?futurebirth=true';" class="btn btn-warning btn-sm  reset-btn pull-left" style="margin-left: 0px;">未来30天内生日</button>
+                                     <button type="button" style="margin-left: 10px;" onclick="javascript:window.location.href = '/business/member/lists';" class="btn btn-danger btn-sm  reset-btn pull-left">刷新</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-warn">
+                            <div class="alert alert-warning">
+                                您现在共有会员： <span class="alert-link"><?php echo $countNum;?></span> 人
+                                <?php if(count($_GET) >= 1): ?>
+                                    ，以下为搜索 
+                                    <?php if($_GET['keywords']): ?>
+                                    包含 “<span class="alert-link"><?php echo $_GET['keywords']; ?></span>”
+                                    <?php endif; ?>
+                                    <?php if($_GET['join_start_time'] && $_GET['join_end_time']): ?>
+                                    入会时间介于 “<span class="alert-link"><?php echo $_GET['join_start_time'].'</span> 至 <span class="alert-link">'.$_GET['join_end_time']; ?></span>”
+                                    <?php elseif($_GET['join_end_time']): ?>
+                                    入会时间小于 “<span class="alert-link"><?php echo $_GET['join_end_time']; ?></span>”
+                                    <?php elseif($_GET['join_start_time']): ?>
+                                    入会时间大于 “<span class="alert-link"><?php echo $_GET['join_start_time']; ?></span>”
+                                    <?php endif; ?>
+                                    <?php if($_GET['birth_start_time'] && $_GET['birth_end_time']): ?>
+                                    生日介于 “<span class="alert-link"><?php echo $_GET['birth_start_time'].'</span> 至 <span class="alert-link">'.$_GET['birth_end_time']; ?></span>”
+                                    <?php elseif($_GET['birth_end_time']): ?>
+                                    生日小于 “<span class="alert-link"><?php echo $_GET['birth_end_time']; ?></span>”
+                                    <?php elseif($_GET['birth_start_time']): ?>
+                                    生日大于 “<span class="alert-link"><?php echo $_GET['birth_start_time']; ?></span>”
+                                    <?php endif; ?>
+                                    <?php if(is_numeric($_GET['sex'])): ?>
+                                    性别为 “<span class="alert-link"><?php echo $_GET['sex'] == 1 ? '男' : '女'; ?></span>”
+                                    <?php endif; ?>
+                                    <?php if($_GET['level']): ?>
+                                    级别为 “<span class="alert-link"><?php echo $_GET['level']; ?></span>”
+                                    <?php endif; ?>
+                                    <?php if($_GET['futurebirth'] == 'true'): ?>
+                                    “<span class="alert-link">未来30天内生日会员</span>”
+                                    <?php endif; ?>
+                                     的结果：
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="selectBox">
+                        <button type="button" class="btn btn-primary btn-xs allselect" style="margin-left:8px;margin-right: 20px"  onclick="swapCheck()">全选/反选</button>  
+                        <button type="button" class="btn btn-xs btn-success" onclick="javascript:checkBoxSendPiao();" style="margin-right: 20px">批量发放共享币</button>  
+                        <button type="button" onclick="javascript:checkBoxDelete();" style="margin-right: 20px" class="btn btn-xs btn-danger">批量删除</button> 
+                        <button type="button"  class="btn btn-xs btn-info myModal"   data-toggle="modal" data-target="#myModal">群发短信</button> 
+                         <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" style="min-height: 600px;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content animated bounceInRight">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+                                                        </button>
+                                                        <h4 class="modal-title">选择群发短信模板</h4>
+                                                    </div>
+                                                    <div class="modal-body">  
+                                                     <div class="alert alert-info">
+                                                     本功能适用于福利提示、活动通知等，例如给将过生日的会员发放福利。本次操作您将被扣除<span class='member_num'>12</span>个共享币（每条短信通知为1个共享币），请谨慎操作。
+                                                     </div>
+                                                        <div class="form-group"><label>请选择群发短信模板类型</label>
+                                                            <select style="color:#000;" id="InfoModal" class="form-control" name="InfoModal_id">
+                                                                <option value="0" data="选择上方的模板类型，此处会呈现你想要的对应模板内容哦！">选择模板</option>
+                                                                <?php foreach ($sms_models as $key => $value): ?>
+                                                                <option value="<?php echo $key; ?>" data="<?php echo $value['content']; ?>"><?php echo $value['name']; ?></option>
+                                                                <?php endforeach ?>
+                                                            </select>
+                                                        </div>
+                                                         <label>对应的模板内容</label>
+                                                        <div style="background: #fff;border: 1px solid #ccc;padding: 5px;" id='InfoModal_content'>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button id="" type="button" class="btn btn-white" data-dismiss="modal">关闭操作</button>
+
+                                                        <button type="button" onClick="javascript:checkBoxSendInfo();" class="btn btn-primary" style=" margin-bottom: 6px;">确认</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                          </div>
+                        </div>
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="99999999" data-limit-navigation='99999999'>
+                            <thead>
+                                <tr>
+                                    <th data-toggle="true"> 选中</th>
+                                    <th>序号</th>
+                                    <th>姓名</th>
+                                    <th>性别</th>
+                                    <th>手机号</th>
+                                    <th>级别</th>
+                                    <th>生日</th>
+                                    <th>入会时间</th>
+                                    <th><abbr data-container="body" data-toggle="popover" data-placement="bottom" data-content="本店曾对该会员发放过的共享币数">本店发放</abbr></th>
+                                    <th><abbr data-container="body" data-toggle="popover" data-placement="bottom" data-content="所有店曾对该会员发放过的共享币数">全部发放</abbr></th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($members as $k => $v): ?>
+                                <tr>
+                                    <td>
+                                        <input phone-number=<?php echo $v['phone_num']; ?> type="checkbox" class="i-checks" name="input[]">
+                                    </td>    
+                                    <!-- <td><?php echo $k + 1 + $page['firstRow']; ?></td> -->
+                                    <td><?php echo $k + 1; ?></td>
+                                    <td>
+                                        <?php if($v['notice'] != null): ?>
+                                        <abbr style="color:blue;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="备注：<?php echo $v['notice']; ?>">
+                                            <?php echo $v['name']; ?>
+                                        </abbr>
+                                        <?php else: ?>
+                                        <?php echo $v['name']; ?>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td><?php echo $v['sex']; ?></td>
+                                    <td><?php echo $v['phone_num']; ?></td>
+                                    <td><?php echo $v['level']; ?></td>
+                                    <?php $theYearBirth = date('-m-d') < substr($v['birth_time'],4)?date('Y').substr($v['birth_time'],4):date('Y',strtotime("+1 year")).substr($v['birth_time'],4);?>
+                                    <?php if(($theYearBirth > date('Y-m-d')) && ($theYearBirth <= date('Y-m-d',time()+60*60*24*30)) && (date('Y-m-d') >= $v['birth_send_time'])): ?>
+                                    <td style="color:red;"><abbr data-container="body" data-toggle="popover" data-placement="bottom" data-content="将在未来30天内生日，今年还未发过共享币生日福利"><i class="fa fa-info-circle"></i> <?php echo $v['birth_time']; ?></abbr></td>
+                                    <?php elseif(($theYearBirth > date('Y-m-d')) && ($theYearBirth <= date('Y-m-d',time()+60*60*24*30))): ?>
+                                    <td style="color:#000;cursor:help;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="将在未来30天内生日，今年已经发过共享币生日福利"><i class="fa fa-info-circle"></i> <?php echo $v['birth_time']; ?></td>
+                                    <?php else: ?>
+                                    <td style="cursor:help;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="生日不在未来30天内，明年生日前30天内可再次发放共享币福利"><i class="fa fa-info-circle"></i> <?php echo $v['birth_time']; ?></td>
+                                    <?php endif; ?>
+                                    <td><?php echo $v['join_time']; ?></td>
+                                    <td><?php echo $v['the_piao']; ?></td>
+                                    <td><?php echo $v['all_piao']; ?></td>
+                                    <td>
+                                        <a href="/Business/Member/orders?phone_num=<?php echo $v['phone_num']; ?>">
+                                            <span class="label label-success ">兑换明细</span>
+                                        </a>
+                                        <a href="/Business/Member/detail?phone_num=<?php echo $v['phone_num']; ?>&name=<?php echo $v['name']; ?>&sex=<?php echo $v['sex']; ?>">
+                                            <span class="label label-primary ">发放明细</span>
+                                        </a>
+                                        <a href="/Business/Member/edit?phone_num=<?php echo $v['phone_num']; ?>">
+                                            <span class="label label-warning ">编辑</span>
+                                        </a>
+                                        <a href="javascript:oneDelete('<?php echo $v['name']; ?>',<?php echo $v['phone_num']; ?>);">
+                                            <span class="label label-danger ">删除</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                            <!-- <tfoot>
+                                <tr>
+                                    <td colspan="12">
+                                        <div class="b-page">
+                                            <?php echo $page['page']; ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot> -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+    $(document).ready(function(){
+        $(".footable").footable();
+        $(".myModal").click(function(){
+            var phone_nums = $('input[name="input[]"]:checked').map(function(){
+                  return $(this).attr('phone-number');
+                }).get();
+                if(phone_nums.length <= 0){
+                    swal('最少需要勾选一个会员', "", "error");
+                    return false;
+                }
+                $('.member_num').text(phone_nums.length);
+             $('.modal-dialog').css('top',$(document).scrollTop())
+        });
+
+        $('.myModal').modal({
+                keyboard: false,
+                backdrop:false,
+                show:false
+        });
+          var start = {
+            elem: "#start",
+            format: "YYYY/MM/DD",
+            min:  "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                end.min = datas;
+                end.start = datas
+            }
+        };
+        var end = {
+            elem: "#end",
+            format: "YYYY/MM/DD",
+            min: "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                start.max = datas
+            }
+        };
+        laydate(start);
+        laydate(end);
+         var start1 = {
+            elem: "#start1",
+            format: "YYYY/MM/DD",
+            min:  "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                end.min = datas;
+                end.start = datas
+            }
+        };
+        var end1 = {
+            elem: "#end1",
+            format: "YYYY/MM/DD",
+            min: "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                start.max = datas
+            }
+        };
+        laydate(start1);
+        laydate(end1);
+    });
+    //checkbox 全选/取消全选  
+    var isCheckAll = false;  
+    function swapCheck() {  
+        if (isCheckAll) {  
+            $("input[type='checkbox']").each(function() {  
+                this.checked = false;  
+            });  
+            isCheckAll = false;  
+        } else {  
+            $("input[type='checkbox']").each(function() {  
+                this.checked = true;  
+            });  
+            isCheckAll = true;  
+        }  
+    }  
+    //批量删除会员
+    function checkBoxDelete(){
+        var phone_nums = $('input[name="input[]"]:checked').map(function(){
+          return $(this).attr('phone-number');
+        }).get();
+        if(phone_nums.length <= 0){
+            swal('最少需要勾选一个会员', "", "error");
+            return false;
+        }
+        swal({
+            title: "确定要删除所勾选的会员吗？",
+            text: "该操作不可逆，请谨慎操作",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我要删除",
+            cancelButtonText: "再考虑一下",
+            closeOnConfirm: false,
+            closeOnCancel: true
+            },
+            function(isConfirm) {
+                if (isConfirm) {
+                    $.post('/Business/Member/delete',{phone_nums:phone_nums},function(d){
+                        if(d.error){
+                            swal(d.msg, "", "error");
+                            return false;
+                        }else{
+                            swal(d.msg, "", "success");
+                            setTimeout("window.location.reload();",1000);
+                        }
+                    },'json');          
+                }
+            }
+        )
+    }
+    //批量发放共享币
+    function checkBoxSendPiao(){
+        var phone_nums = $('input[name="input[]"]:checked').map(function(){
+          return $(this).attr('phone-number');
+        }).get();
+        if(phone_nums.length <= 0){
+            swal('最少需要勾选一个会员', "", "error");
+            return false;
+        }
+        swal({
+            title: "确定给所勾选的"+ phone_nums.length +"人发放共享币？", 
+            text: "本功能适用于搞活动，例如给将过生日的会员发放福利。本次操作您将被扣除"+ phone_nums.length +"人份的共享币总数，且发放共享币所对应的营业额数据将不会做增加和统计，请谨慎操作。",
+            type: "input", 
+            showCancelButton: true, 
+            closeOnConfirm: false, 
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我要发放",
+            cancelButtonText: "再考虑一下",
+            animation: "slide-from-top", 
+            inputPlaceholder: "输入给每人发放的整数共享币数" 
+        },
+        function(inputValue){ 
+            if (inputValue === false) return false; 
+          
+            if (inputValue === "") { 
+                swal.showInputError("请输入要给每人发放的整数共享币数");
+            return false 
+          } 
+            $.post('/Business/Member/batch_piao_send',{phone_nums:phone_nums,add_piao:inputValue},function(d){
+                if(d.error){
+                     swal(d.msg, "", "error");
+                    return false;
+                }else{
+                    swal(d.msg, "", "success");
+                    setTimeout("window.location.reload();",1000);
+                }
+            },'json');     
+        });
+    }
+
+    // 群发短信
+   $('#InfoModal_content').text($('#InfoModal option:selected').attr('data'))
+    document.getElementById('InfoModal').onchange=function(){  
+    $('#InfoModal_content').text($('#InfoModal option:selected').attr('data'));
+   }
+  
+
+   
+    function checkBoxSendInfo(){
+        var selectedVal=$('#InfoModal option:selected').val();
+        var phone_nums = $('input[name="input[]"]:checked').map(function(){
+          return $(this).attr('phone-number');
+        }).get();
+        if(phone_nums.length <= 0){
+            swal('最少需要勾选一个会员', "", "error");
+            return false;
+        }
+    
+        if (selectedVal === "0") { 
+            swal("请选择群发短信模板类型！", "", "error");
+            return false 
+        } 
+        $.post('/Business/Member/groupSMS',{phone_nums:phone_nums,send_info:selectedVal},function(d){
+            if(d.error){
+                swal(d.msg, "", "error");
+                return false;
+            }else{
+                swal(d.msg, "", "success");
+                setTimeout("window.location.reload();",1000);
+            }
+        },'json');     
+        
+    }
+    //单个删除会员
+    function oneDelete(name,phone_nums){
+        swal({
+            title: "确定要删除会员' "+ name +" '吗？",
+            text: "该操作不可逆，请谨慎操作",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我要删除",
+            cancelButtonText: "再考虑一下",
+            closeOnConfirm: false,
+            closeOnCancel: true
+            },
+            function(isConfirm) {
+                if (isConfirm) {
+                    $.post('/Business/Member/delete',{phone_nums:phone_nums},function(d){
+                        if(d.error){
+                            swal(d.msg, "", "error");
+                            return false;
+                        }else{
+                            swal(d.msg, "", "success");
+                            setTimeout("window.location.reload();",1000);
+                        }
+                    },'json');          
+                }
+            }
+        )
+    }
+</script>

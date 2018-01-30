@@ -1,0 +1,153 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<style>
+.good-img{
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+table{
+    font-size: 13px;
+}
+.footable-row-detail-name {
+    display: table-cell;
+    font-weight: bold;
+    padding-right: 0.5em;
+    line-height: 30px;
+}
+.modal-backdrop{
+    display: none;
+}
+
+</style>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>此会员的已完成订单</h5>
+                      <span class="label label-primary pull-right label-primary-cust">
+                            <a href="javascript:history.back(-1);" class="fa-lg-cust-a" title="返回上一页">
+                                <i class="fa fa-arrow-left fa-lg-cust"  aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="member-warn">
+                            <div class="alert alert-warning">
+                                以下为 <b><?php echo $_GET['year']?$_GET['year']:date('Y-m'); ?></b>，<b><?php echo $member_info['level']?$member_info['level']:'undefined'; ?></b> 级别会员 “<b><?php echo $member_info['name']; ?></b>” 产生的 “<b>已完成</b>” 订单：
+                            </div>
+                        </div>
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="10" data-limit-navigation='10'>
+                            <thead>
+                                <tr>
+                                    <th>订单号</th>
+                                    <th >订单时间</th>
+                                    <th>商品名</th>
+                                    <th>购买数量</th>
+                                    <th>商品价格</th>
+                                    <th>支付共享币</th>
+                                    <th>用户手机号</th>
+                                    <th >订单状态</th>
+                                    <th data-hide="all">返利百分比</th>
+                                    <th data-hide="all">是否自提</th>
+                                    <th data-hide="all">运单号</th>
+                                   
+                                    <th data-hide="all">代理卖家ID</th>
+                                    <th >操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>                                    
+                                <?php foreach ($result as $key => $value): ?>
+                                <?php 
+                                    $is_daili = 0;
+                                    $is_me = 0;
+                                    if ($value['business_id'] == $business_id) {
+                                        $is_me = 1;
+                                        $imgs = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                                        if ($value['sell_business_id'] != 0) {
+                                            $imgs = '<img src="/Public/hplus/img/blue_dai.png" title="其他商家代理我的订单"> ';
+                                        }
+                                    }else{
+                                        $imgs = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                                        if ($value['sell_business_id'] == $business_id) {
+                                            $imgs = '<img src="/Public/hplus/img/red_dai.png" title="我代理其他商家的订单"> ';
+                                            $is_daili = 1;
+                                        }
+                                    } 
+                                ?>
+                                <tr>
+                                    <td><?php echo $imgs.$value['order_sn']; ?></td>
+                                    <td><?php echo $value['add_time']; ?></td>
+                                    <td title="<?php echo $value['goods_name']; ?>"><?php echo mb_substr($value['goods_name'],0,10); if(mb_substr($value['goods_name']) > 10) echo ' ....'; ?></td>
+                                    <td><?php echo $value['num']; ?></td>
+                                    <td><?php echo $value['piao']/$value['num']; ?></td>
+                                    <td><?php echo $value['piao']; ?></td>
+                                    <td><?php echo $value['phone_num']; ?></td>
+                                    <td><?php switch ($value['status']) {
+                                        case '1':
+                                            echo '待提货';
+                                            break;
+                                        case '2':
+                                            echo '待发货';
+                                            break;
+                                        case '3':
+                                            echo '已发货';
+                                            break;
+                                        case '4':
+                                            echo '已完成';
+                                            break;
+                                        case '5':
+                                            echo '已取消';
+                                            break;
+                                        case '6':
+                                            echo '退换中';
+                                            break;
+                                        case '7':
+                                            echo '已退货';
+                                            break;
+                                        default:
+                                            echo '未知';
+                                            break;
+                                    } ?></td>
+                                    <td><?php echo $value['rebate'] * 100; ?> %</td>
+                                    <td><?php echo $value['is_ziti'] == 1?'是':'否'; ?></td>
+                                    <td><?php echo empty($value['waybill'])?'无':$value['waybill']; ?></td>
+                                    <td><?php echo empty($value['sell_business_id'])?'无':$value['sell_business_id']; ?></td>
+                                    <td order_id="<?php echo $value['order_id']; ?>">
+                                        <a href="/Business/finance/orders_detail?order_id=<?php echo $value['order_id']; ?>">
+                                            <span class="label label-warning ">详情</span>
+                                        </a>  
+                                    </td>
+                                </tr>
+                                <?php endforeach ?> 
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="12">
+                                        <div class="b-page">
+                                            <?php echo $page['page']; ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+    $(document).ready(function(){$(".footable").footable();});
+       
+
+   
+ 
+
+</script>

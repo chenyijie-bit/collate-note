@@ -1,0 +1,103 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+     <div class="ibox float-e-margins">
+          <div class="ibox-title">
+               <h5>业务信息</h5>
+                <span class="label label-primary pull-right label-primary-cust">
+                    <?php if($_GET['back'] == 'true'): ?>
+                    <a href="javascript:history.back(-1);" class="fa-lg-cust-a" title="返回上一页">
+                        <i class="fa fa-arrow-left fa-lg-cust"  aria-hidden="true"></i>
+                    </a>
+                    <?php endif; ?>
+                </span> 
+          </div>
+       
+    </div>
+     <div class="row">
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h4>共享币余额（共享币/个）</h4>
+                            <h1 class="no-margins"><?php $result['info']['security'] = $result['info']['security'] * 10; ?>
+                        <span><?php echo $result['info']['piao']+$result['info']['security']; ?> <br></span><span style="font-size: 14px"><?php echo $result['info']['security']>0?'（含保证金 '.$result['info']['security'].' 个）':''; ?><span></h1>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h4>推荐获得奖励（共享币/个）</h4>
+                            <h1 class="no-margins"><span><?php echo $result['sumRewardPiao']?$result['sumRewardPiao']:0; ?> <br></span><span style="font-size: 14px">（共 <?php echo $result['unLeaderNum']; ?> 人）</span></h1>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h4>共为会员发放（共享币/个）</h4>
+                            <h1 class="no-margins"><span><?php echo $result['give_piao']?$result['give_piao']:0; ?> <br></span><span>&nbsp;</span></h1>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h4>代理别店获利（共享币/个）</h4>
+                            <h1 class="no-margins"><span><?php echo $result['rebate_piao']?$result['rebate_piao']:0; ?> <br></span><span>&nbsp;</span></h1>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h4>被别店代理得（共享币/个）</h4>
+                            <h1 class="no-margins"><span><?php echo $result['agent_piao']?$result['agent_piao']:0; ?> <br></span><span>&nbsp;</span></h1>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h4>自营商品收入（共享币/个）</h4>
+                            <h1 class="no-margins"><span><?php echo $result['sale_piao']?$result['sale_piao']:0; ?> <br></span><span>&nbsp;</span></h1>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h4>累计充值金额（共享币/个）</h4>
+                            <h1 class="no-margins"><span><?php echo $result['recharge_piao']?$result['recharge_piao']:0; ?> <br></span><span>&nbsp;</span></h1>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h4>累计提现金额（共享币/个）</h4>
+                            <h1 class="no-margins"><span><?php echo $result['withdrawals_piao']?$result['withdrawals_piao']:0; ?> <br></span><span>&nbsp;</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+

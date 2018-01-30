@@ -1,0 +1,150 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style type="text/css">
+    .load-more{
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        background-color: #BFDFFF;
+        color: #999;
+        font-size: 0.4rem;
+        text-align: center;
+    }
+    .consultation-container{
+        margin-bottom: 3rem;
+    }
+    body {
+        background-color: #fff;
+    }
+    .goback{
+        float: left;
+        top: 0.3rem;
+        font-size: 0.8rem;
+        left: 0.5rem;
+        display: block;
+        position: relative;
+    }
+</style>
+<body>
+<div class="consultation-container">
+    <!--头部-->
+    <div class="header">
+        <a href="/Hospital/My/index" class="fa fa-angle-left goback"></a>
+        <span> 我的咨询 </span>
+    </div>
+    <!--内容-->
+    <div class="ask_container" style="100%">
+        <div class='interrogation'>
+            <?php foreach ($advices as $key => $value): ?>
+            <div class="interrogation-centent click_link" advice-id="<?php echo $value['advice_id'] ?>">
+                <div class="interrogation-container">
+                    <div class="centent-top">
+                        <div class="keshi f_l">
+                            <?php echo $value['department_name'] ?>
+                        </div>
+                        <div class="time f_r">
+                            <?php echo $value['send_time'] ?>
+                        </div>
+                    </div>
+                    <div class="centent-description">
+                        <p class=""><?php echo $value['advice_comment'] ?></p>
+                        <span class="fa fa-angle-right"></span>
+                    </div>
+                    <?php if ($value['doctor_name']=='等待医生回复'){ ?>
+                    <div class="centent-status">
+                        等待医生回复
+                    </div>
+                    <?php }else{ ?>
+                    <div class="centent-status offer">
+                        <img src="<?php echo $value['head_img'] ?>" class="head-img">
+                        <span><?php echo $value['doctor_name'] ?></span>医生已回复
+                    </div>    
+                    <?php } ?>
+                    
+                </div>
+            </div>
+            <?php endforeach ?>
+            <?php if (count($advices) == 0){ ?>
+            <div class="load-more" id="get-more" style="background-color:#fff;padding-top:50%;height: 100%;">您还没有咨询</div>
+            <?php }else{ ?>
+            <div class="load-more" id="get-more" onclick="get_advice()">点击加载更多...</div>
+            <?php } ?>
+            </div>
+            <div style='visibility:hidden' id="page" num='2'></div>
+
+
+        </div>
+    </div>
+    <!--底部浮标-->
+    <div class="introduce-footer clearfix">
+        <div class="tab-bar">
+            <ul class="clearfix">
+                <li class="tab-group  f_l "><a href="#">
+                    <span class=" ">会诊室</span></a></li>
+                <li class="tab-home f_l "><a href="/Hospital/Index/index">
+                    <span>首页</span></a></li>
+                <li class="tab-personal f_l "><a href="/Hospital/My/index">
+                    <span>我</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function reload(b){
+        window.location.href='/Hospital/advice/lists?department_id='+b;
+    }
+
+    function get_advice(){
+        var page = $("#page").attr("num");
+        var a = $('#selectPointOfInterest').val();
+        $.ajax({
+            type:"post",
+            url:"/Hospital/My/myAdvice/",
+            data:{'page':page,'department_id':a},
+            success:function(data){
+                if(data.status == 1){
+                    $("#page").attr("num",parseInt(page)+parseInt(1));
+                    //console.log(data.data);
+                    var data = data.data;
+                    for (var i = 0; i <= data.length-1; i++) {
+                        //console.log(data[i]);
+                        in_comment(data[i]);
+                    };
+                }else if(data.status == 0){
+                    $("#get-more").html(data.data);
+                }
+            }
+        })
+    }
+
+
+    //将获取的更多的数据放入页面中
+    function in_comment(data){
+        var str = '<div class="interrogation-centent click_link" advice-id="'+data.advice_id+'"> <div class="interrogation-container"> <div class="centent-top"> <div class="keshi f_l"> '+data.department_name+' </div> <div class="time f_r"> '+data.send_time+' </div> </div> <div class="centent-description"> <p class="">'+data.advice_comment+' </p> <span class="fa fa-angle-right"></span> </div> <div class="centent-status"> 等待医生回复 </div> </div> </div>';
+
+        var str1 = '<div class="interrogation-centent click_link" advice-id="'+data.advice_id+'"> <div class="interrogation-container"> <div class="centent-top"> <div class="keshi f_l"> '+data.department_name+' </div> <div class="time f_r"> '+data.send_time+' </div> </div> <div class="centent-description"> <p class="">'+data.advice_comment+' </p> <span class="fa fa-angle-right"></span> </div> <div class="centent-status offer"> <img src="'+data.head_img+'" class="head-img"> <span>'+data.doctor_name+'</span>医生已回复 </div>  </div> </div>';
+
+        if (data.doctor_name == "等待医生回复" && data.head_img == null) {
+            $('#get-more').before(str);
+        }else{
+            $('#get-more').before(str1);
+        };
+
+        var script = document.createElement("script");
+        script.src = "/Public/Hospital/index/js/index.js";
+
+        var body = document.body;
+        body.insertBefore(script, body.firstChild);
+        
+        $(".click_link").click(function() {
+           window.location.href="/Hospital/Advice/advice_info?advice_id="+$(this).attr('advice-id');
+        });
+        
+    }
+
+    $(".click_link").click(function() {
+        window.location.href="/Hospital/Advice/advice_info?advice_id="+$(this).attr('advice-id');
+    });
+
+</script>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

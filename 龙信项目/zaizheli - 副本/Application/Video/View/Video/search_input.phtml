@@ -1,0 +1,60 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+	<div class="tab-search-body">
+		<div class="sear-top">
+			<form action="/video/video/search">
+				<img src="/Public/Video/index/image/search.png" alt="">
+				<input type="search" name="keywords" class="sear-top-in" placeholder="输入影片名称">
+			</form>
+			<button onclick="javascript:window.location.href='/video';" class="sear-top-no">取消</button>
+		</div>
+		<div class="sear-cen">
+			<div class="sear-cen-top">
+				<span class="clear-his">搜索历史</span>
+				<a href="javascript:clearSearchLog();" class="sear-cen-a">
+					<img src="/Public/Video/index/image/delete.png" alt="">
+					<span>清空</span>
+				</a>
+			</div>
+			<div class="sear-cen-contain">
+				<ul>
+					<?php for($i=0;$i<=3;$i++): ?>
+					<?php if($_COOKIE['searchLog'][$i]): ?>
+					<li>
+						<a href="/video/video/search?keywords=<?php echo $_COOKIE['searchLog'][$i];?>"><?php echo $_COOKIE['searchLog'][$i];?></a>
+					</li>
+					<?php endif; ?>
+					<?php endfor; ?>
+				</ul>
+			</div>
+		</div>
+		<div class="margin-box"></div>
+		<div class="sear-bot">
+			<p class="sear-bot-top">热搜</p>
+			<div class="sear-bot-contain">
+				<ul>
+					<?php foreach($hotSearch as $k => $v): ?>
+					<li>
+						<a href="/video/video/play?video_id=<?php echo $v['video_id']; ?>">
+							<span><?php echo $k+1; ?></span>
+							<span><?php echo mb_substr($v['name'],0,20);echo strlen($v['name']) > 60 ? ' ....' : ''; ?></span>
+						</a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		</div>
+	</div>
+<script>
+	function clearSearchLog(){
+		var url = '/video/video/clearSearchLog';
+		$.getJSON(url,function(d){
+		    if(d.error){
+		        alert(d.msg);
+		        return false;
+		    }else{
+		        window.location.reload();
+		    }
+		});
+	}
+</script>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

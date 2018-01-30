@@ -1,0 +1,287 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style type="text/css">
+    .register-centainter .register-submit div {
+        width: 6.78125rem;
+        height: 0.84375rem;
+        line-height: 0.84375rem;
+        background-color: #007aff;
+        border-radius: 0.15625rem;
+        font-size: 0.34375rem;
+        color: #ffffff;
+        margin: 0.7rem 1.540625rem;
+        text-align: center;
+        float: left;
+    }
+</style>
+<body>
+<div class="register-centainter">
+<!--头部-->
+    <div class="header clearfix">
+        <a href="/Hospital/Doctor/detail?doctor_id=<?php echo $_GET['doctor_id'] ?>" class="fa fa-angle-left f_l"></a> <span> 预约挂号 </span>
+    </div>
+    <!-- <form action=""> -->
+        <!--医生信息-->
+        <div class="register-title">
+            医生信息
+        </div>
+        <div class="register-content">
+            <div class="reg-con-top">
+                <div class="con-top-left f_l">
+                    <img src="<?php echo $info['head_img'] ?>" alt="">
+                </div>
+                <div class="con-top-moddle f_l">
+                    <p class="moddle-name"><span><?php echo $info['doctor_name'] ?></span><?php echo $info['ranks_name'] ?></p>
+                    <?php foreach ($toux as $key => $value){ ?>
+                        <p><?php echo $value ?></p>
+                    <?php } ?>
+
+                </div>
+
+            </div>
+            <div class="reg-time ">
+                            挂号费 <div  class=" f_r " style=" color:#007aff" >请参考当日门诊价</div>
+                        </div>
+            <div class="reg-time ">
+                门诊时间 <div  class="doc-time f_r " id="doc-time">请选择就诊时间<span class="fa fa-angle-right " aria-hidden="true"></span></div>
+            </div>
+            <div class="reg-prompt">
+                <p class="prompt-title">温馨提示:</p>
+                <p>1.建议在每天8:00-21:00进行预约</p>
+                <p>2.因专家号源稀缺,建议隔周挂号,成功率较高,不建议挂当天号</p>
+                <p>3.挂号费由医院收取,在这里网仅提供预约挂号服务,不收取任何费用</p>
+            </div>
+        </div>
+        <!--个人信息-->
+        <div class="register-title">
+            个人信息
+            <div class="title-right f_r">
+            <?php if (!empty($patients)): ?>
+                <a href="javascript:void(0)" id="edit">
+                    <img src="/Public/Hospital/index/images/icon/edit.png" alt="">
+                </a> 
+            <?php endif ?>
+                <a href="javascript:void(0)" id="add">
+                    <img src="/Public/Hospital/index/images/icon/add.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="register-content">
+
+            <div class="reg-type">
+                选择就诊人<span class="doc-type f_r" id="jiuz">未填写</span>
+            </div>
+            <div class="reg-time">
+                是否使用医保卡
+                <div class="valve">
+                    <div id="div1" class="open1">
+                        <div id="div2" class="open2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="reg-type">
+                手机号<span class="doc-type f_r" id="phon">未填写</span>
+            </div>
+            <form action="" id="add_register">
+                <input type="hidden" id="p_id" name="patients_id" value="">
+                <input type="hidden" id="p_id" name="doctor_id" value="<?php echo $_GET['doctor_id'] ?>">
+                <input type="hidden" id="currunt-data" name="date" value="">
+                <input type="hidden" id="currunt-status" name="is_visit" value="">
+                <input type="hidden" id="currunt-color" name="is_yibao" value="1">
+            </form>
+        </div>
+        <!--就诊信息选择-->
+        <div class="register-title">
+            就诊信息选择
+            <div class="f_r clearfix register-select">
+                <div class="  f_l" id="chuzhen">初诊</div> <div class="f_l" id="fuzhen">复诊</div>
+            </div>
+
+        </div>
+        <div class="register-agree">
+           <a href="javascript:void(0)" class="f_l">
+                    <img src="/Public/Hospital/index/images/icon/agree.png" alt="">
+                </a> <p>
+                如遇医生停诊等特殊情况,您的预约可能会被取消,客服人员会及时通知您,请关注预约状态,保持手机畅通.</p>
+        </div>
+        <div class="register-submit">
+            <div onclick="ajax_submit()">提交预约</div>
+        </div>
+    <!-- </form> -->
+<!--时间选择器弹框-->
+    <div class="interdict hide " id="interdict1">
+        <div class="time" id="time"  >
+            <div class="time-title">请选择就诊日期</div>
+            <ul class="time-content" id="timeul">
+            <?php foreach ($dates as $k1 => $v1): ?>                
+                <li>
+                    <span ><?php echo $v1['date'] ?></span> <span><?php echo $v1['week'] ?></span>
+                    <input type="button" value="预约" class="">
+                </li>
+            <?php endforeach ?>
+            </ul>
+            <div class="time-footer">
+                <input type="button" value="确定" class="input-left" id="time-btn1">
+                <input type="button" value="取消" id="time-btn2">
+            </div>
+        </div>
+    </div>
+
+    <!--添加就诊人信息-->
+
+    <div class="interdict hide" id="interdict2">
+        <div class="addponsonal">
+            <form id="add_people" action="">
+                <div class="addponsonal-title" >
+                    添加就诊人<span class="fa fa-times close" id=""></span>
+                </div>
+                <div class="addponsonal-content" >
+                    <div >
+                        <span>姓&nbsp;&nbsp;&nbsp;名</span>
+                        <input class="f_r" type="text " placeholder="请输入姓名" name="name">
+                    </div>
+                    <div>
+                        <span>身份证</span> <input class="f_r" type="text " placeholder="请输入身份证号" name="id_card">
+                    
+                    </div>
+                    <div>
+                    <span>年&nbsp;&nbsp;&nbsp;龄</span> <input class="f_r" type="number " name="age" min="1" max="3" placeholder="请输入年龄" >
+
+                </div>
+                    <div>
+                        <span>手机号</span> <input class="f_r" type="number " name="phone" min="1" max="11" placeholder="请输入手机号" >
+
+                    </div>
+
+                </div>
+                <div class="addponsonal-foot">
+                    <div class="pon-submit" style='margin-left: 1.2rem;' id="do_add_people">确认添加</div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <!--更改就诊人信息-->
+    <div class="interdict hide" id="interdict3">
+        <div class="addponsonal">
+            <form action="">
+                <div class="addponsonal-title" >
+                    更改就诊人 <span class="fa fa-times close" id=""></span>
+                </div>
+                <div class="addponsonal-content" >
+                    <div class="select-person clearfix" id="jiuz_names">
+                    <?php foreach ($patients as $key => $value): ?>
+                        <div class="pon-name" onclick="pon_name(<?php echo $key ?>)"vid="<?php echo $key ?>"><?php echo $value['patients_name'] ?></div>
+                    <?php endforeach ?>
+                    </div>
+
+                </div>
+                <div class="addponsonal-foot">
+                    <input type="button" value="添加新就诊人" class="pon-submit pon-btn" id="pon-btn">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    var patients = <?php echo json_encode($patients) ?>;
+    
+    function pon_name(i) {
+        //var i = $(this).attr('vid');
+        $('#jiuz').html(patients[i].patients_name);
+        $('#phon').html(patients[i].patients_phone);
+        $('#p_id').val(patients[i].patients_id);
+
+        if ($("#interdict2").hasClass("show")) {
+            $("#interdict2").removeClass("show").addClass("hide")
+        }
+
+        if ($("#interdict3").hasClass("show")) {
+            $("#interdict3").removeClass("show").addClass("hide")
+        }
+    };
+
+    $(".close").click(function () {
+        if ($("#interdict2").hasClass("show")) {
+            $("#interdict2").removeClass("show").addClass("hide")
+        }
+       
+        if ($("#interdict3").hasClass("show")) {
+            $("#interdict3").removeClass("show").addClass("hide")
+        }
+
+    })
+    var is_add_people = false;
+    $('#do_add_people').click(function() {
+        if (is_add_people) {
+            return false;
+        };
+        is_add_people = true;
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/Hospital/Register/add_patients",
+            data:$('#add_people').serialize(),// 你的formid
+            async: false,
+            error: function(data) {
+                is_add_people = false;
+                alert('网络错误');
+            },
+            success: function(data) {
+                if (data.status == 1) {
+                    $('#jiuz').html($('input[name="name"]').val());
+                    $('#phon').html($('input[name="phone"]').val());
+                    $('#p_id').val(data.data);
+                    
+                    $("#interdict2").removeClass("show").addClass("hide");
+                    $('#jiuz_names').append('<div class="pon-name" onclick="pon_name('+patients.length+')" vid="'+patients.length+'">'+$('input[name="name"]').val()+'</div>');
+                    var new_date = '{"patients_id":"'+data.data+'","patients_name":"'+$('input[name="name"]').val()+'","id_card":"","patients_age":"'+$('input[name="age"]').val()+'","patients_phone":"'+$('input[name="phone"]').val()+'","member_id":""}';
+                    patients.push(JSON.parse(new_date));
+                    $('input[name="name"]').val('');
+                    $('input[name="phone"]').val('');
+                    $('input[name="age"]').val('');
+                    is_add_people = false;                
+                }else{
+                    is_add_people = false;
+                    alert(data.data);
+                }
+            }
+        });
+    });
+    
+    var is_add_regirst = false;
+    function ajax_submit(){
+        if (is_add_regirst) {
+            return false;
+        };
+        is_add_regirst = true;
+
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/Hospital/Register/add_register",
+            data:$('#add_register').serialize(),// 你的formid
+            async: false,
+            error: function(data) {
+                is_add_regirst = false;
+                alert('网络错误');
+            },
+            success: function(data) {
+                if (data.status == 1) {
+                    alert('挂号成功!');
+                    window.location.href="/Hospital/Doctor/detail?doctor_id=<?php echo $_GET['doctor_id'] ?>";
+                }else if(data.status == 2){
+                    is_add_regirst = false;
+                    alert(data.data);
+                    window.location.href="http://www.zzlhi.com/log/action/in?refererUrl=http://<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>";
+                }else{
+                    is_add_regirst = false;
+                    alert(data.data);
+                }
+            }
+        });
+    }
+</script>
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

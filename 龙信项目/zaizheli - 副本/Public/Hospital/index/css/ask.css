@@ -1,0 +1,2951 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+ol,
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+input {
+    border: none;
+    outline: none;
+}
+.f_r {
+    float: right;
+}
+.f_l {
+    float: left;
+}
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    zoom: 1;
+}
+.b_t {
+    border-top: 1px solid gray;
+}
+.b_b {
+    border-bottom: 1px solid gray;
+}
+.b_l {
+    border-left: 1px solid gray;
+}
+.b_r {
+    border-right: 1px solid gray;
+}
+/* doc-top样式 */
+.doc-home-page {
+    height: auto;
+    width: 100%;
+}
+.margin-box {
+    height: 0.3125rem;
+    background-color: #F4F4F4;
+    width: 100%;
+}
+.margin-box-m {
+    height: 0.15625rem;
+    background-color: #F4F4F4;
+    width: 100%;
+}
+.doc-top {
+    /*height: 1.2rem;*/
+    padding: 0 2.390625rem 0.1rem;
+    border-bottom: 0.1rem solid #f2f2f2;
+
+
+}
+.doc-top .doc-top-t a {
+    text-decoration: none;
+    color: #111;
+    display: block;
+    margin-top: -0.1rem;
+    padding-bottom: 0.1rem;
+    height: 100%;
+    width: 100%;
+}
+.doc-top-t {
+    display: inline-block;
+    font-size: 0.45rem;
+    padding-top: 0.3rem;
+    text-align: center;
+    width: 1.45rem;
+    box-sizing: border-box;
+    /*margin-bottom: 0.5rem;*/
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.doc-top .active {
+    border-bottom: 0.1rem solid #68a0ff;
+    /*margin-bottom: 0.5rem;*/
+}
+.doc-top .top-bar-l {
+    float: left;
+}
+.doc-top .top-bar-r {
+    float: right;
+}
+.doc-top-banner .swiper-container {
+    width: 10rem;
+    height: 4.0625rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.doc-topbanner-return{
+    display: inline-block;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    z-index: 999;
+    width: 0.9rem;
+    height: 0.9rem;
+    padding: 0.12rem;
+}
+.fa-chevron-circle-left{
+    color:rgba(255,255,255,0.8);
+    font-size:0.7rem;
+}
+.doc-top-banner .swiper-container .swiper-slide {
+    text-align: center;
+    height: 100%;
+}
+.doc-top-banner .swiper-container .swiper-slide img {
+    height: 4.0625rem;
+    width: 100%;
+}
+.doc-register {
+    height: 1.21875rem;
+}
+.doc-register .cle-fl {
+    height: 1.21875rem;
+    width: 2.03125rem;
+}
+.doc-register img {
+    float: left;
+    margin-top: 0.42rem;
+    margin-right: 0.25rem;
+    height: 0.46875rem;
+    width: 0.46875rem;
+    margin-left: 0.46875rem;
+}
+.doc-register span {
+    float: right;
+    display: inline-block;
+    font-size: 0.40625rem;
+    margin-top: 0.35rem;
+    color: #1a1a1a;
+}
+.regis-list {
+    height: 4.28125rem;
+    width: 100%;
+    overflow: hidden;
+}
+.regis-list a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+}
+.regis-list-le {
+    float: left;
+    height: 4.28125rem;
+    width: 3.125rem;
+    border-top: 2px solid #eeeeee;
+}
+.regis-list-le img {
+    height: 1.5625rem;
+    width: 1.5625rem;
+    display: inline-block;
+    margin: 0.5125rem 0.78125rem 0.46875rem 0.78125rem;
+}
+.regis-list-le .re-fir {
+    font-size: 0.40625rem;
+    height: 0.40625rem;
+    list-style: none;
+    text-align: center;
+    font-weight: 700;
+    color: #4C4C4C;
+}
+.regis-list-le .re-thi {
+    font-size: 0.3125rem;
+    text-align: center;
+    margin-top: 0.14rem;
+    color: #999;
+}
+.regis-list-ri {
+    float: left;
+    height: 4.28125rem;
+    width: 6.875rem;
+}
+.regis-list-li {
+    list-style: none;
+    float: left;
+    height: 2.215rem;
+    width: 2.282rem;
+    border-top: 0.03125rem solid #eeeeee;
+    border-left: 0.03125rem solid #eeeeee;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.regis-list-ri p {
+    font-size: 0.3125rem;
+    text-align: center;
+    font-weight: 600;
+    color: #4C4C4C;
+}
+.regis-list-ri img {
+    height: 0.78125rem;
+    width: 0.78125rem;
+    margin: 0.2rem 0.765625rem;
+}
+/* doc */
+.doctor-list-top {
+    height: 0.9375rem;
+    line-height: 0.9375rem;
+    /* width: 100%; */
+    margin: 0 0.46875rem;
+    font-size: 0.40625rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    border-bottom: 2px solid #eeeeee;
+}
+.doc-cen-banner .swiper-container .swiper-slide {
+    width: 1.7rem;
+    text-align: center;
+    background: #fff;
+    height: 4rem;
+    clear: both;
+}
+.doc-cen-banner .swiper-container .swiper-slide img {
+    height: 1.34375rem;
+    width: 1.34375rem;
+    border-radius: 50%;
+    margin-top: 0.3125rem;
+}
+.doc-cen-banner .swiper-container .swiper-slide .doc-list-fir {
+    display: block;
+    font-size: 0.3125rem;
+    font-weight: 600;
+    color: #353535;
+    height: 0.42rem;
+    line-height: 0.42rem;
+}
+.doc-cen-banner .swiper-container .swiper-slide .doc-list-sec {
+    display: block;
+    height: 0.42rem;
+    line-height: 0.42rem;
+    font-size: 0.3125rem;
+    margin: 0.18rem 0;
+    color: #8E8E8E;
+}
+.doc-cen-banner .swiper-container .swiper-slide .doc-list-thi {
+    display: block;
+    height: 0.42rem;
+    line-height: 0.42rem;
+    font-size: 0.3125rem;
+    color: #8E8E8E;
+}
+.doc-cen-banner .swiper-container .swiper-slide .doc-list-thi span {
+    color: #e65050;
+}
+.swiper-slide a {
+    display: block;
+    text-decoration: none;
+    color: #111;
+}
+/* doc-contain样式 */
+.ask_container {
+    background-color: #f4f4f4;
+    overflow: auto;
+}
+.ask_container .interrogation .interrogation-title {
+    height: 1.21875rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+.ask_container .interrogation .interrogation-title .interrogation-left {
+    float: left;
+}
+.ask_container .interrogation .interrogation-title .interrogation-left img {
+    display: block;
+    width: 0.46875rem;
+    height: 0.46875rem;
+    float: left;
+    margin-left: 0.46875rem;
+    margin-top: 0.36625rem;
+}
+.ask_container .interrogation .interrogation-title .interrogation-left span {
+    margin-left: 0.25rem;
+    float: left;
+    display: block;
+    color: #1a1a1a;
+    line-height: 1.21875rem;
+    font-weight: 700;
+    font-size: 0.40625rem;
+}
+
+.ask_container .interrogation .interrogation-title ul {
+    height: 1.21875rem;
+}
+.ask_container .interrogation .interrogation-title ul li {
+    float: left;
+    margin-top: 0.375rem;
+    width: 0.46875rem;
+    height: 0.46875rem;
+    margin-right: 0.46875rem;
+}
+.ask_container .interrogation .interrogation-title ul li a img {
+    display: block;
+    width: 0.46875rem;
+    height: 0.46875rem;
+}
+.ask_container .interrogation .interrogation-centent {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 0.15625rem;
+}
+
+.ask_container .interrogation .interrogation-centent .interrogation-container {
+    background-color: #ffffff;
+}
+
+.ask_container .interrogation .interrogation-centent .centent-top {
+    background-color: #ffffff;
+    height: 1rem;
+    line-height: 1rem;
+    margin-left: 0.46875rem;
+    margin-right: 0.46875rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ask_container .interrogation .interrogation-centent .centent-top .keshi {
+    font-size: 0.40625rem;
+}
+
+.ask_container .interrogation .interrogation-centent .centent-top .time {
+    font-size: 0.40625rem;
+    color: #999999;
+}
+
+.ask_container .interrogation .interrogation-centent .centent-description {
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    margin-left: 0.46875rem;
+    padding-right: 0.93rem;
+    overflow: hidden;
+}
+
+.ask_container .interrogation .interrogation-centent .centent-description span {
+    right: 0.3125rem;
+    top: 35%;
+    color: #999999;
+    position: absolute;
+    height: 0.05rem;
+    font-size: 0.45rem;
+    display: inline-block;
+    width: 0.05rem;
+}
+
+.ask_container .interrogation .interrogation-centent .centent-description p {
+    min-height: 0.8rem;
+    color: #999999;
+    font-size: 0.3125rem;
+    line-height: 0.46875rem;
+    padding-top: 0.234375rem;
+    padding-bottom: 0.234375rem;
+    margin-bottom: 0;
+    word-wrap: break-word;
+    white-space: normal;
+
+}
+
+.ask_container .interrogation .interrogation-centent .hasimg .hasimg-icon {
+    position: absolute;
+    left: 0;
+    top: 0.3125rem;
+    margin-right: 0.15625rem;
+    display: block;
+    float: left;
+    width: 0.35rem;
+    height: 0.35rem;
+}
+
+.ask_container .interrogation .interrogation-centent .hasimg p {
+    color: #999999;
+    margin-left: 0.46875rem;
+    font-size: 0.3125rem;
+    padding-top: 0.234375rem;
+    padding-bottom: 0.234375rem;
+}
+
+.ask_container .interrogation .interrogation-centent .centent-status {
+    background-color: #ffffff;
+    margin-left: 0.46875rem;
+    margin-right: 0.46875rem;
+    font-size: 0.34375rem;
+    font-weight: 700;
+    height: 1.09375rem;
+    line-height: 1.09375rem;
+    color: #68A0FF;
+}
+
+.ask_container .interrogation .interrogation-centent .offer {
+    color: #999999;
+    font-weight: 100;
+}
+
+.ask_container .interrogation .interrogation-centent .offer .head-img {
+    float: left;
+    height: 0.84375rem;
+    width: 0.84375rem;
+    border-radius: 50%;
+    margin-top: 0.15625rem;
+}
+
+.ask_container .interrogation .interrogation-centent .offer span {
+    font-weight: 700;
+    font-size: 0.34375rem;
+    color: #1a1a1a;
+    margin-left: 0.15625rem;
+    margin-right: 0.15625rem;
+}
+
+/* doctor_detail样式 */
+.details-coentainer{
+background-color: #FFFFFF;
+}
+/*头部*/
+.details-coentainer .header {
+    height: 1.453125rem;
+    font-size: 0.45rem;
+    line-height: 1.453125rem;
+    text-align: center;
+    border-bottom: 2px solid #f2f2f2;
+}
+.details-coentainer .header span {
+    margin-top: 0.2rem;
+}
+
+.details-coentainer .header a {
+    line-height: 1.09375rem;
+    color: #739FF8;
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.details-coentainer .header .fa-angle-left {
+    margin-left: 0.46875rem;
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+}
+
+.details-coentainer .header .share-alt {
+    width: 0.46875rem;
+    height: 0.46875rem;
+    margin-right: 0.46875rem;
+    margin-top: 0.4525rem;
+    background: url("../images/icon/share.png") no-repeat;
+    background-size: cover;
+}
+
+.details-coentainer .header .collect {
+    width: 0.46875rem;
+    height: 0.46875rem;
+    margin-right: 0.46875rem;
+    margin-top: 0.4525rem;
+    background: url("../images/icon/nocollect.png") no-repeat;
+    background-size: cover;
+}
+
+.details-coentainer .header .select {
+    background: url("../images/icon/collect.png") no-repeat;
+    background-size: cover;
+}
+/*医生介绍*/
+.details-coentainer .doctor {
+    margin: 0 0.46875rem;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 0.25rem;
+}
+
+.details-coentainer .doctor .doc-left {
+
+    margin-left: 0.46875rem;
+    margin-top: 0.34375rem;
+}
+
+.details-coentainer .doctor .doc-left img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 50%;
+}
+
+.details-coentainer .doctor .doc-moddle {
+    margin-left: 0.3125rem;
+    margin-top: 0.59375rem;
+}
+
+.details-coentainer .doctor .doc-moddle .m-p {
+    margin-bottom: 0.3125rem;
+    font-size: 0.34375rem;
+}
+
+.details-coentainer .doctor .doc-moddle P {
+    line-height: 0.578125rem;
+    color: #999999;
+    font-size: 0.3125rem;
+    margin-bottom: 0;
+}
+
+.details-coentainer .doctor .doc-moddle P span {
+    font-size: 0.5rem;
+    color: #1a1a1a;
+    margin-right: 0.3125rem;
+}
+
+.details-coentainer .doctor .doc-right {
+    margin-top: 0.46875rem;
+}
+
+.details-coentainer .doctor .doc-right .doc-good {
+    margin-left: 0.46875rem;
+    margin-bottom: 0.15625rem;
+}
+
+.details-coentainer .doctor .doc-right .doc-good span {
+    display: block;
+    width: 0.46875rem;
+    height: 0.625rem;
+    background: url("../images/icon/nogood.png") no-repeat;
+    background-size: cover;
+}
+
+.details-coentainer .doctor .doc-right .doc-good .good {
+    background: url("../images/icon/good.png") no-repeat;
+    background-size: cover;
+}
+
+.details-coentainer .doctor .doc-right .doc-good p {
+    font-size: 0.28125rem;
+    margin-top: 0.15625rem;
+}
+
+.details-coentainer .doctor .doc-right a {
+    margin-top: 0.3125rem;
+    color: #739FF8;
+    font-size: 0.3125rem;
+}
+
+.details-coentainer .doc-grade {
+    margin: 0.15625rem 0.46875rem;
+}
+
+.details-coentainer .doc-grade .grade {
+    text-align: center;
+    box-sizing: border-box;
+    color: #ffffff;
+    height: 0.78125rem;
+    width: 2.76rem;
+    line-height: 0.78125rem;
+    font-size: 0.3125rem;
+    border-radius: 0.15625rem;
+}
+
+.details-coentainer .doc-grade .blue {
+    margin-right: 0.3125rem;
+    background-color: #70A1E8;
+}
+
+.details-coentainer .doc-grade .orange {
+    margin-right: 0.3125rem;
+    background-color: #FF9500;
+}
+
+.details-coentainer .doc-grade .green {
+    background-color: #9FC750;
+}
+
+.details-coentainer .doc-introduce {
+    border-top: 0.3125rem solid #f6f6f6;
+}
+
+.details-coentainer .doc-introduce .introduce-title {
+    padding: 0 0.46875rem;
+    height: 0.96875rem;
+    line-height: 0.96875rem;
+    border-bottom: 0.03125rem solid #eeeeee;
+}
+
+.details-coentainer .doc-introduce .introduce-title .introduce-left {
+    font-size: 0.375rem;
+    color: #1a1a1a;
+}
+
+.details-coentainer .doc-introduce .introduce-title .introduce-left .icon-introduce {
+    float: left;
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url("../images/icon/introlude.png") no-repeat;
+    background-size: cover;
+    margin-right: 0.15625rem;
+    margin-top: 0.25rem;
+}
+
+.details-coentainer .doc-introduce .introduce-title .introduce-left .disease {
+    background: url("../images/icon/disease.png") no-repeat;
+    background-size: cover;
+}
+
+.details-coentainer .doc-introduce .introduce-title .introduce-left .cometime {
+    background: url("../images/icon/cometime.png") no-repeat;
+    background-size: cover;
+}
+
+.details-coentainer .doc-introduce .introduce-title .introduce-left .evaluate {
+    background: url("../images/icon/evaluate.png") no-repeat;
+    background-size: cover;
+}
+
+.details-coentainer .doc-introduce .introduce-title .introduce-right {
+    height: 0.96875rem;
+}
+
+.details-coentainer .doc-introduce .introduce-title .introduce-right i {
+    display: block;
+    line-height: 0.96875rem;
+    color: #777777;
+    font-size: 0.375rem;
+}
+
+.details-coentainer .doc-introduce .introduce-profile {
+    padding: 0.3125rem 0.46875rem 0.625rem;
+}
+
+.details-coentainer .doc-introduce .introduce-profile p {
+    color: #999999;
+    font-size: 0.3125rem;
+    line-height: 0.46875rem;
+    margin-bottom: 0;
+}
+
+.details-coentainer .doc-introduce .cometime-table .cometime-head .cometime-left {
+    box-sizing: border-box;
+    height: 1.09375rem;
+    width: 3.46875rem;
+    border-bottom: 2px solid #eeeeee;
+    border-right: 2px solid #eeeeee;
+}
+
+.details-coentainer .doc-introduce .cometime-table .cometime-head .cometime-right ul li {
+    box-sizing: border-box;
+    line-height: 1.09375rem;
+    height: 1.09375rem;
+    border-bottom: 2px solid #eeeeee;
+    border-right: 2px solid #eeeeee;
+    text-align: center;
+    float: left;
+    color: #1a1a1a;
+    font-size: 0.53125rem;
+    width: 0.90625rem;
+}
+
+.details-coentainer .doc-introduce .cometime-table .cometime-head .cometime-right ul .last {
+    border-right: 0 none;
+}
+
+.details-coentainer .doc-introduce .cometime-table .cometime-body .cometime-left {
+    box-sizing: border-box;
+    height: 0.65625rem;
+    width: 3.46875rem;
+    border-bottom: 2px solid #eeeeee;
+    border-right: 2px solid #eeeeee;
+    font-size: 0.53125rem;
+    text-align: center;
+}
+
+.details-coentainer .doc-introduce .cometime-table .cometime-body .cometime-right ul li {
+    box-sizing: border-box;
+    line-height: 0.65625rem;
+    height: 0.65625rem;
+    border-bottom: 2px solid #eeeeee;
+    border-right: 2px solid #eeeeee;
+    text-align: center;
+    float: left;
+    color: #1a1a1a;
+    font-size: 0.53125rem;
+    width: 0.90625rem;
+}
+
+.details-coentainer .doc-introduce .cometime-table .cometime-body .cometime-right ul .last {
+    border-right: 0 none;
+}
+
+.details-coentainer .doc-introduce .cometime-table .cometime-body .cometime-right ul .fa-check {
+    background-color: #f1f6ff;
+    color: #739FF8;
+    font-weight: 100;
+    font-size: 0.46875rem;
+}
+
+.details-coentainer .doc-introduce .evaluate-content {
+    margin: 0 0.46875rem 0.3125rem;
+
+}
+
+.details-coentainer .doc-introduce .evaluate-content .evaluate-title {
+    padding: 0.3125rem 0;
+}
+
+.details-coentainer .doc-introduce .evaluate-content .evaluate-title .evaluate-name {
+    font-size: 0.3125rem;
+    color: #1a1a1a;
+}
+
+.details-coentainer .doc-introduce .evaluate-content .evaluate-title .evaluate-time {
+    font-size: 0.28125rem;
+    color: #999999;
+}
+
+.details-coentainer .doc-introduce .evaluate-content .evaluate-description {
+    padding-bottom: 0.3125rem;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.details-coentainer .doc-introduce .evaluate-content .evaluate-description p {
+    color: #999999;
+    font-size: 0.3125rem;
+    margin-bottom: 0;
+}
+
+/* 我的医生列表样式 */
+#doc-list-all {
+    background-color: #fff;
+    height: 100%;
+    margin-bottom: 0.3rem;
+}
+#doc-list-all #doc-li-header {
+    height: 1.453125rem;
+    line-height: 1.453125rem;
+    font-size: 0.45rem;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+    /* margin-bottom: 0.15625rem; */
+}
+
+#doc-list-all #doc-li-header i {
+    line-height: 1.453125rem;
+    color: #739FF8;
+    font-size: 0.8rem;
+    margin-left: 0.46875rem;
+}
+
+#doc-list-all #doc-li-header span {
+    display: inline-block;
+    height: 1.453125rem;
+    margin-left: -0.25rem;
+    line-height: 1.453125rem;
+}
+
+/* doctor_list样式 */
+
+.margin-body {
+    height: 0.15625rem;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.doc-list-all {
+    background-color: #fff;
+    height: 100%;
+    margin-bottom: 0.3rem;
+}
+.doc-list-all .doc-li-header {
+    height: 1.09375rem;
+    line-height: 1.09375rem;
+    font-size: 0.390625rem;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 0.15625rem;
+}
+
+.doc-list-all .doc-li-header i {
+    line-height: 1.09375rem;
+    color: #739FF8;
+    font-size: 0.76rem;
+    margin-left: 0.46875rem;
+}
+
+.doc-list-all .doc-li-header span {
+    display: inline-block;
+    height: 1.09375rem;
+    line-height: 1.09375rem;
+}
+
+.doc-list-all .doc-li-header a {
+    display: inline-block;
+}
+
+.doc-list-all .doc-li-header .doc-head-i {
+    height: 0.46rem;
+    width: 0.46rem;
+    margin: 0.316rem 0.46875rem 0 0;
+}
+
+.doc-section-list {
+    height: 100%;
+    width: 100%;
+}
+.doc-section-list :after {
+    height: 0;
+    content: "";
+    font-size: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.doc-section-list .sect-li-le {
+    height: 100%;
+    width: 2.8125rem;
+    margin-left: 0.15625rem;
+    background-color: #74a9ff;
+    float: left;
+}
+.doc-section-list .sect-li-le a {
+    display: inline-block;
+    font-size: 0.3125rem;
+    color: #fff;
+    padding: 1.6rem 1rem;
+}
+
+.doc-section-list .sect-li-ri li {
+    height: 2.046875rem;
+    width: 2.078125rem;
+    font-size: 0.3125rem;
+    float: left;
+    margin: 0 0 0.15625rem 0.15625rem;
+    display: inline-block;
+}
+
+.doc-section-list .sect-li-ri li:nth-child(2n+1) {
+    background-color: #ecf9ff;
+}
+
+.doc-section-list .sect-li-ri li:nth-child(2n) {
+    background-color: #FFF4F8;
+}
+
+.doc-section-list .sect-li-ri li a {
+    display: inline-block;
+    color: #999999;
+    height: 2.046875rem;
+    line-height: 2.046875rem;
+    width: 100%;
+    text-align: center;
+}
+.doc-li-contain{
+    margin-top: -0.2rem;
+}
+
+.doc-li-contain .doc-cont-top {
+    height: 1rem;
+    width: 100%;
+    position: relative;
+    /*margin-top: 0.2rem;*/
+    /*border-bottom: 2px solid #f2f2f2;*/
+}
+
+.doc-li-contain .doc-cont-top i {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: 0.15rem;
+    right: 50%;
+    height: 0.7rem;
+    width: 2px;
+    background-color: #f2f2f2;
+}
+
+.doc-li-contain .doc-cont-top button {
+    outline: none;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    width: 33.333%;
+    border: none;
+    background-color: #fff;
+    display: inline-block;
+    color: #999999;
+    float: left;
+    padding: 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.doc-li-contain .doc-cont-top button.active {
+    color: #74a9ff;
+}
+
+.doc-li-contain .doc-cont-top button span {
+    display: inline-block;
+    font-size: 0.6rem;
+    margin-left: 0.2rem;
+    margin-top: 0.08rem;
+}
+
+.doc-cont-bottom ul li {
+    height: 2.15625rem;
+    width: 100%;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.doc-cont-bottom ul li a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.doc-cont-bottom .cont-bot-le {
+    display: inline-block;
+    height: 2.15625rem;
+    width: 1.8125rem;
+    padding-left: 0.46875rem;
+    padding-right: 1.8rem;
+    float: left;
+}
+
+.doc-cont-bottom .cont-bot-le img {
+    height: 1.5rem;
+    width: 1.5rem;
+    float: left;
+    border-radius: 50%;
+    margin-top: 0.3125rem;
+    float: left;
+    display: inline-block;
+}
+
+.doc-cont-bottom .cont-bot-ri {
+    width: 7.71875rem;
+    height: 2.15625rem;
+    float: right;
+    position: relative;
+  margin-left: 0.2rem;
+}
+
+.doc-cont-bottom .cont-bot-ri .bot-ri-text {
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+    width: 100%;
+    color: #222;
+}
+
+.doc-cont-bottom .cont-bot-ri .bot-ri-text span:nth-child(1) {
+    display: inline-block;
+    font-size: 0.35375rem;
+    color: #111;
+    font-weight: 600;
+}
+
+.doc-cont-bottom .cont-bot-ri .bot-ri-text span.ri-text-t {
+    font-size: 0.3125rem;
+    display: inline-block;
+    margin-left: 0.325rem;
+}
+
+.doc-cont-bottom .cont-bot-ri .bot-ri-zan {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.46875rem;
+}
+
+.doc-cont-bottom .cont-bot-ri .bot-ri-zan img {
+    height: 0.45rem;
+    width: 0.34375rem;
+}
+
+.doc-cont-bottom .cont-bot-ri p span {
+    display: inline-block;
+}
+
+.doc-cont-bottom .cont-bot-ri p span:nth-child(2) {
+    margin-left: 0.375rem;
+}
+
+.doc-cont-bottom .bot-ri-zan span {
+    margin-left: 0;
+    font-size: 0.375rem;
+}
+
+.doc-cont-bottom .load-more {
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #BFDFFF;
+    color: #999;
+    font-size: 0.4rem;
+    text-align: center;
+}
+
+/*定位浮标*/
+.details-coentainer {
+    margin-bottom: 1.1rem;
+    overflow: auto;
+}
+
+.doc-home-page {
+    margin-bottom: 2.7rem;
+    overflow: auto;
+    background-color: #FFFFFF;
+}
+
+.consultation-container {
+    margin-bottom: 3rem;
+
+    overflow: auto;
+}
+
+.introduce-footer {
+    border-top: 2px solid #eeeeee;
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.introduce-footer .footer-top {
+    height: 1.2rem;
+    padding: 0 0.45rem;
+}
+
+.introduce-footer .footer-top a {
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.45rem;
+    /*margin-right:0.3125rem ;*/
+    margin-top: 0.18rem;
+    display: block;
+    width: 4.4rem;
+    border-radius: 0.16rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+
+.footer-righter {
+    margin-left: -0.5525rem;
+}
+
+.introduce-footer .footer-top .ask {
+    /*overflow: hidden;*/
+    background-color: #70A1E8;
+    /*margin-top: -5rem;*/
+
+}
+
+
+.introduce-footer .footer-top .order {
+    background-color: #9FC750;
+
+}
+.introduce-footer .footer-top .order span{
+    padding-left: 0.35rem;
+}
+.introduce-footer .footer-top a img {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    float: left;
+    margin-top: 0.18rem;
+    margin-left: 0.55rem;
+}
+
+.introduce-footer .footer-top a span {
+    display: block;
+    float: left;
+    /*margin-left: 0.35rem;*/
+}
+.introduce-footer .footer-top .ask span{
+    padding-left: 1.45rem;
+}
+.introduce-footer .footer-top .indexask span{
+    padding-left: 0.35rem;
+
+}
+.introduce-footer .tab-bar {
+    height: 1.4rem;
+    background-color: #f4f4f4;
+}
+
+.introduce-footer .tab-bar ul {
+    height: 1.4rem;
+    padding-top: 0.05rem;
+}
+
+.introduce-footer .tab-bar ul li {
+    /*display: block;*/
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background: url("../images/icon/huizhen2.png") no-repeat;
+    background-size: cover;
+    margin-left: 1.5rem;
+    margin-right: 0.6rem;
+}
+
+.introduce-footer .tab-bar ul li a {
+    display: block;
+    width: 3rem;
+    height: 1.4rem;
+    margin-top: 0.8rem;
+
+}
+
+.introduce-footer .tab-bar ul li a span {
+    color: #999999;
+    display: block;
+    font-size: 0.3124rem;
+    height: 1.4rem;
+    width: 3rem;
+
+}
+
+.introduce-footer .tab-bar .tab-personal span {
+    margin-left: 0.3rem;
+}
+
+.introduce-footer .tab-bar .tab-home span {
+    margin-left: 0.13rem;
+}
+
+.introduce-footer .tab-bar .tab-group {
+    background: url("../images/icon/huizhen2.png") no-repeat;
+    background-size: cover;
+
+}
+
+.introduce-footer .tab-bar .group-currunt {
+    background: url("../images/icon/huizhen.png") no-repeat;
+    background-size: cover;
+    /*color: #007aff;*/
+}
+
+.introduce-footer .tab-bar .tab-personal {
+    background: url("../images/icon/i2.png") no-repeat;
+    background-size: cover;
+}
+.introduce-footer .tab-bar .group-currunt span{
+    color: #007aff;
+}
+.introduce-footer .tab-bar .personal-currunt {
+    background: url("../images/icon/i.png") no-repeat;
+    background-size: cover;
+}
+.introduce-footer .tab-bar .personal-currunt span {
+    color: #007aff;
+}
+.introduce-footer .tab-bar .tab-home {
+    background: url("../images/icon/index2.png") no-repeat;
+    background-size: cover;
+}
+
+.introduce-footer .tab-bar .home-currunt {
+    background: url("../images/icon/index.png") no-repeat;
+    background-size: cover;
+}
+.introduce-footer .tab-bar .home-currunt span{
+    color: #007aff;
+}
+
+/* doctorregister页面样式 */
+.register-centainter {
+    background-color: #ffffff;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.register-centainter .header {
+    width: 100%;
+    height: 1.453125rem;
+    font-size: 0.45rem;
+    line-height: 1.453125rem;
+    text-align: center;
+    border-bottom: 2px solid #f2f2f2;
+    background-color: #ffffff;
+}
+
+.register-centainter .header a {
+    line-height: 1.09375rem;
+    color: #739FF8;
+    font-size: 0.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-left: 0.46875rem;
+    margin-top: 0.1rem;
+}
+
+.register-centainter .header span {
+    margin-right: 0.46875rem;
+    color: #1a1a1a;
+}
+
+.register-centainter .register-title {
+    height: 0.96875rem;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 0.34375rem;
+    padding-left: 0.46875rem;
+    line-height: 0.96875rem;
+}
+
+.register-centainter .register-title .register-select {
+    margin-right: 0.46875rem;
+    margin-top: 0.125rem;
+}
+
+.register-centainter .register-title .register-select div {
+    color: #1a1a1a;
+    margin-left: 0.3125rem;
+    height: 0.6875rem;
+    width: 1.53125rem;
+    border-radius: 0.15625rem;
+    border: 1px solid #eeeeee;
+    text-align: center;
+    line-height: 0.71875rem;
+}
+
+.register-centainter .register-title .register-select .select-currunt {
+    background-color: #007aff;
+    color: #ffffff;
+}
+
+.register-centainter .title-right a {
+    display: block;
+    float: left;
+}
+
+.register-centainter .title-right a img {
+    float: left;
+    display: block;
+    width: 0.46875rem;
+    height: 0.46875rem;
+    margin-right: 0.46875rem;
+    margin-top: 0.234375rem;
+}
+
+.register-centainter .register-content {
+    padding: 0 0.46875rem 0.234375rem;
+    border-bottom: 0.15625rem solid #eeeeee;
+}
+
+.register-centainter .register-content .reg-con-top {
+    /*height: 2.03125rem;*/
+    border-bottom: 1px solid #eeeeee;
+    overflow: hidden;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-left {
+    padding-top: 0.265625rem;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-left img {
+    width: 1.34375rem;
+    height: 1.34375rem;
+    border-radius: 50%;
+    display: block;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-moddle {
+    margin-left: 0.53125rem;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-moddle p {
+    height: 0.546875rem;
+    font-size: 0.3125rem;
+    color: #999999;
+    line-height: 0.546875rem;
+    margin-bottom: 0;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-moddle .moddle-name {
+    font-size: 0.34375rem;
+    color: #1a1a1a;
+    margin-top: 0.3125rem;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-moddle .moddle-name span {
+    margin-right: 0.6875rem;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-right {
+    margin-top: 0.890625rem;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-right p {
+    line-height: 0.36875rem;
+    height: 0.36875rem;
+    font-size: 0.3125rem;
+    color: #999999;
+}
+
+.register-centainter .register-content .reg-con-top .con-top-right .p-blue {
+    color: #007aff;
+}
+
+.register-centainter .register-content .reg-type {
+    height: 0.9375rem;
+    line-height: 0.9375rem;
+    font-size: 0.3125rem;
+    color: #1a1a1a;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.register-centainter .register-content .reg-type .doc-type {
+    float: right;
+    color: #999999;
+
+}
+
+.register-centainter .register-content .reg-time {
+    position: relative;
+    height: 0.9375rem;
+    line-height: 0.9375rem;
+    font-size: 0.3125rem;
+    color: #1a1a1a;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.register-centainter .register-content .reg-time .valve {
+    position: absolute;
+    right: 0;
+    top: 0.15625rem;
+}
+
+.register-centainter .register-content .reg-time .doc-time {
+    color: #1a1a1a;
+}
+
+.register-centainter .register-content .reg-time .doc-time span {
+    margin-left: 0.15625rem;
+    color: #bebebe;
+}
+
+.register-centainter .register-content .reg-prompt {
+    margin-top: 0.3125rem;
+}
+
+.register-centainter .register-content .reg-prompt p {
+    font-size: 0.28125rem;
+    color: #999999;
+    line-height: 0.515625rem;
+    margin-bottom: 0.1rem;
+}
+
+.register-centainter .register-content .reg-prompt .prompt-title {
+    color: #ee7f92;
+}
+
+.register-centainter .register-agree {
+    margin: 0.3125rem 0.46875rem;
+}
+
+.register-centainter .register-agree a {
+    height: 1.5625rem;
+    margin-right: 0.15625rem;
+}
+
+.register-centainter .register-agree p {
+    color: #999999;
+    font-size: 0.3125rem;
+    line-height: 0.546875rem;
+    padding-left: 0.46875rem;
+}
+
+.register-centainter .register-submit {
+    background-color: #eeeeee;
+}
+
+.register-centainter .register-submit input {
+    width: 6.78125rem;
+    height: 0.84375rem;
+    background-color: #007aff;
+    border-radius: 0.15625rem;
+    font-size: 0.34375rem;
+    color: #ffffff;
+    margin: 0.7rem 1.540625rem;
+}
+/*滑动开关*/
+#div1 {
+    width: 1.25rem;
+    height: 0.625rem;
+    border-radius: 0.3125rem;
+    position: relative;
+    right: 0;
+    top: 0;
+}
+
+#div2 {
+    width: 0.5625rem;
+    height: 0.5625rem;
+    border-radius: 0.28125rem;
+    position: absolute;
+    background: white;
+    box-shadow: 0rem 0.03125rem 0.0625rem rgba(0, 0, 0, 0.4);
+}
+
+.open1 {
+    background: rgba(0, 184, 0, 0.8);
+}
+
+.open2 {
+    top: 0.03125rem;
+    right: 0.015625rem;
+}
+
+.close1 {
+    background: rgba(255, 255, 255, 0.4);
+    border: 0.046875rem solid rgba(0, 0, 0, 0.15);
+    border-left: transparent;
+}
+
+.close2 {
+    left: 0;
+    top: 0;
+    border: 0.03125rem solid rgba(0, 0, 0, 0.1);
+}
+/*显示或隐藏*/
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+/*遮挡层*/
+.interdict {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10rem;
+    height: 20rem;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/*时间选择器*/
+.interdict .time {
+    width: 7.8125rem;
+    height: 7.8125rem;
+    border-radius: 0.15625rem;
+    border: 0.03125rem solid #bebebe;
+    background-color: #ffffff;
+    position: absolute;
+    left: 1.09375rem;
+    top: 3.125rem;
+    z-index: 20;
+    color: #1a1a1a;
+}
+
+.interdict .time .time-title {
+    height: 1.25rem;
+    font-size: 0.546875rem;
+    text-align: center;
+    line-height: 1.25rem;
+    border-bottom: 1px  solid #eeeeee;
+}
+
+.interdict .time .time-content {
+    overflow: auto;
+    text-align: center;
+    height: 5.21875rem;
+}
+
+.interdict .time .time-content span {
+    line-height: 0.9375rem;
+    height: 0.9375rem;
+    font-size: 0.46875rem;
+}
+
+.interdict .time .time-content input {
+    margin-left: 0.546875rem;
+    margin-top: 0.15625rem;
+    color: #007aff;
+    padding: 0.046875rem;
+    font-size: 0.3125rem;
+}
+
+.interdict .time .time-footer {
+    border-top: 2px solid #eeeeee;
+    height: 1.25rem;
+    line-height: 1.25rem;
+}
+
+.interdict .time .time-footer input {
+    width: 50%;
+    float: left;
+    border: 0 none;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    color: #007aff;
+    font-weight: 700;
+    font-size: 0.46875rem;
+    padding: 0;
+}
+.interdict .time .time-content input.active{
+    background-color: #007aff;
+    color: #ffffff;
+}
+
+.interdict .time .time-footer .input-left {
+    border-right: 0.03125rem solid #eeeeee;
+}
+/*添加就诊人*/
+.interdict .addponsonal {
+    width: 7.8125rem;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 0.15625rem;
+    left: 1.09375rem;
+    z-index: 20;
+    top: 4.6875rem;
+}
+
+.interdict .addponsonal .addponsonal-title {
+    height: 1.25rem;
+    background-color: #007aff;
+    color: #ffffff;
+    padding-left: 0.46875rem;
+    line-height: 1.25rem;
+
+}
+
+.interdict .addponsonal .addponsonal-content {
+    padding: 0.5875rem 0.78125rem;
+    height: 100%;
+}
+.interdict .addponsonal .addponsonal-content .select-person{
+    height: 100%;
+
+}
+.interdict .addponsonal .addponsonal-content .pon-name {
+    border-radius: 0.00776398rem;
+    border: 1px solid #eeeeee;
+    height: 0.56875rem;
+    line-height: 0.56875rem;
+    float: left;
+    margin-right: 0.3125rem;
+    font-size: 0.45rem;
+    margin-bottom: 0.2rem;
+}
+
+.interdict .addponsonal .addponsonal-content div {
+    color: #1a1a1a;
+    height: 0.9375rem;
+
+}
+
+.interdict .addponsonal .addponsonal-content div input {
+    width: 4.21875rem;
+    height: 0.75rem;
+    line-height: 0.55rem;
+    border: 1px solid #eeeeee;
+    border-radius: 0.078125rem;
+    color: #ACAC9D;
+    font-size: 0.3rem;
+    padding: 0.1rem 0;
+}
+.interdict .addponsonal .addponsonal-title span{
+    float: right;
+    margin-right: 0.45rem;
+    margin-top: 0.3rem;
+    font-size: 0.6rem;
+}
+.interdict .addponsonal .addponsonal-foot {
+    width: 7.8125rem;
+    height: 1.25rem;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+}
+
+
+
+.interdict .addponsonal .addponsonal-foot .pon-submit {
+    padding: 0;
+    color: #ffffff;
+    line-height: 0.78125rem;
+    height: 0.78125rem;
+    width: 5.34375rem;
+    background-color: #007aff;
+    margin-top: 0.19rem;
+    border-radius: 0.11rem;
+}
+
+/* doc-consutation 页面样式 */
+.consultation-container {
+    min-height: 17.8rem;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.consultation-container .header {
+    height: 1.453125rem;
+    font-size: 0.45rem;
+    line-height: 1.453125rem;
+    text-align: center;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.consultation-container .header span {
+    font-size: 0.45rem;
+}
+
+.consultation-container .select-interrogation {
+    margin-top: 0.28125rem;
+    padding-right: 0.46875rem;
+    position: relative;
+}
+.consultation-container .select-interrogation .xiala{
+    position: absolute;
+    right: 0.6rem;
+    color: #007aff;
+    top: 0.05rem;
+}
+
+
+.consultation-container .select-interrogation select#selectPointOfInterest {
+    padding: 0 0.5rem 0 0;
+    margin-top: 0.08rem;
+    width: 3.56796875rem;
+    height: 0.46875rem;
+    line-height: 0.46875rem;
+    text-indent: 0.046875rem;
+    direction: rtl;
+    vertical-align: middle;
+    -moz-border-radius: 0.09375rem;
+    -webkit-border-radius: 0.09375rem;
+    border-radius: 0.09375rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: SimHei;
+    font-size: 0.45rem;
+    font-weight: 500;
+    color: #007aff;
+    cursor: pointer;
+    outline: none;
+}
+
+/*医生说页面样式*/
+.doctor-chat{
+    min-height: 17.8rem;
+    background-color: #FFFFFF;
+}
+.doctor-chat-top{
+    height: 1.453125rem;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #f2f2f2;
+}
+.doctor-chat-top a{
+    display: inline-block;
+    height: 0.7rem;
+    width: 0.7rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.375rem;
+}
+.doctor-chat-top a i{
+    height: 0.5rem;
+    width: 0.5rem;
+    font-size: 0.8rem;
+    color: #007aff;
+    position: absolute;
+    top: -0.1rem;
+}
+.doctor-chat-top span{
+    height: 0.5rem;
+    line-height: 0.5rem;
+    width: 1.35rem;
+    position: absolute;
+    left: 50%;
+    top: 0.425rem;
+    margin-left: -0.675rem;
+    font-size: 0.45rem;
+
+}
+.doctor-chat-contain{
+    height: 2.2rem;
+    width: 100%;
+    border-bottom: 0.3rem solid #f2f2f2;
+    padding: 0 0.3125rem;
+    box-sizing:border-box;
+}
+.doctor-chat-contain img{
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+/*.doctor-chat-top span*/
+margin-top: 0.3rem;
+    float: left;
+
+}
+.doctor-chat-contain span{
+    display: inline-block;
+}
+.doctor-chat-contain .chat-con-l{
+    height: 0.6rem;
+    width: 2rem;
+    font-size: 0.55rem;
+    color: #111;
+    font-weight: 500;
+    margin: 0.7rem 0rem 0 0.4rem;
+}
+.doctor-chat-contain .chat-con-r{
+    height: 0.6rem;
+    width: 3rem;
+    color: #999999;
+    font-size: 0.4rem;
+}
+.doctor-chat-bottom ul li{
+    height: 2rem;
+    width: 100%;
+    padding: 0.3125rem 0.46875rem;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.doctor-chat-bottom ul li img{
+    height: 0.45rem;
+    width: 0.45rem;
+    float: left;
+}
+.doctor-chat-bottom  a{
+    display: inline-block;
+}
+.doctor-chat-bottom .chat-bot-li{
+    height: 1.575rem;
+    width: 8.6rem;
+    float: left;
+    padding-left: 0.4rem;
+}
+.doctor-chat-bottom .chat-bot-li .chat-main{
+    font-size: 0.4rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    color: #3C3C3C;
+    font-weight: 400;
+}
+.doctor-chat-bottom .chat-bot-li .chat-time{
+    font-size: 0.3rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    margin-top:0.3rem;
+    color: #999999;
+}
+
+
+/* 咨询详情页面样式 */
+
+
+/* 医生回复样式 */
+.chatmain-suf{
+    margin-bottom: 1rem;
+}
+.doc-chatmain{
+    min-height: 17.8rem;
+    margin-bottom: 0.5rem;
+    background-color: #FFFFFF;
+}
+.doc-chatmain-top span{
+    height: 0.5rem;
+    line-height: 0.5rem;
+    width: 2.2rem;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 0.475rem;
+    margin-left: -1.1rem;
+    font-size: 0.45rem;
+
+}
+.chatmain-doc{
+    margin-bottom: 1rem;
+    height:auto;
+    width: 100%;
+}
+.reserv-hospital{
+    font-size: 0.34rem;
+}
+.chatmain-doc .chatmain-doc-time{
+    position: absolute;
+    left: 1.5rem;
+    bottom: 0;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+    width: 3rem;
+    /*margin-left: 1.5rem;*/
+    /*margin-top: 0.3rem;*/
+    /*margin: 0.8rem 3rem 0.4rem;*/
+    background-color: #DcDcDc;
+    color: #fff;
+    font-size: 0.3rem;
+    text-align: center;
+
+}
+.chatmain-dochead{
+    display: inline-block;
+    height: 3rem;
+    width: 1.9rem;
+    padding-left: 0.5rem;
+    float: left;
+}
+.chatmain-dochead img{
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    float: left;
+}
+.chatmain-docsay{
+    height: auto;
+    width: 8.1rem;
+    padding-left: 0.1rem;
+    float: left;
+    padding-bottom: 0.8rem;
+    position: relative;
+}
+.chatmain-docsay .chatmain-dname{
+    height: 0.75rem;
+    color: #1a1a1a;
+    font-size: 0.4rem;
+    line-height: 0.75rem;
+    margin-left: 0.15rem;
+}
+.chatmain-docsay .chatmain-dtext{
+    height: auto;
+    width: 7.2rem;
+    font-size: 0.38rem;
+    line-height: 0.4rem;
+}
+.chatmain-docsay .chatmain-dall{
+    height: auto;
+    width: 6.8rem;
+    background-color: #E7E7E7;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.2rem;
+    position: relative;
+    margin-left: 0.15rem;
+}
+.chatmain-docsay .chatmain-dall .back-san{
+    width:0;
+    height:0;
+    left: -0.2rem;
+    top: 0.1rem;
+    border-width:0.3rem 0.3rem 0.3rem 0;
+    border-style:solid;
+    border-color:transparent #E7E7E7 transparent transparent;/*透明 灰 透明 透明 */
+    position:absolute;
+    transform:rotate(20deg);
+}
+
+/* 患者咨询样式 */
+
+.chatmain-suf-time{
+    position: absolute;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+    width: 3rem;
+    left: 3.5rem;
+    bottom: 0;
+    /*margin-left:3.5rem;*/
+    /*margin-top: 2rem;*/
+    /*margin: 0.8rem 3rem 0rem;*/
+    background-color: #DcDcDc;
+    color: #fff;
+    font-size: 0.3rem;
+    text-align: center;
+
+}
+.chatmain-sufhead{
+    display: inline-block;
+    height: 3rem;
+    width: 1.9rem;
+    padding-right: 0.5rem;
+    float: right;
+}
+.chatmain-sufhead img{
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    float: right;
+    margin-top: 0.2rem;
+}
+.chatmain-sufsay{
+    position: relative;
+    height: auto;
+    width: 8.1rem;
+    padding-right: 0.1rem;
+    float: right;
+    padding-bottom: 0.8rem;
+}
+.chatmain-sufsay .chatmain-sufname{
+    height: 0.75rem;
+    color: #1a1a1a;
+    font-size: 0.4rem;
+    line-height: 0.75rem;
+    margin-right: 0.15rem;
+    float: right;
+    min-width: 1rem;
+}
+.chatmain-sufsay .chatmain-suftext{
+    height: auto;
+    width: 7.2rem;
+    font-size: 0.38rem;
+    line-height: 0.45rem;
+}
+.chatmain-sufsay .chatmain-sufall{
+    min-height: 1rem;
+    height: auto;
+    width: 6.8rem;
+    background-color: #cee6ff;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.2rem;
+    position: relative;
+    margin-right: 0.15rem;
+    float: right;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.chatmain-sufsay .chatmain-sufall .back-sufsan{
+    width:0;
+    height:0;
+    right: -0.2rem;
+    top: 0.1rem;
+    border-width:0.3rem 0 0.3rem 0.3rem;
+    border-style:solid;
+    border-color:transparent  transparent transparent #cee6ff;/*透明 灰 透明 透明 */
+    position:absolute;
+    transform:rotate(-20deg);
+}
+.chatmain-sufsay .chatmain-sufall .sufall-img{
+    display: block;
+    height: auto;
+    width: auto;
+}
+.chatmain-sufsay .chatmain-sufall img{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.2rem 0.3rem;
+    display: inline-block;
+    float: left;
+}
+
+/* <!-- 当事人聊天窗口 --> */
+
+.doc-chatmain-bot{
+    border-top: 1px solid #dcdcdc;
+    position: fixed;
+    overflow-x:hidden;
+    width: 10rem;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    padding: 0 0.2rem;
+    background-color: #fafafa;
+}
+.footer-left{
+    height: 100%;
+    width: 1.6rem;
+    display: inline-block;
+    /*position: absolute;*/
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100%;
+    /*padding: 0.2rem 0.3rem;*/
+}
+.footer-center{
+    height: 100%;
+    display: inline-block;
+    padding:0.1rem 0.3rem 0 0;
+    margin-left: -1.5rem;
+}
+
+.footer-right{
+    position: absolute;
+    width: 1.6rem;
+    height: 100%;
+    right: 0.1rem;
+    bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100%;
+    /*padding: 0.2rem 0;*/
+    display: inline-block;
+}
+.doc-chatmain .doc-chatmain-bot .chatmain-bot-photo{
+    height: 0.8rem;
+    width: 0.9rem;
+    float: left;
+    display: inline-block;
+    opacity: 0;
+    z-index: 222;
+    position: absolute;
+    left: 0.3rem;
+    bottom: 0.2rem;
+}
+.doc-chatmain-bot img{
+    height: 0.8rem;
+    width: 0.9rem;
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0.3rem;
+}
+.doc-chatmain .doc-chatmain-bot .chatmain-bot-in{
+    display: inline-block;
+    line-height: 0.65rem;
+    min-height: 0.85rem !important;
+    font-size: 0.5rem;
+    color: #777;
+    padding: 0.13rem 0.1rem;
+    margin: 0;
+    width: 7rem;
+    /* height: 0.85rem !important; */
+    background: #fff;
+    border: solid 1px #ddd;
+    text-align: start;
+    text-rendering: auto;
+    font-family: verdana !important;
+    overflow: hidden;
+    text-shadow: none;
+}
+.doc-chatmain-bot .chatmain-sure{
+    position: absolute;
+    height: 0.86rem;
+    line-height: 0.5rem;
+    width:2rem;
+    bottom: 0.15rem;
+    right: 0.3rem;
+    display: inline-block;
+    padding: 0.125rem 0;
+    font-size: 0.45rem;
+    text-align: center;
+    font-size: 0.5rem;
+    background-color:#007aff;
+    color: #ffffff;
+    border: none;
+    /*padding: 0.2rem 0.5rem;*/
+}
+
+.doc-chatmain-zhezhao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    background: rgba(208,206,206,1);
+}
+.doc-chatmain-zhezhao img {
+    width: 100%;
+    position: absolute;
+}
+.chatmain-bot-bot{
+    height: 1.8rem;
+    width: 100%;
+    display: none;
+}
+/* doctor 免费问诊页面  样式  应添加到ask.css内 */
+
+.free-regist-all {
+    width: 10rem;
+
+    /*height: 100%;*/
+    background-color: #fff;
+}
+
+.free-regist-all .fr-re-it {
+    padding: 0.5rem 0 0 0;
+    height: 1.453125rem;
+    line-height: 1.453125rem;
+    position: relative;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.free-regist-all .fr-re-it a {
+    position: absolute;
+    color: #007aff;
+    width: 0.8rem;
+    height: 0.8rem;
+    line-height: 0.453125rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.free-regist-all .fr-re-it span {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    font-size: 0.45rem;
+    height: 0.4375rem;
+    line-height: 0.4375rem;
+    margin-right: -1.75rem;
+    right: 50%;
+    width: 3.5rem;
+}
+
+.free-regist-all .fr-re-it .fr-return {
+    width: 0.3rem;
+    height: 0.3rem;
+    border-bottom: 1px solid #007aff;
+    border-left: 1px solid #007aff;
+    transform: rotateZ(45deg);
+}
+.reserv-details .fr-pe-top{
+    height: 2.2rem;
+}
+.free-regist-all .fr-in-top {
+    margin: 0.3125rem 0.45rem 0;
+    height: 1.8rem;
+    border-bottom: 1px solid #F4F4F4;
+}
+.fr-pe-top{
+    height: 2.2rem;!important;
+}
+.free-regist-all .fr-in-top .in-top-t {
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.38rem;
+    color: #EE7F92;
+
+}
+
+.free-regist-all .fr-in-top .in-top-b {
+    margin-top: 0.14rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.35rem;
+    color: #999999;
+    margin-bottom: 0;
+}
+
+.free-regist-all .fr-contain {
+    /*height: 2rem;*/
+    width: 100%;
+    overflow: hidden;
+}
+
+.fr-contain .form-in-fir {
+    height: 1rem;
+    margin: 0 0.45rem;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.fr-contain .form-in-fir .free-p {
+    font-weight: 500;
+    color: #999999;
+
+}
+
+.fr-contain .form-in-fir .in-fir-r {
+    height: 1rem;
+    width: 3rem;
+    float: right;
+    position: relative;
+}
+
+.fr-contain .form-in-fir .in-fir-r .boy {
+    position: absolute;
+    top: 0rem;
+    left: 0.4rem;
+}
+
+.fr-contain .form-in-fir .in-fir-r .girl {
+    position: absolute;
+    top: 0rem;
+    right: 0.4rem;
+}
+
+.fr-contain .form-in-fir input:checked {
+    background-color: rgba(77, 147, 223, 0.7);
+}
+
+.fr-contain .fe-form-in {
+    border-bottom: 0.15625rem solid #f2f2f2;
+}
+
+.fr-contain .fe-form-in span {
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.42rem;
+    color: #999999;
+}
+
+.fr-contain .form-in-fir label {
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.42rem;
+}
+
+.fr-contain .form-in-fir .sex {
+    -webkit-appearance: button;
+    border: 1px solid #d1d1d1;
+    display: inline-block;
+    height: 0.8rem;
+    width: 1.2rem;
+    /*background-color: none;*/
+    margin: 0.1rem 0;
+    border-radius: 0.15rem;
+    position: relative;
+    z-index: 33;
+}
+
+.fr-contain .form-in-fir .sex-r {
+    float: right;
+}
+
+.fr-contain .form-in-sec {
+    height: 1rem;
+    margin: 0 0.45rem;
+}
+
+.fr-contain .form-in-sec span {
+    font-weight: 500;
+}
+
+.form-in-sec .age {
+    height: 0.9rem;
+    line-height: 0.4rem;
+    padding: 0.25rem 0;
+    width: 7rem;
+    font-size: 0.4rem;
+    border: none;
+    margin: 0;
+}
+
+.fr-contain-b {
+    background-color: #fff;
+    border-bottom: 0.15625rem solid #f2f2f2;
+    padding: 0 0.45rem;
+}
+
+.fr-contain-b .con-b-t {
+    height: 1.2rem;
+    line-height: 1rem;
+    font-size: 0.43rem;
+    padding: 0 0.8rem;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #f2f2f2;
+    position: relative;
+}
+.con-b-t .con-b-t-l{
+    height: 0.8rem;
+    line-height: 0.4rem;
+    margin-top:0.2rem;
+    padding: 0.2rem 0;
+    width: 2.6rem;
+    color: #333;
+    font-size: 0.38rem;
+    font-weight: 500;
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 0;
+}
+.con-b-t .con-b-t-r {
+    height: 0.8rem;
+    line-height: 0.4rem;
+    padding: 0.2rem 0;
+    width: 2.6rem;
+    color: #333;
+    font-size: 0.38rem;
+    font-weight: 500;
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 0;
+    margin-left: 2rem;
+    margin-top:0.2rem;
+    direction:rtl;
+}
+.con-b-t-san,.con-b-t-sanb{
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top:0.3rem solid #007aff;
+    border-left:0.2rem solid transparent;
+    border-right:0.2rem solid transparent;
+    border-bottom:none;
+}
+.con-b-t-san{
+    top: 0.45rem;
+    left: 0.3rem;
+}
+.con-b-t-sanb{
+    top: 0.45rem;
+    right: 0.3rem;
+}
+.fr-contain-b .con-b-con {
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+    color: #999999;
+}
+
+.fr-contain-b .con-b-con .b-con-t {
+    height: 1rem;
+    color: #999999;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.fr-contain-b .con-b-con input {
+    height: 0.95rem;
+    width: 6rem;
+    line-height: 0.5rem;
+    padding: 0.2rem 0rem 0.1rem 0;
+    font-size: 0.4rem;
+    float: left;
+    border: none;
+}
+
+.fr-contain-b .con-b-con textarea {
+    padding: 0.1rem 0rem;
+    font-size: 0.36rem;
+    line-height: 0.5rem;
+    width: 9rem;
+}
+
+.fr-contain-b .con-b-con textarea {
+    border: none;
+}
+
+.con-b-con input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #999999;
+    font-size: 0.4rem;
+    height: 0.95rem;
+    line-height: 0.5rem;
+}
+
+.con-b-con input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999999;
+    font-size: 0.4rem;
+    height: 0.95rem;
+    line-height: 0.5rem;
+}
+
+.con-b-con input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999999;
+    font-size: 0.4rem;
+    height: 0.95rem;
+    line-height: 0.5rem;
+}
+
+.con-b-con input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #999999;
+    font-size: 0.4rem;
+    height: 0.95rem;
+    line-height: 0.5rem;
+}
+
+.con-b-con textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #999999;
+    font-size: 0.4rem;
+    line-height: 0.7rem;
+}
+
+.con-b-con textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999999;
+    font-size: 0.4rem;
+    line-height: 0.7rem;
+}
+
+.con-b-con textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999999;
+    font-size: 0.4rem;
+    line-height: 0.7rem;
+}
+
+.con-b-con textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #999999;
+    font-size: 0.4rem;
+    line-height: 0.7rem;
+}
+
+.fr-bottom {
+    background-color: #fff;
+    border-bottom: 0.15625rem solid #f2f2f2;
+    padding: 0 0.45rem;
+    height: 5.7rem;
+}
+
+.fr-bottom .fr-bo-top {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.43rem;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.bo-con-le {
+    height: 2rem;
+    width: 10rem;
+    display: block;
+}
+
+.bo-con-le p {
+    margin-top: 0.3rem;
+    font-size: 0.4rem;
+    color: #999999;
+}
+
+.bo-con-le .con-le-check {
+    float: left;
+    margin: 0.1rem 0.15625rem 0 0;
+    /* border: 1px solid #f2f2f2; */
+    border-radius: 50%;
+    background-color: #777;
+}
+
+.fr-bo-con {
+    height: 2.5rem;
+    width: 9.1rem;
+    background-color: #fff;
+}
+
+.fr-bo-con .bo-con-ri {
+    height: 2rem;
+    width: 2.8rem;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.fr-bo-con .bo-con-ri .fr-in_file {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    z-index: 2;
+    width: 1.6rem;
+    height: 1.6rem;
+    opacity: 0;
+}
+
+.fr-bo-con .bo-con-ri [class^='fr-imgLogo'] {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.doc-fr-img{
+    height: auto;
+    width: 100%;
+}
+.fr-contain .doc-fr-sub{
+    height:5rem;
+    /*width: 100%;*/
+    padding: 1rem 0 0 1.5rem;
+    background-color: #fff;
+
+}
+.fr-bot-but {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    width: 7rem;
+    background-color: #007aff;
+    color: #fff;
+    text-align: center;
+    font-size: 0.5rem;
+    font-weight: 500;
+    border-radius: 0.1rem;
+     margin: 1rem 0 1.5rem 0rem; 
+}
+
+
+/*常用就诊人,查看就诊人,我的挂号页面演示*/
+/*公用头部*/
+.common-person-content{
+    background-color: #ffffff;
+    min-height: 17.8rem;
+}
+.common-person-content .com-header {
+    height: 1.453125rem;
+    font-size: 0.45rem;
+    text-align: center;
+    line-height: 1.453125rem;
+    border-bottom: 2px solid #f2f2f2;
+}
+.common-person-content .com-header .com-head-left {
+    float: left;
+    height: 1.453125rem;
+}
+.common-person-content .com-header .com-head-left a {
+    float: left;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: block;
+    font-size: 0.8rem;
+    color: #007aff;
+    margin-left: 0.45rem;
+    margin-top: 0.35rem;
+}
+.common-person-content .com-header .com-head-left span {
+    display: block;
+    float: left;
+    margin-top: 0.078125rem;
+    margin-left: 2.8125rem;
+}
+.common-person-content .com-header .com-head-right {
+    height: 1.453125rem;
+    float: right;
+}
+.common-person-content .com-header .com-head-right a {
+    width: 0.56rem;
+    height: 1.453125rem;
+    display: block;
+    margin-right: 0.46875rem;
+    margin-top: 0.234375rem;
+    color: #007aff;
+}
+.common-person-content .com-header .com-head-right a img {
+    width: 0.6rem;
+    height: 0.6rem;
+}
+/*常用就诊人*/
+.common-person-content .com-con-tableheader table thead {
+    width: 10rem;
+    font-size: 0.46875rem;
+    color: #007aff;
+}
+.common-person-content .com-con-tableheader table thead td {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    width: 2.5rem;
+    border-bottom: 1px solid #f2f2f2;
+}
+.common-person-content .com-con-tableheader table tbody {
+    width: 10rem;
+    font-size: 0.390625rem;
+    color: #1A1A1A;
+}
+.common-person-content .com-con-tableheader table tbody td {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    width: 2.5rem;
+}
+.common-person-content .com-con-tableheader table tbody td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #1A1A1A;
+}
+/*查看就诊人*/
+.common-person-content .com-con-see {
+    border-bottom: 2px solid #f2f2f2;
+}
+.common-person-content .com-con-see .see-per-content {
+    height: 1.2rem;
+    margin: 0 0.46875rem;
+    line-height: 1.2rem;
+    border-bottom: 1px solid #f2f2f2;
+}
+.common-person-content .com-con-see .see-per-content .see-left {
+    font-size: 0.4rem;
+}
+.common-person-content .com-con-see .see-per-content .see-right {
+    font-size: 0.3125rem;
+    color: #999999;
+}
+.common-person-content .com-con-see .last {
+    border-bottom: 0 none;
+}
+.common-person-content .com-con-foot {
+    height: 1rem;
+    line-height: 1rem;
+    padding: 0.4rem 0.45rem;
+    margin-top: 4.5rem;
+    border-top: 2px solid #f2f2f2;
+}
+.common-person-content .com-con-foot .foot-left {
+    background-color: #9FC750;
+    width: 4rem;
+    height: 1rem;
+    color: #ffffff;
+    font-size: 0.45rem;
+    border-radius: 0.2rem;
+}
+.common-person-content .com-con-foot .foot-right {
+    border-radius: 0.2rem;
+    float: right;
+    background-color: #ffbf44;
+    width: 4rem;
+    height: 1rem;
+    color: #ffffff;
+    font-size: 0.45rem;
+}
+/*我的挂号*/
+.common-person-content .myreg-content .myreg-list li {
+    border-bottom: 1px solid #f2f2f2;
+    height: 2.34375rem;
+}
+.common-person-content .myreg-content .myreg-list li .li-left {
+    padding: 0.3rem;
+    float: left;
+}
+.common-person-content .myreg-content .myreg-list li .li-left img {
+    display: block;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.common-person-content .myreg-content .myreg-list li .li-moddle {
+    float: left;
+    margin-top: 0.2rem;
+}
+.common-person-content .myreg-content .myreg-list li .li-moddle p {
+    color: #999999;
+    line-height: 0.35rem;
+    font-size: 0.3125rem;
+}
+.common-person-content .myreg-content .myreg-list li .li-moddle .li-m-name {
+    font-size: 0.375rem;
+    line-height: 1rem;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+.common-person-content .myreg-content .myreg-list li .li-right {
+    margin-top: 0.2rem;
+    padding-right: 0.35rem;
+    float: right;
+}
+.common-person-content .myreg-content .myreg-list li .li-right p {
+    text-align: right;
+    color: #999999;
+    line-height: 0.35rem;
+    font-size: 0.35rem;
+}
+.common-person-content .myreg-content .myreg-list li .li-right .state {
+    line-height: 1rem;
+    color: #ffbf44;
+    font-size: 0.375rem;
+}
+.common-person-content .myreg-content .myreg-list li .li-right .sucess {
+    color: red;
+}
+.common-person-content .myreg-content .myreg-list li .li-right .cancel {
+    color: #1A1A1A;
+}
+.common-person-content .myreg-content .myreg-list li .li-right .li-time {
+    font-size: 0.28125rem;
+}
+/*我的咨询页面样式*/
+.myAdvice-bot{
+    height: 1.2rem;
+    width: 100%;
+    line-height: 1.2rem;
+    font-size: 0.45rem;
+    color: #999;
+    text-align: center;
+    background-color: #efeff4;
+}
+/*我的医生页面样式*/
+.doc-cont-bottom .cont-bot-ri {
+    width: 7.71875rem;
+    height: 2.15625rem;
+    float: right;
+    position: relative;
+    margin-left: 0.3rem;
+    /* margin-top: -0.08rem; */}
+.doc-cont-bottom .cont-bot-ri p {
+    font-size: 0.38rem;
+    color: #999;
+    height: 0.5rem;
+    margin: 0;
+    line-height: 0.5rem;
+}
+
+/*添加就诊人样式*/
+.addSuf-mar{
+    height: 0.3rem;
+    width: 100%;
+    background-color: #efeff4;
+}
+.addSuf-main [class^="addSuf-"]{
+    height: 1.5rem;
+    width: 100%;
+    border-bottom: 1px  solid  #f2f2f2;
+}
+.addSuf-main [class^="addSuf-"]:after{
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.addSuf-main [class^="addSuf-"] .as-name-sp{
+    position: absolute;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.45rem;
+    margin-left: 0.5rem;
+    text-align: justify;
+    overflow: hidden;
+}
+.addSuf-main [class^="addSuf-"] .as-name-sp:after{
+    display: inline-block;
+    content: '';
+    width: 1.8rem;
+    height: 1.5rem;
+}
+.addSuf-main [class^="addSuf-"] input[class^="as-"]{
+    display: inline-block;
+    height: 1.3rem;
+    line-height: 0.45rem;
+    font-size: 0.45rem;
+    padding: 0.4rem 0rem 0.4rem 0.2rem;
+    border: none;
+    margin: 0.1rem 0;
+    color: #777;
+}
+.addSuf-main [class^="addSuf-"] .as-ma-right{
+    position: relative;
+    display: inline-block;
+    width: 7rem;
+    float: right;
+    height: 1.3rem;
+}
+.addSuf-main [class^="addSuf-"] .as-ma-right:before{
+    content: ':';
+    position: absolute;
+    left: -0.48rem;
+    font-size: 0.6rem;
+    color: #444;
+    height: 1.3rem;
+    line-height: 1.4rem;
+}
+.addSuf-main input::-webkit-input-placeholder {
+    line-height: 0.45rem;
+    font-size: 0.45rem;
+    padding-top: 0.06rem;
+    outline: none;
+    border: none;
+    color: #9d9d9d;
+}
+.addSuf-main input:-moz-placeholder {
+    line-height: 0.45rem;
+    font-size: 0.45rem;
+    padding-top: 0.06rem;
+    outline: none;
+    border: none;
+    color: #9d9d9d;
+}
+.addSuf-main input::-moz-placeholder {
+    line-height: 0.45rem;
+    font-size: 0.45rem;
+    padding-top: 0.06rem;
+    outline: none;
+    border: none;
+    color: #9d9d9d;
+}
+.addSuf-main input:-ms-input-placeholder {
+    line-height: 0.45rem;
+    font-size: 0.45rem;
+    padding-top: 0.06rem;
+    outline: none;
+    border: none;
+    color: #9d9d9d;
+}
+.as-ma-right .in-fir-r input:checked {
+    background-color: rgba(77, 147, 223, 0.7);
+}
+.as-ma-right .in-fir-r .sex {
+    -webkit-appearance: button;
+    border: 1px solid #d1d1d1;
+    display: inline-block;
+    height: 0.8rem;
+    width: 1.2rem;
+    margin: 0.35rem 0.2rem;
+    border-radius: 0.15rem;
+    position: relative;
+    z-index: 333;
+}
+.as-ma-right .in-fir-r .boy {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.58rem;
+}
+.as-ma-right .in-fir-r .girl {
+    position: absolute;
+    top: 0.25rem;
+    left: 2.31rem;
+}
+.as-ma-right .in-fir-r label {
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.42rem;
+}
+.resetsuf{
+    height: 0.9rem;
+    background-color: #efeff4;
+    padding-left: 6rem;
+    padding-top: 0.2rem;
+}
+.resetsuf label{
+    height: 0.5rem;
+    line-height:0.5rem;
+    color: #007aff;
+    font-size: 0.4rem;
+    display: inline-block;
+}
+.resetsuf input{
+    height: 0.43rem;
+    width: 0.43rem;
+    margin-top: 0.08rem;
+    background-color: #fff;
+    color: red;
+    border: 1px solid #9d9d9d;
+}
+.addsuf-bottom .addsuf-bot-but{
+    height: 1rem;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #007aff;
+    border-radius: 0.15rem;
+    color: #fff;
+    font-size: 0.55rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1rem;
+    margin-top: 4rem;
+}
+
+/* 预约页面样式 */
+.reserv-details	.fr-in-top{
+    background-color: #F8F8F8;
+    height: 2.4rem;
+    width: 100%;
+    margin: 0;
+    padding: 0.3125rem 0.45rem 0;
+}
+.reserv-det-con{
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 0.5rem;
+}
+.reserv-det-con .det-con-top{
+    height: 1rem;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #EDEDED;
+}
+.reserv-det-con .det-con-top p{
+    font-size: 0.45rem;
+    font-weight: 500;
+    color: #222;
+    height: 1rem;
+    line-height: 1rem;
+}
+.reserv-det-con .det-con-cen{
+    padding:0 0 0.3rem;
+}
+.reserv-det-con .det-con-cen p{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    margin-top: 0.3rem;
+    font-size: 0.38rem;
+    color: #7a7a7a;
+    margin-bottom: 0;
+}
+.reserv-margin{
+    height: 0.32rem;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+.det-con-cen p i{
+    color: #FF9F40;
+}
+.reserv-det-con-bot .det-con-cen p{
+    margin-top: 0.24rem;
+}
+.reserv-det-con-bot .det-con-cen p:nth-child(n+2){
+    height: 1rem;
+}
+.reserv-det-con-bot .det-con-cen p:nth-child(n+2) .det-con-mao{
+    height: 1rem;
+    display: inline-block;
+    float: left;
+    padding-top: 0.08rem;
+}
+.reserv-det-con-bot .det-con-cen p:nth-child(n+2) .det-con-maob{
+    height: 1rem;
+    line-height: 0.55rem;
+    display: inline-block;
+    float: left;
+    width: 8.35rem;
+
+}
+.reserv-detail-botbut{
+    height: 1rem;
+    border-radius: 0.2rem;
+    width: 6rem;
+    background-color: #007aff;
+    color: #fff;
+    font-size: 0.45rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 2.5rem 2rem 1rem 2rem;
+}
+/* 预约成功页面样式 */
+.reserv-suc-top{
+    height: auto;
+    padding: 0 0.5rem;
+}
+.reserv-suc-top .reserv-suc-topA{
+    height: 1rem;
+    width: 100%;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.5rem;
+    color: #FF9500;
+    margin-bottom: 0;
+}
+.reserv-suc-top .reserv-suc-topB{
+    color: #333;
+    font-size: 0.34rem;
+    line-height: 0.6rem;
+
+}
+.reserv-suc-top .reserv-suc-topB span{
+    color: #FF9500;
+    font-size: 0.38rem;
+}
+.hospital-keshi{
+    font-size: 0.34rem;
+}

@@ -1,0 +1,127 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style type="text/css">
+    <?php 
+        if ($is_member != 'yes') {
+    ?>
+    .chatmain-suf {
+        margin-bottom: 0rem;
+    }
+    <?php
+        }
+    ?>
+    
+</style>
+    <body>
+    <div class="doc-chatmain-zhezhao" id="doc-chatmain-b">
+        <img src="#" class="zhezhao-i">
+    </div>
+    <div class="doc-chatmain">
+    	<div class="doctor-chat-top doc-chatmain-top">
+    		<a href="<?php echo $_SERVER['HTTP_REFERER'] ?>"><i class="fa fa-angle-left"></i></a>
+    		<span>问诊详情</span>
+    	</div>
+    	<!-- 患者询问模块 -->
+    	<div class="chatmain-suf clearfix">
+
+    		<div class="chatmain-sufhead">
+    			<img src="<?php echo $member['head_img'] ? $member['head_img'] : '/Public/Hospital/index/images/person.png'; ?>" alt="">
+    		</div>
+    		<div class="chatmain-sufsay clearfix">
+    			<span class="chatmain-sufname clearfix"><?php echo $member['nick_name'] ?></span>
+    			<div class="chatmain-sufall">
+    				<span class="back-sufsan"></span>
+    				<span class="chatmain-suftext"><?php echo $advice['advice_comment'] ?></span>
+                    <?php if ($is_member == 'yes' && !empty($advice['images'])): ?>
+                    <div class="sufall-img"> 
+                        <?php foreach (explode('#',$advice['images']) as $key => $value): ?>
+                            <img src="<?php echo $value ?>" alt="" class="chatmain-text-i">
+                        <?php endforeach ?>
+                        
+                    </div>
+                    <?php endif ?>
+    				
+    			</div>
+    			<div class="chatmain-suf-time"><?php echo $advice['send_time'] ?></div>
+    		</div>
+
+    	</div>
+
+        <?php foreach ($reply as $k => $v): ?>            
+    	<!-- 医生回复模块 -->
+        <?php if ($v['doctor_id'] != 0): ?>
+    	<div class="chatmain-doc clearfix">
+
+    		<div class="chatmain-dochead">
+    			<img src="<?php echo $doctor['head_img'] ?>" alt="">
+    		</div>
+    		<div class="chatmain-docsay">
+    			<span class="chatmain-dname"><?php echo $doctor['doctor_name'] ?></span>
+    			<div class="chatmain-dall">
+    				<span class="back-san"></span>
+    				<span class="chatmain-dtext"><?php echo $v['reply_comment'] ?></span>
+    			</div>
+              <div class="chatmain-doc-time"><?php echo $v['send_time'] ?></div>
+    		</div>
+
+    	</div>
+        <?php endif ?>
+
+    	<!-- 患者询问模块 -->
+    	<?php if ($v['member_id'] != 0): ?>
+        <div class="chatmain-suf clearfix">
+    		<div class="chatmain-sufhead">
+    			<img src="<?php echo $member['head_img'] ? $member['head_img'] : '/Public/Hospital/index/images/person.png'; ?>" alt="">
+    		</div>
+    		<div class="chatmain-sufsay">
+    			<span class="chatmain-sufname clearfix"><?php echo $member['nick_name'] ?></span>
+    			<div class="chatmain-sufall">
+    				<span class="back-sufsan"></span>
+    				<span class="chatmain-suftext"><?php echo $v['reply_comment'] ?></span>
+                    <!-- <div class="sufall-img"> 
+                        <img src="images/15.jpg" alt="" class="chatmain-text-i">
+                        <img src="images/15.jpg" alt="" class="chatmain-text-i">
+                        <img src="images/15.jpg" alt="" class="chatmain-text-i">
+                    </div> -->
+    			</div>
+    			<div class="chatmain-suf-time"><?php echo $v['send_time'] ?></div>
+    		</div>
+    	</div>
+        <?php endif ?>
+        <?php endforeach ?>
+
+    	<!-- 当事人聊天窗口 -->
+        <?php if ($is_member == 'yes'): ?>
+            
+    	<div class="doc-chatmain-bot">
+    		<form action="/Hospital/Advice/reply" class="chatmain-bot-form" method="post">
+            <div class="footer-left">
+    			<!-- <input type="file" class="chatmain-bot-photo" multiple>
+                <img src="/Public/Hospital/index/images/addimg.png" alt="" class="bot-photo-i"> -->
+            </div>
+            <div class="footer-center">
+    			<textarea type="text" class="chatmain-bot-in" id="textarea" name="reply_comment"rows=1></textarea>
+            </div>
+            <input type="hidden" name="advice_id" value="<?php echo $_GET['advice_id'] ?>">
+            <div class="footer-right">
+    			<button type="submit" id="button" onmousedown="is_tijiao()" class="chatmain-sure">确定</button>
+            </div>
+    		</form>
+        </div>
+        <?php endif ?>
+    </div>
+    <script src="/Public/Hospital/index/js/autosize.min.js"></script>
+    <script>
+    autosize($('#textarea'));
+    function is_tijiao(){
+        var comment = $('#textarea').val();
+        if (comment == '') {
+            $('#button').attr('disabled',true);
+        };
+    }
+
+    $('#textarea').focus(function (){ 
+       $('#button').removeAttr("disabled");
+    })
+    </script>
+    </body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

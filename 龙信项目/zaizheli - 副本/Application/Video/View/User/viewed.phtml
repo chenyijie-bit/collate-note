@@ -1,0 +1,68 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<body class="re-bo-all">
+    <div class="recent-regist-all">
+    	<div class="recent-re-it">
+    		<div class="re-t recent-re-t ">
+    			<a href="/video/user">
+                    <div class="recent-return"></div>
+                </a>
+    			<span class="login-l">最近浏览</span>
+    		</div>
+    	</div>
+    <button onclick="javascript:clearFavorite(0,1);" class="recent-but" style="background-color: #FF9500">
+    	<img src="/Public/Video/index/image/shanchu.png" alt="">
+    	<span>清空最近浏览记录</span>
+    </button>
+	<div class="collet-cen-it">
+		<ul>
+		<?php foreach($res as $v): ?>
+		<li class="col-cen-li">
+			<a href="/video/video/play?video_id=<?php echo $v['video_id']; ?>" class="index-all-it">
+			<div class="main-t-tbot">
+				<div class="t-tbot-le fr">
+					<p class="mui-st-top"><?php echo mb_substr($v['name'],0,8);echo strlen($v['name']) > 30 ? ' ....' : ''; ?></p>
+					<p class="mui-st-cen"><?php echo mb_substr($v['synopsis'],0,18); ?> ....</p>
+					<p class="mui-st-bot"><?php echo $v['view_time']; ?></p>
+				</div>
+				<div class="t-tbot-ri">
+					<img src="<?php echo $v['pic_path']; ?>" alt="" class="tbot-ri-img fr">
+				</div>
+			</div>
+		</a>
+		<button class="col-li-but" onclick="javascript:clearFavorite(<?php echo $v['video_id']; ?>,2);">X</button>
+		</li>
+	  	<div class="cut-off"></div>
+		<?php endforeach; ?>
+		</ul>
+	</div>
+	<div class="nav-foot">
+		<div class="line-left f_l"></div>
+		<div class="moddle-logo">
+		    <img src="/Public/Video/index/image/bot.png" alt="">
+		    <p class="big f_l">在这里</p >
+		    <p class="small f_l">zzlhi.com</p >
+		</div>
+		<div class="line-right f_r"></div>
+	</div>
+</div>
+<script type="text/javascript">
+	function clearFavorite(video_id,method){
+		if(method == 1){
+			confirm('确定清空最近浏览记录？');
+		}
+		//准备
+		var url = "/Video/user/viewed";
+		//发送
+		$.post(url,{video_id:video_id,method:method},function(d){
+			d = eval('('+ d +')');
+			if(d.error){
+				alert(d.msg);
+				return false;
+			}else{
+				window.location.reload();
+				return false;
+			}
+		},'text');
+	}
+</script>

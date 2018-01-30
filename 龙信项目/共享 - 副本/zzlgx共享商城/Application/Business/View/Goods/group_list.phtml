@@ -1,0 +1,223 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<style>
+.good-img{
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+table{
+    font-size: 13px;
+}
+.footable-row-detail-name {
+    display: table-cell;
+    font-weight: bold;
+    padding-right: 0.5em;
+    line-height: 30px;
+    min-width: 80px;
+}
+.modal-backdrop{
+    display: none;
+}
+</style>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>分组管理</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-12">
+                                    <form method="get" action="/business/goods/group_list" class="clearfix pull-left" >
+                                        <input type="text" name="keywords" value="<?php echo $_GET['keywords'] ? $_GET['keywords'] : ''; ?>" placeholder="分组名称关键字" class="input-sm form-control pull-left col-sm-4" style="width:74%;" >
+                                        <span class="input-group-btn pull-left " >
+                                            <button type="submit" class="btn btn-sm btn-primary search-btn"> 搜索</button>
+                                        </span>
+                                    </form>
+                                    <button type="button" onclick="javascript:window.location.href = '/business/goods/group_list';" class="btn btn-danger btn-sm  reset-btn pull-left" style="">刷新</button>
+                                     <button type="button"  class="btn btn-success btn-sm  reset-btn pull-left myModal" style="margin-left: 30px;"  data-toggle="modal" data-target="#myModal_<?php echo $value['order_id']; ?>">添加新分组</button>
+                                        <div class="modal inmodal" id="myModal_<?php echo $value['order_id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content animated bounceInRight">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+                                                        </button>
+                                                        <h4 class="modal-title">添加新的分组</h4>
+                                                        </div>
+                                                        <div class="modal-body">  
+                                                            <div class="form-group"><label>请输入新的分组名称</label> <input id="new_group_name" type="text" name="group_name" placeholder="请输入新的分组名称" class="form-control"></div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button id="close_0" type="button" class="btn btn-white" data-dismiss="modal">关闭操作</button>
+
+                                                            <button type="button" onClick="add_group()" class="btn btn-primary" style=" margin-bottom: 6px;">确认</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-warn">
+                            <div class="alert alert-warning">
+                                您现在共有分组： <span class="alert-link"><?php echo $count; ?></span> 个
+                                <?php if(!empty($_GET['keywords'])): ?>
+                                ，分组名称包含 “<span class="alert-link"><?php echo $_GET['keywords']; ?></span>”&nbsp;&nbsp;
+                                的分组，共 <span class="alert-link"><?php echo $where_count; ?></span> 个
+                                <?php endif; ?>
+                                
+                             
+                            </div>
+                        </div>
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="9999999" data-limit-navigation='10'>
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>分组名</th>
+                                    <th>总商品种类</th>
+                                    <th>我的商品种类</th>
+                                    <th>我代理的商品种类</th>
+                                    <th>添加时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    
+                                <?php foreach ($groups as $key => $value): ?>
+                                <tr>
+                                    <td><?php echo $key+1; ?></td>
+                                    <td><?php echo $value['group_name'] ?></td>
+                                    <td><?php echo $all_count[$value['group_id']]?$all_count[$value['group_id']]:0; ?> 种</td>
+                                    <td><?php echo $my_count[$value['group_id']]?$my_count[$value['group_id']]:0; ?> 种</td>
+                                    <td><?php echo $other_count[$value['group_id']]?$other_count[$value['group_id']]:0; ?> 种</td>
+                                    <td><?php echo $value['add_time'] ?></td>
+                                    <td>
+                                        <a href="/Business/Goods/group_detail?group_id=<?php echo $value['group_id'] ?>" style="margin-right: 10px;">
+                                            <span class="label label-warning ">编辑</span>
+                                        </a>
+                                         <a href="/Business/Goods/group_extend?group_id=<?php echo $value['group_id'] ?>" style="margin-right: 10px;">
+                                            <span class="label label-primary ">推广</span>
+                                        </a>
+                                         <a href="javascript:;">
+                                            <span class="label label-danger del_groups" group_id="<?php echo $value['group_id']; ?>">删除</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <?php endforeach ?>
+                         
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="12">
+                                        <div class="b-page">
+                                            <?php echo $page['page']; ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+    $(document).ready(function(){$(".footable").footable();});
+    $(".myModal").click(function(){
+        $('.modal-dialog').css('top',$(document).scrollTop())
+    })
+        $('.myModal').modal({
+            keyboard: false,
+            backdrop:false,
+            show:false
+        });
+
+    $('.del_groups').click(function(){
+        var _this = $(this);
+        var group_id = _this.attr('group_id');
+        swal({
+            title: "您确定要删除该组吗？",
+            text: "",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我要删除！",
+            cancelButtonText: "让我再考虑一下…",
+            closeOnConfirm: false,
+            closeOnCancel: true
+        },
+        function(isConfirm) {
+            if (isConfirm) {
+                $.ajax({
+                    cache: true,
+                    type: "POST",
+                    url:"/Business/Goods/group_del",
+                    data:{'group_id':group_id},
+                    dataType: 'json',
+                    async: false,
+                    error: function(data) {
+                       swal('网络错误，请重试！', "", "warning");
+                    },
+                    success: function(data) {
+                        if (data.error == 0) {
+                            _this.parents('tr').remove();
+                            swal("本组已删除！", "", "success");
+                        }else{
+                            swal(data.msg, "", "error");
+                        }
+                    }
+                });
+                
+            }
+        })
+    })
+
+    function add_group(){
+        var group_name = $('#new_group_name').val();
+        $('#new_group_name').val('');
+        if (!group_name) {
+            swal('请输入新的分组名称', "", "warning");
+            return false;
+        }else{
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/Business/Goods/add_group",
+                data:{'group_name':group_name},
+                dataType: 'json',
+                async: false,
+                error: function(data) {
+                   swal('网络错误，请重试！', "", "warning");
+                },
+                success: function(data) {
+                    if (data.error == 0) {
+                        swal("添加分组成功","","success");
+                        //IE
+                        if(document.all) {
+                            document.getElementById("close_0").click();
+                        }
+                        // 其它浏览器
+                        else {
+                            var e = document.createEvent("MouseEvents");
+                            e.initEvent("click", true, true);
+                            document.getElementById("close_0").dispatchEvent(e);
+                        }
+                        setTimeout("window.location.reload();",1000);
+                        
+                    }else{
+                        swal(data.msg, "", "error");
+                    }
+                }
+            });
+        }
+    }
+</script>

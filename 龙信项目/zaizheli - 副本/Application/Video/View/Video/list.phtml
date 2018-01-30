@@ -1,0 +1,77 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<div class="List-all">
+    <div class="list-navigat">
+        <div class="li-six">
+            <div class="list-top">
+                <?php foreach($type as $v): ?>
+                <a href="/video/video/list?type_id=<?php echo $v['type_id']; ?>" <?php echo $_GET['type_id'] == $v['type_id'] ? 'class="list-top-active"' : ''; ?>><?php echo $v['type_name']; ?></a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    <div class="cut-off"></div>
+    <?php foreach($res as $v): ?>
+    <div class="main-igte">
+        <a href="/video/video/play?video_id=<?php echo $v['video_id']; ?>" class="main-igte-a">
+            <div class="igte-contain">
+                <div class="igte-contain-top">
+                    <img src="<?php echo $v['pic_path']; ?>" alt="" class="igte-contain-i">
+                </div>
+                <div class="igte-contain-box">
+                    <p class="igte-t-t"><?php echo mb_substr($v['name'],0,20); ?></p> 
+                    <p class="igte-t-cen"><?php echo mb_substr($v['synopsis'],0,45); ?> ....</p>
+                    <p class="igte-t-bot"><?php echo $v['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $v['zan_num']; ?></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="cut-off"></div>
+    <?php endforeach; ?>
+</div>
+<?php if(@count($res) >= 10): ?>
+<button id="loadNext" onclick="javascript:loadNext(<?php echo $_GET['type_id'];?>);" style="font-size: 0.375rem;text-align: center;color: #F7950F;width: 100%;position: relative;">
+    <span>加载下十条</span>
+</button>
+<?php endif; ?>
+<input type="hidden" id="p" value="1">
+<div class="cut-off"></div>
+
+<script type="text/javascript">
+    function loadNext(type_id){
+        var url = '/video/video/list';
+        var p = parseInt($('#p').val());
+        $.post(url,{type_id:type_id,p:p+1},function(d){
+            d = eval('('+ d +')');
+            $('#p').val(p+1);
+            if(d.error == 1){
+                alert(d.msg);
+                return false;
+            }else if(d.error == 2){
+                $('#loadNext').attr('disabled','true').children().text(d.msg).css('color','#7B7B7B');
+                return false;
+            }else{
+                var insertCon = "";
+                for(var i=0;i<d.res.length;i++){
+                    insertCon += '<div class="main-igte">';
+                    insertCon += '<a href="/video/video/play?video_id='+ d.res[i]["video_id"] +'" class="main-igte-a">';
+                    insertCon += '<div class="igte-contain">';
+                    insertCon += '<div class="igte-contain-top">';
+                    insertCon += '<img src="'+ d.res[i]["pic_path"] +'" alt="" class="igte-contain-i">';
+                    insertCon += '</div>';
+                    insertCon += '<div class="igte-contain-box">';
+                    insertCon += '<p class="igte-t-t">'+ d.res[i]["name"].substr(0,20) +'</p>';
+                    insertCon += '<p class="igte-t-cen">'+ d.res[i]["synopsis"].substr(0,45) +' ....</p>';
+                    insertCon += '<p class="igte-t-bot">'+ d.res[i]["class_name"] +'&nbsp;&nbsp;&nbsp;赞'+ d.res[i]["zan_num"] +'</p>';
+                    insertCon += '</div>';
+                    insertCon += '</div>';
+                    insertCon += '</a>';
+                    insertCon += '</div>';
+                    insertCon += '<div class="cut-off"></div>';
+                }
+                $('#loadNext').prev().append(insertCon);
+            }
+        },'text');
+    }    
+</script>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

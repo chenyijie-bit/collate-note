@@ -1,0 +1,155 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+.weui-navbar__item.proinfo-tab-tit.weui-bar__item--on:before {
+    content: "";
+    width: 34px;
+    height: 3px;
+     background: transparent; 
+    position: absolute;
+    left: 50%;
+    margin-left: -17px;
+    bottom: -1px;
+    z-index: 10;
+}
+.promotion-message {
+    margin: 8px 0;
+    line-height: 15px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+}
+.promotion-message p{
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.5;
+}
+.weui-navbar__item.weui-bar__item--on {
+    color: #e21323;
+    font-weight: bold;
+    background-color: inherit;
+    margin-left: -50px;
+}
+.wy-header {
+    height: 44px;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #e21323;
+    z-index: 100;
+}
+.wy-header-title {
+    margin: 0 50px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    color: #252525;
+    overflow: hidden;
+}
+</style>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <a href="javascript:self.location=document.referrer;" title="返回上一页" style="width: 50px;position: absolute;left: 0;top: 0;z-index: 10; height: 45px;"><div class="wy-header-icon-back"><span></span></div></a>
+       <div class="wy-header-title" style="color: #fff">订单评价</div>
+</header>
+<div class="weui-content clear" style="margin-top: 44px;">
+  <div class="order-list-Below clear">
+    <h1>商品评价</h1>
+    <ul>
+      <li class="on"></li>
+      <li class="on"></li>
+      <li class="on"></li>
+      <li class="on"></li>
+      <li class="on"></li>
+    </ul>
+  </div>
+  <div class="weui-cells weui-cells_form com-txt-area">
+    <div class="weui-cell">
+      <div class="weui-cell__bd">
+        <textarea id="content" class="weui-textarea txt-area" placeholder="这个商品满足你的期待吗？说说你的使用心得，分享给想买的他们吧" rows="3"></textarea>
+        <div class="weui-textarea-counter font-12 num"><span>0</span>/200</div>
+      </div>
+    </div>
+  </div>
+  <div class="com-button"><a href="javascript:submit_eval(<?php echo $_GET['order_id']; ?>);">发表评价</a></div>
+</div>
+
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script> 
+<script type="text/javascript">
+    $(".order-list-Below ul li").click(
+        function(){
+            var num = $(this).index()+1;
+            var len = $(this).index();
+            var thats = $(this).parent(".order-list-Below ul").find("li");
+            if($(thats).eq(len).attr("class")=="on"){
+                if($(thats).eq(num).attr("class")=="on"){
+                    $(thats).removeClass();
+                    for (var i=0 ; i<num; i++) {
+                        $(thats).eq(i).addClass("on");
+                    }
+                }else{
+                    $(thats).removeClass();
+                    for (var k=0 ; k<len; k++) {
+                        $(thats).eq(k).addClass("on");
+                    }
+                }
+            }else{
+                $(thats).removeClass();
+                for (var j=0 ; j<num; j++) {
+                    $(thats).eq(j).addClass("on");
+                }
+            }
+        }
+    );
+
+    function submit_eval(order_id){
+        if(!order_id){
+            $.toast("参数错误", "cancel");
+            return false;
+        }
+        var level = $('.on').length;
+        if (level<=0) {
+            $.toast("请选择评价等级", "cancel");
+            return false;
+        }
+        var content = $('#content').val();
+        if (!content) {
+            $.toast("请输入评价内容", "cancel");
+            return false;
+        }
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/exchange/member/add_evaluate",
+            data:{'order_id':order_id,'level':level,'content':content},
+            dataType: 'json',
+            async: false,
+            error: function(data) {
+                $.toast("网络错误", "cancel");
+            },
+            success: function(data) {
+                if (data.error == 0) {
+                    $.toast("评价成功");
+                    setTimeout('self.location=document.referrer;',1000);
+                }else{
+                    $.toast(data.msg, "cancel");
+                }
+                
+            }
+        });
+    }
+</script>

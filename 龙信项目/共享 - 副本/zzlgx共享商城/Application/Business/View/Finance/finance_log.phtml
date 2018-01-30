@@ -1,0 +1,165 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+    .rechargeTable tr th,.rechargeTable tr td{
+        text-align: center;
+    }
+    .good-img{
+        width: 50px;
+        height: 50px;
+        display: block;
+    }
+    table{
+        font-size: 13px;
+    }
+    .footable-row-detail-name {
+        display: table-cell;
+        font-weight: bold;
+        padding-right: 0.5em;
+        line-height: 30px;
+    }
+    .contact-box {
+        background-color: #fff;
+        border: 1px solid #e7eaec;
+        padding: 20px;
+        margin-bottom: 20px;
+        min-width: 275px;
+    }
+    .img-responsive{
+        min-width: 70px;
+        min-height: 70px;
+    }
+    .form-select{
+        width: 55%;
+    }
+    .search-btn{
+        margin-top: -15px;
+    }
+    .selectBody{
+        margin-bottom: 30px;
+    }
+</style>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+           
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>充值提现记录</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-12">
+                                    <form method="get" action="/Business/Finance/finance_log" class="clearfix pull-left" style="width:60%;margin-right: -100px;" >
+                                        <div class="form-group" style="width:53%;">
+                                        <label class="col-sm-4 control-label" style="padding-right: 0;margin-top: 6px;">按日期：</label>
+                                        <div class="col-sm-8"  style="padding-left: 0;padding-right: 10px;">
+                                            <input placeholder="开始日期" name="start_time" value="<?php echo $_GET['start_time'] ?>" class="form-control layer-date" id="start" style="width:50%;height: 30px;" >
+                                            <input placeholder="结束日期" name="end_time" value="<?php echo $_GET['end_time'] ?>" class="form-control layer-date " id="end" style="width:50%;height: 30px;" >
+                                        </div>
+                                        </div>
+                                        <select name="type" class="input-sm form-control pull-left col-sm-4 sex-select " style="width: 20%;margin-top: -15px;">
+                                            <option value="0">类型</option>
+                                            <option disabled="true">--------------------</option>
+                                            <option value="1" <?php echo $_GET['type'] == 1 ? 'selected' : ''; ?>>充值</option>
+                                            <option value="2" <?php echo $_GET['type'] == 2 ? 'selected' : ''; ?>>提现</option>
+                                        </select>
+                                        <span class="input-group-btn pull-left " >
+                                            <button type="submit" class="btn btn-sm btn-primary search-btn"  style="margin-top: -15px;"> 搜索</button>
+                                        </span>
+                                    </form>
+                                    <button type="button" onclick="javascript:window.location.href = '/Business/Finance/finance_log';" class="btn btn-danger btn-sm  reset-btn pull-left">刷新</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-warn">
+                            <div class="alert alert-warning">
+                                共找到 <span class="alert-link"><?php echo $count; ?></span> 条您充值和提现的记录，其中充值记录 <span class="alert-link"><?php echo $c; ?></span> 条，提现记录 <span class="alert-link"><?php echo $t; ?></span> 条。
+                            </div>
+                        </div>
+                        <table class="table table-striped table-hover rechargeTable">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>类型</th>
+                                    <th>开户行名称</th>
+                                    <th>开户名</th>
+                                    <th>卡号</th>
+                                    <th>共享币数</th>
+                                    <th>人民币</th>
+                                    <th>状态</th>
+                                    <th>时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($result as $k => $v): ?>
+                                <tr>
+                                    <td><?php echo $k + 1 + $page['firstRow']; ?></td>
+                                    <td>
+                                        <span><?php echo $v['type'] == 1 ? '<span style="color:green">充值</span>' : '<span style="color:red">提现</span>'; ?></span>
+                                    </td>
+                                    <td><span><?php echo $v['bank_name']; ?></span></td>
+                                    <td><span><?php echo $v['card_name'] ? $v['card_name'] : '-'; ?></span></td>
+                                    <td><span><?php echo $v['card_number'] ? $v['card_number'] : '-'; ?></span></td>
+                                    <td><?php echo $v['piao'];?></td>
+                                    <td><?php echo $v['rmb'];?></td>
+                                    <td><?php echo $v['status'] == 1 ? '处理中' : '已完成';?></td>
+                                    <td><?php echo $v['add_time'];?></td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="12">
+                                        <div class="b-page">
+                                            <?php echo $page['page']; ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+    $(document).ready(function(){
+        $(".footable").footable();
+        $('#myModal').modal({
+            keyboard: false,
+            backdrop:false,
+            show:false
+        });
+        var start = {
+            elem: "#start",
+            format: "YYYY/MM/DD",
+            min:  "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                end.min = datas;
+                end.start = datas
+            }
+        };
+        var end = {
+            elem: "#end",
+            format: "YYYY/MM/DD",
+            min: "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                start.max = datas
+            }
+        };
+        laydate(start);
+        laydate(end);
+    });
+</script>

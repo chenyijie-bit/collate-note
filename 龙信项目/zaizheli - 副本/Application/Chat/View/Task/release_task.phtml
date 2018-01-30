@@ -1,0 +1,135 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<body>
+<div class="container">
+    <div class="chatheader clearfix">
+        <a href="/chat/task/index" class="fa fa-angle-left"></a><span>发布求助任务</span> <a href="#" class="server "><img
+            src="/Public/Chat/index/images/server.png" alt=""></a>
+    </div>
+    <div class="r-task-content">
+        <form>
+          <div class="selectbox clearfix">
+
+            <select id="position_id" onchange="javascript:reChange();" >
+                <option value="0">选择在哪</option>
+                <?php foreach($position as $v): ?>
+                <option value="<?php echo $v['position_id']; ?>" ><?php echo $v['position_name']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <select id="city_id" onchange="javascript:siteChange();">
+                <option value="0" >选择城市</option>
+            </select>
+            <select id="site_id" name="site_id">
+                <option value="0">选择具体区域</option>
+            </select>
+            <div class='btm-line'></div>
+            </div>
+            <div class="con-b-con">
+                <div class="b-con-t">
+                    <input type="text" name="title" placeholder="请输入您的标题"  id="title">
+                </div>
+                <textarea name="content" id="content" cols="48" rows="5" placeholder="请详细描述您想要得到的帮助" ></textarea>
+                <div class="youxiao">
+                    <select name='day' id="day">
+                        <option>请选择有效期限</option>
+                        <option value="1">1天</option>
+                        <option value="2">2天</option>
+                        <option value="3">3天</option>
+                    </select>
+                </div>
+            </div>
+            <div class="task-submit">
+                <input type='button' onclick="javascript:submitTask();" value="提交任务">
+            </div>
+        </form>
+    </div>
+    <div class="t-content">
+    <div class='t-tab'>
+        <ul>
+            <li><a href="/chat/task/index">
+                <img src="/Public/Chat/index/images/4.jpg" alt=""><span>这里帮</span>
+            </a></li>
+            <li><a href="#">
+                <img src="/Public/Chat/index/images/1.png" alt=""><span>我发布的</span>
+            </a></li>
+            <li><a href="/chat/task/mypart">
+                <img src="/Public/Chat/index/images/2.png" alt=""><span>我参与的</span>
+            </a></li>
+            <li><a href="#">
+                <img src="/Public/Chat/index/images/3.png" alt=""><span style="color:#BB4B48;">发布任务</span>
+            </a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+</body>
+<script>
+    //重新选择
+    function reChange(){
+        if($('#position_id').val() == 0){
+            $('#city_id').html('<option value="0">选择城市</option>');
+            return false;
+        }else{
+            var url = '/index.php/index/index/getCityList';
+            $.post(url,{},function(d){
+                d = eval('('+ d +')');
+                if(d.error){
+                    $('#city_id').html('<option value="0">选择城市</option>');
+                    $('#site_id').html('<option value="0">选择具体区域</option>');
+                    return false;
+                }else{
+                    $('#site_id').html('<option value="0">选择具体区域</option>');
+                    //插入
+                    var insertData = '';
+                    for(var i=0;i<d.res.length;i++){
+                        insertData += '<option value="'+ d.res[i].city_id +'" >'+ d.res[i].city_name +'</option>';
+                    }
+                    $('#city_id').html('<option value="0" >选择城市</option>').append(insertData);
+                }
+            },'text');
+            return false;
+        }
+    }
+    //改变事件
+    function siteChange(){
+        var position_id = $('#position_id').val();
+        var city_id = $('#city_id').val();
+        var url = '/index.php/index/index/getSiteList';
+        $.post(url,{position_id:position_id,city_id:city_id},function(d){
+            d = eval('('+ d +')');
+            if(d.error){
+                $('#site_id').html('<option value="0">选择具体区域</option>');
+                return false;
+            }else{
+                //插入
+                var insertData = '';
+                for(var i=0;i<d.res.length;i++){
+                    insertData += '<option site_url="'+ d.res[i].site_url +'" value="'+ d.res[i].site_id +'" >'+ d.res[i].name +'</option>';
+                }
+                $('#site_id').html('<option value="0">选择具体区域</option>').append(insertData);
+            }
+        },'text');
+    }
+    //提交
+    function submitTask(){
+        var title = $('#title').val();
+        var content = $('#content').val();
+        var site_id = $('#site_id').val();
+        var day = $('#day').val();
+        if(!title || !content || !site_id || !day){
+            alert('请将提交信息补充完整');
+            return false;
+        }
+        var url = '/chat/task/release_task';
+        $.post(url,$('form').serialize(),function(d){
+            d = eval('('+ d +')');
+            if(d.error){
+                alert(d.msg);
+                return false;
+            }else{
+                alert(d.msg);
+                window.location.href = '/chat/task/index';
+            }
+        },'text');
+    }
+</script>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

@@ -1,0 +1,189 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+</style>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+	        <div class="col-sm-12">
+	           <div class="ibox">
+	                    <div class="ibox-title">
+	                        <h5>订单详情</h5>
+	                         <span class="label label-primary pull-right label-primary-cust">
+	                            <a href="javascript:history.back(-1);" class="fa-lg-cust-a" title="返回上一页">
+	                                <i class="fa fa-arrow-left fa-lg-cust" aria-hidden="true"></i>
+	                            </a>
+	                        </span> 
+	                    </div>
+	                    <div class="ibox-content">
+	                        <div>
+	                            <span>当前订单进度：</span>
+	                            <?php if ($order_info['is_ziti']==1): ?>
+	                            <div class="stat-percent"><?php echo $order_info['status']==1?'50%':'100%'; ?></div>
+	                            <div class="progress progress-mini">
+	                                <div style="width: <?php echo $order_info['status']==1?'50%':'100%'; ?>;" class="progress-bar"></div>
+	                            </div>
+	                            <?php else: ?>
+	                            <div class="stat-percent"><?php if($order_info['status']==2){echo '33%';}else if($order_info['status']==3){echo '67%';}else if($order_info['status']==6){echo '75%';}else{echo '100%';} ?></div>
+	                            <div class="progress progress-mini">
+	                                <div style="width: <?php if($order_info['status']==2){echo '33%';}else if($order_info['status']==3){echo '67%';}else if($order_info['status']==6){echo '75%';}else if($order_info['status']==5){echo '100%';}else{echo '100%';} ?>;" class="progress-bar"></div>
+	                            </div>
+	                            <?php endif; ?>
+	                        </div>
+	                        <div class="row  m-t-sm" style="position: relative;">
+	                        	<?php if ($order_info['is_ziti']==1): ?>
+	                        	<div class="col-sm-4  text-left">
+	                                <div class="font-bold " >已下单</div>
+	                            </div>
+	                        	<div class="col-sm-4  text-center">
+	                                <div class="font-bold " >待提货</div>
+	                            </div>
+	                            <div class="col-sm-4  text-right">
+	                                <div class="font-bold">已完成</div>
+	                            </div>
+	                        	<?php else: ?>
+	                        		<?php if ($order_info['status'] == 6): ?>
+	                        			<div class="text-left" style="position: absolute;left: 15px;top: 0">
+			                                <div class="font-bold " >已下单</div>
+			                            </div>
+			                            <div class="col-sm-3  text-right">
+			                                <div class="font-bold " style="margin-right: -39px">待发货</div>
+			                            </div>
+			                            <div class="col-sm-3  text-right">
+			                                <div class="font-bold  " style="margin-right: -39px">已发货</div>
+			                            </div>
+			                            <div class="col-sm-3  text-right">
+			                                <div class="font-bold  " style="margin-right: -39px">退换中</div>
+			                            </div>
+			                            <div class="col-sm-3  text-right">
+			                                <div class="font-bold">已完成</div>
+			                            </div>
+	                        		<?php elseif ($order_info['status'] == 5): ?>
+	                        			<div class="text-left" style="position: absolute;left: 15px;top: 0">
+			                                <div class="font-bold " >已下单</div>
+			                            </div>
+			                            <div class="col-sm-12  text-right">
+			                                <div class="font-bold">已取消</div>
+			                            </div>
+			                        <?php elseif ($order_info['status'] == 7): ?>
+			                        	<div class="text-left" style="position: absolute;left: 15px;top: 0">
+			                                <div class="font-bold " >已下单</div>
+			                            </div>
+			                            <div class="col-sm-4  text-right">
+			                                <div class="font-bold " style="margin-right: -39px">待发货</div>
+			                            </div>
+			                            <div class="col-sm-4  text-right">
+			                                <div class="font-bold  " style="margin-right: -39px">已发货</div>
+			                            </div>
+			                            <div class="col-sm-4  text-right">
+			                                <div class="font-bold">已退货</div>
+			                            </div>
+	                        		<?php else: ?>
+	                        			<div class="text-left" style="position: absolute;left: 15px;top: 0">
+			                                <div class="font-bold " >已下单</div>
+			                            </div>
+			                            <div class="col-sm-4  text-right">
+			                                <div class="font-bold " style="margin-right: -39px">待发货</div>
+			                            </div>
+			                            <div class="col-sm-4  text-right">
+			                                <div class="font-bold  " style="margin-right: -39px">已发货</div>
+			                            </div>
+			                            <div class="col-sm-4  text-right">
+			                                <div class="font-bold">已完成</div>
+			                            </div>
+	                        		<?php endif ?>
+	                        	<?php endif ?>
+	                        </div>
+
+	                    </div>
+	                    <br>
+	                    <div class="alert alert-danger">
+	                    	<span class="alert-link">返利提示：</span><br/><br/>
+	                    	该订单交易额为：<?php echo $order_info['piao'] ?> 共享币。<br/><br/> 
+	                    	<?php 
+	                    	if($order_info['sell_business_id'] == $_SESSION['business']['business_id']){
+	                    		$x100rebate = $order_info['rebate'] * 100;
+	                    		echo "本订单商品是您代理其他商家的，订单完成后，您将获得 {$x100rebate}% 的共享币返利（{$order_info['sell_business_piao']} 个），对方商家将获得 {$order_info['business_piao']} 个共享币。";
+	                    	}elseif(($order_info['business_id'] == $_SESSION['business']['business_id']) && ($order_info['sell_business_id'] != 0)){
+	                    		$x100rebate = $order_info['rebate'] * 100;
+	                    		echo "本订单商品是其他商家代理您的，订单完成后，代理商家将获得 {$x100rebate}% 的共享币返利（{$order_info['sell_business_piao']} 个），您将获得 {$order_info['business_piao']} 个共享币。";
+	                    	}elseif(($order_info['business_id'] == $_SESSION['business']['business_id']) && ($order_info['sell_business_id'] == 0)){
+	                    		echo '本订单商品来自您自己的积分商城，订单完成后，您将获得 '.$order_info['piao'].' 个共享币。';
+	                    	}
+	                    	?>
+                        </div>
+	           </div>
+	        </div>
+        </div>
+         <div class="row">
+	        <div class="col-sm-6">
+	           <div class="ibox">
+	                    <div class="ibox-title">
+	                        <h5>商品信息</h5>
+	                    </div>
+	                    <div class="ibox-content">
+	                       <p>商品ID：<?php echo $order_info['goods_id']; ?></p> 
+	                       <p>商品名称：<?php echo $order_info['goods_name']; ?></p> 
+	                       <p>商品价格：<?php echo $order_info['piao'] / $order_info['num']; ?> 共享币</p>
+						   <p>返利百分比：<?php echo $order_info['rebate'] * 100; ?>%</p>
+	                       <p><?php echo $order_info['sell_business_id'] != 0 ? '代理卖家ID：'.$order_info['sell_business_id'] : '&nbsp;'; ?></p>
+	                    </div>
+	           </div>
+	           <div class="ibox">
+	                    <div class="ibox-title">
+	                        <h5>物流信息</h5>
+	                    </div>
+	                    <div class="ibox-content">
+	                       <p>配送方式：<?php echo $order_info['is_ziti']==1?'自提':$transports[$order_info['transport_id']] ?></p>
+						   <p>货运单号：<?php echo $order_info['is_ziti']==1?'无':$order_info['waybill']; ?></p>
+						   	<p>配送地址：<?php echo $order_info['address']; ?></p>
+	                    </div>
+	           </div>
+	        </div>
+	        <div class="col-sm-6">
+	           <div class="ibox">
+	                    <div class="ibox-title">
+	                        <h5>订单信息</h5>
+	                    </div>
+	                    <div class="ibox-content">
+	                        <p>下单时间：<?php echo $order_info['add_time']; ?></p> 
+	                        <p>订单号码：
+	                        	<?php
+	                        	echo $order_info['order_sn'];
+	                        	if ($order_info['business_id'] == $_SESSION['business']['business_id']) {
+                                    if ($order_info['sell_business_id'] != 0) {
+                                        echo '&nbsp;<img style="cursor:pointer" src="/Public/hplus/img/blue_dai.png" title="其他商家代理的我的商品订单"> ';
+                                    }
+                                }else{
+                                    $imgs = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                                    if ($order_info['sell_business_id'] == $_SESSION['business']['business_id']) {
+                                        echo '&nbsp;<img style="cursor:pointer" src="/Public/hplus/img/red_dai.png" title="我代理的其他商家的商品订单"> ';
+                                    }
+                                }
+	                        	?>
+	                        </p>
+	                        <?php $str_status = array('1'=>'待提货','2'=>'待发货','3'=>'待收货','4'=>'已完成','5'=>'已取消','6'=>'退换中','7'=>'已退货'); $str_return_status = array('0'=>'未受理','1'=>'已受理','2'=>'已拒绝');?>
+	                        <p>兑换数量：<?php echo $order_info['num']; ?></p>
+	                       	<p>支付共享币：<?php echo $order_info['piao']; ?> 个</p>
+	                       	<p>订单状态：<?php echo $str_status[$order_info['status']]; ?><sapn class="text-danger"><?php if ($order_info['status'] == 6){echo '（'.$str_return_status[$order_info['return_status']].'）';}; ?></sapn></p>
+	                    </div>
+	           </div>
+	           <div class="ibox">
+	                    <div class="ibox-title">
+	                        <h5>买家信息</h5>
+	                    </div>
+	                    <div class="ibox-content" style="height: 120px;">
+	                        <p>用户手机：<?php echo $order_info['phone_num']; ?></p>
+	                        <p>用户留言：<sapn class="text-danger"><?php echo $order_info['message']; ?></sapn></p>
+	                    </div>
+	           </div>
+	        </div>
+	    </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+
+</script>

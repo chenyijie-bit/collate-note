@@ -1,0 +1,163 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style type="text/css">
+    .load-more{
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+         background-color: #BFDFFF;
+        color: #999;
+        font-size: 0.4rem;
+        text-align: center;
+    }
+    .consultation-container{
+        margin-bottom: 3rem;
+    }
+</style>
+<body>
+<div class="consultation-container">
+    <!--头部-->
+    <div class="header">
+        <span> 会诊室 </span>
+    </div>
+    <!--内容-->
+    <div class="ask_container">
+        <div class='interrogation'>
+            <div class="interrogation-title ">
+                <div class="interrogation-left ">
+                    <img src="/Public/Hospital/index/images/icon/circle2.png">
+                    <span>问诊</span>
+                </div>
+               <div class="select-interrogation f_r">
+                   <div class="fa fa-caret-down xiala" ></div>
+                   <form action="" method="get">
+
+                           <select name="" id="selectPointOfInterest" title="Select points of interest nearby" onchange="reload($(this).val())">
+                               <option value="0"> 全部科室</option>
+                               <option value="1" <?php echo $_GET['department_id'] == 1?'selected="selected"':''; ?>> 骨科</option>
+                               <option value="2" <?php echo $_GET['department_id']==2?'selected="selected"':'' ?>> 皮肤科</option>
+                               <option value="3" <?php echo $_GET['department_id']==3?'selected="selected"':'' ?>> 耳鼻喉科</option>
+                               <option value="4" <?php echo $_GET['department_id']==4?'selected="selected"':'' ?>> 中医科</option>
+                               <option value="5" <?php echo $_GET['department_id']==5?'selected="selected"':'' ?>> 口腔科</option?>
+                               <option value="6" <?php echo $_GET['department_id']==6?'selected="selected"':'' ?>> 整形美容科</option>
+                           </select>
+
+                   </form>
+               </div>
+            </div>
+            <?php foreach ($advices as $key => $value): ?>
+            <div class="interrogation-centent click_link" advice-id="<?php echo $value['advice_id'] ?>">
+                <div class="interrogation-container">
+                    <div class="centent-top">
+                        <div class="keshi f_l">
+                            <?php echo $value['department_name'] ?>
+                        </div>
+                        <div class="time f_r">
+                            <?php echo $value['send_time'] ?>
+                        </div>
+                    </div>
+                    <div class="centent-description">
+                        <p class=""><?php echo mb_strlen($value['advice_comment'])<65?$value['advice_comment']:mb_substr($value['advice_comment'],0,65,'utf-8').'...'; ?></p>
+                        <span class="fa fa-angle-right"></span>
+                    </div>
+                    <?php if ($value['doctor_name']=='等待医生回复'){ ?>
+                    <div class="centent-status">
+                        等待医生回复
+                    </div>
+                    <?php }else{ ?>
+                    <div class="centent-status offer">
+                        <img src="<?php echo $value['head_img'] ?>" class="head-img">
+                        <span><?php echo $value['doctor_name'] ?></span>医生已回复
+                    </div>    
+                    <?php } ?>
+                    
+                </div>
+            </div>
+            <?php endforeach ?>
+            <div class="load-more" id="get-more" onclick="get_advice()">点击加载更多...</div>
+            </div>
+            <div style='visibility:hidden' id="page" num='2'></div>
+
+
+        </div>
+    </div>
+    <!--底部浮标-->
+    <div class="introduce-footer clearfix">
+        <div class="footer-top">
+            <a href="/Hospital/Advice/add_advice" class="footer-left f_l ask" style="width: 5rem ;margin-left: 2rem"> <span
+                    style="margin-left: 0.3125rem">免费问诊</span></a>
+
+        </div>
+        <div class="tab-bar">
+            <ul class="clearfix">
+                <li class="tab-group  f_l group-currunt "><a href="#">
+                    <span class=" ">会诊室</span></a></li>
+                <li class="tab-home f_l "><a href="/Hospital/Index/index">
+                    <span>首页</span></a></li>
+                <li class="tab-personal f_l "><a href="/Hospital/My/index">
+                    <span>我</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function reload(b){
+        window.location.href='/Hospital/advice/lists?department_id='+b;
+    }
+
+    function get_advice(){
+        var page = $("#page").attr("num");
+        var a = $('#selectPointOfInterest').val();
+        $.ajax({
+            type:"post",
+            url:"/Hospital/Advice/lists/",
+            data:{'page':page,'department_id':a},
+            success:function(data){
+                if(data.status == 1){
+                    $("#page").attr("num",parseInt(page)+parseInt(1));
+                    //console.log(data.data);
+                    var data = data.data;
+                    for (var i = 0; i <= data.length-1; i++) {
+                        //console.log(data[i]);
+                        in_comment(data[i]);
+                    };
+                }else if(data.status == 0){
+                    $("#get-more").html(data.data);
+                }
+            }
+        })
+    }
+
+
+    //将获取的更多的数据放入页面中
+    function in_comment(data){
+        var str = '<div class="interrogation-centent click_link" advice-id="'+data.advice_id+'"> <div class="interrogation-container"> <div class="centent-top"> <div class="keshi f_l"> '+data.department_name+' </div> <div class="time f_r"> '+data.send_time+' </div> </div> <div class="centent-description"> <p class="">'+data.advice_comment+' </p> <span class="fa fa-angle-right"></span> </div> <div class="centent-status"> 等待医生回复 </div> </div> </div>';
+
+        var str1 = '<div class="interrogation-centent click_link" advice-id="'+data.advice_id+'"> <div class="interrogation-container"> <div class="centent-top"> <div class="keshi f_l"> '+data.department_name+' </div> <div class="time f_r"> '+data.send_time+' </div> </div> <div class="centent-description"> <p class="">'+data.advice_comment+' </p> <span class="fa fa-angle-right"></span> </div> <div class="centent-status offer"> <img src="'+data.head_img+'" class="head-img"> <span>'+data.doctor_name+'</span>医生已回复 </div>  </div> </div>';
+
+        if (data.doctor_name == "等待医生回复" && data.head_img == null) {
+            $('#get-more').before(str);
+        }else{
+            $('#get-more').before(str1);
+        };
+
+        var script = document.createElement("script");
+        script.src = "/Public/Hospital/index/js/index.js";
+
+        var body = document.body;
+        body.insertBefore(script, body.firstChild);
+        
+        $(".click_link").click(function() {
+           window.location.href="/Hospital/Advice/advice_info?advice_id="+$(this).attr('advice-id');
+        });
+        
+    }
+
+    $(".click_link").click(function() {
+        window.location.href="/Hospital/Advice/advice_info?advice_id="+$(this).attr('advice-id');
+    });
+
+
+
+</script>
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>

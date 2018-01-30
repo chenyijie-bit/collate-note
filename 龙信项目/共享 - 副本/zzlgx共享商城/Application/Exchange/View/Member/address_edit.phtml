@@ -1,0 +1,122 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+.wy-header {
+    height: 44px;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #e21323;
+    z-index: 100;
+}
+.wy-header-title {
+    margin: 0 50px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    /*color: #252525;*/
+    overflow: hidden;
+}
+.weui-cell_select .weui-select {
+    padding-right: 15px;
+}
+</style>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+   <a href="javascript:self.location=document.referrer;" title="返回上一页" style="width: 50px;position: absolute;left: 0;top: 0;z-index: 10; height: 45px;"><div class="wy-header-icon-back"><span></span></div></a>
+  <div class="wy-header-title"  style="color: #fff">收货地址</div>
+</header>
+<div class="weui-content" style="margin-top: 44px;">
+  <form class="weui-cells weui-cells_form wy-address-edit">
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">收货人</label></div>
+      <div class="weui-cell__bd"><input class="weui-input" type="text" readonly value="<?php echo $info['name']; ?>"></div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">手机号</label></div>
+      <div class="weui-cell__bd"><input class="weui-input" type="number" name="phone_num" readonly value="<?php echo $info['phone_num']; ?>"></div>
+    </div>
+    <div class="weui-cell weui-cell_select weui-cell_select-after">
+        <div class="weui-cell__hd">
+          <label for="" class="weui-label wy-lab">所在地区</label>
+        </div>
+        <div class="weui-cell__bd">
+          <select class="weui-select" id="province_id" name="province_id" onchange="javascript:changeSelect('province_id');" style="width: 30%">
+            <option value="">请选择</option>
+            <?php foreach ($province as $key => $value): ?>
+                <option <?php echo $value['province_id'] == $info['province_id'] ? 'selected' : ''; ?> value="<?php echo $value['province_id']; ?>"><?php echo $value['province_name']; ?></option>
+            <?php endforeach ?>
+          </select>
+           <select class="weui-select" id="city_id" name="city_id" onchange="javascript:changeSelect('city_id');" style="width: 30%">
+            <option value="">请选择</option>
+            <?php foreach ($city as $key => $value): ?>
+                <option <?php echo $value['city_id'] == $info['city_id'] ? 'selected' : ''; ?> value="<?php echo $value['city_id']; ?>"><?php echo $value['city_name']; ?></option>
+            <?php endforeach ?>
+          </select>
+           <select class="weui-select" id="area_id" name="area_id" style="width: 30%">
+            <option value="">请选择</option>
+            <?php foreach ($area as $key => $value): ?>
+                <option <?php echo $value['area_id'] == $info['area_id'] ? 'selected' : ''; ?> value="<?php echo $value['area_id']; ?>"><?php echo $value['area_name']; ?></option>
+            <?php endforeach ?>
+          </select>
+        </div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">街道地址</label></div>
+      <div class="weui-cell__bd">
+        <textarea class="weui-textarea" name="address" placeholder=""><?php echo $info['address']; ?></textarea>
+      </div>
+    </div>
+  </form> 
+  <div class="weui-btn-area">
+    <a class="weui-btn weui-btn_warn" href="javascript:saveAddress();" id="showTooltips">保存地址</a>
+  </div>
+
+</div>
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script>
+    function saveAddress(){
+        $.post('/Exchange/Member/address_edit',{type:'SAVE',form:$('form').serialize()},function(d){
+            if(d.error){
+                $.toast(d.msg,'cancel');
+                return false;
+            }else{
+                $.toast(d.msg);
+                //setTimeout("window.location.reload()",1000);
+            }
+        },'json');
+    }
+    function changeSelect(select_id){
+        $('#area_id').html('<option value="">请选择</option>');
+        $.post('/Exchange/Member/address_edit',{type:'OPTION',select_type:select_id,select_val:$('#'+select_id).val()},function(d){
+            if(d.error){
+                $.toast(d.msg,'cancel');
+                return false;
+            }else{
+                if(select_id == 'province_id'){
+                    var opt = '<option value="">请选择</option>';
+                    for(var i=0;i<d.result.length;i++){
+                        opt += '<option value="'+d.result[i].city_id+'">'+d.result[i].city_name+'</option>'
+                    }
+                    $('#city_id').html(opt);
+                }
+                if(select_id == 'city_id'){
+                    var opt = '<option value="">请选择</option>';
+                    for(var i=0;i<d.result.length;i++){
+                        opt += '<option value="'+d.result[i].area_id+'">'+d.result[i].area_name+'</option>'
+                    }
+                    $('#area_id').html(opt);
+                }
+            }
+        },'json');
+    }
+</script>

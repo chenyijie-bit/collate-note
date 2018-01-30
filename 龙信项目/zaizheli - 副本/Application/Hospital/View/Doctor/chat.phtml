@@ -1,0 +1,49 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style type="text/css">
+    p {
+        margin-bottom: 18px;
+    }
+    .load-more{
+        text-align: center;
+        margin-top: 40%;
+        padding-bottom: 40%;
+    }
+
+</style>
+    <body>
+    <div class="doctor-chat">
+    	<div class="doctor-chat-top">
+    		<a href="/Hospital/Doctor/detail?doctor_id=<?php echo $_GET['doctor_id'] ?>"><i class="fa fa-angle-left"></i></a>
+    		<span>医生说</span>
+    	</div>
+    	<div class="doctor-chat-contain">
+    		
+	    		<img src="<?php echo $info['head_img'] ?>" alt="">
+	    		<span class="chat-con-l"><?php echo $info['doctor_name'] ?></span>
+	    		<span class="chat-con-r"><?php echo $info['ranks_name'] ?></span>
+    	</div>
+    	<div class="doctor-chat-bottom">
+    		<ul>
+                <?php foreach ($advices as $k => $v): ?>
+                    
+    			<li>
+    				<a href="/Hospital/Advice/advice_info?advice_id=<?php echo $v['advice_id'] ?>" class="chat-bot-a">
+	    				<img src="/Public/Hospital/index/images/chat-wen.png" alt="">
+	    				<div class="chat-bot-li"> 
+	    					<p class="chat-main"><?php echo $v['advice_comment'] ?></p>
+	    					<p class="chat-time"><?php echo $v['send_time'] ?></p>
+	    				</div>	
+    				</a>	
+    			</li>
+
+                <?php endforeach ?>
+    		</ul>
+            <?php if (count($advices) <= 0): ?>
+                <div class="load-more" id="get-more">暂无咨询信息</div>
+            <?php endif ?>
+            
+    	</div>
+    </div>
+    
+    </body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

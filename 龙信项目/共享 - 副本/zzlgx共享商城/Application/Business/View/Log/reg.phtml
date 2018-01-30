@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:52 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>在这里共享商企平台 -注册</title>
+    <meta name="keywords" content="在这里共享商企平台,在这里,商企共享平台,共享平台">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="/Public/hplus/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="/Public/hplus/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="/Public/hplus/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/Public/hplus/css/animate.min.css" rel="stylesheet">
+    <link href="/Public/hplus/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="/Public/hplus/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<style>
+
+.loginscreen.middle-box {
+    width: 500px;
+}
+.middle-box {
+    max-width: 500px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+label{
+    float: left;
+    width: 20%;
+    line-height: 34px;
+}
+.myinput {
+   width: 80%;  
+}
+.webScreen .select2{
+    width: 80%;
+    float: left;
+}
+.webScreen .select1{
+     width: 80%;  
+ }
+.webScreen .select2 select{
+    width: 26%;height: 33px;
+}
+.titleFs{
+    font-size: 30px;
+    font-weight: 600;
+}
+ @media screen and (max-width: 600px) {
+   html{ font-size:14px}
+     .loginscreen.middle-box {
+        width:18rem;
+    }
+    .webScreen {
+        
+        margin:auto;
+        width: 18rem;
+        max-width: 18rem;
+        position: absolute;
+        left: 0;
+        top:0;
+        right: 0;
+        bottom: 0;
+
+       
+    }
+    .titleFs {
+    font-size: 0.6rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+}
+    .webScreen label{
+        width: 35%;
+    }
+   .webScreen .myinput{
+   width: 65%;  
+}
+ .webScreen .select1{
+     width: 65%;  
+ }
+ .webScreen .select2{
+     width: 65%;  
+     float: left;
+ }
+  .webScreen .select2 select{
+width: 33.3%;
+float: left;
+  }
+    
+   }
+/*注册协议弹框*/
+.boxRegisterProtocol{
+    height: 100%; position: fixed;top: 0;
+    left: 0;
+    width: 100%;
+    /*padding: 5% 15%; */
+    z-index: 100;
+    box-sizing: border-box; 
+    background: #777;
+}
+.hideScroll{
+    height: 100%;
+    width: 50%;
+    overflow: hidden;margin:0 auto;
+}
+.registerProtocolDoc{
+    /*position: relative;*/
+    overflow: auto;
+    height: 100%;
+    width: 102%;
+    font-size: 16px;
+    text-indent: 2;
+    padding: 2% 5% 20% 5%;
+   background: #fff;
+}
+.docBot{
+    height: 100px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    padding-top: 30px;
+    background: #fff;
+    text-align: center;
+    z-index: 150;
+}
+.docBot button{
+    height: 30px;
+    width: 80px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 2px;
+    outline: none;
+    background: #46adf9;
+    text-align: center;
+    margin:0 auto;
+
+}
+.docContentTit{
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+}
+.docContent{
+    font-size: 15px;
+}
+
+.titleFw{
+    font-weight: 600;
+}
+article{
+    clear: both;
+}
+</style>
+    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+
+</head>
+
+<body class="gray-bg" style="position: relative;">
+
+    <div class="middle-box text-center loginscreen   animated fadeInDown webScreen">
+        <div>
+            <div>
+                <h2>在这里共享商企平台</h2>
+            </div>
+            <p>创建一个企业账户，即刻开启共享零售新模式</p>
+            <form id="reg_form" class="m-t" role="form" action="" method="post">
+                <input type="text" name="seRes" style="width: 1px;height: 1px;border: 0px;margin: 0px" value="<?php echo $_GET['seRes']; ?>">
+                <div class="form-group">
+                    <label >推荐人ID</label>
+                    <input type="text" class="form-control myinput" placeholder="选填" required="" name="leader"  >
+                </div>
+                <div class="form-group">
+                    <label  >公司名称</label>
+                    <input type="text" class="form-control myinput" value="<?php echo $seRes['ENTNAME'];?>" placeholder="" required="" name="company_name"  >
+                </div>
+                <div class="form-group">
+                    <label >注册地址</label>
+                    <input type="text" class="form-control myinput" disabled value="<?php echo $seRes['DOM'];?>" required=""  >
+                </div>
+                <div class="form-group">
+                    <label style="">法人姓名</label>
+                    <input type="text" class="form-control myinput" value="<?php echo isset($seRes['FRDB']) ? $seRes['FRDB'] : $seRes['NAME'];?>" placeholder="" required="" name="legal_name"  >
+                </div>
+                <div class="form-group">
+                    <label >法人身份证号</label>
+                    <input type="text" class="form-control myinput" placeholder="" required="" name="card_num"  >
+                </div>
+                <div class="form-group">
+                    <label >行业类别</label>
+                    <select class="input-sm form-control input-s-sm inline select1" name="profession_id" style="height: 34px;">
+                        <option value="0">请选择</option>
+                        <?php foreach ($professions as $key => $value): ?>
+                        <option value="<?php echo $value['profession_id'] ?>"><?php echo $value['profession_name'] ?></option>
+                        <?php endforeach ?>
+                    </select>
+                </div>
+                <div class="form-group clear">
+                    <label >营业所在地</label>
+                    <div class="select2">
+                    <select class="input-sm form-control input-s-sm inline" name="province_id" style="">
+                        <option value="0">省份</option>
+                        <?php foreach ($provinces as $key => $value): ?>
+                        <option value="<?php echo $value['province_id'] ?>"><?php echo $value['province_name'] ?></option>
+                        <?php endforeach ?>
+                    </select>
+
+                    <select class="input-sm form-control input-s-sm inline" name="city_id" style="">
+                        <option value="0">城市</option>
+                    </select>
+
+                    <select class="input-sm form-control input-s-sm inline" name="area_id" style="">
+                        <option value="0">区(县)</option>
+                    </select>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <label >街道地址</label>
+                    <input type="text" class="form-control myinput" placeholder="" required="" name="business_address"  >
+                </div>
+                <div class="form-group">
+                    <label >积分商城名称</label>
+                    <input type="text" class="form-control myinput" placeholder="如果输入符号将被系统清除" required="" name="exchange_name"  >
+                </div>
+                <div class="form-group">
+                    <label >密码</label>
+                    <input type="password" class="form-control myinput" placeholder="密码" required="" name="password" maxlength="16"  >
+                </div>
+                <div class="form-group">
+                 <label style="">重复密码</label>
+                    <input type="password" class="form-control myinput" placeholder="重复密码" required="" name="repassword" maxlength="16"  >
+                </div>
+                <div class="form-group" style='position: relative;'>
+                 <label >法人手机号</label>
+                    <input type="text" class="form-control myinput" placeholder="法人手机号" required="" name="phone_num" maxlength="11"  >
+                    <input type="button" class='btn-primary testCode ' value='获取验证码' style="position: absolute;right: 5px;top:8px;border: none;outline-style: none;" >
+                </div>
+                <div class="form-group">
+                 <label >手机验证码</label>
+                    <input type="text" class="form-control myinput" placeholder="手机验证码" required="" name="phone_code" maxlength="4"  >
+                </div>
+                <div class="form-group text-left">
+                    <div class="checkbox i-checks">
+                        <label class="no-padding">
+                            <input name="agree" type="checkbox"><i></i> 我同意</label><a class="registerProtocol" style="line-height: 34px;">&nbsp;注册协议</a>
+                    </div>
+                </div>
+                <div id="reg_submit" class="btn btn-primary block full-width m-b">提交注册</div>
+                <p class="text-muted text-center"><small>已经有账户了？</small><a href="/Business/Log/in">点此登录</a></p>
+            </form>
+        </div>
+    </div>
+    <!--注册协议弹框-->
+    <div class="boxRegisterProtocol" style="display: none;">
+        <div class="hideScroll">
+            <div class="registerProtocolDoc">
+                <div class="docContent">
+                    <h1 style="text-align: center;" class="docContentTit titleFs">《在这里共享商企平台平台服务协议》</h1>
+                    <div>
+                        <br>
+                        <h4 style="display: inline-block;float: right;">版本生效日期：2017年12月1日</h4> 
+                        <br>
+                        <article>
+                            <h3>提示条款</h3>
+
+                            <p>
+                                欢迎您入驻在这里共享商企平台，您将于本平台各注册商户（详见定义条款）共同签署本《在这里共享商企平台服务协议》（下称“本协议”）并使用在这里商企共享服务！
+                            </p>
+                            <p>     本协议为《在这里共享商企平台协议》，自本协议发布之日起，在这里共享商企平台各处所称“在这里商企服务协议”均指本协议。   
+                            </p>
+                            <p>
+                                各服务条款前所列索引关键词仅为帮助您理解该条款表达的主旨之用，不影响或限制本协议条款的含义或解释。为维护您自身权益，建议您仔细阅读各条款具体表述。
+                            </p>   
+                            <p>
+                               <span class="titleFw">【审慎阅读】</span> 您在申请注册流程中点击同意本协议之前，应当认真阅读本协议。 <span class="titleFw">请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、法律适用和争议解决条款。免除或者限制责任的条款将以粗体下划线标识，您应重点阅读。</span>如您对协议有任何疑问，可向在这里共享商企平台客服咨询。
+                            </p>
+                            <p> <span class="titleFw">【签约动作】</span> 
+                                当您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，即表示您已充分阅读、理解并接受本协议的全部内容，并与在这里共享商企平台达成一致，成为在这里共享商企平台“用户”。<span class="titleFw">阅读本协议的过程中，如果您不同意本协议或其中任何条款约定，您应立即停止注册程序。</span>
+                            </p>  
+
+                             
+                            <h3>一、 定义</h3>
+
+                            <p>
+                                <span class="titleFw">在这里共享商企平台：</span>指包括在这里共享商企平台网_________________________等网站及客户端。
+                            </p> 
+                            <p>
+                                <span class="titleFw">在这里共享商企平台服务：</span>在这里共享商企平台基于互联网，以包含在这里共享商企平台网站、客户端等在内的各种形态（包括未来技术发展出现的新的服务形态）向您提供的各项服务。
+                            </p>
+                            <p>
+                                <span class="titleFw">在这里共享商企平台规则：</span>包括在所有在这里共享商企平台规则频道内已经发布及后续发布的全部规则、解读、公告等内容以及各平台在论坛、帮助中心内发布的各类规则、实施细则、产品流程说明、公告等。
+                            </p>
+                            <p>
+                                <span class="titleFw">同一用户：</span>使用同一身份认证信息或经在这里共享商企平台排查认定多个在这里共享商企平台账户的实际控制人为同一人的，均视为同一用户。
+                            </p>
+                            <h3>二、 协议范围</h3>
+                            <br>
+                            <h4>2.1 签约主体</h4>
+                            <p>
+                                <span class="titleFw">【平等主体】</span>本协议由您与在这里共享商企平台商户共同缔结，本协议对您与在这里共享商企平台商户均具有合同效力。
+                            </p>
+                            <p>
+                                <span class="titleFw">【主体信息】</span>在这里共享商企平台商户是指经营在这里共享商企平台的各法律主体，您可随时查看在这里共享商企平台各网站首页底部公示的证照信息以确定与您履约的在这里共享商企平台主体。本协议项下，<span class="titleFw">在这里共享商企平台商户可能根据在这里共享商企平台的业务调整而发生变更，变更后的在这里共享商企平台商户与您共同履行本协议并向您提供服务，在这里共享商企平台商户的变更不会影响您本协议项下的权益。在这里共享商企平台商户还有可能因为提供新的在这里共享商企平台服务而新增，如您使用新增的在这里共享商企平台服务的，视为您同意新增的在这里共享商企平台商户与您共同履行本协议。发生争议时，您可根据您具体使用的服务及对您权益产生影响的具体行为对象确定与您履约的主体及争议相对方。</span>
+                            </p>
+                            <h4>2.2补充协议</h4>
+                            <p>
+                                由于互联网高速发展，您与在这里共享商企平台签署的本协议列明的条款并不能完整罗列并覆盖您与在这里共享商企平台所有权利与义务，现有的约定也不能保证完全符合未来发展的需求。因此，<span class="titleFw">在这里共享商企平台法律声明及隐私权政策、在这里共享商企平台规则均为本协议的补充协议，与本协议不可分割且具有同等法律效力。如您使用在这里共享商企平台服务，视为您同意上述补充协议。</span>     
+                            </p> 
+                            <br>
+                            <h3>三、 账户注册与使用</h3>
+                             
+                            <h4>3.1 用户资格</h4>
+                            <p>
+                                您确认，在您开始注册程序使用在这里共享商企平台服务前，您应当具备中华人民共和国法律规定的与您行为相适应的民事行为能力。<span class="titleFw">若您不具备前述与您行为相适应的民事行为能力，则您及您的监护人应依照法律规定承担因此而导致的一切后果。</span>
+                            </p>
+                            <p>
+                                此外，您还需确保您不是任何国家、国际组织或者地域实施的贸易限制、制裁或其他法律、规则限制的对象，否则您可能无法正常注册及使用在这里共享商企平台服务。 
+                            </p>
+                             
+                            <h4>3.2 账户说明</h4>
+                            <p>
+                                <span class="titleFw">【账户获得】</span>当您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，您可获得在这里共享商企平台账户并成为在这里共享商企平台用户。
+                            </p> 
+                            <p>
+                                在这里共享商企平台只允许每位用户使用一个在这里共享商企平台账户。如有证据证明或在这里共享商企平台根据在这里共享商企平台规则判断您存在不当注册或不当使用多个在这里共享商企平台账户的情形，在这里共享商企平台可采取冻结或关闭账户、取消订单、拒绝提供服务等措施，如给在这里共享商企平台及相关方造成损失的，您还应承担赔偿责任。
+                            </p>
+                            <p>
+                                <span class="titleFw">【账户使用】</span>您有权使用您设置或确认的在这里共享商企平台会员名、手机号码（以下简称“账户名称”）及您设置的密码（账户名称及密码合称“账户”）登录在这里共享商企平台。
+                            </p>
+                            <p>
+                                由于您的在这里共享商企平台账户关联您的个人信息及在这里共享商企平台商业信息，您的在这里共享商企平台账户仅限您本人使用。未经在这里共享商企平台同意，您直接或间接授权第三方使用您在这里共享商企平台账户或获取您账户项下信息的行为无效。如在这里共享商企平台根据在这里共享商企平台规则中约定的违约认定程序及标准判断您在这里共享商企平台账户的使用可能危及您的账户安全及/或在这里共享商企平台信息安全的，在这里共享商企平台可拒绝提供相应服务或终止本协议。
+                            </p>
+                            <p>
+                                <span class="titleFw">【账户转让】</span>由于用户账户关联用户信用信息，仅当有法律明文规定、司法裁定或经在这里共享商企平台同意，并符合在这里共享商企平台规则规定的用户账户转让流程的情况下，您可进行账户的转让。您的账户一经转让，该账户项下权利义务一并转移。<span class="titleFw">除此外，您的账户不得以任何方式转让，否则在这里共享商企平台有权追究您的违约责任，且由此产生的一切责任均由您承担。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【实名认证】</span>作为在这里共享商企平台商户，为使您更好地使用在这里共享商企平台的各项服务，保障您的账户安全，在这里共享商企平台会审核您注册上传的企业信息，请确保上传的企业信息真实可查。
+                            </p>
+                            <p>
+                                <span class="titleFw">【不活跃账户回收】</span>如您的账户同时符合以下条件，则在这里共享商企平台可回收您的账户，您的账户将不能再登录在这里共享商企平台，相应服务同时终止：
+                            </p>
+                            <p>
+                                <span class="titleFw">（一）上传企业信息错误一直未改正；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（二）连续六个月未用于登录在这里共享商企平台；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（三）不存在未到期的有效业务。</span>
+                            </p>
+                             
+                            <h4>3.3 注册信息管理</h4>
+
+                            <h4>3.3.1 真实合法</h4>
+                            <span class="titleFw">【信息真实】</span>在使用在这里共享商企平台服务时，您应当按在这里共享商企平台页面的提示准确完整地提供您的信息（包括您的姓名及电子邮件地址、联系电话、联系地址等），以便在这里共享商企平台或其他用户与您联系。<span class="titleFw">您了解并同意，您有义务保持您提供信息的真实性及有效性。</span>
+                            <h4>3.3.2 更新维护</h4>
+                            <p>
+                              您应当及时更新您提供的信息，在法律有明确规定要求在这里共享商企平台作为平台服务提供者必须对部分用户（如平台卖家等）的信息进行核实的情况下，在这里共享商企平台将依法不时地对您的信息进行检查核实，您应当配合提供最新、真实、完整、有效的信息。  
+                            </p>
+                            <p>
+                                <span class="titleFw">如在这里共享商企平台按您最后一次提供的信息与您联系未果、您未按在这里共享商企平台的要求及时提供信息、您提供的信息存在明显不实或行政司法机关核实您提供的信息无效的，您将承担因此对您自身、他人及在这里共享商企平台造成的全部损失与不利后果。在这里共享商企平台可向您发出询问或要求整改的通知，并要求您进行重新认证，直至中止、终止对您提供部分或全部在这里共享商企平台服务，在这里共享商企平台对此不承担责任。</span>
+                            </p>
+                            <h3>3.4 账户安全规范</h3>
+                            <p>
+                                <span class="titleFw">【账户安全保管义务】</span>您的账户为您自行设置并由您保管，在这里共享商企平台任何时候均不会主动要求您提供您的账户密码。因此，建议您务必保管好您的账户，并确保您在每个上网时段结束时退出登录并以正确步骤离开在这里共享商企平台。
+                            </p>
+                            <p>
+                                <span class="titleFw">账户因您主动泄露或因您遭受他人攻击、诈骗等行为导致的损失及后果，在这里共享商企平台并不承担责任，您应通过司法、行政等救济途径向侵权行为人追偿。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【账户行为责任自负】</span>>除在这里共享商企平台存在过错外，<span class="titleFw">您应对您账户项下的所有行为结果（包括但不限于在线签署各类协议、发布信息、购买商品及服务及披露信息等）负责。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【日常维护须知】</span>如发现任何未经授权使用您账户登录在这里共享商企平台或其他可能导致您账户遭窃、遗失的情况，建议您立即通知在这里共享商企平台。<span class="titleFw">您理解在这里共享商企平台对您的任何请求采取行动均需要合理时间，且在这里共享商企平台应您请求而采取的行动可能无法避免或阻止侵害后果的形成或扩大，除在这里共享商企平台存在法定过错外，在这里共享商企平台不承担责任。</span>
+                            </p> 
+                            
+                             
+                            <h3>四、 在这里共享商企平台服务及规范</h3>
+                            <p>
+                                <span class="titleFw">【服务概况】</span>您有权在在这里共享商企平台上享受商城管理、商品及/或服务的销售与推广、商品及/或服务的购买与评价、交易争议处理等服务。在这里共享商企平台提供的服务内容众多，具体您可登录在这里共享商企平台浏览。
+                            </p>
+                            <h4>4.1 商城管理</h4>
+                            <p>
+                                <span class="titleFw">【商城创建】</span>通过在在这里共享商企平台网创建商城，您可发布全新商品及/或服务信息并与其他用户达成交易。
+                            </p> 
+                            <p>
+                                <span class="titleFw">基于在这里共享商企平台网管理需要，您理解并认可，同一用户在在这里共享商企平台网仅能开设一家商城，在这里共享商企平台可关闭您在在这里共享商企平台网同时开设的其他商城。 </span>  
+                            </p>
+                            <p>
+                                <span class="titleFw">【商城关停】</span>如您通过下架全部商品短暂关停您的商城，<span class="titleFw">您应当对您商城关停前已达成的交易继续承担发货、退换货及质保维修、维权投诉处理等交易保障责任。</span>
+                            </p>  
+                            <p>
+                                <span class="titleFw">在您的商城连续六周无出售中的商品的情况下，在这里共享商企平台也可依据在这里共享商企平台网规则关停您的商城。</span>
+                            </p>
+                            <p>
+                                依据上述约定关停商城均不会影响您已经累积的信用。
+                            </p>
+                             
+                            <h4>4.2商品及/或服务的销售与推广</h4>
+                            <p>
+                                <span class="titleFw">【商品及/或服务信息发布】</span>通过在这里共享商企平台提供的服务，您有权通过文字、图片、视频、音频等形式在在这里共享商企平台上发布商品及/或服务信息、招揽和物色交易对象、达成交易。
+                            </p>
+                            <p>
+                                <span class="titleFw">【禁止销售范围】</span>您应当确保您对您在在这里共享商企平台上发布的商品及/或服务享有相应的权利，<span class="titleFw">您不得在在这里共享商企平台上销售以下商品及/或提供以下服务：</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（一）国家禁止或限制的；</span>
+                                
+                            </p>
+                            <p>
+                                <span class="titleFw">（二）侵犯他人知识产权或其它合法权益的；</span>
+                                
+                            </p>
+                            <p>
+                                <span class="titleFw">（三）在这里共享商企平台规则、公告、通知或各平台与您单独签署的协议中已明确说明不适合在在这里共享商企平台上销售及/或提供的。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【交易秩序保障】</span>您应当遵守诚实信用原则，确保您所发布的商品及/或服务信息真实、与您实际所销售的商品及/或提供的服务相符，并在交易过程中切实履行您的交易承诺。
+                            </p>
+                            <p>
+                                您应当维护在这里共享商企平台市场良性竞争秩序，不得贬低、诋毁竞争对手，不得干扰在这里共享商企平台上进行的任何交易、活动，不得以任何不正当方式提升或试图提升自身的信用度，不得以任何方式干扰或试图干扰在这里共享商企平台的正常运作。
+                            </p>
+                            <p>
+                                <span class="titleFw">【促销及推广】</span>您有权自行决定商品及/或服务的促销及推广方式。<span class="titleFw">您的促销推广行为应当符合国家相关法律法规及在这里共享商企平台的要求。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【依法纳税】依法纳税是每一个公民、企业应尽的义务，您应对销售额/营业额超过法定免征额部分及时、足额地向税务主管机关申报纳税。</span>
+                            </p>
+                            <h4>4.3商品及/或服务的购买与评价</h4>
+
+
+
+                            <p>
+                                <span class="titleFw">【商品及/或服务的购买】</span>当您在在这里共享商企平台购买商品及/或服务时，请您务必仔细确认所购商品的品名、价格、数量、型号、规格、尺寸或服务的时间、内容、限制性要求等重要事项，并在下单时核实您的联系地址、电话、收货人等信息。<span class="titleFw">如您填写的收货人非您本人，则该收货人的行为和意思表示产生的法律后果均由您承担。</span>
+                            </p>
+                            <p>
+                                您的购买行为应当基于真实的消费需求，不得存在对商品及/或服务实施恶意购买、恶意维权等扰乱在这里共享商企平台正常交易秩序的行为。基于维护在这里共享商企平台交易秩序及交易安全的需要，<span class="titleFw">在这里共享商企平台发现上述情形时可主动执行关闭相关交易订单等操作。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【评价】</span>您有权在在这里共享商企平台提供的评价系统中对与您达成交易的其他用户商品及/或服务进行评价。您应当理解，您在在这里共享商企平台的评价信息是公开的，如您不愿意在评价信息中向公众披露您的身份信息，您有权选择通过匿名形式发表评价内容。
+                            
+                            </p>
+                            <p>
+                                您的所有评价行为应遵守在这里共享商企平台规则的相关规定，评价内容应当客观真实，不应包含任何污言秽语、色情低俗、广告信息及法律法规与本协议列明的其他禁止性信息；您不应以不正当方式帮助他人提升信用或利用评价权利对其他用户实施威胁、敲诈勒索。<span class="titleFw">在这里共享商企平台可按照在这里共享商企平台规则的相关规定对您实施上述行为所产生的评价信息进行删除或屏蔽。</span>
+                            </p>
+                            <h4> 4.4交易争议处理</h4>
+                            <p>
+                                <span class="titleFw">【交易争议处理途径】</span>您在在这里共享商企平台交易过程中与其他用户发生争议的，您或其他用户中任何一方均有权选择以下途径解决：
+                            </p>
+                            <p>
+                                <span class="titleFw">（一）与争议相对方自主协商；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（二）使用在这里共享商企平台提供的争议调处服务；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（三）请求消费者协会或者其他依法成立的调解组织调解；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（四）向有关行政部门投诉；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（五）根据与争议相对方达成的仲裁协议（如有）提请仲裁机构仲裁；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（六）向人民法院提起诉讼。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【平台调处服务】</span>如您依据在这里共享商企平台规则使用在这里共享商企平台的争议调处服务，则表示您认可并愿意履行在这里共享商企平台的客服或大众评审员（“调处方”）作为独立的第三方根据其所了解到的争议事实并依据在这里共享商企平台规则所作出的调处决定（包括调整相关订单的交易状态、判定将争议款项的全部或部分支付给交易一方或双方等）。在在这里共享商企平台调处决定作出前，您可选择上述（三）、（四）、（五）、（六）途径（下称“其他争议处理途径”）解决争议以中止在这里共享商企平台的争议调处服务。
+                            </p>
+                            <p>
+                                <span class="titleFw">如您对调处决定不满意，您仍有权采取其他争议处理途径解决争议，但通过其他争议处理途径未取得终局决定前，您仍应先履行调处决定。</span>
+                            </p>
+                            <h4>4.5费用</h4>
+                            <p>
+                                在这里共享商企平台为在这里共享商企平台向您提供的服务付出了大量的成本，除在这里共享商企平台明示的收费业务外，在这里共享商企平台向您提供的服务目前是免费的。如未来在这里共享商企平台向您收取合理费用，在这里共享商企平台会采取合理途径并以足够合理的期限提前通过法定程序并以本协议第八条约定的方式通知您，确保您有充分选择的权利。
+                            </p>
+                            <h4>4.6责任限制</h4>
+                             <p>
+                                <span class="titleFw">【不可抗力及第三方原因】在这里共享商企平台依照法律规定履行基础保障义务，但对于下述原因导致的合同履行障碍、履行瑕疵、履行延后或履行内容变更等情形，在这里共享商企平台并不承担相应的违约责任：</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">（一）因自然灾害、罢工、暴乱、战争、政府行为、司法行政命令等不可抗力因素；</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">（二）因电力供应故障、通讯网络故障等公共服务因素或第三人因素；</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">（三）在在这里共享商企平台已尽善意管理的情况下，因常规或紧急的设备与系统维护、设备与系统故障、网络信息与数据安全等因素。</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">【海量信息】</span>在这里共享商企平台仅向您提供在这里共享商企平台服务，您了解在这里共享商企平台上的信息系用户自行发布，且可能存在风险和瑕疵。在这里共享商企平台将通过依法建立相关检查监控制度尽可能保障您在在这里共享商企平台上的合法权益及良好体验。同时，<span class="titleFw">鉴于在这里共享商企平台具备存在海量信息及信息网络环境下信息与实物相分离的特点，在这里共享商企平台无法逐一审查商品及/或服务的信息，无法逐一审查交易所涉及的商品及/或服务的质量、安全以及合法性、真实性、准确性，对此您应谨慎判断。</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">【调处决定】</span>您理解并同意，在争议调处服务中，在这里共享商企平台的客服、大众评审员并非专业人士，仅能以普通人的认知对用户提交的凭证进行判断。因此，<span class="titleFw">除存在故意或重大过失外，调处方对争议调处决定免责。</span>
+                            </p>
+                            <h3> 五、 用户信息的保护及授权</h3>
+                            <h4> 5.1个人信息的保护</h4>
+                             <p>
+                                在这里共享商企平台非常重视用户个人信息（即能够独立或与其他信息结合后识别用户身份的信息）的保护，在您使用在这里共享商企平台提供的服务时，您同意在这里共享商企平台按照在在这里共享商企平台上公布的隐私权政策收集、存储、使用、披露和保护您的个人信息。
+                            </p>
+                            <H4> 5.2非个人信息的保证与授权</H4>
+                             <p>
+                                <span class="titleFw">【信息的发布】您声明并保证，您对您所发布的信息拥有相应、合法的权利。否则，在这里共享商企平台可对您发布的信息依法或依本协议进行删除或屏蔽。</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">【禁止性信息】您应当确保您所发布的信息不包含以下内容：</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">（一）违反国家法律法规禁止性规定的；</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">（二）政治宣传、封建迷信、淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；</span>
+                            </p>
+                             <p>
+                                <span class="titleFw">（三）欺诈、虚假、不准确或存在误导性的；</span>
+                            </p>
+                            <P>
+                                <span class="titleFw">（四）侵犯他人知识产权或涉及第三方商业秘密及其他专有权利的；</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">（五）侮辱、诽谤、恐吓、涉及他人隐私等侵害他人合法权益的；</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">（六）存在可能破坏、篡改、删除、影响在这里共享商企平台任何系统正常运行或未经授权秘密获取在这里共享商企平台及其他用户的数据、个人资料的病毒、木马、爬虫等恶意软件、程序代码的；</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">（七）其他违背社会公共利益或公共道德或依据相关在这里共享商企平台协议、规则的规定不适合在在这里共享商企平台上发布的。</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">【授权使用】</span>对于您提供、发布及在使用在这里共享商企平台服务中形成的除个人信息外的文字、图片、视频、音频等非个人信息，<span class="titleFw">在法律规定的保护期限内您免费授予在这里共享商企平台及其关联公司获得全球排他的许可使用权利及再授权给其他第三方使用并可以自身名义对第三方侵权行为取证及提起诉讼的权利。您同意在这里共享商企平台及其关联公司存储、使用、复制、修订、编辑、发布、展示、翻译、分发您的非个人信息或制作其派生作品，并以已知或日后开发的形式、媒体或技术将上述信息纳入其它作品内。</span>
+                            </P>
+                            <h3>六、 用户的违约及处理</h3>
+                            <h4>6.1 违约认定</h4>
+                            <P>
+                                发生如下情形之一的，视为您违约：
+                            </P>
+                            <P>
+                                <span class="titleFw">（一）使用在这里共享商企平台服务时违反有关法律法规规定的；</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">（二）违反本协议或本协议补充协议（即本协议第2.2条）约定的。</span>
+                            </P>
+                            <P>
+                                为适应电子商务发展和满足海量用户对高效优质服务的需求，<span class="titleFw">您理解并同意，在这里共享商企平台可在在这里共享商企平台规则中约定违约认定的程序和标准。如：在这里共享商企平台可依据您的用户数据与海量用户数据的关系来认定您是否构成违约；您有义务对您的数据异常现象进行充分举证和合理解释，否则将被认定为违约。</span>
+                            </P>
+                            <h4> 6.2 违约处理措施</h4>
+                            <P>
+                                <span class="titleFw">【信息处理】</span>您在在这里共享商企平台上发布的信息构成违约的，<span class="titleFw">在这里共享商企平台可根据相应规则立即对相应信息进行删除、屏蔽处理或对您的商品进行下架、监管。</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">【行为限制】</span>您在在这里共享商企平台上实施的行为，或虽未在在这里共享商企平台上实施但对在这里共享商企平台及其用户产生影响的行为构成违约的，<span class="titleFw">在这里共享商企平台可依据相应规则对您执行账户扣分、限制参加营销活动、中止向您提供部分或全部服务、划扣违约金等处理措施。如您的行为构成根本违约的，在这里共享商企平台可查封您的账户，终止向您提供服务。</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">【账户处理】</span>当您违约的同时存在欺诈、售假、盗用他人账户等特定情形或您存在危及他人交易安全或账户安全风险时，<span class="titleFw">在这里共享商企平台会依照您行为的风险程度对您的账户采取取消收款、资金止付等强制措施。</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">【处理结果公示】在这里共享商企平台可将对您上述违约行为处理措施信息以及其他经国家行政或司法机关生效法律文书确认的违法信息在在这里共享商企平台上予以公示。</span>
+                            </P>
+                            <h4>6.3赔偿责任</h4>
+                            <P>
+                                <span class="titleFw">
+                                如您的行为使在这里共享商企平台及/或其关联公司遭受损失（包括自身的直接经济损失、商誉损失及对外支付的赔偿金、和解款、律师费、诉讼费等间接经济损失），您应赔偿在这里共享商企平台及/或其关联公司的上述全部损失。</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">
+                                如您的行为使在这里共享商企平台及/或其关联公司遭受第三人主张权利，在这里共享商企平台及/或其关联公司可在对第三人承担金钱给付等义务后就全部损失向您追偿。</span>
+                            </P>
+                            <P>
+                                <span class="titleFw">
+                                如因您的行为使得第三人遭受损失或您怠于履行调处决定、在这里共享商企平台及/或其关联公司出于社会公共利益保护或消费者权益保护目的，会自行将您的账户中划扣相应款项进行支付。如您的余额或保证金不足以支付相应款项的，您同意委托在这里共享商企平台使用自有资金代您支付上述款项，您应当返还该部分费用并赔偿因此造成在这里共享商企平台的全部损失。</span>
+                            </P>
+                            <p>
+                                您同意在这里共享商企平台自您的账户中划扣相应款项支付上述赔偿款项。如您账户中的款项不足以支付上述赔偿款项的，在这里共享商企平台及/或关联公司可直接抵减您在在这里共享商企平台及/或其关联公司其它协议项下的权益，并可继续追偿。
+                            </p>
+                            <h4> 6.4特别约定</h4>
+                            <p>
+                                <span class="titleFw">【商业贿赂】</span>如您向在这里共享商企平台及/或其关联公司的雇员或顾问等提供实物、现金、现金等价物、劳务、旅游等价值明显超出正常商务洽谈范畴的利益，则可视为您存在商业贿赂行为。发生上述情形的，在这里共享商企平台可立即终止与您的所有合作并向您收取违约金及/或赔偿金，该等金额以在这里共享商企平台因您的贿赂行为而遭受的经济损失和商誉损失作为计算依据。
+                            </p>
+                            <p>
+                                <span class="titleFw">【关联处理】如您因严重违约导致在这里共享商企平台终止本协议时，出于维护平台秩序及保护消费者权益的目的，在这里共享商企平台及/或其关联公司可对与您在其他协议项下的合作采取中止甚或终止协议的措施，并以本协议第八条约定的方式通知您。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">
+                                 如在这里共享商企平台与您签署的其他协议及在这里共享商企平台及/或其关联公司与您签署的协议中明确约定了对您在本协议项下合作进行关联处理的情形，则在这里共享商企平台出于维护平台秩序及保护消费者权益的目的，可在收到指令时中止甚至终止协议，并以本协议第八条约定的方式通知您。</span>
+                            </p>
+                            <h3>七、 协议的变更</h3>
+                            <p>
+                                在这里共享商企平台可根据国家法律法规变化及维护交易秩序、保护消费者权益需要，不时修改本协议、补充协议，变更后的协议、补充协议（下称“变更事项”）将通过法定程序并以本协议第八条约定的方式通知您。
+                            </p>
+                            <p>
+                                如您不同意变更事项，您有权于变更事项确定的生效日前联系在这里共享商企平台反馈意见。如反馈意见得以采纳，在这里共享商企平台将酌情调整变更事项。
+                            </p>
+                            <p>
+                                <span class="titleFw">
+                                如您对已生效的变更事项仍不同意的，您应当于变更事项确定的生效之日起停止使用在这里共享商企平台服务，变更事项对您不产生效力；如您在变更事项生效后仍继续使用在这里共享商企平台服务，则视为您同意已生效的变更事项。</span>
+                            </p>
+                            <h3>八、 通知</h3>
+                            <h4> 8.1有效联系方式</h4>
+                            <p>
+                                您在注册成为在这里共享商企平台用户，并接受在这里共享商企平台服务时，您应该向在这里共享商企平台提供真实有效的联系方式（包括您的电子邮件地址、联系电话、联系地址等），对于联系方式发生变更的，您有义务及时更新有关信息，并保持可被联系的状态。
+                            </p>
+                            <p>
+                                您在注册在这里共享商企平台用户时生成的用于登陆在这里共享商企平台接收站内信、系统消息，也作为您的有效联系方式。
+                            </p>
+                            <p>
+                                <span class="titleFw">
+                                在这里共享商企平台将向您的上述联系方式的其中之一或其中若干向您送达各类通知，而此类通知的内容可能对您的权利义务产生重大的有利或不利影响，请您务必及时关注。</span>
+
+                            </p>
+                            <p>
+                                您有权通过您注册时填写的手机号码或者电子邮箱获取您感兴趣的商品广告信息、促销优惠等商业性信息；<span class="titleFw">您如果不愿意接收此类信息，您有权通过在这里共享商企平台提供的相应的退订功能进行退订。</span>
+                            </p>
+                            <h4>8.2 通知的送达</h4>
+                            <p>
+                                在这里共享商企平台通过上述联系方式向您发出通知，其中以电子的方式发出的书面通知，包括但不限于在在这里共享商企平台公告，向您提供的联系电话发送手机短信，向您提供的电子邮件地址发送电子邮件，向您的账号发送系统消息以及站内信信息，在发送成功后即视为送达；以纸质载体发出的书面通知，按照提供联系地址交邮后的第五个自然日即视为送达。
+                            </p>
+                            <p>
+                                对于在在这里共享商企平台上因交易活动引起的任何纠纷，您同意司法机关（包括但不限于人民法院）可以通过手机短信、电子邮件等现代通讯方式或邮寄方式向您送达法律文书（包括但不限于诉讼文书）。您指定接收法律文书的手机号码、电子邮箱等联系方式为您在在这里共享商企平台注册、更新时提供的手机号码、电子邮箱联系方式，司法机关向上述联系方式发出法律文书即视为送达。您指定的邮寄地址为您的法定联系地址或您提供的有效联系地址。
+                            </p>
+
+                            <p>
+                                您同意司法机关可采取以上一种或多种送达方式向您达法律文书，司法机关采取多种方式向您送达法律文书，送达时间以上述送达方式中最先送达的为准。
+                            </p>
+                            <p>
+                                您同意上述送达方式适用于各个司法程序阶段。如进入诉讼程序的，包括但不限于一审、二审、再审、执行以及督促程序等。
+                            </p>
+                            <p>
+                                 你应当保证所提供的联系方式是准确、有效的，并进行实时更新。如果因提供的联系方式不确切，或不及时告知变更后的联系方式，使法律文书无法送达或未及时送达，由您自行承担由此可能产生的法律后果。
+                            </p>
+                            <h3>九、 协议的终止</h3>
+                            <h4>9.1 终止的情形</h4>
+                            <p>
+                                <span class="titleFw">【用户发起的终止】您有权通过以下任一方式终止本协议：</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（一）在满足在这里共享商企平台网公示的账户注销条件时您通过网站自助服务注销您的账户的；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（二）变更事项生效前您停止使用并明示不愿接受变更事项的；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（三）您明示不愿继续使用在这里共享商企平台服务，且符合在这里共享商企平台网终止条件的。</span>
+                            </p>
+                            <p>
+                                 <span class="titleFw">【在这里共享商企平台发起的终止】出现以下情况时，在这里共享商企平台可以本协议第八条的所列的方式通知您终止本协议：</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（一）您违反本协议约定，在这里共享商企平台依据违约条款终止本协议的；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（二）您盗用他人账户、发布违禁信息、骗取他人财物、售假、扰乱市场秩序、采取不正当手段谋利等行为，在这里共享商企平台依据在这里共享商企平台规则对您的账户予以查封的；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（三）除上述情形外，因您多次违反在这里共享商企平台规则相关规定且情节严重，在这里共享商企平台依据在这里共享商企平台规则对您的账户予以查封的；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（四）您的账户被在这里共享商企平台依据本协议回收的；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（五）您有欺诈、发布或销售假冒伪劣/侵权商品、侵犯他人合法权益或其他严重违法违约行为的；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（六）其它应当终止服务的情况。</span>
+                            </p>
+
+                            <h4>9.2 协议终止后的处理</h4>
+                            <p>
+                                <span class="titleFw">【用户信息披露】本协议终止后，除法律有明确规定外，在这里共享商企平台无义务向您或您指定的第三方披露您账户中的任何信息。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【在这里共享商企平台权利】本协议终止后，在这里共享商企平台仍享有下列权利：</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（一）继续保存您留存于在这里共享商企平台的本协议第五条所列的各类信息；</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">（二）对于您过往的违约行为，在这里共享商企平台仍可依据本协议向您追究违约责任。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【交易处理】本协议终止后，对于您在本协议存续期间产生的交易订单，在这里共享商企平台可通知交易相对方并根据交易相对方的意愿决定是否关闭该等交易订单；如交易相对方要求继续履行的，则您应当就该等交易订单继续履行本协议及交易订单的约定，并承担因此产生的任何损失或增加的任何费用。</span>
+                            </p>
+                            <h3>十、 法律适用、管辖与其他</h3>
+                            <p>
+                                <span class="titleFw">【法律适用】本协议之订立、生效、解释、修订、补充、终止、执行与争议解决均适用中华人民共和国大陆地区法律；如法律无相关规定的，参照商业惯例及/或行业惯例。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【管辖】您因使用在这里共享商企平台服务所产生及与在这里共享商企平台服务有关的争议，由在这里共享商企平台与您协商解决。协商不成时，任何一方均可向被告所在地有管辖权的人民法院提起诉讼。</span>
+                            </p>
+                            <p>
+                                <span class="titleFw">【可分性】</span>本协议任一条款被视为废止、无效或不可执行，该条应视为可分的且并不影响本协议其余条款的有效性及可执行性。
+
+                            </p>
+ 
+                        </article>
+
+
+
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="docBot">
+            <button class="iDo" style="background-color: #1ab394">已阅读</button>
+        </div>
+    </div>
+    <script src="/Public/hplus/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/Public/hplus/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="/Public/hplus/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="/Public/hplus/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+        var wait=60;
+        function time(o) {
+          if (wait == 0) {
+           o.removeAttribute("disabled");   
+           o.value="重新发送";
+           o.style.backgroundColor='#1ab394';
+           wait = 60;
+          } else { 
+           o.style.backgroundColor='#ccc';
+           o.setAttribute("disabled", true);
+           o.value="" + wait + "s";
+           wait--;
+           setTimeout(function() {
+            time(o)
+           },
+           1000)
+          }
+         }
+        $(".testCode").click(function () {
+            var _this = this;
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/Business/Log/send_code",
+                data:{phone_num:$('input[name=phone_num]').val()},
+                dataType: 'json',
+                async: false,
+                error: function(data) {
+                swal('网络错误，请重试！', "", "warning");
+                },
+                success: function(data) {
+                    if (data.error == 0) {
+                        time(_this);
+                    }else{
+                        swal(data.msg, "", "warning")
+                    }
+                }
+            });
+        })
+        //获取城市
+        $('select[name=province_id]').change(function(){
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/Business/Log/get_citys",
+                data:{province_id:$('select[name=province_id]').val()},
+                dataType: 'json',
+                async: false,
+                error: function(data) {
+                    swal('网络错误，请重试！', "", "warning");
+                },
+                success: function(data) {      
+                    $('select[name=city_id]').html('');
+                    data = data.data;
+                    $('select[name=city_id]').append('<option value="0">城市</option>');
+                    $('select[name=area_id]').html('');
+                    $('select[name=area_id]').append('<option value="0">区(县)</option>');
+                    for (var i = 0; i < data.length; i++) {
+                        $('select[name=city_id]').append('<option value="'+data[i].city_id+'">'+data[i].city_name+'</option>');
+                    }
+                }
+            });
+        });
+        //获取区(县)
+        $('select[name=city_id]').change(function(){
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/Business/Log/get_areas",
+                data:{city_id:$('select[name=city_id]').val()},
+                dataType: 'json',
+                async: false,
+                error: function(data) {
+                    swal('网络错误，请重试！', "", "warning");
+                },
+                success: function(data) {      
+                    $('select[name=area_id]').html('');
+                    data = data.data;
+                    $('select[name=area_id]').append('<option value="0">区(县)</option>');
+                    for (var i = 0; i < data.length; i++) {
+                        $('select[name=area_id]').append('<option value="'+data[i].area_id+'">'+data[i].area_name+'</option>');
+                    }
+                }
+            });
+        });
+        $('#reg_submit').click(function(){
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/Business/Log/reg",
+                data:$('#reg_form').serialize(),// 你的formid
+                dataType: 'json',
+                async: false,
+                error: function(data) {
+                    swal('网络错误，请重试！', "", "warning");
+                },
+                success: function(data) {      
+                    if (data.error == 0) {
+                        swal(data.msg,"","warning");
+                        setTimeout("window.location.href='/Business/Log/in';",1000);
+                    }else{
+                        swal(data.msg, "", "warning");
+                        return false;
+                    }
+                }
+            });
+        });
+        // 注册协议
+        $(".registerProtocol").on("click",function(){
+            $(".boxRegisterProtocol").fadeIn();
+        });
+        $(".iDo").on("click",function(){
+            $(".boxRegisterProtocol").fadeOut();
+        })
+    </script>
+</body>
+
+</html>

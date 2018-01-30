@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <title><?php echo $webConfig['title']; ?></title>
+    <script src="/Public/Video/index/js/mui.min.js"></script>
+    <script src="/Public/Video/index/js/zepto.js"></script>
+    <script src="/Public/Video/index/js/main.js"></script> 
+    <link href="/Public/Video/index/css/mui.css" rel="stylesheet"/>
+    <link href="/Public/Video/index/css/main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" charset="utf-8">
+        mui.init();
+    </script>
+    <style type="text/css">
+      .navs-bottom{
+        display: inline-block;
+        height: 1rem;
+        width: 100%;
+        position: absolute;
+        bottom: 0.3rem;
+        left: 0;
+      }
+    </style>
+</head>
+<body>
+    <div class="zhezhao"></div>
+    <!-- 菜单容器 -->
+      <div class="side-left" id="side-left">
+        <div class="mui-scroll">
+        <!-- 菜单具体展示内容 -->
+        <!-- 左边隐藏导航栏 -->
+        <div class="navs" >  
+        <dl> 
+          <dt class="login">
+            <?php if(!isset($_SESSION['member']) || empty($_SESSION['member'])): ?>
+            <img src="/Public/Video/index/image/avatar.png" alt="">
+            <a href="http://www.zzlhi.com/log/action/in?refererUrl=http://<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>?holder=true">
+              <span class="entry">登录</span>
+            </a>
+            <?php else: ?>
+            <img src="<?php echo $_SESSION['member']['base64_con']?>" alt="">
+            <a href="/video/user">
+              <span class="entry"><?php echo $_SESSION['member']['nick_name']?></span>
+            </a>
+            <?php endif;?>
+          </dt> 
+          <dd>
+            <a href="/video">
+              <span>网站首页</span>
+              </a>
+          </dd>
+          <dd>
+              <a href="/video/user/myFavorite">
+              <span>我的收藏</span>
+              </a>
+          </dd> 
+          <dd>
+              <a href="/video/user/viewed">
+              <span>最近浏览</span>
+              </a>
+          </dd> 
+        </dl> 
+      </div>         
+    </div>
+        <a href="javascript:goToIndexAlert();" class="navs-bottom menu-bottom-link" style="bottom: 0rem;height: 1.2rem;">
+            <span style="padding-left: 1rem;">在这里</span>
+        </a>
+</div>
+    <!-- 左下角悬浮导航按钮 -->
+    <div class="avatar" id="navigation"> 
+        <img src="/Public/Video/index/image/navigat.png" alt="">
+    </div>
+<script>
+    var startPosition, endPosition, deltaX, deltaY;  
+        $(".zhezhao").bind('touchstart', function(e){  
+            var touch = e.touches[0];  
+            startPosition = {  
+                x: touch.pageX,  
+                y: touch.pageY  
+            }  
+        }) .bind('touchmove', function(e){
+            var touch = e.touches[0];  
+            endPosition = {  
+                x: touch.pageX,  
+                y: touch.pageY
+            };  
+  
+            deltaX = endPosition.x - startPosition.x;  
+            deltaY = endPosition.y - startPosition.y;  
+        }).bind('touchend', function(e){  
+            if(deltaX < 20) { // 向左划动 
+            var zhezhao= $('.zhezhao')
+            var side=$('.side-left') 
+            $('#side-left').css('transform','translate3d(-100%,0,0)');
+          $('.zhezhao').css('display','none');
+            } else if (deltaX > 20) { // 向右划动
+            }  
+        });
+    //去首页的判断 
+    function goToIndexAlert(){
+        var domain = window.location.host;
+        if(domain == 'www.zzlhi.com'){
+            window.location.href = 'http://www.zzlhi.com';
+        }else{
+            if(confirm('回首页后，再次通过“免流量区域”进入才可继续免流量哦，是否离开？')){
+                window.location.href = 'http://www.zzlhi.com';
+            }
+        }
+    }
+</script>
