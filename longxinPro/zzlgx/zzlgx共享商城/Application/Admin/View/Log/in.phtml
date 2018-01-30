@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>在这里共享商企平台 - 后台管理系统</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="/Public/hplus/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Public/hplus/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="/Public/hplus/css/animate.min.css" rel="stylesheet">
+    <link href="/Public/hplus/css/style.min.css" rel="stylesheet">
+    <link href="/Public/hplus/css/login.min.css" rel="stylesheet">
+    <link href="/Public/hplus/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <style>
+        .signinpanel {
+            width: 780px;
+            margin: 15% auto 0;
+        }
+        .title-in{
+            width: 100%;
+            text-align: center;
+            color: #fff;          
+        }
+        .signin {
+            position: fixed;
+            display: inline-block;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: rgb(255,255,255)!important;
+        }
+        .mycell{
+            display: inline-block;
+            background: rgba(0,0,0,.3);
+        }
+    </style>
+    <script type="text/javascript" src="/Public/hplus/js/jquery.min.js"></script>
+    <script src="/Public/hplus/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>
+        if(window.top!==window.self){window.top.location=window.location};
+    </script>
+
+</head>
+
+<body class="signin">
+    <div class="mycell"  style="position: absolute;left: 0;top: 0;z-index: 5;">
+    </div>
+    <div class="signinpanel" >
+        <div class="row" style="margin-top: -130px; position: relative; z-index: 10" >
+            <div class="title-in">
+            </div>
+            <div class='col-sm-12'  style="">
+            <div   style="padding: 0;margin: 20px auto 0; width: 50%" >
+                <img src="/Public/hplus/img/login_logo.png" style="width: 150px;height: 150px;border-radius: 50%;display: block;margin:0 auto">
+                <form onsubmit="javascript:return false;" style="border: none;background: transparent;box-shadow: 0 0 0 transparent;padding-top: 0px;" >
+                <div>
+                    <input type="text" class="form-control uname" name="username" id="username" placeholder="用户名" /><br>
+                    <input type="password" class="form-control pword m-b" name="password" id="password" placeholder="密码" style="margin-top: 0" />
+                </div>
+                    <button class="btn btn-success btn-block" onclick="javascript:loginAction();" style="margin-bottom: 15px;background: rgb(73,208,171);border: 1px solid rgb(73,208,171) ;font-weight: 500">立即登录</button>
+                </form>
+            </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="signup-footer " style="position: fixed;z-index: 10;bottom: 0;width: 100%" >
+            <div style="text-align: center;" >
+                在这里共享商企平台 - 后台管理系统
+            </div>
+        </div>
+</body>
+<script>
+   $('.signin').css('width',window.screen.width);
+   $('.mycell').css('width', window.screen.width);
+   $('.signin').css('height',window.screen.height);
+   $('.mycell').css('height', window.screen.height);
+    function loginAction(){
+        //准备
+        var url = "/admin/log/in";
+        var username = $('#username').val();
+        var password = $('#password').val();
+        //发送
+        $.post(url,{username:username,password:password},function(d){
+            if(d.error){            
+                swal(d.msg, "", "warning");
+                return false;
+            }else{
+                window.location.href = '/admin';
+                return false;
+            }
+        },'json');
+    }
+</script>
+</html>

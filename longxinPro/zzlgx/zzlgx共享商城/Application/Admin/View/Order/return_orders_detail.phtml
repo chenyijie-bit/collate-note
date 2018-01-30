@@ -1,0 +1,194 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+.modal-backdrop{
+    display: none;
+}
+</style>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+          <div class="col-sm-12">
+             <div class="ibox">
+                  <div class="ibox-title">
+                      <h5>退货订单结算分配</h5>
+                       <span class="label label-primary pull-right label-primary-cust">
+                          <a href="javascript:history.back(-1);" class="fa-lg-cust-a" title="返回上一页">
+                              <i class="fa fa-arrow-left fa-lg-cust" aria-hidden="true"></i>
+                          </a>
+                      </span> 
+                  </div>
+                  <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-6">
+                           <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>商品信息</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <p>商品ID：<?php echo $order_info['goods_id']; ?></p> 
+                                    <p>商品名称：<?php echo $order_info['goods_name']; ?></p> 
+                                    <p>商品价格：<?php echo $order_info['piao'] / $order_info['num']; ?> 共享币</p>
+                                    <p>返利百分比：<?php echo $order_info['rebate'] * 100; ?>%</p>
+                                    <p><?php echo $order_info['sell_business_id'] != 0 ? '代理卖家ID：'.$order_info['sell_business_id'] : '&nbsp;'; ?></p>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-6">
+                           <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>订单信息</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <p>下单时间：<?php echo $order_info['add_time']; ?></p> 
+                                    <p>订单号码：<?php echo $order_info['order_sn'];?></p>
+                                    <p>兑换数量：<?php echo $order_info['num']; ?></p>
+                                    <p>支付共享币：<span style="color:red;" class="allNum"><?php echo $order_info['piao']; ?> 个</span></p>
+                                    <p>退换类型：<?php echo $order_info['return_status'] == 2 ? '<span style="color:red;">卖家拒绝退换货</span>（理由：'.$order_info['refuse_reason'].'）' : '<span style="color:green;">买家确认已协商</span>'; ?></sapn></p>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="ibox">
+                       <div class="ibox-title" style="background-color: #f8ac59;color: #fff">
+                           <h5> 根据协商结果分配共享币</h5>
+                        </div>
+                        <div class="ibox-content" style="background-color: #555;color: #fff">
+                            <div class="clear">
+                                <form id="assign_data" style="width: 75%;float: left;" >
+                                商家应获得共享币数： <input type="text" placeholder="输入共享币数" class="form-control busNum" name="business_piao" style="width: 12%;display: inline-block;color: #333"   >
+                           
+                                   ，买家应获得共享币数： <input type="text" placeholder="输入共享币数" class="form-control getNum" name="member_piao" style="width: 12%;display: inline-block;color: #333"   >
+                                   ，代理商家应获得共享币数：
+                                   <input type="text" readonly="readonly" class="form-control daiNum" name="sell_business_piao" style="width: 12%;display: inline-block;color: #333" value="<?php if($order_info['business_id']==$order_info['sell_business_id'] || $order_info['sell_business_id'] == 0){echo 0;}else{echo floor($order_info['piao']*$order_info['rebate']);} ?>"> 
+                                   <input type="hidden" name="order_id" value="<?php echo $_GET['order_id']; ?>">
+                                </form>
+			                    <button type="button" onclick="javascript:payEnter();" class="btn btn-danger btn-sm pull-left" style="padding: 7px 10px;margin-left: 15px;">确认分配结果</button>     
+	                        </div>           
+                         </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-6">
+                           <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>商家信息</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <p>姓名：<?php echo $business['legal_name']; ?></p> 
+                                    <p>手机号：<b style="color: blue"><?php echo $business['phone_num']; ?></b></p> 
+                                    <p>积分商城名称：<?php echo $business['exchange_name']; ?></p>
+                                    <p>公司名称：<?php echo $business['company_name']; ?></p>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-6">
+                           <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>买家信息</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <p>姓名：<?php echo $member['name']; ?></p> 
+                                    <p>性别：<?php echo $member['sex'] == 1 ? '男' : '女'; ?></p>
+                                    <p>手机号：<b style="color: blue"><?php echo $member['phone_num']; ?></b></p>
+                                    <p>住址：<?php echo $member['address']; ?></p>
+                                </div>
+                           </div>
+                        </div>
+                  </div>
+             </div>
+          </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+$(".myModal").click(function(){
+    $('.modal-dialog').css('top',$(document).scrollTop())
+})
+$('.myModal').modal({
+    keyboard: false,
+    backdrop:false,
+    show:false
+});
+
+$('.busNum').bind('input propertychange',function () {
+    $(this).val($(this).val().replace(/[^\d]/g,''));
+  var busAndGetSum=<?php echo $order_info['piao']; ?>-$('.daiNum').val();
+  if(parseInt($(this).val())>busAndGetSum){
+    swal('您分配的数额不能超过'+busAndGetSum, "", "warning");
+    $(this).val('')
+    $('.getNum').val('');
+    return;
+  }else if($(this).val()=='') {
+  $('.getNum').val('');
+  return;
+  }else{
+     var endNum=busAndGetSum-Number($(this).val());
+     $('.getNum').val(endNum);
+  }
+})
+$('.getNum').bind('input propertychange',function () {
+   $(this).val($(this).val().replace(/[^\d]/g,''));
+  var busAndGetSum=<?php echo $order_info['piao']; ?>-$('.daiNum').val();
+  if(parseInt($(this).val())>busAndGetSum){
+    swal('您分配的数额不能超过'+busAndGetSum, "", "warning");
+     $(this).val('')
+    $('.busNum').val('');
+    return;
+  }else if($(this).val()=='') {
+   $('.busNum').val('');
+    return;
+  }else {
+     var endNum=busAndGetSum-Number($(this).val());
+     $('.busNum').val(endNum);
+  }
+})
+
+var flog = false;
+function payEnter(finance_log_id){
+    swal({
+        title: "确认要这样分配本订单共享币吗？",
+        text: "该操作不可逆，请谨慎操作",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "确认，已和买卖双方沟通",
+        cancelButtonText: "点错了",
+        closeOnConfirm: false,
+        closeOnCancel: true
+        },
+        function(isConfirm) {
+            if (isConfirm) {
+                if (flog) {
+                    return;
+                }
+                flog = true;
+                $.ajax({
+                    cache: true,
+                    type: "POST",
+                    url:"/admin/order/assign_piao",
+                    data:$('#assign_data').serialize(),
+                    dataType: 'json',
+                    async: false,
+                    error: function(d) {
+                        flog = false;
+                        swal(d.msg, "", "warning");
+                        return false;
+                    },
+                    success: function(d) {      
+                        if(d.error){
+                            flog = false;
+                            swal(d.msg, "", "warning");
+                            return false;
+                        }else{
+                            swal(d.msg, "", "success");
+                            setTimeout("window.location.href = '/admin/order/return_orders';",1000);
+                        }
+                    }
+                });
+         
+            }
+        }
+    )
+}
+</script>

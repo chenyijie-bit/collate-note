@@ -1,0 +1,210 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+.weui-navbar__item.proinfo-tab-tit.weui-bar__item--on:before {
+    content: "";
+    width: 34px;
+    height: 3px;
+     background: transparent; 
+    position: absolute;
+    left: 50%;
+    margin-left: -17px;
+    bottom: -1px;
+    z-index: 10;
+}
+.promotion-message {
+    margin: 8px 0;
+    line-height: 15px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+}
+.promotion-message p{
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.5;
+}
+.weui-navbar__item.weui-bar__item--on {
+    color: #e21323;
+    font-weight: bold;
+    background-color: inherit;
+    margin-left: -50px;
+}
+.wy-header {
+    height: 44px;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #e21323;
+    z-index: 100;
+}
+.wy-header-title {
+    margin: 0 50px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    color: #252525;
+    overflow: hidden;
+}
+.swiper-container img {
+    display: block;
+    width: 100%;
+    height: 75vw;
+}
+.line-through{
+    text-decoration:line-through;
+}
+</style>
+<body ontouchstart>
+ <header class="wy-header ">
+     <a href="<?php echo !stristr($_SERVER["HTTP_REFERER"],$_SERVER["HTTP_HOST"]) || stristr($_SERVER["HTTP_REFERER"],"log") ? '/exchange' : 'javascript:history.back(-1);'; ?>" title="返回上一页<?php echo $_SERVER["HTTP_REFERER"]; ?>" style="width: 50px;position: absolute;left: 0;top: 0;z-index: 10; height: 45px;"><div class="wy-header-icon-back"><span></span></div></a>
+       <div class="wy-header-title" style="color: #fff"><?php echo $info['goods_name']; ?></div>
+</header>
+<!--主体-->
+<div class="weui-content clear">
+  <!--产品详情--> 
+    <div class="weui-tab__bd proinfo-tab-con" style="margin-top: 44px;">
+      <div  class="weui-tab__bd-item weui-tab__bd-item--active">
+        <!--主图轮播-->
+        <div class="swiper-container swiper-zhutu">
+          <div class="swiper-wrapper">
+            <?php for($i=0;$i<count(explode(';',$info['pics']));$i++): ?>
+            <div class="swiper-slide"><img src="<?php echo explode(';',$info['pics'])[$i]; ?>" /></div>
+            <?php endfor; ?>
+          </div>
+          <div class="swiper-pagination swiper-zhutu-pagination"></div>
+        </div>
+        <div class="wy-media-box-nomg weui-media-box_text">
+          <h4 class="wy-media-box__title"><?php echo $info['goods_name']; ?></h4>
+          <div class="wy-pro-pri mg-tb-5"><em class="num font-20"><?php echo $info['piao']; ?>共享币</em>/市场价:<span class="realprice "></span> RMB </div>
+         
+        </div>
+        <div class="wy-media-box2 weui-media-box_text">
+          <div class="weui-media-box_appmsg">
+            <div class="weui-media-box__hd proinfo-txt-l"><span class="promotion-label-tit">商品描述</span></div>
+            <div class="weui-media-box__bd">
+              <div class="promotion-message clear">
+              <p style="display: block;"><?php echo $info['description']; ?></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="wy-media-box2 weui-media-box_text">
+          <div class="weui-media-box_appmsg">
+            <div class="weui-media-box__hd proinfo-txt-l"><span class="promotion-label-tit">注意事项</span></div>
+            <div class="weui-media-box__bd">
+              <div class="promotion-message clear">
+              <p>
+              1.商品配送规则：可自提和快递两种方式;
+              </p>
+              <p>
+               2.如选择快递邮寄，邮费由商家承担，商家尽快安排发货，请耐心等待;
+              </p>
+              <p>
+               3.兑换时请仔细核对收货信息，商品已经兑换，不支持收货地址、收件人信息修改;
+              </p>
+              <p>
+               4.本店对所有活动有最终解释权;
+              </p>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+
+
+
+        <div class="weui-panel weui-panel_access">
+          <div class="weui-panel__hd">商品评价</div>
+         <div class="weui-panel__bd">
+        <?php 
+            $btn = '<div class="weui-panel__ft"> <a href="javascript:;" class="weui-cell weui-cell_access weui-cell_link"> <div class="weui-cell__bd">没有更多了</div> <span class="weui-cell__ft"></span> </a> </div>';
+        ?>
+        <?php foreach ($evals as $kk => $vv): ?>
+          <?php if ($kk > 1){
+            $btn = '<div class="weui-panel__ft"> <a href="/Exchange/Member/evaluate_list?goods_id='.$_GET['goods_id'].'" class="weui-cell weui-cell_access weui-cell_link"> <div class="weui-cell__bd">查看更多评价</div> <span class="weui-cell__ft"></span> </a> </div>';
+            break;
+          }?>
+          <div class="weui-media-box weui-media-box_text">
+           <div class="order-list-Below clear">
+            <h1><?php echo $vv['name']; ?></h1>
+            <ul>
+            <?php for ($i=1; $i <= 5; $i++) { 
+                if ($i <= $vv['level']) {
+                    echo '<li class="on"></li>';
+                }else{
+                    echo '<li class=""></li>';
+                }
+            } ?>
+            </ul>
+          </div>
+            <p class="weui-media-box__desc" style="padding-left: 15px;"><?php echo $vv['content']; ?></p>
+          </div>
+          
+        <?php endforeach ?>
+
+        </div>
+        <?php echo $btn; ?>
+      </div>
+
+      
+      </div>
+    </div>
+ 
+</div>
+
+<!--底部导航-->
+<div class="foot-black"></div>
+<div class="weui-tabbar wy-foot-menu"> 
+    <?php if($info['status'] == 1 && $info['nums'] > 0): ?>
+        <?php if($_SESSION['exchange']['phone_num']): ?>
+        <a href="/Exchange/Goods/order?goods_id=<?php echo $info['goods_id']; ?>" class="weui-tabbar__item red-color open-popup" >
+            <p class="promotion-foot-menu-label">立即兑换</p>
+        </a>
+        <?php else:?>
+        <a href="/Exchange/Log/in" class="weui-tabbar__item red-color open-popup" >
+            <p class="promotion-foot-menu-label">立即兑换</p>
+        </a>
+        <?php endif; ?>
+    <?php elseif($info['status'] == 2): ?>
+    <a href="javascript:;" class="weui-tabbar__item red-color open-popup" style="background-color:#333333;">
+        <p class="promotion-foot-menu-label">已下架</p>
+    </a>
+    <?php elseif($info['nums'] <= 0): ?>
+    <a href="javascript:;" class="weui-tabbar__item red-color open-popup" style="background-color:#333333;">
+        <p class="promotion-foot-menu-label">无货</p>
+    </a>
+    <?php endif; ?>
+</div>
+
+
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script> 
+<script>
+var bili=10;
+var piao=<?php echo $info['piao']; ?> ;
+var realprice=piao/bili;
+$('.realprice').text(realprice);
+
+$(".swiper-zhutu").swiper({
+        loop: true,
+    paginationType:'fraction',
+        autoplay:5000
+      });
+</script>
+

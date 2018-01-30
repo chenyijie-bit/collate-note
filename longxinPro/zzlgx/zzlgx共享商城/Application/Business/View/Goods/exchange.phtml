@@ -1,0 +1,250 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<style>
+.good-img{
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+table{
+    font-size: 13px;
+}
+.footable-row-detail-name {
+    display: table-cell;
+    font-weight: bold;
+    padding-right: 0.5em;
+    line-height: 30px;
+}
+.contact-box {
+    background-color: #fff;
+    border: 1px solid #e7eaec;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-width: 275px;
+}
+.img-responsive {
+    width: 100%;height: 100%;
+}
+</style>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5><?php echo $_GET['business_id']?'<span style="color:red;">【'.$exchange_name.'】</span>的':''; ?>共享商品池</h5>
+                        <?php if ($_GET['business_id']): ?>
+                        <span style="line-height: 17px;height: 20px;" class="label label-danger pull-right label-primary-cust">
+                            <a href="/business/goods/exchange" class="fa-lg-cust-a" title="返回主共享商品池">
+                                <i class="fa fa-arrow-left fa-lg-cust" aria-hidden="true"></i>
+                                &nbsp;返回主共享商品池
+                            </a>
+                        </span> 
+                        <?php endif ?>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-12">
+                                    <form method="get" action="/business/goods/exchange" class="clearfix pull-left" >
+                                        <select name="goods_type_id" class="input-sm form-control input-s-sm inline sex-select " style="width: 15%;margin-right: 10px;">
+                                            <option value="0">商品类型</option>
+                                            <option disabled="true">--------------------</option>
+                                            <?php foreach($goods_type as $v): ?>
+                                            <option <?php echo $_GET['goods_type_id'] == $v['goods_type_id'] ? 'selected' : ''; ?> value="<?php echo $v['goods_type_id']; ?>"><?php echo $v['goods_type_name']; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                        <select class="input-sm form-control input-s-sm inline" name="province_id" style="width: 14%;padding: 3px 12px">
+                                        <option value="0">省份</option>
+                                        <option disabled="true">------------</option>
+                                        <?php foreach ($provinces as $key => $value): ?>
+                                        <?php $prov_dis = ($key==$_GET['province_id'])?'selected="selected"':''; ?>
+                                        <option value="<?php echo $key ?>" <?php echo $prov_dis; ?> ><?php echo $value; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
+                                    <select class="input-sm form-control input-s-sm inline" name="city_id" style="width: 14%;padding: 3px 12px">
+                                        <option value="0">城市</option>
+                                        <option disabled="true">------------</option>
+                                        <?php foreach ($citys as $key => $value): ?>
+                                        <?php $city_dis = ($key==$_GET['city_id'])?'selected="selected"':''; ?>
+                                        <option value="<?php echo $key ?>" <?php echo $city_dis; ?> ><?php echo $value; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
+                                    <select class="input-sm form-control input-s-sm inline" name="area_id" style="width: 14%;margin-right: 10px; padding: 3px 12px">
+                                        <option value="0">区(县)</option>
+                                        <option disabled="true">------------</option>
+                                        <?php foreach ($areas as $key => $value): ?>
+                                        <?php $area_dis = ($key==$_GET['area_id'])?'selected="selected"':''; ?>
+                                        <option value="<?php echo $key ?>" <?php echo $area_dis; ?> ><?php echo $value; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
+                                    <select name="price" class="input-sm form-control input-s-sm inline sex-select " style="width: 18%;margin-right: 10px;">
+                                        <option value="">商品价格（共享币）</option>
+                                        <option value="0~2000" <?php echo $_GET['price']=="0~2000"?"selected='selected'":''; ?>>0~2000</option>
+                                        <option value="2000~5000" <?php echo $_GET['price']=="2000~5000"?"selected='selected'":''; ?>>2000~5000</option>
+                                        <option value="5000以上" <?php echo $_GET['price']=="5000以上"?"selected='selected'":''; ?>>5000以上</option>
+                                    </select>
+                                        <input type="hidden" name="business_id" value="<?php echo $_GET['business_id'] ?>">
+                                        <input type="text" name="keywords" value="<?php echo $_GET['keywords'] ? $_GET['keywords'] : ''; ?>" placeholder="商品名称关键字" class="input-sm form-control pull-left col-sm-4" style="width:20%;" >
+                                        <span class="input-group-btn pull-left " >
+                                            <button type="submit" class="btn btn-sm btn-primary search-btn"> 搜索</button>
+                                        </span>
+                                    </form>
+                                    <button type="button" onclick="javascript:window.location.href = '/business/goods/exchange<?php echo $_GET["business_id"]?"?business_id=".$_GET['business_id']:''; ?>';" class="btn btn-danger btn-sm  reset-btn pull-left" style="margin-left: 34px;">刷新</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-warn">
+                            <?php $_GET['business_id']?$kuang='alert-info':$kuang='alert-warning'; ?>
+                            <div class="alert <?php echo $kuang; ?>">
+                                现有共享商品： <span class="alert-link"><?php echo $count; ?></span> 种
+                                <?php if($_GET['goods_type_id'] > 0 || $_GET['province_id'] > 0 || $_GET['city_id'] > 0 || $_GET['area_id'] > 0 || !empty($_GET['keywords']) || !empty($_GET['price'])): ?>
+                                ，以下为搜索&nbsp;&nbsp;
+                                <?php if($_GET['goods_type_id'] > 0): ?>
+                                商品类型是 “<span class="alert-link"><?php echo $goods_type[$_GET['goods_type_id'] - 1]['goods_type_name']; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                <?php if($_GET['province_id'] > 0): ?>
+                                省份是 “<span class="alert-link"><?php echo $provinces[$_GET['province_id']]; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                <?php if($_GET['city_id'] > 0): ?>
+                                城市是 “<span class="alert-link"><?php echo $citys[$_GET['city_id']]; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                <?php if($_GET['area_id'] > 0): ?>
+                                区县是 “<span class="alert-link"><?php echo $areas[$_GET['area_id']]; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                <?php if(!empty($_GET['keywords'])): ?>
+                                商品名称包含 “<span class="alert-link"><?php echo $_GET['keywords']; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                <?php if(!empty($_GET['price'])): ?>
+                                商品价格在 “<span class="alert-link"><?php echo $_GET['price']; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                的商品：
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                     <div class="row">
+                        <?php foreach($goods as $k => $v): ?>
+                        <div class="col-sm-4">
+                            <div class="contact-box">
+                                <div class="col-sm-4">
+                                    <div class="text-center" style="min-width: 70px;height: 70px;">
+                                        <img alt="image" class="img-circle m-t-xs img-responsive" src="<?php echo explode(';',$v['pics'])[0]; ?>">
+                                    </div>
+                                    <a href="/Business/Goods/exchange_detail?goods_id=<?php echo $v['goods_id']; ?>">
+                                        <span class="label label-success " style="margin-top: 15px; padding: 6px 0px;display: block;min-width:70px;">详情</span>
+                                    </a>
+                                    <?php if($v['is_me'] === 0): ?>
+                                        <?php if($v['is_agent'] == 0): ?>
+                                            <?php if($v['nums'] > 0): ?>
+                                            <a href="javascript:doAgent(<?php echo $v['goods_id']; ?>);">
+                                                <span class="label label-danger" id="doAgentButton_<?php echo $v['goods_id']; ?>" style="margin-top: 15px; padding: 6px 0px;display: block;min-width:70px;">我要代理</span>
+                                            </a>
+                                            <?php else: ?>
+                                                <span class="label label-default" style="margin-top: 15px; padding: 6px 0px;display: block;min-width:70px;">没有库存</span>
+                                            <?php endif; ?>
+                                        <?php elseif($v['is_agent'] == 1): ?>
+                                        <span class="label label-default" style="margin-top: 15px; padding: 6px 0px;display: block;min-width:70px;">已经代理</span>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                    <span class="label label-default" style="margin-top: 15px; padding: 6px 0px;display: block;min-width:70px;">我的商品</span>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h3 style="overflow: hidden;height: 22px;line-height: 22px;">
+                                        <?php if(strlen($v['goods_name']) > 15): ?>
+                                            <strong data-container="body" data-toggle="popover" data-placement="bottom" data-content="<?php echo $v['goods_name']; ?>"><?php echo mb_substr($v['goods_name'],0,9); ?> ....</strong>
+                                        <?php else: ?>
+                                            <strong><?php echo $v['goods_name']; ?></strong>
+                                        <?php endif; ?>
+                                    </h3>
+                                    <p><i class="fa fa-map-marker"></i> <?php echo $provinces[$v['province_id']]; ?></p>
+                                    <div style="line-height: 24px;">
+                                        所需共享币：<strong class="text-warning"><?php echo $v['piao']; ?></strong> 个<br>
+                                        商品类型：<span><?php echo $goods_type[$v['goods_type_id'] - 1]['goods_type_name']; ?></span><br>
+                                        库存数量：<span><?php echo $v['nums']; ?></span> 件<br>
+                                        销售返利：<span><?php echo $v['rebate'] * 100; ?>%</span><br>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="b-page">
+                        <?php echo $page['page']; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+   $(document).ready(function(){$(".contact-box").each(function(){animationHover(this,"pulse")})});
+
+    //获取城市
+    $('select[name=province_id]').change(function(){
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/Business/Log/get_citys",
+            data:{province_id:$('select[name=province_id]').val()},
+            dataType: 'json',
+            async: false,
+            error: function(data) {
+            swal('网络错误，请重试！', "", "warning");
+            },
+            success: function(data) {      
+                $('select[name=city_id]').html('');
+                data = data.data;
+                $('select[name=city_id]').append('<option value="0">城市</option><option disabled="true">------------</option>');
+                $('select[name=area_id]').html('');
+                $('select[name=area_id]').append('<option value="0">区(县)</option><option disabled="true">------------</option>');
+                for (var i = 0; i < data.length; i++) {
+                    $('select[name=city_id]').append('<option value="'+data[i].city_id+'">'+data[i].city_name+'</option>');
+                }
+            }
+        });
+    });
+
+    //获取区(县)
+    $('select[name=city_id]').change(function(){
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/Business/Log/get_areas",
+            data:{city_id:$('select[name=city_id]').val()},
+            dataType: 'json',
+            async: false,
+            error: function(data) {
+             swal('网络错误，请重试！', "", "warning");
+            },
+            success: function(data) {      
+                $('select[name=area_id]').html('');
+                data = data.data;
+                $('select[name=area_id]').append('<option value="0">区(县)</option><option disabled="true">------------</option>');
+                for (var i = 0; i < data.length; i++) {
+                    $('select[name=area_id]').append('<option value="'+data[i].area_id+'">'+data[i].area_name+'</option>');
+                }
+            }
+        });
+    });
+
+    //我要代理
+    function doAgent(goods_id){
+        var url = '/Business/Goods/exchange';
+        $.post(url,{goods_id:goods_id},function(d){
+            if(d.error){
+                  swal(d.msg, "", "error");
+                return false;
+            }else{
+                swal(d.msg, "", "success");
+                $('#doAgentButton_' + goods_id).attr('class','label label-default').text('已经代理');
+                return false;
+            }
+        },'json');
+    }
+</script>
