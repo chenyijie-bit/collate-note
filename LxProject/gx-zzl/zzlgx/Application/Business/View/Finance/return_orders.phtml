@@ -1,0 +1,310 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<style>
+.good-img{
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+table{
+    font-size: 13px;
+}
+.footable-row-detail-name {
+    display: table-cell;
+    font-weight: bold;
+    padding-right: 0.5em;
+    line-height: 30px;
+}
+.modal-backdrop{
+    display: none;
+}
+
+</style>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>退货订单</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-12">
+                                    <form method="get" action="/business/finance/orders" class="clearfix pull-left"  style="width:60%;" >
+                                        <div class="form-group" style="width:53%;">
+                                        <label class="col-sm-4 control-label" style="padding-right: 0;margin-top: 6px;">按订单日期：</label>
+                                        <div class="col-sm-8"  style="padding-left: 0;padding-right: 10px;">
+                                            <input placeholder="开始日期" name="start_time" value="<?php echo $_GET['start_time'] ?>" class="form-control layer-date" id="start" style="width:50%;height: 30px;" >
+                                            <input placeholder="结束日期" name="end_time" value="<?php echo $_GET['end_time'] ?>" class="form-control layer-date " id="end" style="width:50%;height: 30px;" >
+                                        </div>
+                                        </div>
+                                        <input type="text" name="order_sn" value="<?php echo $_GET['order_sn'] ? $_GET['order_sn'] : ''; ?>" placeholder="商品订单号" class="input-sm form-control pull-left col-sm-4" style="width:20%;margin-top: -15px;  margin-right: 10px;" >
+                                        <input type="text" name="keywords" value="<?php echo $_GET['keywords'] ? $_GET['keywords'] : ''; ?>" placeholder="商品名称关键字" class="input-sm form-control pull-left col-sm-4" style="width:20%;margin-top: -15px;" >
+                                        <span class="input-group-btn pull-left " >
+                                            <button type="submit" class="btn btn-sm btn-primary search-btn"  style="margin-top: -15px;"> 搜索</button>
+                                        </span>
+                                    </form>
+                                    <button type="button" onclick="javascript:window.location.href = '/business/finance/return_orders';" class="btn btn-danger btn-sm  reset-btn pull-left" style="margin-left: 50px;">刷新</button>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-warn">
+                            <div class="alert alert-warning">
+                                您现在共有退货订单： <span class="alert-link"><?php echo $count; ?></span> 笔
+                                <?php if($_GET['start_time'] > 0 || $_GET['end_time'] > 0 || !empty($_GET['order_sn']) || !empty($_GET['keywords'])): ?>
+                                ，以下为搜索&nbsp;&nbsp;
+                                <?php if($_GET['start_time'] > 0): ?>
+                                开始时间是 “<span class="alert-link"><?php echo $_GET['start_time']; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                <?php if($_GET['end_time'] > 0): ?>
+                                结束时间是 “<span class="alert-link"><?php echo $_GET['end_time']; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                <?php if($_GET['order_sn'] > 0): ?>
+                                订单号是 “<span class="alert-link"><?php echo $_GET['order_sn']; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                <?php if(!empty($_GET['keywords'])): ?>
+                                商品名称包含 “<span class="alert-link"><?php echo $_GET['keywords']; ?></span>”&nbsp;&nbsp;
+                                <?php endif; ?>
+                                的商品，共 <span class="alert-link"><?php echo $where_count; ?></span> 笔
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="10" data-limit-navigation='10'>
+                            <thead>
+                                <tr>
+                                    <th>订单号</th>
+                                    <th >订单时间</th>
+                                    <th>商品名</th>
+                                    <th>商品价格</th>
+                                    <th>支付共享币</th>
+                                    <th>用户手机号</th>
+                                    <th>受理状态</th>
+                                    <th data-hide="all">返利百分比</th>
+                                    <th data-hide="all">是否自提</th>
+                                    <th data-hide="all">运单号</th>
+                                   
+                                    <th data-hide="all">代理卖家ID</th>
+                                    <th >操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    
+                                <?php foreach ($result as $key => $value): ?>
+                                <?php 
+                                    $is_daili = 0;
+                                    $is_me = 0;
+                                    if ($value['business_id'] == $business_id) {
+                                        $is_me = 1;
+                                        $imgs = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                                        if ($value['sell_business_id'] != 0) {
+                                            $imgs = '<img src="/Public/hplus/img/blue_dai.png" title="其他商家代理我的订单"> ';
+                                        }
+                                    }else{
+                                        $imgs = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                                        if ($value['sell_business_id'] == $business_id) {
+                                            $imgs = '<img src="/Public/hplus/img/red_dai.png" title="我代理其他商家的订单"> ';
+                                            $is_daili = 1;
+                                        }
+                                    } 
+                                ?>
+                                <tr>
+                                    <td><?php echo $imgs.$value['order_sn']; ?></td>
+                                    <td><?php echo $value['add_time']; ?></td>
+                                    <td title="<?php echo $value['goods_name']; ?>"><?php echo mb_substr($value['goods_name'],0,10); if(mb_substr($value['goods_name']) > 10) echo ' ....'; ?></td>
+                                    <td><?php echo $value['piao']/$value['num']; ?></td>
+                                    <td><?php echo $value['piao']; ?></td>
+                                    <td><?php echo $value['phone_num']; ?></td>
+                                    <td><?php switch ($value['return_status']) {
+                                        case '0':
+                                            echo '<span class="text-warning">未受理</span>';
+                                            break;
+                                        case '1':
+                                            echo '<span class="text-info">已受理</span>';
+                                            break;
+                                        case '2':
+                                            echo '<span class="text-danger">已拒绝</span>';
+                                            break;
+                                        default:
+                                            echo '未知';
+                                            break;
+                                    } ?></td>
+                                    <td><?php echo $value['rebate'] * 100; ?> %</td>
+                                    <td><?php echo $value['is_ziti'] == 1?'是':'否'; ?></td>
+                                    <td><?php echo empty($value['waybill'])?'无':$value['waybill']; ?></td>
+                                    <td><?php echo empty($value['sell_business_id'])?'无':$value['sell_business_id']; ?></td>
+                                    <td order_id="<?php echo $value['order_id']; ?>">
+                                        <a href="/Business/finance/return_detail?order_id=<?php echo $value['order_id']; ?>">
+                                            <span class="label label-danger ">退换进度</span>
+                                        </a>
+                                        <a href="/Business/finance/orders_detail?order_id=<?php echo $value['order_id']; ?>">
+                                            <span class="label label-warning ">订单详情</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <?php endforeach ?>
+                          
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="12">
+                                        <div class="b-page">
+                                            <?php echo $page['page']; ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+    $(document).ready(function(){$(".footable").footable();
+        $(".myModal").click(function(){
+        $('.modal-dialog').css('top',$(document).scrollTop())
+        })
+        $('.myModal').modal({
+            keyboard: false,
+            backdrop:false,
+            show:false
+        });
+     
+       
+        var start = {
+            elem: "#start",
+            format: "YYYY/MM/DD",
+            min:  "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                end.min = datas;
+                end.start = datas
+            }
+        };
+        var end = {
+            elem: "#end",
+            format: "YYYY/MM/DD",
+            min: "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                start.max = datas
+            }
+        };
+        laydate(start);
+        laydate(end);
+    });
+
+    function give_num(order_id,me_give=1){
+        var give_num = $('#give_num_'+order_id).val();
+        var transport_id = $('#transport_id_'+order_id).val();
+        if (!give_num && me_give == 1) {
+            swal("请填写订单的运单号", "", "warning");
+            return false;
+        }else{
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/Business/Finance/add_waybill",
+                data:{'order_id':order_id,'waybill':give_num,'transport_id':transport_id,"me_give":me_give},
+                dataType: 'json',
+                async: false,
+                error: function(data) {
+                   swal('网络错误，请重试！', "", "warning");
+                },
+                success: function(data) {
+                    if (data.error == 0) {
+                        swal("订单已发货！", "", "success");
+                        setTimeout("window.location.reload();",1000);
+                    }else{
+                        swal(data.msg, "", "error");
+                    }
+                }
+            });
+        }
+    }
+
+    function true_get(order_id){
+        swal({
+            title: "买家并未点击确认收货，您确定买家已收货吗？",
+            text: "",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我确定！",
+            cancelButtonText: "我再问一问买家…",
+            closeOnConfirm: false,
+            closeOnCancel: true
+        },
+        function(isConfirm) {
+            if (isConfirm) {
+                $.ajax({
+                    cache: true,
+                    type: "POST",
+                    url:"/Business/Finance/geted",
+                    data:{'order_id':order_id},
+                    dataType: 'json',
+                    async: false,
+                    error: function(data) {
+                       swal('网络错误，请重试！', "", "warning");
+                    },
+                    success: function(data) {
+                        if (data.error == 0) {
+                            swal("订单已完成！", "", "success");
+                            setTimeout("window.location.reload();",1000);
+                        }else{
+                            swal(data.msg, "", "error");
+                        }
+                    }
+                });
+            }
+        })
+    }
+
+    function delivery_notice(order_sn,order_id){
+        swal({
+            title: "您确定催商家发货吗？",
+            text: "",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我确定！",
+            cancelButtonText: "我再考虑一下…",
+            closeOnConfirm: false,
+            closeOnCancel: true
+        },
+        function(isConfirm) {
+            if (isConfirm) {
+                $.ajax({
+                    cache: true,
+                    type: "POST",
+                    url:"/Business/Finance/delivery_notice",
+                    data:{'order_sn':order_sn,'order_id':order_id},
+                    dataType: 'json',
+                    async: false,
+                    error: function(data) {
+                       swal('网络错误，请重试！', "", "warning");
+                    },
+                    success: function(data) {
+                        if (data.error == 0) {
+                            swal("已通知商家发货！", "", "success");
+                        }else{
+                            swal(data.msg, "", "error");
+                        }
+                    }
+                });
+            }
+        })
+    }
+</script>

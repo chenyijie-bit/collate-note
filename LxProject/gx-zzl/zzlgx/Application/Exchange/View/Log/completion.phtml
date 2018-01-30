@@ -1,0 +1,128 @@
+<!-- 找回密码 -->
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+.wy-header {
+    height: 44px;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #e21323;
+    z-index: 100;
+}
+.wy-header-title {
+    margin: 0 50px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+}
+i.icon.icon-next, i.icon.icon-prev {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-top: 0.55rem;
+}
+</style>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+ <a href="javascript:history.back(-1);" title="返回上一页" style="width: 50px;position: absolute;left: 0;top: 0;z-index: 10; height: 45px;"><div class="wy-header-icon-back"><span></span></div></a>
+  <div class="wy-header-title" style="color: #fff">补全信息</div>
+</header>
+<form id="info" >
+    <div class="weui-content" style="margin-top: 44px;">
+      <div class="weui-cells weui-cells_form wy-address-edit">
+        <div class="weui-cell ">
+          <div class="weui-cell__hd"><label class="weui-label wy-lab">手机号</label></div>
+          <div class="weui-cell__bd"><input class="weui-input" type="tel" disabled value="<?php echo $phone_num; ?>"></div>
+        </div>
+        <div class="weui-cell ">
+          <div class="weui-cell__hd"><label class="weui-label wy-lab">姓名</label></div>
+          <div class="weui-cell__bd"><input name="name" class="weui-input" type="text" placeholder="请输入您的姓名"></div>
+        
+        </div>
+         <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label wy-lab">生日</label></div>
+        <input class="weui-input" name="birthday" id="date2" type="text" value="" readonly="" placeholder="请选择您的生日">
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label wy-lab">性别</label></div>
+          <div class="weui-cell__bd"><input type="text" name="sex" id='picker' placeholder="请选择您的性别"/></div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label wy-lab">支付密码</label></div>
+          <div class="weui-cell__bd"><input type="password" name="pay_pass" id='picker' placeholder="请输入6位支付密码"  maxlength="6"/></div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label wy-lab">重复密码</label></div>
+          <div class="weui-cell__bd"><input type="password" name="repay_pass" id='picker' placeholder="请确认支付密码"  maxlength="6"/></div>
+        </div>
+      </div>
+      <div id="submit_info" class="weui-btn-area"><a href="javascript:;" class="weui-btn weui-btn_warn">提交信息</a></div>
+    </div>
+</form>
+
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+    $("#date2").calendar({
+        input: "#date2"
+    });
+    $("#picker").picker({
+        title: "请选择您的性别",
+        cols: [
+            {
+                textAlign: 'center',
+                values: ['男', '女']
+            }
+        ]
+    });
+  });
+
+  $('#submit_info').click(function(){
+        if (!$('input[name=name]').val()) {
+            $.toast('请输入您的姓名', "cancel");
+            return;
+        }
+        if (!$('input[name=birthday]').val()) {
+            $.toast('请选择您的生日', "cancel");
+            return;
+        }
+        if (!$('input[name=sex]').val()) {
+            $.toast('请选择您的性别', "cancel");
+            return;
+        }
+        if (!$('input[name=pay_pass]').val() || $('input[name=pay_pass]').val().length !=6) {
+            $.toast('请输入6位支付密码', "cancel");
+            return;
+        }
+        if ($('input[name=pay_pass]').val() != $('input[name=repay_pass]').val()) {
+            $.toast('两次密码不一致', "cancel");
+            return;
+        }
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/exchange/log/completion",
+            data:$('#info').serialize(),// 你的formid
+            dataType: 'json',
+            async: false,
+            error: function(data) {
+                $.toast('网络错误', "cancel");
+            },
+            success: function(data) {      
+                if (data.error == 0) {
+                    window.location.href="/exchange/?b=<?php echo $_SESSION['exchange']['business_id']; ?>";
+                }else{
+                    $.toast(data.msg, "cancel");
+                }
+            }
+        });
+    });
+</script>

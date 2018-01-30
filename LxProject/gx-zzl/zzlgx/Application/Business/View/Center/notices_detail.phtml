@@ -1,0 +1,31 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <span class="label label-primary pull-right label-primary-cust">
+                            <a href="javascript:self.location=document.referrer;" class="fa-lg-cust-a" title="返回上一页">
+                                <i class="fa fa-arrow-left fa-lg-cust"  aria-hidden="true"></i>
+                            </a>
+                        </span>
+                        <span class="label label-primary pull-right"><?php echo $notices_info['add_time']; ?></span>
+                        <h5><?php echo $notices_info['title'];?></h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="team-members">
+                        </div>
+                        <p style=" line-height: 25px;">
+                            <?php echo $notices_info['content']; ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

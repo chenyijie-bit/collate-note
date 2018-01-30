@@ -1,0 +1,501 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+.laydate_body .laydate_table {
+    display: none;
+    width: 240px!important;
+    margin: 0!important;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
+}
+#laydate_MM{
+	 display: none!important;
+}
+.laydate_body .laydate_ym {
+    border: 1px solid #009F95;
+    background-color: #009F95;
+    width: 228px !important;
+}
+.laydate_body .laydate_y input {
+    width: 171px !important;
+    margin-right: 15px;
+}
+.laydate_body .laydate_y .laydate_yms {
+    width: 229px !important;
+    text-align: center;
+}
+</style>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+    	<div class="ibox float-e-margins">
+          <div class="ibox-title">
+               <h5>销售统计（每年）</h5>
+                <span class="label label-primary pull-right label-primary-cust">
+                    <?php if($_GET['back'] == 'true'): ?>
+                    <a href="javascript:history.back(-1);" class="fa-lg-cust-a" title="返回上一页">
+                        <i class="fa fa-arrow-left fa-lg-cust"  aria-hidden="true"></i>
+                    </a>
+                    <?php endif; ?>
+                </span> 
+          </div>
+          <div class="ibox-content">
+    	<div class="alert alert-info">
+	    	<div class="row">
+	            <div class="col-sm-8">
+		            <input id="year" value="<?php echo $_GET['year'] ? $_GET['year'] : date('Y'); ?>" class="laydate-icon form-control layer-date datepicker" style='width: 40%;margin-top: -8px; margin-right: 5px'>
+		            <button type="button" class="btn btn-primary" data-container="body" onclick="javascript:enterYear();" data-toggle="popover" data-placement="left" style='padding: 5px 10px;margin-top:-3px;margin-right: 5px'>
+		                查看
+		            </button>
+		            <button type="button" class="btn btn-success" data-container="body" onclick="javascript:enterYear('theYear');" data-toggle="popover" data-placement="left" style='padding: 5px 10px;margin-top: -3px; margin-right: 5px'>
+		                今年
+		            </button>
+	            </div>
+	        </div>
+            </div>
+        </div>
+        </div>
+        <!-- <div class="row">
+         	<div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>(共享币兑换)本店商品与代理商品销售统计(件)</small></h5>
+                        
+                    </div>
+                    <div class="ibox-content">
+
+                        <div class="echarts" id="echarts-bar-chart2"></div>
+                    </div>
+                </div>
+            </div>
+       </div> -->
+       <div class="row">
+         	<div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>实体店销售统计(元/月)</h5>
+                   
+                    </div>
+                    <div class="ibox-content">
+                        <div class="echarts" id="echarts-line-chart1"></div>
+                    </div>
+                </div>
+          	</div>
+       </div>
+       <div class="row">
+         <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>共享币发放统计(共享币/月)</small></h5>
+                        
+                    </div>
+                    <div class="ibox-content">
+
+                        <div class="echarts" id="echarts-bar-chart"></div>
+                    </div>
+                </div>
+            </div>
+       </div>
+   
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>（积分商城）本店商品销售与代理销售的数量（件/月）</h5>
+                   
+                    </div>
+                    <div class="ibox-content">
+                        <div class="echarts" id="echarts-line-chart"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+          <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>（积分商城）本店商品销售与代理销售的共享币（共享币/月）</h5>
+                   
+                    </div>
+                    <div class="ibox-content">
+
+                        <div class="echarts" id="echarts-bar-chart1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script src="/Public/hplus/js/plugins/echarts/echarts-all.js"></script>
+
+<script>
+ $(".datepicker").datepicker({
+            language: "zh-CN",
+            startView: 2,  
+            maxViewMode: 2,
+            minViewMode:2,
+            forceParse: false, 
+            weekStart: 1, 
+            autoclose: true,//选中之后自动隐藏日期选择框
+            clearBtn: true,//清除按钮
+            format: "yyyy"//日期格式
+        });     
+</script>
+
+<script>
+	function enterYear(year){
+		if(year == 'theYear'){
+			window.location.href = '/Business/Finance/orders_count_year?year=<?php echo date('Y'); ?>'
+		}else{
+			window.location.href = '/Business/Finance/orders_count_year?year=' + $('#year').val();
+		}
+	}
+
+
+</script>
+
+<script>
+    $(function() {
+    	   /*var t2 = echarts.init(document.getElementById("echarts-bar-chart2")),
+	    n2 = {
+	        title: {
+		        text: '',
+		        subtext: ''
+		    },
+		    tooltip: {
+		        trigger: 'axis',
+		        axisPointer: {
+		            type: 'shadow'
+		        }
+		    },
+		    legend: {
+		        data: ['本店商品','代理商品'],
+		        x:"right"
+		    },
+		    grid: {
+		        left: '3%',
+		        right: '4%',
+		        bottom: '3%',
+		        containLabel: true
+		    },
+		    xAxis: {
+		        type: 'value',
+		        boundaryGap: [0, 0.01]
+		    },
+		    yAxis: {
+		        type: 'category',
+		        data: ['共享币兑换']
+		    },
+		    series: [
+		        {
+		            name: '本店商品',
+		            type: 'bar',
+		            data: [<?php echo $self_goods; ?>]
+		        },
+		        {
+		            name: '代理商品',
+		            type: 'bar',
+		            data: [<?php echo $sell_goods; ?>]
+		        }
+		    ]
+	    };
+	    t2.setOption(n2),
+	    window.onresize = t2.resize;*/
+         var e1 = echarts.init(document.getElementById("echarts-line-chart1")),
+		    a1 = {
+		        title: {
+		            text: ""
+		        },
+		        tooltip: {
+		            trigger: "axis"
+		        },
+		        legend: {
+		            data: ["月销售额"],
+		             x: "right"
+		        },
+			       grid:{
+				  	left:'5%',//组件距离容器左边的距离
+				  	right:'4%',
+				  	bottom:'7%',
+				  },
+		        calculable: !0,
+		        xAxis: [{
+		            type: "category",
+		            boundaryGap: !1,
+		            data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+		        }],
+		        yAxis: [{
+		            type: "value",
+		            axisLabel: {
+		                formatter: "{value} "
+		            }
+		        }],
+		        series: [{
+		            name: "月销售额",
+		            type: "line",
+		            data: [<?php echo $json_shop_count; ?>],
+		            markPoint: {
+		                data: [{
+		                    type: "max",
+		                    name: "最大值"
+		                },
+		                {
+		                    type: "min",
+		                    name: "最小值"
+		                }]
+		            },
+		            markLine: {
+		                data: [{
+		                    type: "average",
+		                    name: "平均值"
+		                }]
+		            }
+		        }
+		        ]
+		    };
+		    e1.setOption(a1),
+    		$(window).resize(e1.resize);
+         var t = echarts.init(document.getElementById("echarts-bar-chart")),
+            n = {
+	        title: {
+	            text: ""
+	        },
+	        tooltip: {
+	            trigger: "axis"
+	        },
+	        legend: {
+	            data: ["共享币数"],
+	             x: "right"
+	        },
+	        grid:{
+			  	left:'5%',//组件距离容器左边的距离
+			  	right:'4%',
+			  	bottom:'7%',
+			  },
+	        calculable: !0,
+	        xAxis: [{
+	            type: "category",
+	            data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+	        }],
+	        yAxis: [{
+	            type: "value"
+	        }],
+	        series: [{
+	            name: "共享币数",
+	            type: "bar",
+	            data: [<?php echo $json_piao_count; ?>],
+	            markPoint: {
+	                data: [{
+	                    type: "max",
+	                    name: "最大值"
+	                },
+	                {
+	                    type: "min",
+	                    name: "最小值"
+	                }]
+	            },
+	            markLine: {
+	                data: [{
+	                    type: "average",
+	                    name: "平均值"
+	                }]
+	            }
+	        }
+	       ]
+	    };
+        t.setOption(n),
+        window.onresize = t.resize;
+	    var e = echarts.init(document.getElementById("echarts-line-chart")),
+	    a = {
+	        title: {
+	            text: ""
+	        },
+	        tooltip: {
+	            trigger: "axis"
+	        },
+	        legend: {
+	            data: ["本店的", "他人代理我的", "我代理他人的"],
+	             x: "right"
+	        },
+	       grid:{
+			  	left:'5%',//组件距离容器左边的距离
+			  	right:'4%',
+			  	bottom:'7%',
+			  },
+	        calculable: !0,
+	        xAxis: [{
+	            type: "category",
+	            boundaryGap: !1,
+	            data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+	        }],
+	        yAxis: [{
+	            type: "value",
+	            axisLabel: {
+	                formatter: "{value} "
+	            }
+	        }],
+	        series: [{
+	            name: "本店的",
+	            type: "line",
+	            data: [<?php echo $json_myNum_count; ?>],
+	            markPoint: {
+	                data: [{
+	                    type: "max",
+	                    name: "最大值"
+	                },
+	                {
+	                    type: "min",
+	                    name: "最小值"
+	                }]
+	            },
+	            markLine: {
+	                data: [{
+	                    type: "average",
+	                    name: "平均值"
+	                }]
+	            }
+	        },
+	        {
+	            name: "他人代理我的",
+	            type: "line",
+	            data: [<?php echo $json_sellNum_count; ?>],
+	            markPoint: {
+	                data: [{
+	                    type: "max",
+	                    name: "最大值"
+	                },
+	                {
+	                    type: "min",
+	                    name: "最小值"
+	                }]
+	            },
+	            markLine: {
+	                data: [{
+	                    type: "average",
+	                    name: "平均值"
+	                }]
+	            }
+	        },
+	        {
+	            name: "我代理他人的",
+	            type: "line",
+	            data: [<?php echo $json_agentNum_count; ?>],
+	            markPoint: {
+	                data: [{
+	                    type: "max",
+	                    name: "最大值"
+	                },
+	                {
+	                    type: "min",
+	                    name: "最小值"
+	                }]
+	            },
+	            markLine: {
+	                data: [{
+	                    type: "average",
+	                    name: "平均值"
+	                }]
+	            }
+	        }]
+	    };
+	    e.setOption(a),
+	    $(window).resize(e.resize);
+	    var t1 = echarts.init(document.getElementById("echarts-bar-chart1")),
+	    n1 = {
+	        title: {
+	            text: ""
+	        },
+	        tooltip: {
+	            trigger: "axis"
+	        },
+	        legend: {
+	            data: ["本店的", "他人代理我的", "我代理他人的"],
+	             x: "right"
+	        },
+	        grid:{
+			  	left:'5%',//组件距离容器左边的距离
+			  	right:'4%',
+			  	bottom:'7%',
+			  },
+	        calculable: !0,
+	        xAxis: [{
+	            type: "category",
+	            data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+	        }],
+	        yAxis: [{
+	            type: "value"
+	        }],
+	        series: [{
+	            name: "本店的",
+	            type: "bar",
+	            data: [<?php echo $json_myPiao_count; ?>],
+	            markPoint: {
+	                data: [{
+	                    type: "max",
+	                    name: "最大值"
+	                },
+	                {
+	                    type: "min",
+	                    name: "最小值"
+	                }]
+	            },
+	            markLine: {
+	                data: [{
+	                    type: "average",
+	                    name: "平均值"
+	                }]
+	            }
+	        },
+	        {
+	            name: "他人代理我的",
+	            type: "bar",
+	            data: [<?php echo $json_sellPiao_count; ?>],
+	            markPoint: {
+	                data: [{
+	                    type: "max",
+	                    name: "最大值"
+	                },
+	                {
+	                    type: "min",
+	                    name: "最小值"
+	                }]
+	            },
+	            markLine: {
+	                data: [{
+	                    type: "average",
+	                    name: "平均值"
+	                }]
+	            }
+	        },
+	        {
+	            name: "我代理他人的",
+	            type: "bar",
+	            data: [<?php echo $json_agentPiao_count; ?>],
+	            markPoint: {
+	                data: [{
+	                    type: "max",
+	                    name: "最大值"
+	                },
+	                {
+	                    type: "min",
+	                    name: "最小值"
+	                }]
+	            },
+	            markLine: {
+	                data: [{
+	                    type: "average",
+	                    name: "平均值"
+	                }]
+	            }
+	        }]
+	    };
+	    t1.setOption(n1),
+	    window.onresize = t1.resize;
+    
+        
+});
+    
+</script>

@@ -1,0 +1,26 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <address >
+                            <strong  style='font-size: 20px;'><?php echo $about_us['company_name']; ?></strong><br><br>
+                            <span style='font-size: 10px;'><?php echo $about_us['content']; ?></span><br><br>
+                            <i class="glyphicon glyphicon-map-marker" style='font-size: 15px;'></i>
+                                <abbr style='font-size: 15px;line-height:50px; margin-left: 15px;'>公司地址：</abbr> <span style='font-size: 15px;'><?php echo $about_us['address']; ?></span><br>
+                            <i class="fa fa-phone-square" style='font-size: 15px;'></i>
+                                <abbr style='font-size: 15px;line-height:50px;margin-left: 15px;' >联系电话：</abbr> <span style='font-size: 15px;'><?php echo $about_us['phone']; ?></span><br>
+                            <!-- <i class="glyphicon glyphicon-globe" style='font-size: 15px;'></i>
+                                <abbr style='font-size: 15px;line-height:50px;margin-left: 15px;' >公司官网：</abbr>  <a href="http://www.zzlgx.com" onclick="window.open('http://www.zzlgx.com'); return false;" style='font-size: 15px;'><?php echo $about_us['website']; ?></a> -->
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

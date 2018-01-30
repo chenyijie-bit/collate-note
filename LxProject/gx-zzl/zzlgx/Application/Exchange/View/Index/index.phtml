@@ -1,0 +1,207 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<style>
+.wy-Module-tit {
+    width: 100%;
+    padding: 8px 10px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.wy-header {
+    height: 44px;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #e21323;
+    z-index: 100;
+}
+.wy-header-title {
+    margin: 0 50px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+.wy-pro-list .proimg img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform-origin: 50% 50% 0px;
+    transform: translate3d(-50%, -50%, 0px);
+}
+.weui-cells {
+     margin-top: 0em; 
+     background-color:transparent; 
+    line-height: 1.41176471;
+    font-size: 17px;
+    overflow: hidden;
+    position: relative;
+}
+.wy-pro-list .protxt .name {
+    font-size: 10px;
+    color: #454545;
+    overflow: hidden;
+     text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-height: 14px;
+}
+</style>
+
+<body ontouchstart>
+<!--顶部搜索-->
+<header class="wy-header">
+  <div class="wy-header-title"><?php echo $exchange_name; ?></div>
+</header>
+<!--主体-->
+<div class='weui-content' style="width: 100%;overflow: hidden;">
+    <!--精选推荐-->
+    <?php if(count($result['res_jian']) > 0): ?>
+    <div class="wy-Module">
+        <div class="wy-Module-tit"><span>推荐商品</span></div>
+        <div class="wy-Module-con">
+          <div class="swiper-container swiper-jingxuan" style="padding-top:34px;margin-top: 45px;">
+            <div class="swiper-wrapper">
+                <?php foreach($result['res_jian'] as $v): ?>
+                <div class="swiper-slide"><a href="/exchange/goods/detail?goods_id=<?php echo $v['goods_id']; ?>"><img class="jian_img" src="<?php echo explode(';',$v['pics'])[0]; ?>" /></a></div>
+                <?php endforeach; ?>
+            </div>
+            <div class="swiper-pagination jingxuan-pagination"></div>
+          </div>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?php if(count($result['res_1_2000']) > 0): ?>
+    <div class="wy-Module">
+        <div class="wy-Module-tit"><span>1~2000共享币区</span><a href="/Exchange/Goods/lists?type=1_2000" style=" float: right; font-size: 12px;font-weight: bold;color: #999;line-height: 18px;padding-right: 25px;">查看更多 >></a></div>
+        <div class="wy-Module-con" style='padding-top: 34px;'>
+        <ul class="wy-pro-list clear">
+            <?php foreach($result['res_1_2000'] as $v): ?>
+            <li>
+                <a href="/Exchange/Goods/detail?goods_id=<?php echo $v['goods_id']; ?>">
+                    <div class="proimg"><img src="<?php echo explode(';',$v['pics'])[0]; ?>"></div>
+                    <div class="protxt">
+                        <div class="name"><?php echo mb_substr($v['goods_name'],0,13); ?></div>
+                        <div class="wy-pro-pri"><span><?php echo $v['piao']; ?></span>共享币</div>
+                    </div>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?php if(count($result['res_2001_5000']) > 0): ?>
+    <div class="wy-Module">
+        <div class="wy-Module-tit"><span>2001~5000共享币区</span><a href="/Exchange/Goods/lists?type=2001_5000" style=" float: right; font-size: 12px;font-weight: bold;color: #999;line-height: 18px;padding-right: 25px;">查看更多 >></a></div>
+        <div class="wy-Module-con" style='padding-top: 34px;'>
+        <ul class="wy-pro-list clear">
+            <?php foreach($result['res_2001_5000'] as $v): ?>
+            <li>
+                <a href="/Exchange/Goods/detail?goods_id=<?php echo $v['goods_id']; ?>">
+                    <div class="proimg"><img src="<?php echo explode(';',$v['pics'])[0]; ?>"></div>
+                    <div class="protxt">
+                        <div class="name"><?php echo mb_substr($v['goods_name'],0,13); ?></div>
+                        <div class="wy-pro-pri"><span><?php echo $v['piao']; ?></span>共享币</div>
+                    </div>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?php if(count($result['res_5000up']) > 0): ?>
+    <div class="wy-Module">
+        <div class="wy-Module-tit"><span>5000+共享币区</span><a href="/Exchange/Goods/lists?type=5000up" style=" float: right; font-size: 12px;font-weight: bold;color: #999;line-height: 18px;padding-right: 25px;">查看更多 >></a></div>
+        <div class="wy-Module-con" style='padding-top: 34px;'>
+        <ul class="wy-pro-list clear">
+            <?php foreach($result['res_5000up'] as $v): ?>
+            <li>
+                <a href="/Exchange/Goods/detail?goods_id=<?php echo $v['goods_id']; ?>">
+                    <div class="proimg"><img src="<?php echo explode(';',$v['pics'])[0]; ?>"></div>
+                    <div class="protxt">
+                        <div class="name"><?php echo mb_substr($v['goods_name'],0,13); ?></div>
+                        <div class="wy-pro-pri"><span><?php echo $v['piao']; ?></span>共享币</div>
+                    </div>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?php if(count($result['res_myagent']) > 0): ?>
+    <div class="wy-Module">
+        <div class="weui-cells">
+          <a class="weui-cell weui-cell_access" href="/Exchange/Goods/lists?type=myagent">
+            <div class="weui-cell__hd"><img src="/Public/hplus/img/red_dai.png"></div>
+            <div class="weui-cell__bd">
+              <p style="    font-size: 12px;font-weight: bold;color: #333;padding-left: 5px;line-height: 18px;">代理商品区</p>
+            </div>
+            <div class="weui-cell__ft" style="font-size: 12px;font-weight: bold; color: #999;line-height: 18px;">查看更多</div>
+          </a>
+        </div>
+        <div class="wy-Module-con" >
+            <ul class="wy-pro-list clear">
+                <?php foreach($result['res_myagent'] as $v): ?>
+                <li>
+                    <a href="/Exchange/Goods/detail?goods_id=<?php echo $v['goods_id']; ?>" style="border: 1px solid rgba(245, 129, 35, 0.53);">
+                        <div class="proimg"><img src="<?php echo explode(';',$v['pics'])[0]; ?>"></div>
+                        <div class="protxt">
+                            <div class="name"><?php echo mb_substr($v['goods_name'],0,13); ?></div>
+                            <div class="wy-pro-pri"><span><?php echo $v['piao']; ?></span>共享币</div>
+                        </div>
+                    </a>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+    <?php endif; ?>
+</div>
+
+<!--底部导航-->
+<div class="foot-black"></div>
+<div class="weui-tabbar wy-foot-menu">
+    <a href="/Exchange" class="weui-tabbar__item weui-bar__item--on">
+        <div class="weui-tabbar__icon foot-menu-home"></div>
+        <p class="weui-tabbar__label">首页</p>
+    </a>
+    <a href="/Exchange/Goods/lists" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon foot-menu-list"></div>
+        <p class="weui-tabbar__label">商品</p>
+    </a>
+    <a href="/Exchange/Member/index" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon foot-menu-member"></div>
+        <p class="weui-tabbar__label">我的</p>
+    </a>
+</div>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+    $(".swiper-jingxuan").swiper({
+        pagination: '.swiper-pagination',
+        loop: true,
+        paginationType:'fraction',
+            slidesPerView:3,
+            paginationClickable: true,
+            spaceBetween: 2
+        });
+    var width_img=$('.jian_img').width();
+  $('.jian_img').height(3/4*width_img);
+    });
+</script> 

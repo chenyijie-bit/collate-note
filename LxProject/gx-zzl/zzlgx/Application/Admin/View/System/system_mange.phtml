@@ -1,0 +1,87 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+       
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                   <div class="ibox-title">
+                            <h5>系统配置</h5>  
+                    </div>
+                    <div class="ibox-content">
+                        <form class="form-horizontal m-t" id="commentForm">
+                         <div class="form-group">
+                                <label class="col-sm-3 control-label">商户激活价格（元）</label>
+                                <div class="col-sm-8">
+                                    <input id="activate_price" name="activate_price" value="<?php echo $result['activate_price']; ?>" class="form-control" type="number" maxlength="16">
+                                </div>
+                            </div>
+                           <div class="form-group">
+                                <label class="col-sm-3 control-label">推荐注册激活后奖励的共享币数</label>
+                                <div class="col-sm-8">
+                                    <input id="reward_piao" name="reward_piao" value="<?php echo $result['reward_piao']; ?>" class="form-control" type="number" maxlength="16">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">保证金（元）</label>
+                                <div class="col-sm-8">
+                                    <input id="security" name="security" value="<?php echo $result['security']; ?>" class="form-control" type="number" maxlength="16">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">提现手续费百分比</label>
+                                <div class="col-sm-8">
+                                    <input id="poundage" name="poundage" value="<?php echo $result['poundage']; ?>" class="form-control" type="number" max="1.00" min="0.01" maxlength="4">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 最大输入1，最小输入0.01</span>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-bottom">
+                                <div class="col-sm-2 col-sm-offset-3">
+                                    <p id="save_submit" class="btn btn-primary" onclick="javascript:saveConfig();">保存配置</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            
+            </div>
+           
+        </div>
+    </div>
+
+
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+    <script>
+        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+
+        function saveConfig(){
+        swal({
+            title: "确定保存系统配置？",
+            text: "将影响所有人请谨慎操作",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "确定",
+            cancelButtonText: "点错了",
+            closeOnConfirm: false,
+            closeOnCancel: true
+            },
+            function(isConfirm) {
+                if (isConfirm) {
+                    $.post('/admin/System/system_mange',$('form').serialize(),function(d){
+                        if(d.error){
+                            swal(d.msg, "", "error");
+                            return false;
+                        }else{
+                            swal(d.msg, "", "success");
+                            setTimeout("window.location.reload();",1000);
+                        }
+                    },'json');          
+                }
+            }
+        )
+    }
+    </script>
+
