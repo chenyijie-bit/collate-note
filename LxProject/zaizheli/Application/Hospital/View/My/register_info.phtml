@@ -1,0 +1,45 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<body>
+	<div class="reserv-details">
+		<div class="free-regist-all">
+			<div class="fr-re-it">
+	        	<a href="/Hospital/My/myRegister" class="fa fa-angle-left"></a>
+	        	<span class="fr-login-l">挂号详情</span>
+	    	</div>
+	    	<div class="fr-in-top fr-pe-top">
+	        	<p class="in-top-t">温馨提示:</p>
+	        	<p class="in-top-b">您已预约&nbsp<span class="in-top-sp"><?php echo $result['doctor_name'] ?></span>&nbsp医生</p>
+	        	<p class="in-top-b">请耐心等待客服人员与您确认医生出诊时间及号源</p>
+	    	</div>
+	    </div>
+	    <div class="reserv-det-con">
+	    	<div class="det-con-top">
+	    		<p>预约信息如下</p>
+	    	</div>
+	    	<div class="det-con-cen">
+	    		<p><span >就诊人:&nbsp</span><span><?php echo $result['patients_name'] ?></span></p>
+	    		<p><span>预约医生:&nbsp</span><span><?php echo $result['doctor_name'] ?></span>&nbsp(<span class="reserv-hospital"><?php echo $result['hospital_name'] ?></span>&nbsp &nbsp<span class="hospital-keshi"><?php echo $result['department_name'] ?></span>)</p>
+	    		<p><span>就诊时间:&nbsp</span><span><?php echo $result['consultation_date'] ?></span></p>
+	    		<p><span>取号地点:&nbsp</span><span>医院自助挂号机&nbsp(&nbsp或医院指定人工窗口&nbsp)</span></p>
+	    	</div>
+		</div>
+	    <div class="reserv-margin"></div>
+	    <div class="reserv-det-con reserv-det-con-bot">
+	    	<div class="det-con-top">
+	    		<p>注意事项</p>
+	    	</div>
+	    	<div class="det-con-cen">
+	    		<p><span class="det-con-mao">1、</span><span class="det-con-maob">您可以在&nbsp<i>个人中心-->我的预约</i>&nbsp查看订单详情。</span></p>
+	    		<p><span class="det-con-mao">2、</span><span class="det-con-maob">如果您预约成功由于您个人原因不能就诊请及时取消订单。</span></p>
+	    		<p><span class="det-con-mao">3、</span><span class="det-con-maob">如果专家停诊,您的订单会被取消,我们将以短信的方式通知您,请保持手机畅通。</span></p>
+	    		<p><span class="det-con-mao">4、</span><span class="det-con-maob">每个账号每日挂号和取消数量有限,请按需预约,若超出取消上限则不能再次预约。</span></p>
+	    	</div>
+	    </div>
+	</div>
+	<?php if ($result['is_status'] == 1){ ?>
+		<button class="reserv-detail-botbut" onclick="window.location.href='/Hospital/My/cancel?registration_id=<?php echo $_GET['registration_id'] ?>'">取消预约</button>
+	<?php }else{ ?>
+		<button class="reserv-detail-botbut" style="background-color:#999;margin-top:2rem">已取消预约</button>
+	<?php } ?>
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

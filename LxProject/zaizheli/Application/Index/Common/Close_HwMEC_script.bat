@@ -1,0 +1,1 @@
+D:\wamp\bin\php\php7.0.10\php.exe -q D:\wamp\www\WWW\zaizheli\Application\Index\Common\Close_HwMEC_script.php

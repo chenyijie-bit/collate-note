@@ -1,0 +1,488 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+    <!-- 别站引用本站 -->
+    <?php if(isset($_SESSION['REFERER_SITE']['URL'])): ?>
+    <div class="doc-top clearfix">
+        <div class="doc-top-t top-bar-l">
+            <a href="<?php echo $_SESSION['REFERER_SITE']['URL']; ?>"><?php echo $_SESSION['REFERER_SITE']['NAME']; ?></a>
+        </div>
+        <div class="doc-top-t top-bar-r active" style="border-bottom: 0.1rem solid <?php echo $_SESSION['REFERER_SITE']['COLOR']; ?>;">
+            <a href="">看片</a>
+        </div>
+    </div>
+    <?php endif; ?>
+    <!-- 本站调用别站 -->
+    <?php if(isset($_SESSION['SITE_URL'])): ?>
+    <div class="doc-top clearfix">
+        <div class="doc-top-t top-bar-l active" style="border-bottom: 0.1rem solid #ff9500;">
+            <a href="javascript:;">看片</a>
+        </div>
+        <div class="doc-top-t top-bar-r">
+            <a href="http://www.zzlhi.com/chat">聊天</a>
+        </div>
+    </div>
+    <?php endif; ?>
+<!-- 主界面 头部 具体展示内容 -->
+<div class="main-all">
+    <div class="home-slide">
+        <div id="mui-slider" class="mui-slider" >
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="<?php echo end($carousel)['url'];?>"><img src="<?php echo end($carousel)['pic_path'];?>" /></a></div>
+                <?php foreach($carousel as $v): ?>
+                <div class="mui-slider-item"><a href="<?php echo $v['url'];?>"><img src="<?php echo $v['pic_path'];?>" /></a></div>
+                <?php endforeach; ?>
+                <!--支持循环-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="<?php echo reset($carousel)['url'];?>"><img src="<?php echo reset($carousel)['pic_path'];?>" /></a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <?php for($i=1;$i<count($carousel);$i++): ?>
+                <div class="mui-indicator"></div>
+                <?php endfor; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 分割线 -->
+ <div class="cut-off"></div>
+<!-- 电影院 -->
+<div class="main-vid main-v-mar">
+    <div class="main-vid-title">
+        <span class="vid-ti-o"></span>
+        <span class="vid-ti-t">电影院</span>
+    </div>
+    
+    <div class="main-igte">
+        <a href="/video/video/play?video_id=<?php echo reset($dy)['video_id']; ?>" class="main-igte-a">
+            <div class="igte-contain">
+        <div class="igte-contain-top">
+                <img src="<?php echo reset($dy)['pic_path']; ?>" alt="" class="igte-contain-i">
+          </div>
+                <div class="igte-contain-box">
+                <p class="igte-t-t"><?php echo mb_substr(reset($dy)['name'],0,20); ?>
+                </p> 
+                <p class="igte-t-cen"><?php echo mb_substr(reset($dy)['synopsis'],0,45); ?> ....</p>
+                <p class="igte-t-bot"><?php echo reset($dy)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo reset($dy)['zan_num']; ?></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- 分割线 -->
+    <div class="cut-off"></div>
+    <div class="main-vid-slide">
+
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#" class="main-vid-slide-a">
+                        <img src="<?php echo end($dy)['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr(end($dy)['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr(end($dy)['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo end($dy)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo end($dy)['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <?php for($i=1;$i<count($dy);$i++): ?>
+                <div class="mui-slider-item">
+                    <a href="/video/video/play?video_id=<?php echo $dy[$i]['video_id']; ?>" class="main-vid-slide-a">
+                        <img src="<?php echo $dy[$i]['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                            <p class="mui-st-top"><?php echo mb_substr($dy[$i]['name'],0,15); ?></p>
+                            <p class="mui-st-cen"><?php echo mb_substr($dy[$i]['synopsis'],0,30); ?> ....</p>
+                            <p class="mui-st-bot"><?php echo $dy[$i]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $dy[$i]['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php endfor; ?>
+
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#" class="main-vid-slide-a">
+                    <img src="<?php echo $dy[1]['pic_path']; ?>" />
+                    <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr($dy[1]['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr($dy[1]['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo $dy[1]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $dy[1]['zan_num']; ?></p>
+                    </div>
+                </a>
+            </div>
+
+             </div>
+        </div>
+
+    </div>
+    <div class="cut-off"></div>
+</div>
+<!-- tab 分类 -->
+<div class="main-tab">
+    <div class="main-t-top">
+        <a href="javascript:;" class="main-t-top-active">推荐</a>
+        <?php foreach($type as $v): ?>
+        <a href="/video/video/list?type_id=<?php echo $v['type_id']; ?>"><?php echo $v['type_name']; ?></a>
+        <?php endforeach; ?>
+        <a href="/video/video/search" class="main-t-top-search"><img src="/Public/Video/index/image/input.png" alt=""></a>
+    </div>
+    <div class="main-vid">
+    <div class="cut-off"></div>
+        <div class="main-igte">
+            <a href="/video/video/play?video_id=<?php echo reset($level)['video_id']; ?>" class="main-igte-a">
+                <div class="igte-contain">
+                    <div class="igte-contain-top">
+                        <img src="<?php echo reset($level)['pic_path']; ?>" alt="" class="igte-contain-i">
+                    </div>
+                    <div class="igte-contain-box">
+                        <p class="igte-t-t"><?php echo mb_substr(reset($level)['name'],0,20); ?></p> 
+                        <p class="igte-t-cen"><?php echo mb_substr(reset($level)['synopsis'],0,45); ?> ....</p>
+                        <p class="igte-t-bot"><?php echo reset($level)['class_name']; ?>&nbsp;&nbsp;&nbsp;<?php echo reset($level)['level']; ?>星&nbsp;&nbsp;&nbsp;赞<?php echo reset($level)['zan_num']; ?></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cut-off"></div>
+        <?php for($i=1;$i<count($level);$i++): ?>
+        <a href="/video/video/play?video_id=<?php echo $level[$i]['video_id']; ?>" class="index-all-it">
+            <div class="main-t-tbot">
+                <div class="t-tbot-le fl">
+                    <p class="mui-st-top"><?php echo mb_substr($level[$i]['name'],0,10); ?></p>
+                    <p class="mui-st-cen"><?php echo mb_substr($level[$i]['synopsis'],0,18); ?> ....</p>
+                    <p class="mui-st-bot"><?php echo $level[$i]['class_name']; ?>&nbsp;&nbsp;&nbsp;<?php echo $level[$i]['level']; ?>星&nbsp;&nbsp;&nbsp;赞<?php echo $level[$i]['zan_num']; ?></p>
+                </div>
+                <div class="t-tbot-ri">
+                    <img src="<?php echo $level[$i]['pic_path']; ?>" alt="" class="tbot-ri-img fr">
+                </div>
+            </div>
+        </a>
+        <div class="cut-off"></div>
+        <?php endfor; ?>
+    </div>
+</div>
+<!-- top10 -->
+<div class="main-vid">
+    <div class="main-vid-title">
+        <span class="vid-ti-o"></span>
+        <span class="vid-ti-t">TOP10</span>
+    </div>
+    <?php for($i=0;$i<3;$i++): ?>
+    <div class="main-igte">
+        <a href="/video/video/play?video_id=<?php echo $top10[$i]['video_id']; ?>" class="main-igte-a">
+            <div class="igte-contain">
+                <div class="igte-contain-top">
+                    <img src="<?php echo $top10[$i]['pic_path']; ?>" alt="" class="igte-contain-i">
+                </div>
+                <div class="igte-contain-box">
+                    <p class="igte-t-t"><?php echo mb_substr($top10[$i]['name'],0,20); ?></p> 
+                    <p class="igte-t-cen"><?php echo mb_substr($top10[$i]['synopsis'],0,45); ?> ....</p>
+                    <p class="igte-t-bot"><?php echo $top10[$i]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $top10[$i]['zan_num']; ?></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="cut-off"></div>
+    <?php endfor; ?>
+    <div class="main-vid-slide">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#" class="main-vid-slide-a">
+                        <img src="<?php echo end($top10)['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr(end($top10)['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr(end($top10)['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo end($top10)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo end($top10)['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php for($i=3;$i<count($top10);$i++): ?>
+                <div class="mui-slider-item">
+                    <a href="/video/video/play?video_id=<?php echo $top10[$i]['video_id']; ?>" class="main-vid-slide-a">
+                        <img src="<?php echo $top10[$i]['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                            <p class="mui-st-top"><?php echo mb_substr($top10[$i]['name'],0,15); ?></p>
+                            <p class="mui-st-cen"><?php echo mb_substr($top10[$i]['synopsis'],0,25); ?> ....</p>
+                            <p class="mui-st-bot"><?php echo $top10[$i]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $top10[$i]['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php endfor; ?>
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#" class="main-vid-slide-a">
+                    <img src="<?php echo $top10[3]['pic_path']; ?>" />
+                    <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr($top10[3]['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr($top10[3]['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo $top10[3]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $top10[3]['zan_num']; ?></p>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+<div class="cut-off"></div>
+</div>
+<!-- 电影 -->
+<div class="main-vid main-v-mar">
+    <div class="main-vid-title">
+        <span class="vid-ti-o"></span>
+        <span class="vid-ti-t">电影</span>
+        <span class="vid-ti-t" style="float: right;"><a href="/video/video/list?type_id=1" style="color: #000">更多>></a></span>
+    </div>
+    
+    <div class="main-igte">
+        <a href="/video/video/play?video_id=<?php echo reset($dy)['video_id']; ?>" class="main-igte-a">
+            <div class="igte-contain">
+        <div class="igte-contain-top">
+                <img src="<?php echo reset($dy)['pic_path']; ?>" alt="" class="igte-contain-i">
+          </div>
+                <div class="igte-contain-box">
+                <p class="igte-t-t"><?php echo mb_substr(reset($dy)['name'],0,20); ?></p> 
+                <p class="igte-t-cen"><?php echo mb_substr(reset($dy)['synopsis'],0,45); ?> ....</p>
+                <p class="igte-t-bot"><?php echo reset($dy)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo reset($dy)['zan_num']; ?></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- 分割线 -->
+    <div class="cut-off"></div>
+    <div class="main-vid-slide">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#" class="main-vid-slide-a">
+                        <img src="<?php echo end($dy)['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr(end($dy)['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr(end($dy)['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo end($dy)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo end($dy)['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+
+                <?php for($i=1;$i<count($dy);$i++): ?>
+                <div class="mui-slider-item">
+                    <a href="/video/video/play?video_id=<?php echo $dy[$i]['video_id']; ?>" class="main-vid-slide-a">
+                        <img src="<?php echo $dy[$i]['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                            <p class="mui-st-top"><?php echo mb_substr($dy[$i]['name'],0,15); ?></p>
+                            <p class="mui-st-cen"><?php echo mb_substr($dy[$i]['synopsis'],0,30); ?> ....</p>
+                            <p class="mui-st-bot"><?php echo $dy[$i]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $dy[$i]['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php endfor; ?>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#" class="main-vid-slide-a">
+                    <img src="<?php echo $dy[1]['pic_path']; ?>" />
+                    <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr($dy[1]['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr($dy[1]['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo $dy[1]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $dy[1]['zan_num']; ?></p>
+                    </div>
+                </a>
+            </div>
+
+             </div>
+        </div>
+    </div>
+    <div class="cut-off"></div>
+</div>
+<!-- 电视剧 -->
+<div class="main-vid main-v-mar">
+    <div class="main-vid-title">
+        <span class="vid-ti-o"></span>
+        <span class="vid-ti-t">电视剧</span>
+        <span class="vid-ti-t" style="float: right;"><a href="/video/video/list?type_id=2" style="color: #000">更多>></a></span>
+    </div>
+    
+    <div class="main-igte">
+        <a href="/video/video/play?video_id=<?php echo reset($dsj)['video_id']; ?>" class="main-igte-a">
+            <div class="igte-contain">
+        <div class="igte-contain-top">
+                <img src="<?php echo reset($dsj)['pic_path']; ?>" alt="" class="igte-contain-i">
+          </div>
+                <div class="igte-contain-box">
+                <p class="igte-t-t"><?php echo mb_substr(reset($dsj)['name'],0,20); ?></p> 
+                <p class="igte-t-cen"><?php echo mb_substr(reset($dsj)['synopsis'],0,45); ?> ....</p>
+                <p class="igte-t-bot"><?php echo reset($dsj)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo reset($dsj)['zan_num']; ?></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- 分割线 -->
+    <div class="cut-off"></div>
+    <div class="main-vid-slide">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#" class="main-vid-slide-a">
+                        <img src="<?php echo end($dsj)['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr(end($dsj)['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr(end($dsj)['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo end($dsj)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo end($dsj)['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php for($i=1;$i<count($dsj);$i++): ?>
+                <div class="mui-slider-item">
+                    <a href="/video/video/play?video_id=<?php echo $dsj[$i]['video_id']; ?>" class="main-vid-slide-a">
+                        <img src="<?php echo $dsj[$i]['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                            <p class="mui-st-top"><?php echo mb_substr($dsj[$i]['name'],0,15); ?></p>
+                            <p class="mui-st-cen"><?php echo mb_substr($dsj[$i]['synopsis'],0,30); ?> ....</p>
+                            <p class="mui-st-bot"><?php echo $dsj[$i]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $dsj[$i]['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php endfor; ?>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#" class="main-vid-slide-a">
+                    <img src="<?php echo $dsj[1]['pic_path']; ?>" />
+                    <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr($dsj[1]['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr($dsj[1]['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo $dsj[1]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $dsj[1]['zan_num']; ?></p>
+                    </div>
+                </a>
+            </div>
+             </div>
+        </div>
+    </div>
+    <div class="cut-off"></div>
+</div>
+<!-- 综艺 -->
+<div class="main-vid main-v-mar">
+    <div class="main-vid-title">
+        <span class="vid-ti-o"></span>
+        <span class="vid-ti-t">综艺</span>
+        <span class="vid-ti-t" style="float: right;"><a href="/video/video/list?type_id=3" style="color: #000">更多>></a></span>
+    </div>
+    
+    <div class="main-igte">
+        <a href="/video/video/play?video_id=<?php echo reset($zy)['video_id']; ?>" class="main-igte-a">
+            <div class="igte-contain">
+        <div class="igte-contain-top">
+                <img src="<?php echo reset($zy)['pic_path']; ?>" alt="" class="igte-contain-i">
+          </div>
+                <div class="igte-contain-box">
+                <p class="igte-t-t"><?php echo mb_substr(reset($zy)['name'],0,20); ?></p> 
+                <p class="igte-t-cen"><?php echo mb_substr(reset($zy)['synopsis'],0,45); ?> ....</p>
+                <p class="igte-t-bot"><?php echo reset($zy)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo reset($zy)['zan_num']; ?></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- 分割线 -->
+    <div class="cut-off"></div>
+    <div class="main-vid-slide">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#" class="main-vid-slide-a">
+                        <img src="<?php echo end($zy)['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr(end($zy)['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr(end($zy)['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo end($zy)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo end($zy)['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+
+                <?php for($i=1;$i<count($zy);$i++): ?>
+                <div class="mui-slider-item">
+                    <a href="/video/video/play?video_id=<?php echo $zy[$i]['video_id']; ?>" class="main-vid-slide-a">
+                        <img src="<?php echo $zy[$i]['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                            <p class="mui-st-top"><?php echo mb_substr($zy[$i]['name'],0,15); ?></p>
+                            <p class="mui-st-cen"><?php echo mb_substr($zy[$i]['synopsis'],0,30); ?> ....</p>
+                            <p class="mui-st-bot"><?php echo $zy[$i]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $zy[$i]['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php endfor; ?>
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#" class="main-vid-slide-a">
+                    <img src="<?php echo $zy[1]['pic_path']; ?>" />
+                    <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr($zy[1]['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr($zy[1]['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo $zy[1]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $zy[1]['zan_num']; ?></p>
+                    </div>
+                </a>
+            </div>
+             </div>
+        </div>
+    </div>
+    <div class="cut-off"></div>
+</div>
+<!-- 新闻 -->
+<div class="main-vid main-v-mar">
+    <div class="main-vid-title">
+        <span class="vid-ti-o"></span>
+        <span class="vid-ti-t">新闻</span>
+        <span class="vid-ti-t" style="float: right;"><a href="/video/video/list?type_id=4" style="color: #000">更多>></a></span>
+    </div>
+    
+    <div class="main-igte">
+        <a href="/video/video/play?video_id=<?php echo reset($xw)['video_id']; ?>" class="main-igte-a">
+            <div class="igte-contain">
+        <div class="igte-contain-top">
+                <img src="<?php echo reset($xw)['pic_path']; ?>" alt="" class="igte-contain-i">
+          </div>
+                <div class="igte-contain-box">
+                <p class="igte-t-t"><?php echo mb_substr(reset($xw)['name'],0,20); ?></p> 
+                <p class="igte-t-cen"><?php echo mb_substr(reset($xw)['synopsis'],0,45); ?> ....</p>
+                <p class="igte-t-bot"><?php echo reset($xw)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo reset($xw)['zan_num']; ?></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- 分割线 -->
+    <div class="cut-off"></div>
+    <div class="main-vid-slide">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+
+                 <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#" class="main-vid-slide-a">
+                        <img src="<?php echo end($xw)['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr(end($xw)['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr(end($xw)['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo end($xw)['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo end($xw)['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php for($i=1;$i<count($xw);$i++): ?>
+                <div class="mui-slider-item">
+                    <a href="/video/video/play?video_id=<?php echo $xw[$i]['video_id']; ?>" class="main-vid-slide-a">
+                        <img src="<?php echo $xw[$i]['pic_path']; ?>" />
+                        <div class="mui-st-text">
+                            <p class="mui-st-top"><?php echo mb_substr($xw[$i]['name'],0,15); ?></p>
+                            <p class="mui-st-cen"><?php echo mb_substr($xw[$i]['synopsis'],0,30); ?> ....</p>
+                            <p class="mui-st-bot"><?php echo $xw[$i]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $xw[$i]['zan_num']; ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php endfor; ?>
+
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#" class="main-vid-slide-a">
+                    <img src="<?php echo $xw[1]['pic_path']; ?>" />
+                    <div class="mui-st-text">
+                        <p class="mui-st-top"><?php echo mb_substr($xw[1]['name'],0,15); ?></p>
+                        <p class="mui-st-cen"><?php echo mb_substr($xw[1]['synopsis'],0,30); ?> ....</p>
+                        <p class="mui-st-bot"><?php echo $xw[1]['class_name']; ?>&nbsp;&nbsp;&nbsp;赞<?php echo $xw[1]['zan_num']; ?></p>
+                    </div>
+                </a>
+            </div>
+             </div>
+        </div>
+    </div>
+    <div class="cut-off"></div>
+</div>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

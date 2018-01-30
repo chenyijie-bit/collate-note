@@ -1,0 +1,82 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<?php require_once MODULE_PATH.'/View/Common/menu.phtml'; ?>
+<section class="Hui-article-box">
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span>
+    视频管理
+    <span class="c-gray en">&gt;</span>
+    视频列表 <span class="c-gray en">&gt;</span>
+    添加视频 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<form action="/Videoadmin/video/add" method="post" enctype="multipart/form-data" style="margin-right: 60px;left: -80px;position: relative;" class="form form-horizontal">
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3">片名：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <input type="text" class="input-text" autocomplete="off" name="name" value="">
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3">类型：</label>
+        <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+            <select class="select" size="1" name="type_id">
+                <option value="" selected="">请选择</option>
+                <?php foreach($type as $v): ?>
+                <option value="<?php echo $v['type_id']; ?>"><?php echo $v['type_name']; ?></option>
+                <?php endforeach ;?>
+            </select>
+            </span> </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3">类别：</label>
+        <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+            <select class="select" size="1" name="class_id">
+                <option value="" selected="">请选择</option>
+                <?php foreach($class as $v): ?>
+                <option value="<?php echo $v['class_id']; ?>"><?php echo $v['class_name']; ?></option>
+                <?php endforeach ;?>
+            </select>
+            </span> </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3">推荐：</label>
+        <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+            <select class="select" size="1" name="level">
+                <?php for($i=0;$i<=5;$i++): ?>
+                <option value="<?php echo $i; ?>"><?php echo $i; ?>星</option>
+                <?php endfor ;?>
+            </select>
+            </span>
+        </div>
+    </div>
+    <div class="row cl">
+        <label  class="form-label col-xs-4 col-sm-3">图片：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <span class="btn-upload form-group">
+                <input class="input-text upload-url" type="text" name="uploadfile-2" id="uploadfile-2" readonly="">
+                <a href="javascript:void();" class="btn btn-primary upload-btn"><i class="Hui-iconfont"></i> 浏览文件</a>
+                <input type="file" multiple="" name="pic_path" class="input-file">
+            </span>
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3">简介：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <textarea class="textarea" placeholder="说点什么..." rows="" cols="" name="synopsis"></textarea>
+        </div>
+    </div>
+    <div class="row cl">
+        <label class="form-label col-xs-4 col-sm-3">路径：</label>
+        <div class="formControls col-xs-8 col-sm-9">
+            <textarea class="textarea" rows="" cols="" name="play_url"></textarea>
+        <span>注意：多剧集路径中间请用井号'#'间隔；多集数命名如'528072797_02.mp4'，综艺类命名如'528072797_2017-03-21.mp4'</span>
+        </div>
+    </div>
+    <div class="row cl">
+        <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+            <input  disabled="true"  class="btn btn-primary radius" type="submit" value="提交">
+            <input  disabled="true"  class="btn btn-primary radius" type="reset" value="重置">
+        </div>
+    </div>
+</form>
+</section>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

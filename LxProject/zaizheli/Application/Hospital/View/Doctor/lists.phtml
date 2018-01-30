@@ -1,0 +1,127 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style type="text/css">
+    .doc-cont-bottom{
+        margin-bottom: -0.3rem;
+    }
+    .doc-cont-bottom .cont-bot-le {
+        padding-right: 0rem;
+    }
+    .doc-cont-bottom ul li {
+        height: 100%;
+    } 
+    .top-title {
+        width: 100%;
+        height: 1.5rem;
+        line-height: 1rem;
+        background-color: #BFDFFF;
+    }
+</style>
+<body>
+<div class="doc-list-all">
+    <div class="doc-li-header">
+        <i onclick="javascript:window.location.href='/Hospital';" class="fa fa-angle-left f_l" aria-hidden="true"></i> 
+        <span>医生列表</span>
+        <!-- <a href="" class="f_r">
+            <img src="/Public/Hospital/index/images/find.png" alt="" class="doc-head-i">
+        </a> -->&nbsp;&nbsp;
+    </div>
+    <div class="doc-section-list">
+        <div  class="top-title" style="display: -webkit-box; line-height:1.2rem;">
+            <div style="font-size:0.35rem;margin-left:27%; margin-top:0.2rem; ">
+                <span class="f_l" class="ri-text-t">以下是&nbsp;&nbsp;</span><span class="f_l" style="font-weight: bold;"><?php echo $keshi ?></span><span class="f_l" style="margin-left: 0.25rem;">的全部医生</span>
+            </div>
+        </div>
+        <div class="doc-li-contain">
+            <div class="doc-cont-top">
+                <i></i>
+                <?php if($_GET['sort']=='h'){ $active1 = 'active';$url1 = 'onclick="javascript:window.location.href=\'/Hospital/Doctor/lists?department='.$_GET['department'].'\'"';$url2 = 'onclick="javascript:window.location.href=\'/Hospital/Doctor/lists?department='.$_GET['department'].'&isuse=true\'"'; }else if($_GET['isuse']==true){ $active2 = 'active';$url1 = 'onclick="javascript:window.location.href=\'/Hospital/Doctor/lists?department='.$_GET['department'].'\'"';$url = 'onclick="javascript:window.location.href=\'/Hospital/Doctor/lists?sort=h&department='.$_GET['department'].'\'"'; }else{ $active = 'active';$url = 'onclick="javascript:window.location.href=\'/Hospital/Doctor/lists?sort=h&department='.$_GET['department'].'\'"';$url2 = 'onclick="javascript:window.location.href=\'/Hospital/Doctor/lists?department='.$_GET['department'].'&isuse=true\'"'; } ?>
+                <button class="cont-top cont-top-le <?php echo $active ?>" <?php echo $url1 ?> >人气<span class="fa fa-angle-down"></span></button>
+
+                <button class="cont-top cont-top-ri <?php echo $active1 ?>" <?php echo $url ?> >好评<span class="fa fa-angle-down "></span></button>
+                <button class="cont-top <?php echo $active2 ?>" <?php echo $url2 ?> >可预约<span class="fa fa-angle-down"></span></button>
+            </div>
+            <div class="doc-cont-bottom">
+                <ul id='z_ul'>
+                    <?php foreach ($doctors as $key => $val){ ?>    
+                    <li>
+                    	<a href="/Hospital/Doctor/detail?doctor_id=<?php echo $val['doctor_id']; ?>" class="cont-bot-a">
+	                            <div class="cont-bot-le">
+	                                <img src="<?php echo $val['head_img'] ?>" alt="">
+	                            </div>
+	                            <div class="cont-bot-ri">
+	                                <div class="bot-ri-text">
+	                                    <span><?php echo $val['doctor_name'] ?></span>
+	                                    <span class="ri-text-t"><?php echo $val['ranks_name'] ?></span>
+	                                    <div class="bot-ri-zan">
+	                                        <img src="/Public/Hospital/index/images/handzan.png" alt="">
+	                                        <span><?php echo $val['count_zan'] ?></span>
+	                                    </div>
+	                                </div>
+	                                <p class="bot-ri-sec"><span><?php echo $val['hospital_name'] ?></span><span><?php echo $val['department_name'] ?></span></p>
+	                                <p class="bot-ri-thi"><?php echo $val['adept'] ?></p>
+	                            </div>
+	                     </a>
+                    </li>
+                    <?php } ?>
+                </ul>
+                <div class="load-more" id="get-more" onclick="get_more()">点击加载更多...</div>
+            </div>
+            <div style='visibility:hidden' id="page" num='2'></div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(function(){
+    $('.cont-top').on("tap",function() {
+    $('.cont-top').removeClass('active');
+    $(this).addClass('active');
+    });
+    var sub_classify =$('.doc-cont-top')[0];
+    var sub_but=$('.cont-top');
+    window.onscroll = function(){
+        var mTop = sub_classify.offsetTop;
+        var sTop = document.body.scrollTop;
+        var result = mTop - sTop; 
+            if(result<=0){
+                $(sub_classify).css({"position":"fixed",'top':"0","z-index":"999"}) ;
+            }
+            if(sTop<187){
+                sub_classify.removeAttribute("style");
+            }
+    }
+})   
+
+//获取更多
+function get_more(){
+    var page = $("#page").attr("num");
+    $.ajax({
+        type:"post",
+        url:"/Hospital/Doctor/lists",
+        data:{'page':page,'sort': "<?php echo $_GET['sort']=='h'?'h':'null' ?>",'department': "<?php echo !empty($_GET['department'])?$_GET['department']:'0' ?>",'isuse': "<?php echo $_GET['isuse']=='true'?'true':'null' ?>"},
+        success:function(data){
+            if(data.status == 1){
+                $("#page").attr("num",parseInt(page)+parseInt(1));
+                //console.log(data.data);
+                var data = data.data;
+                for (var i = 0; i <= data.length-1; i++) {
+                    //console.log(data[i]);
+                    in_comment(data[i]);
+                };
+            }else if(data.status == 0){
+                $("#get-more").html(data.data);
+            }
+        }
+    })
+}
+
+//将获取的更多的数据放入页面中
+function in_comment(data){
+    var str = '<li> <a href=/Hospital/Doctor/detail?doctor_id='+data.doctor_id+' class="cont-bot-a"> <div class="cont-bot-le"> <img src="'+data.head_img+'" alt=""> </div> <div class="cont-bot-ri"> <div class="bot-ri-text"> <span>'+data.doctor_name+'</span> <span class="ri-text-t">'+data.ranks_name+'</span> <div class="bot-ri-zan"> <img src="/Public/Hospital/index/images/handzan.png" alt=""> <span>'+data.count_zan+'</span> </div> </div> <p class="bot-ri-sec"> <span>'+data.hospital_name+'</span> <span>'+data.department_name+'</span> </p> <p class="bot-ri-thi">'+data.adept+'</p> </div> </a> </li>';
+    $('#z_ul').append(str);
+}
+
+
+</script>
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

@@ -1,0 +1,79 @@
+//模型
+    	// $video = M('video','video_');
+    	//新闻
+    	// $path = "c:/export20170511/info/xml/";
+    	// $files = scandir($path);
+    	// $insertData = array();
+    	// foreach ($files as $k => $v) {
+    	// 	if($v != '.' && $v != '..'){
+    	// 		$file = $path.$v;
+    	// 		$con = file_get_contents($file);
+    	// 		$con = json_decode(json_encode(simplexml_load_string($con)),1);
+    	// 		$insertData[$k]['name'] = $con['Objects']['Object'][0]['Property'][3];
+    	// 		$insertData[$k]['synopsis'] = $con['Objects']['Object'][0]['Property'][3];
+    	// 		$insertData[$k]['pic_path'] = '/Public/Video/index/resource/old/news/'.explode('.', $v)[0].'.jpg';
+    	// 		$insertData[$k]['type_id'] = '4';
+    	// 		$insertData[$k]['class_id'] = '60';
+    	// 		$insertData[$k]['play_url'] = '/Public/Video/index/resource/old/news/'.explode('.', $v)[0].'.mp4';
+    	// 		$insertData[$k]['add_time'] = date('Y-m-d H:i:s',strtotime($con['Objects']['Object'][0]['Property'][10]));
+    	// 		if($video->add($insertData[$k])){
+    	// 			echo 'sussess!<br/>';
+    	// 		}
+    	// 	}
+    	// }
+    	
+    	//电影
+    	// $path = "c:/export20170511/movie/xml/";
+    	// $files = scandir($path);
+    	// $insertData = array();
+    	// foreach ($files as $k => $v) {
+    	// 	if($v != '.' && $v != '..'){
+    	// 		$file = $path.$v;
+    	// 		$con = file_get_contents($file);
+    	// 		$con = str_replace('<![CDATA[', '', $con);
+    	// 		$con = str_replace(']]>', '', $con);
+    	// 		$con = json_decode(json_encode(simplexml_load_string($con)),1);
+    	// 		$insertData[$k]['name'] = $con['Objects']['Object'][0]['Property'][3];
+    	// 		$insertData[$k]['synopsis'] = $con['Objects']['Object'][0]['Property'][15];
+    	// 		$insertData[$k]['pic_path'] = '/Public/Video/index/resource/old/movie/'.explode('.', $v)[0].'.jpg';
+    	// 		$insertData[$k]['type_id'] = '1';
+    	// 		$insertData[$k]['class_id'] = '59';
+    	// 		$insertData[$k]['play_url'] = '/Public/Video/index/resource/old/movie/'.explode('.', $v)[0].'.mp4';
+    	// 		$insertData[$k]['add_time'] = date('Y-m-d H:i:s',strtotime($con['Objects']['Object'][0]['Property'][10]));
+    	// 		if($video->add($insertData[$k])){
+    	// 			echo 'sussess!<br/>';
+    	// 		}
+    	// 	}
+    	// }
+
+    	//电视剧
+    	// $path = "c:/export20170511/seris/xml/";
+    	// $dirs = scandir($path);
+    	// $insertData = array();
+    	// foreach ($dirs as $key => $value) {
+    	// 	if($value != '.' && $value != '..'){
+    	// 		$dir = $path.$value.'/';
+    	// 		$files = scandir($dir);
+    	// 		array_shift($files);
+    	// 		array_shift($files);
+    	// 		$indexFile = $dir.$files[0];
+    	// 		$con = file_get_contents($indexFile);
+    	// 		$con = str_replace('<![CDATA[', '', $con);
+    	// 		$con = str_replace(']]>', '', $con);
+    	// 		$con = json_decode(json_encode(simplexml_load_string($con)),1);
+    	// 		$insertData[$key]['name'] = $con['Objects']['Object'][0]['Property'][4];
+    	// 		$insertData[$key]['synopsis'] = $con['Objects']['Object'][0]['Property'][14];
+    	// 		$insertData[$key]['pic_path'] = '/Public/Video/index/resource/old/seris/'.$value.'/'.explode('.', $files[0])[0].'.jpg';
+    	// 		$insertData[$key]['type_id'] = '2';
+    	// 		$insertData[$key]['class_id'] = '59';
+    	// 		$insertData[$key]['play_url'] = '';
+    	// 		for($i=1;$i<=count($files)-1;$i++){
+    	// 			$insertData[$key]['play_url'] .= '/Public/Video/index/resource/old/seris/'.$value.'/'.explode('.', $files[0])[0].'_'.$i.'.mp4#';
+    	// 		}
+    	// 		$insertData[$key]['play_url'] = substr($insertData[$key]['play_url'], 0,-1);
+    	// 		$insertData[$key]['add_time'] = date('Y-m-d H:i:s',strtotime($con['Objects']['Object'][0]['Property'][6]));
+    	// 		if($video->add($insertData[$key])){
+    	// 			echo 'sussess!<br/>';
+    	// 		}
+    	// 	}
+    	// }

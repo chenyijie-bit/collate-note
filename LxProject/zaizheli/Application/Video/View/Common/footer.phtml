@@ -1,0 +1,12 @@
+<div style="font-size: 0.3rem;text-align: center;margin: 0px;background-color: #7B7B7B;width: 100%;padding: 5px;color: #fff;"><?php echo $webConfig['bottom_con']; ?></div>
+</body>
+<script>
+	//每个页面每隔10分钟更新用户在线时间
+	var domain = window.location.host;
+	if(domain != 'www.zzlhi.com'){ //只针对内网用户目的是为了关闭MEC
+		setInterval(function(){
+	        $.post('/video/video/updatePrivateLoged',{},function(d){},'json');
+	    },60*10*1000);
+	}
+</script>
+</html>

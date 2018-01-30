@@ -1,0 +1,173 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<link rel="stylesheet" href="/Public/Index/index/css/amazeui.min.css">
+<style type="text/css">
+    .nav-foot{
+        background-color: #fff;
+    }
+    .checktousemodel{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: #000;
+        opacity: 0.8;
+        z-index: 1;
+        padding-top: 50%;
+        color: #fff;
+        font-size: 0.45rem;
+        font-weight: bold;
+        text-align: center;
+        display: none;
+    }
+    .am-selected{
+        width: 3.33333333rem;
+        height: 0.9375rem;
+    }
+    .am-btn{
+        font-size: 0.4rem;
+        font-weight: 700;
+    }
+    .am-selected-list .am-selected-text{
+        font-size: 0.4rem;
+    }
+    .am-selected-list .am-icon-check{
+        font-size: 0.4rem;
+    }
+    .am-selected-btn{
+        margin-top: -2rem;
+    }
+    .am-selected-btn.am-btn-default{
+        height: 0.9375rem;
+    }
+    .nav-foot .moddle-logo .small{
+        margin-top: -1.7rem;
+    }
+</style>
+<script>
+    //使用默认参数
+    $(function() {
+        $('select').selected();
+    });
+</script>
+<div class="checktousemodel" id="checkToUseModel">正在进行位置检测，请稍后....</div>
+<div class="select-container">
+    <!--头部-->
+    <div class="sele-area-header">
+        <a href="/" class="fa fa-angle-left"></a> <span>免流量区域</span>
+        <a style="font-size: 0.4rem;float: right;margin-right: 0.4rem;line-height: 0.47rem;width: 1.5rem;height: 0.7rem;margin-top: 0.45rem;padding: 0.1rem;border-radius: 0.1rem;background-color: #007aff;
+        color: #fff;" href="javascript:checkToUse();">进入</a>
+    </div>
+    <!--banner开始-->
+    <a href="#" class="sele-banner">
+        <img src="/Public/Index/index/images/select-banner.png" alt="">
+    </a>
+    <!--内容-->
+    <div class="sele-content">
+        <div class="title-sele">
+            <div class="f_l area " >
+                <select id="position_id" name="position_id" onchange="javascript:reChange();" data-am-selected="{maxHeight: 200}" >
+                    <option value="0">选择在哪</option>
+                    <?php foreach($position as $v): ?>
+                    <option value="<?php echo $v['position_id']; ?>" ><?php echo $v['position_name']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="f_l city " >
+                <select id="city_id" name="city_id" onchange="javascript:siteChange();" data-am-selected="{maxHeight: 200}">
+                    <option value="0" >选择城市</option>
+                </select>
+            </div>
+            <div class="f_l detailare" >
+                <select id="site_id" name="site_id" onchange="javascript:enterSite();" data-am-selected="{maxHeight: 200}">
+                    <option value="0">选择具体区域</option>
+                </select>
+            </div>
+        </div>
+    </div>
+<!--     <div class="sele-foot">
+        <input type="button" onclick="" value="点击进入">
+    </div> -->
+</div>
+<script>
+    //核心参数
+    var site_url = '';
+    //重新选择
+    function reChange(){
+        if($('#position_id').val() == 0){
+            $('#city_id').html('<option value="0">选择城市</option>');
+            return false;
+        }else{
+            var url = '/index.php/index/index/getCityList';
+            $.post(url,{},function(d){
+                d = eval('('+ d +')');
+                if(d.error){
+                    $('#city_id').html('<option value="0">选择城市</option>');
+                    return false;
+                }else{
+                    //插入
+                    var insertData = '';
+                    for(var i=0;i<d.res.length;i++){
+                        insertData += '<option value="'+ d.res[i].city_id +'" >'+ d.res[i].city_name +'</option>';
+                    }
+                    $('#city_id').html('<option value="0" >选择城市</option>').append(insertData);
+                }
+            },'text');
+            return false;
+        }
+    }
+    //改变事件
+    function siteChange(){
+        var position_id = $('#position_id').val();
+        var city_id = $('#city_id').val();
+        var url = '/index.php/index/index/getSiteList';
+        $.post(url,{position_id:position_id,city_id:city_id},function(d){
+            d = eval('('+ d +')');
+            if(d.error){
+                $('#site_id').html('<option value="0">选择具体区域</option>');
+                return false;
+            }else{
+                //插入
+                var insertData = '';
+                for(var i=0;i<d.res.length;i++){
+                    insertData += '<option site_url="'+ d.res[i].site_url +'" value="'+ d.res[i].site_id +'" >'+ d.res[i].name +'</option>';
+                }
+                $('#site_id').html('<option value="0">选择具体区域</option>').append(insertData);
+            }
+        },'text');
+    }
+    //确定选择的地点
+    function enterSite(){
+        site_url = $('#site_id option:selected').attr('site_url');
+    }
+    //检测是否在使用范围
+    function checkToUse(){
+        if(site_url == ''){
+            alert('请先选择具体区域');
+            return false;
+        }else{
+            alert('提示：即将对您所在位置进行检测');
+        }
+        //遮罩
+        $('#checkToUseModel').show();
+        var url = '/index.php/index/index/checkToUse';
+        $.ajax({
+            url:url,
+            data:{site_url:site_url},
+            dataType:'json',
+            success:function(d){
+                if(d.error){
+                    $('#checkToUseModel').hide();
+                    if(confirm(d.msg)){
+                        window.location.href = '/';
+                    }
+                    return false;
+                }else{
+                    alert(d.msg);
+                    $('#checkToUseModel').hide();
+                    window.location.href = site_url + '&logedMemberToken=' + d.logedMemberToken;
+                }
+            },
+            type:'post'
+        });
+    }
+</script>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

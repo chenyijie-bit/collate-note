@@ -1,0 +1,43 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<div class="navpage-content">
+    <div class="nav-header">
+        <a href="#" class="nav_logo"> 在这里</a>
+    </div>
+    <div class="nav-wai">
+        <div class="nav-container clearfix">
+            <div class="nav-left f_l">
+                <a href="/Video?into=index" class="f_l video">
+                    <img src="/Public/Index/index/images/video.png" alt="">
+                    <span>视频</span></a>
+                <a href="javascript:alert('暂未开通，敬请期待');" class="f_l chat">
+                    <img src="/Public/Index/index/images/chat.png" alt="">
+                    <span>聊天</span>
+                </a>
+                <a href="/index.php/index/index/freedata" class="f_l free">
+                    <img src="/Public/Index/index/images/free.png" alt="">
+                    <span>免流量区域</span>
+                </a>
+                <a href="/Hospital?into=index" class="f_l nav-ask">
+                    <img src="/Public/Index/index/images/nav-ask.png" alt="">
+                    <span>问诊</span>
+                </a>
+            </div>
+            <?php if($member): ?>
+            <div class="f_r">
+                <a href="/index.php/index/index/memberInfo?member_id=<?php echo $member['member_id']; ?>" class="f_r nav-login" >
+                    <img style="border-radius:50%;" src="<?php echo $member['base64_con']; ?>" alt="">
+                    <span><?php echo $member['nick_name']; ?></span>
+                </a>
+            </div>
+            <?php else: ?>
+            <div class="f_r" onclick="javascript:window.location.href='http://www.zzlhi.com/log/action/in?refererUrl=http://<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>?holder=true';">
+                <a href="#" class="f_r nav-login" >
+                    <img src="/Public/Index/index/images/login.png" alt="">
+                    <span>注册/登录</span>
+                </a>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

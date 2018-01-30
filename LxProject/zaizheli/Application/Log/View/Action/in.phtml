@@ -1,0 +1,61 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<body class="re-bo-all">
+<div class="regist-all">
+	<div class="re-it">
+		<div class="re-t">
+			<a href="<?php echo $refererUrl; ?>">
+                <div class="return"></div>
+            </a>
+			<span class="login-l">统一登录</span>
+		</div>
+		<div class="re-i">
+			<img src="/Public/Video/index/image/logo.png" alt="">
+		</div>
+	</div>
+	<form>
+    	<div class="re-body">	
+    		<input type="text" class="re-in-tel" name="phone_num" placeholder="手机号码">
+    		<div class="re-ipb">
+    			<input type="password" class="re-in-pas" name="password" placeholder="密码">
+    		</div>
+  		</div>
+  	</form>
+	<div class="forget-pw">
+	  	<a href="/log/action/findPassword?refererUrl=<?php echo $refererUrl; ?>">找回密码</a>
+	</div>
+	<div class="re-ck-but">
+		<input type="button" onclick="javascript:login();return false;" style="color: #fff" class="re-in-but" value="登录">
+	</div>
+	<div class="login-reg">
+		<a href="/log/action/reg?refererUrl=<?php echo $refererUrl; ?>" class="log-r-a">注册新账号</a> 
+	</div>
+	<div class="nav-foot">
+		<div class="line-left f_l"></div>
+		<div class="moddle-logo">
+		    <img src="/Public/Video/index/image/bot.png" alt="">
+		    <p class="big f_l">在这里</p >
+		    <p class="small f_l">zzlhi.com</p >
+		</div>
+		<div class="line-right f_r"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function login(){
+		//准备
+		var data = $('form').serialize();
+		var url = "/log/action/in";
+		//发送
+		$.post(url,{data:data},function(d){
+			d = eval('('+ d +')');
+			if(d.error){
+				alert(d.msg);
+				return false;
+			}else{
+				window.location.href = "<?php echo $refererUrl; ?>&logedMemberToken=" + d.token;
+				return false;
+			}
+		},'text');
+	}
+</script>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>

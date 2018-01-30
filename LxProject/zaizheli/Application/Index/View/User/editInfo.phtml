@@ -1,0 +1,72 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<link href="/Public/Video/index/css/mui.css" rel="stylesheet"/>
+<link href="/Public/Video/index/css/main.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+	.mona-ipb input{
+		font-size: 0.4rem;
+	}
+	.regist-all .re-it .re-t a{
+		height: 1.45rem;
+	}
+    body{
+        background-color: #FFFFFF;
+    }
+</style>
+<body>
+<div class="per-container">
+<div class="regist-all">
+    <div class="mona-borer">
+    	<iframe style="width: 1px;height: 1px;display:block;position:fixed;bottom:1px;opacity:0.1" name="iframeUpload"></iframe>
+  		<form method="post" target="iframeUpload" enctype="multipart/form-data">
+        <div class="person-bg" style="margin-bottom: 2rem;">
+            <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>" class="fa fa-angle-left"></a>
+            <div class="sw_logo">
+                <input type="file" id="logofile" value="<?php echo $res['headimg_path']; ?>" name="headimg_path" class="in_file">
+                <div class="headimg">
+                    <img id="headimg" src="<?php echo $res['base64_con']; ?>" alt="">
+                    <span class="mona-p imgLogo" style="height: 0.5rem;top: 2rem;background-color: #00BCD4;line-height: 0.5rem;font-size: 0.2rem;color: #FFF;text-align: center;left: 0.25rem;">修改头像</span>
+                </div>
+            </div>  
+        </div>
+            <div class="mona-ipb">
+                <span class="mona-p">电话:</span>
+                <input type="text" class="mona-nicheng" placeholder="" value="<?php echo $res['phone_num']; ?>" disabled="true">
+            </div>
+    		<div class="mona-ipb">
+    			<span class="mona-p">昵称:</span>
+    			<input type="text" class="mona-nicheng" placeholder="" value="<?php echo $res['nick_name']; ?>" name="nick_name">
+  		  	</div>
+  		  	<div class="mona-sex">
+  		  		<span class="mona-p">性别:</span>
+  		  		<input type="radio" value="1" class="sex" <?php echo $res['sex'] == '1' ? 'checked' : ''; ?> name="sex">男
+  		  		<input type="radio" value="0" class="sex" <?php echo $res['sex'] == '0' ? 'checked' : ''; ?> name="sex">女
+  		  	</div>
+    		<div class="mona-ipb">
+  		        <span class="mona-p">生日:</span>
+ 			    <input type="date" value="<?php echo $res['birthday']; ?>" name="birthday" class="birthday">
+ 	        </div>
+    		<div class="re-ck-but mona-ck-but">
+    			<button class="re-in-but" style="background-color:#2196F3;">保存</button>
+    		</div>
+		</form>
+	</div>
+</div>
+</div>
+</body>
+<script>
+	$("#logofile").on('change', function () {
+        fileToBase64($(this), function (imgBase64) {
+            $('#headimg').attr('src', imgBase64);
+        });
+    });
+	function fileToBase64(file, callback, outputFormat) {
+        var file = file[0];
+        if (file.files && file.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                callback.call(this, evt.target.result);
+            }
+            reader.readAsDataURL(file.files[0]);
+        }
+    }
+</script>
