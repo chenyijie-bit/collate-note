@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在这里共享商企平台 -注册</title>
+    <meta name="keywords" content="在这里共享商企平台,在这里,商企共享平台,共享平台">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/Public/hplus/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="/Public/hplus/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="/Public/hplus/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/Public/hplus/css/animate.min.css" rel="stylesheet">
+    <link href="/Public/hplus/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="/Public/hplus/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+    <style>
+    table th {
+        width: 130px;
+    }
+    .loginscreen.middle-box {
+    width: 600px;
+}
+    .middle-box {
+        max-width: 600px;
+        z-index: 100;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+    #table-content tr td {
+        border-right: 1px solid #e7eaec;
+    }
+     .webScreen {
+        width: 600px;
+        max-width: 600px;
+    }
+    @media screen and (max-width: 600px) {
+   html{ font-size:14px}
+    .loginscreen.middle-box {
+        width: 20rem;
+    }
+    .webScreen {   
+        margin:auto;
+        width: 20rem;
+        max-width: 20rem;
+        position: absolute;
+        left: 0;
+        top:0;
+        right: 0;
+        bottom: 0;  
+    }
+    .webScreen h2{
+        font-size: 1.5rem;
+    }
+    .webScreen .pZhu{
+         font-size: 0.6rem;
+    }
+    .webScreen li a{
+        font-size:0.6rem; 
+    }
+     .webScreen input{
+        font-size: 0.6rem;
+        padding: 5px;
+     }
+     .tabs-container .panel-body{
+        padding: 1.1rem;
+     }
+     .text-muted{
+        font-size: 0.8rem
+     }
+   }
+    </style>
+</head>
+<body class="gray-bg" style="position: relative;">
+    <div class="middle-box text-center loginscreen animated fadeInDown webScreen" >
+        <div>
+            <div>
+                <h2>在这里共享商企平台</h2>
+            </div>
+            <p class="pZhu">注册前需要核准您的营业信息，以保证您身份的真实和安全性</p>
+            <form id="reg_form" class="m-t" role="form" action="" method="post">
+                <div class="tabs-container">
+                    <ul id="tab-ul" class="nav nav-tabs">
+                        <li class="active" name="geren">
+                            <a data-toggle="tab" href="#tab-1" aria-expanded="true">个体</a>
+                        </li>
+                        <li class="" name="qiye">
+                            <a data-toggle="tab" href="#tab-2" aria-expanded="false">企业</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <input type="text" id="geren-input" class="form-control pull-left" placeholder="输入个体户工商注册号" style='width: 75%'>
+                                    <button type="button" onclick="javascript:searchInfo('geren');" class="btn btn-primary btn-sm pull-left" style='width: 20%;padding: 6px 0;margin-left: 5px;' >查询</button>
+                                </div> 
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+                              <div class="form-group" style="margin-bottom: 0;">
+                                    <input type="text" id="qiye-input" class="form-control pull-left" placeholder="输入完整的公司名称" style='width: 75%'>
+                                    <button type="button" onclick="javascript:searchInfo('qiye');" class="btn btn-primary btn-sm pull-left" style='width: 20%;padding: 6px 0;margin-left: 5px;'>查询</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <div>
+                <div class="ibox float-e-margins" id="display-info-div" style="display: none">
+                    <div class="ibox-title">
+                        <h5>以下是您的工商登记信息：</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center; border-right: 1px solid #e7eaec">类别</th>
+                                    <th style="text-align: center;">信息</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-content"></tbody>                                                                  
+                        </table>
+                        <div id="reg_submit" class="btn btn-primary block full-width m-b">已核对，下一步</div>
+                    </div>
+                </div>
+                <div id="seRes" style="width: 1px;height: 1px;display: none;"></div>
+               </div>
+                <p class="text-muted text-center" style="margin-top: 10px;">
+                    <small>已经有账户了？</small>
+                    <a href="/Business/Log/in">点此登录</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script src="/Public/hplus/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/Public/hplus/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="/Public/hplus/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="/Public/hplus/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+        });
+
+        //查询
+        function searchInfo(type){
+            if(type == 'geren'){
+                var value = $('#geren-input').val();
+            }else if(type == 'qiye'){
+                var value = $('#qiye-input').val();
+            }else{
+                var value = '';
+            }
+            if(value == ''){
+                swal("输入的信息不可以为空","","warning");
+                return false;
+            }
+            var url = "/Business/Log/check";
+            $.post(url,{type:type,value:value},function(d){
+                if(d.error){
+                    $('#display-info-div').hide();
+                    swal(d.msg, "", "warning");
+                    return false;
+                }else{
+                    $('#table-content').html(d.res);
+                    $('#display-info-div').show();
+                    $('#seRes').text(d.seRes);
+                }
+            },'json');
+        }
+        $('#reg_submit').click(function(){
+            window.location.href = "/Business/Log/reg?seRes="+$('#seRes').text();
+        });
+    </script>
+</body>
+</html>

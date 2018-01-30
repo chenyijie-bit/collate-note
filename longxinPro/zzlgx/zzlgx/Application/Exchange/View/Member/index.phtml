@@ -1,0 +1,187 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<body ontouchstart>
+<!--主体-->
+<div class='weui-content'>
+  <div class="wy-center-top">
+    <div class="weui-media-box weui-media-box_appmsg">
+      <div class="weui-media-box__hd"><img class="weui-media-box__thumb radius" src="<?php echo $business_logo; ?>" alt=""></div>
+      <div class="weui-media-box__bd">
+        <h4 class="weui-media-box__title user-name"><?php echo $user['name']; ?></h4>
+        <p class="user-grade">当前店铺：<?php echo $exchange_name; ?></p>
+        <p class="user-integral" style="margin:5px 0px;">
+            <?php if ($is_member): ?>
+            <p class="user-grade">
+                <img src="/Public/mobile/images/is_member.png"><span style="top: 3px;position: relative;left: 3px;">本店会员</span>
+            </p>
+            <?php else: ?>
+            <p class="user-grade">
+                <img src="/Public/mobile/images/not_member.png"><span style="top: 3px;position: relative;left: 3px;color: #c1c1c1;">非本店会员</span>
+            </p>
+            <?php endif ?>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <div class="weui-panel weui-panel_access">
+    <div class="weui-panel__hd">
+      <a href="/Exchange/Member/myorders" class="weui-cell weui-cell_access center-alloder">
+        <div class="weui-cell__bd wy-cell">
+          <div class="weui-cell__hd"><img src="/Public/mobile/images/center-icon-order-all.png" alt="" class="center-list-icon"></div>
+          <div class="weui-cell__bd weui-cell_primary"><p class="center-list-txt">全部订单</p></div>
+        </div>
+        <span class="weui-cell__ft"></span>
+      </a>   
+    </div>
+    <div class="weui-panel__bd">
+      <div class="weui-flex">
+        <div class="weui-flex__item">
+          <a href="/Exchange/Member/myorders?status=1" class="center-ordersModule">
+            <?php if ($dth > 0): ?>
+            <span class="weui-badge" style="position: absolute;top:5px;right:10px; font-size:10px;"><?php echo $dth; ?></span>
+            <?php endif ?>
+            <div class="imgicon"><img src="/Public/mobile/images/center-icon-order-dfk.png" /></div>
+            <div class="name">待提货</div>
+          </a>
+        </div>
+        <div class="weui-flex__item">
+          <a href="/Exchange/Member/myorders?status=2" class="center-ordersModule">
+            <?php if ($dfh > 0): ?>
+            <span class="weui-badge" style="position: absolute;top:5px;right:10px; font-size:10px;"><?php echo $dfh; ?></span>
+            <?php endif ?>
+            <div class="imgicon"><img src="/Public/mobile/images/center-icon-order-dfh.png" /></div>
+            <div class="name">待发货</div>
+          </a>
+        </div>
+        <div class="weui-flex__item">
+          <a href="/Exchange/Member/myorders?status=3" class="center-ordersModule">
+            <?php if ($dsh > 0): ?>
+            <span class="weui-badge" style="position: absolute;top:5px;right:10px; font-size:10px;"><?php echo $dsh; ?></span>
+            <?php endif ?>
+            <div class="imgicon"><img src="/Public/mobile/images/center-icon-order-dsh.png" /></div>
+            <div class="name">待收货</div>
+          </a>
+        </div>
+        <div class="weui-flex__item">
+          <a href="/Exchange/Member/myorders?status=6" class="center-ordersModule">
+            <?php if ($thh > 0): ?>
+            <span class="weui-badge" style="position: absolute;top:5px;right:10px; font-size:10px;"><?php echo $thh; ?></span>
+            <?php endif ?>
+            <div class="imgicon"><img src="/Public/mobile/images/return.png" /></div>
+            <div class="name">退换货</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="weui-panel weui-panel_access">
+    <div class="weui-panel__hd">
+      <a href="#" class="weui-cell weui-cell_access center-alloder">
+        <div class="weui-cell__bd wy-cell">
+          <div class="weui-cell__hd"><img src="/Public/mobile/images/center-icon-jk.png" alt="" class="center-list-icon"></div>
+          <div class="weui-cell__bd weui-cell_primary"><p class="center-list-txt">我的财务</p></div>
+        </div>
+      </a>   
+    </div>
+    <div class="weui-panel__bd">
+      <div class="weui-flex">
+        <div class="weui-flex__item">
+          <a href="javascript:;" class="center-ordersModule">
+            <div class="center-money"><em><?php echo $piao; ?></em>个</div>
+            <div class="name">当前共享币余额</div>
+          </a>
+        </div>
+        <div class="weui-flex__item">
+          <a href="javascript:;" class="center-ordersModule">
+            <div class="center-money"><em><?php echo $xf; ?></em>个</div>
+            <div class="name">交易完成共享币</div>
+          </a>
+        </div>
+        <div class="weui-flex__item">
+          <a href="javascript:;" class="center-ordersModule">
+            <div class="center-money"><em><?php echo $js; ?></em>件</div>
+            <div class="name">交易完成件数</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="weui-panel">
+        <div class="weui-panel__bd">
+          <div class="weui-media-box weui-media-box_small-appmsg">
+            <div class="weui-cells">
+              <a class="weui-cell weui-cell_access" href="/Exchange/Member/mypiao">
+                <div class="weui-cell__hd"><img src="/Public/mobile/images/center-icon-jyjl.png" alt="" class="center-list-icon"></div>
+                <div class="weui-cell__bd weui-cell_primary">
+                  <p class="center-list-txt">共享币记录</p>
+                </div>
+                <span class="weui-cell__ft"></span>
+              </a>
+              <a class="weui-cell weui-cell_access" href="/Exchange/Member/address_edit">
+                <div class="weui-cell__hd"><img src="/Public/mobile/images/center-icon-dz.png" alt="" class="center-list-icon"></div>
+                <div class="weui-cell__bd weui-cell_primary">
+                  <p class="center-list-txt">收货地址</p>
+                </div>
+                <span class="weui-cell__ft"></span>
+              </a>
+              <a class="weui-cell weui-cell_access" href="/Exchange/Member/repassword">
+                <div class="weui-cell__hd"><img src="/Public/mobile/images/center-icon-dlmm.png" alt="" class="center-list-icon"></div>
+                <div class="weui-cell__bd weui-cell_primary">
+                  <p class="center-list-txt">登录密码修改</p>
+                </div>
+                <span class="weui-cell__ft"></span>
+              </a>
+              <a class="weui-cell weui-cell_access" href="/Exchange/Member/edit_pay">
+                <div class="weui-cell__hd"><img src="/Public/mobile/images/center-icon-dlmm.png" alt="" class="center-list-icon"></div>
+                <div class="weui-cell__bd weui-cell_primary">
+                  <p class="center-list-txt">支付密码修改</p>
+                </div>
+                <span class="weui-cell__ft"></span>
+              </a>
+              <a class="weui-cell weui-cell_access" href="/Exchange/log/out">
+                <div class="weui-cell__hd"><img src="/Public/mobile/images/center-icon-out.png" alt="" class="center-list-icon"></div>
+                <div class="weui-cell__bd weui-cell_primary">
+                  <p class="center-list-txt">退出账号</p>
+                </div>
+                <span class="weui-cell__ft"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+  
+</div>
+
+<!--底部导航-->
+<div class="foot-black"></div>
+<div class="weui-tabbar wy-foot-menu">
+  <?php if(!$_SESSION['exchange']['group_id']): ?>
+  <a href="/Exchange" class="weui-tabbar__item ">
+    <div class="weui-tabbar__icon foot-menu-home"></div>
+    <p class="weui-tabbar__label">首页</p>
+  </a>
+  <?php endif; ?>
+  <a href="<?php echo $_SESSION['exchange']['group_id'] ? '/exchange/goods/group?group_id='.$_SESSION['exchange']['group_id'] : '/Exchange/Goods/lists'; ?>" class="weui-tabbar__item">
+    <div class="weui-tabbar__icon foot-menu-list"></div>
+    <p class="weui-tabbar__label"><?php echo $_SESSION['exchange']['group_id'] ? $group_name : '商品'; ?></p>
+  </a>
+  <a href="/Exchange/Member/index" class="weui-tabbar__item weui-bar__item--on">
+    <div class="weui-tabbar__icon foot-menu-member"></div>
+    <p class="weui-tabbar__label">我的</p>
+  </a>
+</div>
+ 
+</body>
+<!-- 后引用 -->
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>

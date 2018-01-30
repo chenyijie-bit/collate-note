@@ -1,0 +1,59 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<body ontouchstart style="background:#2f2f2f;">
+<!--主体-->
+<div class="login-box">
+  	<div class="lg-title">网站登录</div>
+    <div class="login-form">
+    	<form id="log_in" action="#">
+        	<div class="login-user-name common-div">
+            	<span class="eamil-icon common-icon">
+                	<img src="/Public/mobile/images/eamil.png" />
+                </span>
+                <input type="email" name="phone_num" value="<?php echo $_GET['phone_num']; ?>" placeholder="请输入您的手机号" />        
+            </div>
+            <div class="login-user-pasw common-div">
+            	<span class="pasw-icon common-icon">
+                	<img src="/Public/mobile/images/password.png" />
+                </span>
+                <input type="password" name="password" value="" placeholder="请输入您的密码" />        
+            </div>
+            <a href="javascript:;" id="sign" class="login-btn common-div">登录</a>
+
+        </form>
+    </div>
+    <div class="forgets">
+    	<a href="/Exchange/log/findpassword" style="color: #fff; opacity: 1;">忘记密码？</a>
+        <a href="/Exchange/log/reg" style="color: #fff; opacity: 1;">免费注册</a>
+    </div>
+</div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+
+  $('#sign').click(function(){
+    $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/Exchange/log/in",
+            data:$('#log_in').serialize(),
+            dataType: 'json',
+            async: false,
+            error: function(data) {
+                $.toast('网络错误', "cancel");
+            },
+            success: function(data) {
+                if (data.error == 0) {
+                    window.location.href="<?php echo isset($_SESSION['exchange']['goods_id']) ? '/exchange?g='.$_SESSION['exchange']['goods_id'] : '/exchange/?b='.$_SESSION['exchange']['business_id']; ?>";
+                }else{
+                    $.toast(data.msg, "cancel");
+                }
+            }
+        });
+  });
+</script>

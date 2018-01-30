@@ -1,0 +1,1716 @@
+[ 2017-11-20T14:02:21+08:00 ] 127.0.0.1 /Business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+NOTIC: [8] Undefined index: business C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\CommonController.class.php 第 16 行.
+
+[ 2017-11-20T14:02:21+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-11-20T14:02:24+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2190s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.2260s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18610601520' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.3050s ]
+
+[ 2017-11-20T14:02:46+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2430s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.3140s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18610601520' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.2620s ]
+
+[ 2017-11-20T14:10:40+08:00 ] 127.0.0.1 /Business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: business C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\CommonController.class.php 第 16 行.
+
+[ 2017-11-20T14:10:40+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:10:47+08:00 ] 127.0.0.1 /Business/Log/reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `profession` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `profession`  [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:10:48+08:00 ] 127.0.0.1 /Business/Log/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:21:08+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2950s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.4130s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.4000s ]
+
+[ 2017-11-20T14:21:14+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3230s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.2510s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.3330s ]
+
+[ 2017-11-20T14:21:21+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2350s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.2940s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.2920s ]
+
+[ 2017-11-20T14:21:22+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2750s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.2460s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.2950s ]
+
+[ 2017-11-20T14:21:26+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2830s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.2460s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.3140s ]
+
+[ 2017-11-20T14:21:27+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2810s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.3330s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.2650s ]
+
+[ 2017-11-20T14:21:30+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3020s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.6290s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.6080s ]
+
+[ 2017-11-20T14:21:32+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.4710s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.2280s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = '7fa8282ad93047a4d6fe6111c93b308a' LIMIT 1   [ RunTime:0.7400s ]
+
+[ 2017-11-20T14:22:50+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2290s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = '3d9188577cc9bfe9291ac66b5cc872b7' LIMIT 1   [ RunTime:0.2400s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18332273388' AND `password` = '3d9188577cc9bfe9291ac66b5cc872b7' LIMIT 1   [ RunTime:0.2610s ]
+
+[ 2017-11-20T14:22:52+08:00 ] 127.0.0.1 /Business/Log/reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `profession` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `profession`  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:23:41+08:00 ] 127.0.0.1 /Business/Log/get_citys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `city` WHERE `province_id` = '110000'  [ RunTime:0.0120s ]
+
+[ 2017-11-20T14:23:42+08:00 ] 127.0.0.1 /Business/Log/get_areas
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `area` WHERE `city_id` = 110100  [ RunTime:0.0220s ]
+
+[ 2017-11-20T14:24:12+08:00 ] 127.0.0.1 /Business/Log/send_code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2190s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.2720s ]
+NOTIC: [8] Undefined index: find_pass C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\LogController.class.php 第 175 行.
+
+[ 2017-11-20T14:24:57+08:00 ] 127.0.0.1 /Business/Log/reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:03+08:00 ] 127.0.0.1 /Business/Log/reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2220s ]
+SQL: INSERT INTO `business` (`legal_name`,`card_num`,`company_name`,`exchange_name`,`business_address`,`profession_id`,`province_id`,`city_id`,`area_id`,`password`,`phone_num`,`leader`,`add_time`,`verify`) VALUES ('陈','13246512345656','杰威尔','商城','北京丰台','1','110000','110100','110102','e10adc3949ba59abbe56e057f20f883e','18610601520','0','2017-11-20 14:25:02','1') [ RunTime:0.0540s ]
+
+[ 2017-11-20T14:25:04+08:00 ] 127.0.0.1 /Business/Log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:08+08:00 ] 127.0.0.1 /business/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2290s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 2147483647 AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.2350s ]
+SQL: SELECT * FROM `business` WHERE `phone_num` = '18610601520' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.2780s ]
+SQL: UPDATE `business` SET `last_login`='2017-11-20 14:25:07' WHERE `phone_num` = '18610601520' [ RunTime:0.5410s ]
+SQL: UPDATE `business` SET `status`='0' WHERE `phone_num` = '18610601520' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' [ RunTime:0.2170s ]
+
+[ 2017-11-20T14:25:08+08:00 ] 127.0.0.1 /business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2380s ]
+SQL: SELECT `exchange_name`,`status` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:10+08:00 ] 127.0.0.1 /Business/Index/index_base
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2280s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2230s ]
+SQL: SHOW COLUMNS FROM `member_10000` [ RunTime:0.0500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10000` LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `dispense` [ RunTime:0.4330s ]
+SQL: SELECT SUM(pay_num) AS tp_sum FROM `dispense` WHERE `business_id` = 10004 AND ( `add_time` > '2017-11-20 00:00:00' AND `add_time` < '2017-11-20 23:59:59'  ) LIMIT 1   [ RunTime:0.2390s ]
+SQL: SELECT * FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.2270s ]
+SQL: SHOW COLUMNS FROM `profession` [ RunTime:0.0620s ]
+SQL: SELECT * FROM `profession`  [ RunTime:0.0170s ]
+SQL: SELECT SUM(reward_piao) AS tp_sum FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT SUM(add_piao) AS tp_sum FROM `dispense` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0120s ]
+SQL: SELECT SUM(sell_business_piao) AS tp_sum FROM `order` WHERE `sell_business_id` = 10004 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(business_piao) AS tp_sum FROM `order` WHERE `business_id` = 10004 AND `sell_business_id` <> 0 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT SUM(business_piao) AS tp_sum FROM `order` WHERE `business_id` = 10004 AND `sell_business_id` = 0 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `finance_log` [ RunTime:0.0080s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `finance_log` WHERE `business_id` = 10004 AND `type` = 1 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `finance_log` WHERE `business_id` = 10004 AND `type` = 2 LIMIT 1   [ RunTime:0.1280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `placard` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `placard` ORDER BY add_time desc LIMIT 7   [ RunTime:0.0110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:11+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2300s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0650s ]
+
+[ 2017-11-20T14:25:13+08:00 ] 127.0.0.1 /business/center/activate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `system_config`  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2250s ]
+SQL: SELECT `business_id`,`status`,`lose_time`,`activate_time` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:25:17+08:00 ] 127.0.0.1 /Business/Center/activate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `system_config` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `system_config`  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2580s ]
+SQL: SELECT `leader` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.1180s ]
+SQL: UPDATE `business` SET `activate_time`='2017-11-20 14:25:16',`lose_time`='2018-11-20 14:25:16',`status`='1',`activate_price`='5000' WHERE `business_id` = 10004 [ RunTime:0.0290s ]
+SQL: UPDATE `business` SET `piao`=piao+100 WHERE `business_id` = 0 [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `piao_log` [ RunTime:0.0320s ]
+SQL: INSERT INTO `piao_log` (`business_id`,`piao`,`type`,`description`,`add_time`) VALUES ('0','100','1','推荐奖励','2017-11-20 14:25:17') [ RunTime:0.0210s ]
+SQL:             CREATE TABLE `member_10004` ( `phone_num` varchar(50) NOT NULL COMMENT '手机号', `name` varchar(50) DEFAULT NULL COMMENT '姓名', `sex` tinyint(1) unsigned DEFAULT '0' COMMENT '性别（1男，0女）', `add_time` datetime DEFAULT NULL COMMENT '添加时间', `join_time` date DEFAULT NULL COMMENT '入会时间', `birth_time` date DEFAULT NULL COMMENT '生日', `birth_send_time` date DEFAULT NULL COMMENT '生日奖励时间', PRIMARY KEY (`phone_num`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; [ RunTime:0.0460s ]
+
+[ 2017-11-20T14:25:22+08:00 ] 127.0.0.1 /business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2320s ]
+SQL: SELECT `exchange_name`,`status` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:23+08:00 ] 127.0.0.1 /Business/Index/index_base
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2480s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2780s ]
+SQL: SHOW COLUMNS FROM `member_10004` [ RunTime:0.0470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dispense` [ RunTime:0.0140s ]
+SQL: SELECT SUM(pay_num) AS tp_sum FROM `dispense` WHERE `business_id` = 10004 AND ( `add_time` > '2017-11-20 00:00:00' AND `add_time` < '2017-11-20 23:59:59'  ) LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT * FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.2420s ]
+SQL: SHOW COLUMNS FROM `profession` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `profession`  [ RunTime:0.0120s ]
+SQL: SELECT SUM(reward_piao) AS tp_sum FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT SUM(add_piao) AS tp_sum FROM `dispense` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0130s ]
+SQL: SELECT SUM(sell_business_piao) AS tp_sum FROM `order` WHERE `sell_business_id` = 10004 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT SUM(business_piao) AS tp_sum FROM `order` WHERE `business_id` = 10004 AND `sell_business_id` <> 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(business_piao) AS tp_sum FROM `order` WHERE `business_id` = 10004 AND `sell_business_id` = 0 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `finance_log` [ RunTime:0.0090s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `finance_log` WHERE `business_id` = 10004 AND `type` = 1 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `finance_log` WHERE `business_id` = 10004 AND `type` = 2 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `placard` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `placard` ORDER BY add_time desc LIMIT 7   [ RunTime:0.0120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:24+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2370s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0160s ]
+
+[ 2017-11-20T14:25:33+08:00 ] 127.0.0.1 /Business/Index/index_base
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2310s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2310s ]
+SQL: SHOW COLUMNS FROM `member_10004` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` LIMIT 1   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `dispense` [ RunTime:0.0090s ]
+SQL: SELECT SUM(pay_num) AS tp_sum FROM `dispense` WHERE `business_id` = 10004 AND ( `add_time` > '2017-11-20 00:00:00' AND `add_time` < '2017-11-20 23:59:59'  ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.2210s ]
+SQL: SHOW COLUMNS FROM `profession` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `profession`  [ RunTime:0.0100s ]
+SQL: SELECT SUM(reward_piao) AS tp_sum FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT SUM(add_piao) AS tp_sum FROM `dispense` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0200s ]
+SQL: SELECT SUM(sell_business_piao) AS tp_sum FROM `order` WHERE `sell_business_id` = 10004 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT SUM(business_piao) AS tp_sum FROM `order` WHERE `business_id` = 10004 AND `sell_business_id` <> 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT SUM(business_piao) AS tp_sum FROM `order` WHERE `business_id` = 10004 AND `sell_business_id` = 0 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `finance_log` [ RunTime:0.0150s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `finance_log` WHERE `business_id` = 10004 AND `type` = 1 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `finance_log` WHERE `business_id` = 10004 AND `type` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.2440s ]
+SQL: SHOW COLUMNS FROM `placard` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `placard` ORDER BY add_time desc LIMIT 7   [ RunTime:0.0260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:35+08:00 ] 127.0.0.1 /Business/Goods/exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE ( is_del = 0 and is_gx = 1 and status = 1 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: select * from goods where is_del = 0 and is_gx = 1 and status = 1 order by add_time desc limit 0,12 [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `goods_type`  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `agent` WHERE `business_id` = 10004  [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 353 行.
+NOTIC: [8] Undefined variable: citys C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 361 行.
+NOTIC: [8] Undefined variable: areas C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 362 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 49 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 56 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 63 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 71 行.
+NOTIC: [8] Undefined index: keywords C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 76 行.
+NOTIC: [8] Undefined index: goods_type_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 88 行.
+NOTIC: [8] Undefined index: province_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 88 行.
+NOTIC: [8] Undefined index: city_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 88 行.
+NOTIC: [8] Undefined index: area_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\exchange.phtml 第 88 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:25:42+08:00 ] 127.0.0.1 /Business/Goods/myexchangeinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `business_id` = 10004 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `agent` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `business_id` = 10004 AND `is_del` = 0 AND `is_gx` = 1 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `business_id` = 10004 AND `is_del` = 0 AND `status` = 1 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `goods_type`  [ RunTime:0.0130s ]
+SQL: SELECT `goods_type_id` FROM `goods` WHERE `business_id` = 10004 AND `is_del` = 0 GROUP BY goods_type_id  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: goods_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\myexchangeinfo.phtml 第 133 行.
+NOTIC: [8] Undefined index: goods_id C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\myexchangeinfo.phtml 第 147 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:25:45+08:00 ] 127.0.0.1 /Business/Goods/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE ( business_id = 10004 and is_del = 0 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE ( business_id = 10004 and is_del = 0 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: select * from goods where business_id = 10004 and is_del = 0 order by add_time desc limit 0,10 [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `goods_type`  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `group` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `group` WHERE `business_id` = 10004 AND `is_del` = 1  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `group_goods` [ RunTime:0.0130s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `group_goods` WHERE `goods_id` IN () 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `group_goods` WHERE `goods_id` IN () 
+
+[ 2017-11-20T14:25:47+08:00 ] 127.0.0.1 /Business/Goods/myagent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `agent` WHERE `business_id` = 10004  [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: myAgents C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 448 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE ( goods_id in (0) and business_id != 10004 and is_del = 0 ) LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE ( goods_id in (0) and business_id != 10004 and is_del = 0 ) LIMIT 1   [ RunTime:0.0330s ]
+SQL: select * from goods where goods_id in (0) and business_id != 10004 and is_del = 0 order by add_time desc limit 0,10 [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `goods_type`  [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `group` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `group` WHERE `business_id` = 10004 AND `is_del` = 1  [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `group_goods` [ RunTime:0.0370s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `group_goods` WHERE `goods_id` IN () 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `group_goods` WHERE `goods_id` IN () 
+
+[ 2017-11-20T14:25:49+08:00 ] 127.0.0.1 /Business/Goods/group_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `group` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `group` WHERE `business_id` = 10004 AND `is_del` = 1 LIMIT 1   [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: keywords C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\GoodsController.class.php 第 560 行.
+SQL: SELECT * FROM `group` WHERE `business_id` = 10004 AND `is_del` = 1  [ RunTime:0.0190s ]
+SQL: select group_id,count(*) as count from group_goods where business_id = 10004 group by group_id [ RunTime:0.0100s ]
+SQL: select gg.group_id,count(*) as count from group_goods gg,goods g where g.business_id = 10004 and g.goods_id=gg.goods_id and gg.business_id=10004 group by gg.group_id [ RunTime:0.0160s ]
+SQL: select gg.group_id,count(*) as count from group_goods gg,goods g where g.business_id<>10004 and g.goods_id=gg.goods_id and gg.business_id=10004 group by gg.group_id [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: keywords C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\group_list.phtml 第 37 行.
+NOTIC: [8] Undefined variable: value C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\group_list.phtml 第 43 行.
+NOTIC: [8] Undefined variable: value C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\group_list.phtml 第 44 行.
+NOTIC: [8] Undefined variable: page C:\wnmp\nginx\www\zzlgx\Application\Business\View\Goods\group_list.phtml 第 118 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:53+08:00 ] 127.0.0.1 /Business/Member/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2320s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2720s ]
+SQL: SHOW COLUMNS FROM `member_10004` [ RunTime:0.0720s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2260s ]
+NOTIC: [8] Undefined index: join_start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\MemberController.class.php 第 24 行.
+NOTIC: [8] Undefined index: join_end_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\MemberController.class.php 第 27 行.
+NOTIC: [8] Undefined index: join_start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\MemberController.class.php 第 30 行.
+NOTIC: [8] Undefined index: birth_start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\MemberController.class.php 第 34 行.
+NOTIC: [8] Undefined index: birth_end_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\MemberController.class.php 第 37 行.
+NOTIC: [8] Undefined index: birth_start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\MemberController.class.php 第 40 行.
+NOTIC: [8] Undefined index: futurebirth C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\MemberController.class.php 第 44 行.
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2620s ]
+SQL: select * from member_10004 where 1 = 1 order by join_time desc [ RunTime:0.0590s ]
+NOTIC: [8] Undefined index: join_start_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\lists.phtml 第 35 行.
+NOTIC: [8] Undefined index: join_end_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\lists.phtml 第 36 行.
+NOTIC: [8] Undefined index: birth_start_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\lists.phtml 第 42 行.
+NOTIC: [8] Undefined index: birth_end_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\lists.phtml 第 43 行.
+NOTIC: [8] Undefined index: sex C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\lists.phtml 第 48 行.
+NOTIC: [8] Undefined index: sex C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\lists.phtml 第 49 行.
+NOTIC: [8] Undefined index: keywords C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\lists.phtml 第 51 行.
+NOTIC: [8] Undefined variable: page C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\lists.phtml 第 154 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:25:55+08:00 ] 127.0.0.1 /Business/Member/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:05+08:00 ] 127.0.0.1 /Business/Member/member_count
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2340s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2540s ]
+SQL: SHOW COLUMNS FROM `member_10004` [ RunTime:0.0600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-01-01' AND `join_time` < '2017-12-31'  ) AND ( sex = 0 ) LIMIT 1   [ RunTime:0.0990s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.8230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-01-01' AND `join_time` < '2017-12-31'  ) AND ( sex = 1 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-1-01' AND `join_time` < '2017-1-31'  ) LIMIT 1   [ RunTime:0.0860s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2570s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-2-01' AND `join_time` < '2017-2-31'  ) LIMIT 1   [ RunTime:0.0710s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-3-01' AND `join_time` < '2017-3-31'  ) LIMIT 1   [ RunTime:0.0580s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2480s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-4-01' AND `join_time` < '2017-4-31'  ) LIMIT 1   [ RunTime:0.0820s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2640s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-5-01' AND `join_time` < '2017-5-31'  ) LIMIT 1   [ RunTime:0.0630s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-6-01' AND `join_time` < '2017-6-31'  ) LIMIT 1   [ RunTime:0.0470s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-7-01' AND `join_time` < '2017-7-31'  ) LIMIT 1   [ RunTime:0.2370s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2900s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-8-01' AND `join_time` < '2017-8-31'  ) LIMIT 1   [ RunTime:0.0680s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-9-01' AND `join_time` < '2017-9-31'  ) LIMIT 1   [ RunTime:0.0600s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-10-01' AND `join_time` < '2017-10-31'  ) LIMIT 1   [ RunTime:0.0570s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-11-01' AND `join_time` < '2017-11-31'  ) LIMIT 1   [ RunTime:0.0510s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `member_10004` WHERE ( `join_time` > '2017-12-01' AND `join_time` < '2017-12-31'  ) LIMIT 1   [ RunTime:0.0580s ]
+NOTIC: [8] Undefined index: year C:\wnmp\nginx\www\zzlgx\Application\Business\View\Member\member_count.phtml 第 33 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:06+08:00 ] 127.0.0.1 /Business/Member/piao_send
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2410s ]
+SQL: SELECT `piao` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0550s ]
+SQL: SELECT `security` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:10+08:00 ] 127.0.0.1 /Business/Finance/orders
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE ( (business_id=10004 OR sell_business_id=10004) ) LIMIT 1   [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 12 行.
+NOTIC: [8] Undefined index: end_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 15 行.
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 18 行.
+NOTIC: [8] Undefined index: order_sn C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 21 行.
+NOTIC: [8] Undefined index: keywords C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 24 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE ( (business_id=10004 OR sell_business_id=10004) ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `order` WHERE ( (business_id=10004 OR sell_business_id=10004) ) ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `transport` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `transport` WHERE ( transport_id > 0 )  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\orders.phtml 第 40 行.
+NOTIC: [8] Undefined index: end_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\orders.phtml 第 41 行.
+NOTIC: [8] Undefined index: order_sn C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\orders.phtml 第 44 行.
+NOTIC: [8] Undefined index: keywords C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\orders.phtml 第 45 行.
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\orders.phtml 第 58 行.
+NOTIC: [8] Undefined index: end_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\orders.phtml 第 58 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:11+08:00 ] 127.0.0.1 /Business/Finance/orders_count_year
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: year C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE ( business_id=10004 ) LIMIT 1   [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `agent` WHERE ( business_id=10004 ) LIMIT 1   [ RunTime:0.0170s ]
+SQL: select month(add_time) as month,sum(pay_num) as sum from dispense where year(add_time)=2017 and business_id=10004 group by month(add_time); [ RunTime:0.0130s ]
+SQL: select month(add_time) as month,sum(add_piao) as sum from dispense where year(add_time)=2017 and business_id=10004 group by month(add_time); [ RunTime:0.0190s ]
+SQL: select month(add_time) as month,sum(num) as sum from `order` where year(add_time)=2017 and business_id=10004 and sell_business_id=0 and status=4 group by month(add_time); [ RunTime:0.0280s ]
+SQL: select month(add_time) as month,sum(num) as sum from `order` where year(add_time)=2017 and business_id=10004 and sell_business_id!=0 and status=4 group by month(add_time); [ RunTime:0.0140s ]
+SQL: select month(add_time) as month,sum(num) as sum from `order` where year(add_time)=2017 and sell_business_id=10004 and sell_business_id!=0 and status=4 group by month(add_time); [ RunTime:0.0130s ]
+SQL: select month(add_time) as month,sum(piao) as sum from `order` where year(add_time)=2017 and business_id=10004 and sell_business_id=0 and status=4 group by month(add_time); [ RunTime:0.0140s ]
+SQL: select month(add_time) as month,sum(business_piao) as sum from `order` where year(add_time)=2017 and business_id=10004 and sell_business_id!=0 and status=4 group by month(add_time); [ RunTime:0.0180s ]
+SQL: select month(add_time) as month,sum(sell_business_piao) as sum from `order` where year(add_time)=2017 and sell_business_id=10004 and sell_business_id!=0 and status=4 group by month(add_time); [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: year C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\orders_count_year.phtml 第 33 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:26:16+08:00 ] 127.0.0.1 /Business/Finance/orders_count_month
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: year C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 206 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE ( business_id=10004 ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `agent` WHERE ( business_id=10004 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: select day(add_time) as day,sum(pay_num) as sum from dispense where year(add_time)=2017 and month(add_time)=11 and business_id=10004 group by day(add_time); [ RunTime:0.0190s ]
+SQL: select day(add_time) as day,sum(add_piao) as sum from dispense where year(add_time)=2017 and month(add_time)=11 and business_id=10004 group by day(add_time); [ RunTime:0.0180s ]
+SQL: select day(add_time) as day,sum(num) as sum from `order` where year(add_time)=2017 and month(add_time)=11 and business_id=10004 and sell_business_id=0 and status=4 group by day(add_time); [ RunTime:0.0290s ]
+SQL: select day(add_time) as day,sum(num) as sum from `order` where year(add_time)=2017 and month(add_time)=11 and business_id=10004 and sell_business_id!=0 and status=4 group by day(add_time); [ RunTime:0.0100s ]
+SQL: select day(add_time) as day,sum(num) as sum from `order` where year(add_time)=2017 and month(add_time)=11 and sell_business_id=10004 and sell_business_id!=0 and status=4 group by day(add_time); [ RunTime:0.0180s ]
+SQL: select day(add_time) as day,sum(piao) as sum from `order` where year(add_time)=2017 and month(add_time)=11 and business_id=10004 and sell_business_id=0 and status=4 group by day(add_time); [ RunTime:0.0130s ]
+SQL: select day(add_time) as day,sum(business_piao) as sum from `order` where year(add_time)=2017 and month(add_time)=11 and business_id=10004 and sell_business_id!=0 and status=4 group by day(add_time); [ RunTime:0.0130s ]
+SQL: select day(add_time) as day,sum(sell_business_piao) as sum from `order` where year(add_time)=2017 and month(add_time)=11 and sell_business_id=10004 and sell_business_id!=0 and status=4 group by day(add_time); [ RunTime:0.0180s ]
+NOTIC: [8] Undefined index: year C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\orders_count_month.phtml 第 33 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:20+08:00 ] 127.0.0.1 /Business/Finance/recharge
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2470s ]
+SQL: SELECT `piao` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0590s ]
+SQL: SELECT `security` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `system_config` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `system_config`  [ RunTime:0.0240s ]
+NOTIC: [8] Undefined index: back C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\recharge.phtml 第 34 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2440s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0240s ]
+
+[ 2017-11-20T14:26:28+08:00 ] 127.0.0.1 /Business/Finance/withdraw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.7160s ]
+SQL: SELECT `piao` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `system_config` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `system_config`  [ RunTime:0.0250s ]
+SQL: SELECT `security` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: select * from bank_card,bank where bank_card.bank_id = bank.bank_id and bank_card.business_id = 10004 [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: back C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\withdraw.phtml 第 28 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:34+08:00 ] 127.0.0.1 /Business/Finance/piao_log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `piao_log` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `piao_log` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 521 行.
+NOTIC: [8] Undefined index: end_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 524 行.
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 527 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 530 行.
+NOTIC: [8] Undefined index: description C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 533 行.
+SQL: SELECT * FROM `piao_log` WHERE `business_id` = 10004 ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 58 行.
+NOTIC: [8] Undefined index: end_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 59 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 65 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 66 行.
+NOTIC: [8] Undefined index: description C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 71 行.
+NOTIC: [8] Undefined index: description C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 72 行.
+NOTIC: [8] Undefined index: description C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 73 行.
+NOTIC: [8] Undefined index: description C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 74 行.
+NOTIC: [8] Undefined index: description C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 75 行.
+NOTIC: [8] Undefined index: description C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 76 行.
+NOTIC: [8] Undefined index: description C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\piao_log.phtml 第 77 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:35+08:00 ] 127.0.0.1 /Business/Finance/capital_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2400s ]
+SQL: SELECT * FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.2500s ]
+SQL: SELECT SUM(reward_piao) AS tp_sum FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dispense` [ RunTime:0.0130s ]
+SQL: SELECT SUM(add_piao) AS tp_sum FROM `dispense` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0130s ]
+SQL: SELECT SUM(sell_business_piao) AS tp_sum FROM `order` WHERE `sell_business_id` = 10004 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT SUM(business_piao) AS tp_sum FROM `order` WHERE `business_id` = 10004 AND `sell_business_id` <> 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT SUM(business_piao) AS tp_sum FROM `order` WHERE `business_id` = 10004 AND `sell_business_id` = 0 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `finance_log` [ RunTime:0.0210s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `finance_log` WHERE `business_id` = 10004 AND `type` = 1 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `finance_log` WHERE `business_id` = 10004 AND `type` = 2 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: back C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\capital_info.phtml 第 8 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:37+08:00 ] 127.0.0.1 /Business/Finance/finance_log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `finance_log` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `finance_log` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0500s ]
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 473 行.
+NOTIC: [8] Undefined index: end_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 476 行.
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 479 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Business\Controller\FinanceController.class.php 第 482 行.
+SQL: select * from finance_log where business_id = 10004 order by add_time desc limit 0,10 [ RunTime:0.1750s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `finance_log` WHERE ( business_id = 10004 and type = 1 ) LIMIT 1   [ RunTime:0.3090s ]
+NOTIC: [8] Undefined index: start_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\finance_log.phtml 第 58 行.
+NOTIC: [8] Undefined index: end_time C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\finance_log.phtml 第 59 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\finance_log.phtml 第 65 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Business\View\Finance\finance_log.phtml 第 66 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:26:41+08:00 ] 127.0.0.1 /Business/Center/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2270s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.2980s ]
+SQL: SHOW COLUMNS FROM `profession` [ RunTime:0.1060s ]
+SQL: SELECT * FROM `profession`  [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.2440s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0950s ]
+SQL: SELECT * FROM `city` WHERE `province_id` = '110000'  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `area` WHERE `city_id` = 110100  [ RunTime:0.0800s ]
+NOTIC: [8] Undefined index: back C:\wnmp\nginx\www\zzlgx\Application\Business\View\Center\info.phtml 第 13 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:42+08:00 ] 127.0.0.1 /Business/Center/repassword
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:45+08:00 ] 127.0.0.1 /Business/Center/notices
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT * FROM `notices` WHERE `business_id` = 10004 ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:26:46+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2240s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0760s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0130s ]
+
+[ 2017-11-20T14:26:46+08:00 ] 127.0.0.1 /Business/Center/recommend
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `placard` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `placard` LIMIT 1   [ RunTime:0.1040s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2590s ]
+SQL: SELECT `status`,`legal_name`,`company_name`,`phone_num`,`add_time`,`reward_piao`,`activate_time` FROM `business` WHERE ( leader = 10004 ) LIMIT 0,10   [ RunTime:0.0180s ]
+SQL: SELECT SUM(reward_piao) AS tp_sum FROM `business` WHERE ( leader = 10004 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `system_config` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `system_config`  [ RunTime:0.0090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:26:59+08:00 ] 127.0.0.1 /Business/Center/placard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `placard` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `placard` LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT * FROM `placard` ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0160s ]
+NOTIC: [8] Undefined index: back C:\wnmp\nginx\www\zzlgx\Application\Business\View\Center\placard.phtml 第 14 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-20T14:27:01+08:00 ] 127.0.0.1 /Business/Center/about_us
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `about_us` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `about_us`  [ RunTime:0.0190s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:27:06+08:00 ] 127.0.0.1 /Business/Center/placard_detail?placard_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `placard` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `placard` WHERE `placard_id` = 1 LIMIT 1   [ RunTime:0.0220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:27:08+08:00 ] 127.0.0.1 /Business/Center/placard?back=true
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `placard` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `placard` LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `placard` ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:27:12+08:00 ] 127.0.0.1 /Business/Center/placard_detail?placard_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `placard` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `placard` WHERE `placard_id` = 1 LIMIT 1   [ RunTime:0.0290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-20T14:27:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2190s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0100s ]
+
+[ 2017-11-20T14:28:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2560s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0150s ]
+
+[ 2017-11-20T14:29:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2300s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0260s ]
+
+[ 2017-11-20T14:30:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2630s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0130s ]
+
+[ 2017-11-20T14:31:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2500s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0210s ]
+
+[ 2017-11-20T14:32:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2250s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0150s ]
+
+[ 2017-11-20T14:33:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3940s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.1740s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.1570s ]
+
+[ 2017-11-20T14:34:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3490s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0650s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0200s ]
+
+[ 2017-11-20T14:35:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.5120s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0490s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0150s ]
+
+[ 2017-11-20T14:36:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3430s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.2400s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.1360s ]
+
+[ 2017-11-20T14:37:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2260s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0500s ]
+
+[ 2017-11-20T14:38:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2290s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0840s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0180s ]
+
+[ 2017-11-20T14:39:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2580s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0510s ]
+
+[ 2017-11-20T14:40:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2320s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0570s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0710s ]
+
+[ 2017-11-20T14:41:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2720s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0940s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0180s ]
+
+[ 2017-11-20T14:42:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2950s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0150s ]
+
+[ 2017-11-20T14:43:49+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.4250s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0860s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.1130s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0090s ]
+
+[ 2017-11-20T14:45:48+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.4080s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0930s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0200s ]
+
+[ 2017-11-20T14:48:17+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2550s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0140s ]
+
+[ 2017-11-20T14:49:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2410s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0210s ]
+
+[ 2017-11-20T14:50:36+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2330s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0140s ]
+
+[ 2017-11-20T14:51:55+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2700s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0810s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0200s ]
+
+[ 2017-11-20T14:53:09+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2410s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0130s ]
+
+[ 2017-11-20T14:54:23+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3180s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0080s ]
+
+[ 2017-11-20T14:56:18+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3210s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.1020s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0520s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0220s ]
+
+[ 2017-11-20T14:58:04+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2420s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0190s ]
+
+[ 2017-11-20T14:59:08+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2360s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.1920s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0580s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0260s ]
+
+[ 2017-11-20T15:00:40+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2370s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0230s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2017-11-20T15:01:48+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2200s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0130s ]
+
+[ 2017-11-20T15:02:53+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2300s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0220s ]
+
+[ 2017-11-20T15:04:12+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2190s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0150s ]
+
+[ 2017-11-20T15:05:31+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3730s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.6300s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:1.5171s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.2360s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0130s ]
+
+[ 2017-11-20T15:11:00+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2270s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0120s ]
+
+[ 2017-11-20T15:12:02+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.1240s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0900s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0140s ]
+
+[ 2017-11-20T15:13:50+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2970s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0100s ]
+
+[ 2017-11-20T15:16:13+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2780s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0090s ]
+
+[ 2017-11-20T15:17:25+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2250s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.3140s ]
+
+[ 2017-11-20T15:18:28+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2650s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0300s ]
+
+[ 2017-11-20T15:19:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2410s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0100s ]
+
+[ 2017-11-20T15:20:26+08:00 ] 127.0.0.1 /Business/Center/notices_num
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2360s ]
+SQL: SELECT `status` FROM `business` WHERE ( business_id = 10004 ) LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `notices` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `notices` WHERE `business_id` = 10004 AND `is_read` = 0 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `business_logo` FROM `business` WHERE `business_id` = 10004 LIMIT 1   [ RunTime:0.0170s ]
+

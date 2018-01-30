@@ -1,0 +1,23 @@
+[ 2017-12-29T14:32:28+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: [8] Undefined index: exchange C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php ç¬¬ 46 è¡Œ.
+NOTIC: [8] Undefined index: exchange C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php ç¬¬ 51 è¡Œ.
+NOTIC: [8] Undefined index: exchange C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php ç¬¬ 66 è¡Œ.
+NOTIC: [8] Undefined index: exchange C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php ç¬¬ 73 è¡Œ.
+NOTIC: [8] Undefined index: exchange C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php ç¬¬ 80 è¡Œ.
+
+[ 2017-12-29T14:32:49+08:00 ] 127.0.0.1 /exchange?b=10001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓÐÕýÈ·´ð¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓÐ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+
+

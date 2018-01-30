@@ -1,0 +1,1872 @@
+[ 2017-11-27T09:41:49+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:41:49+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:05+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:05+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:08+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:08+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:13+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:13+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:16+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:16+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:20+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:42:20+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:45+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:45+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:49+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:42:49+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:43:39+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:43:39+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:43:46+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT `password` FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0150s ]
+SQL: UPDATE `member` SET `pay_pass`='e10adc3949ba59abbe56e057f20f883e' WHERE `phone_num` = '18301557812' [ RunTime:0.0120s ]
+
+[ 2017-11-27T09:43:46+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2340s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0080s ]
+SQL: SELECT `goods_id`,`pics`,`goods_name`,`piao`,`is_jian`,`business_id` FROM `goods` WHERE `is_del` = 0 AND `status` = 1 ORDER BY add_time desc  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0210s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 AND `is_jian` = 1 ORDER BY add_time desc  [ RunTime:0.0070s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 ORDER BY add_time desc  [ RunTime:0.0100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:43:52+08:00 ] 127.0.0.1 /Exchange/Goods/detail?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.2270s ]
+SQL: SHOW COLUMNS FROM `eval` [ RunTime:0.0450s ]
+SQL: SELECT eval.*,member.name FROM `eval`,`member` WHERE eval.goods_id = '37' AND ( eval.phone_num=member.phone_num ) ORDER BY level desc LIMIT 0,3   [ RunTime:0.0100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:43:56+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0080s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0200s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0110s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130182 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2150s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0550s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:00+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+SQL: SELECT `area_id`,`city_id`,`province_id`,`phone_num`,`address`,`name` FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `city` WHERE ( province_id = 130000 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `area` WHERE ( city_id = 130100 )  [ RunTime:0.0130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:04+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0312s ]
+SQL: UPDATE `member` SET `phone_num`='18301557812',`province_id`='130000',`city_id`='130100',`area_id`='130124',`address`='西关镇慈上村' WHERE ( phone_num = 18301557812 ) [ RunTime:0.0156s ]
+
+[ 2017-11-27T09:44:14+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0200s ]
+SQL: UPDATE `member` SET `phone_num`='18301557812',`province_id`='130000',`city_id`='130100',`area_id`='130124',`address`='23
+23
+2' WHERE ( phone_num = 18301557812 ) [ RunTime:0.0120s ]
+
+[ 2017-11-27T09:44:19+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0110s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0140s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0140s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2120s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:23+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0120s ]
+SQL: SELECT `area_id`,`city_id`,`province_id`,`phone_num`,`address`,`name` FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `city` WHERE ( province_id = 130000 )  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `area` WHERE ( city_id = 130100 )  [ RunTime:0.0100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:26+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0400s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0140s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0250s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0310s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2270s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0140s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:44:29+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0120s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0090s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0120s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0130s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2410s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:30+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0140s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0170s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0150s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0140s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2300s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:30+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0110s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0090s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0080s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2220s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0160s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:31+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0150s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0130s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0180s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0140s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2260s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.1360s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:32+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0090s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0160s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0160s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0080s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2800s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:33+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0100s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0090s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0110s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0160s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3020s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.1840s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0710s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0230s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:34+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0140s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0110s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0060s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0200s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2150s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0480s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:35+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0110s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0120s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0180s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0130s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2240s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0580s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0160s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:35+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0130s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0180s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0120s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0140s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2510s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:44:36+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0090s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0130s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0120s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2330s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:37+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0500s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0380s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0110s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0130s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2400s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.1050s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0550s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0140s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:38+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0120s ]
+SQL: UPDATE `member` SET `phone_num`='18301557812',`province_id`='130000',`city_id`='130100',`area_id`='130124',`address`='23
+23
+2' WHERE ( phone_num = 18301557812 ) [ RunTime:0.0130s ]
+
+[ 2017-11-27T09:44:38+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0220s ]
+SQL: UPDATE `member` SET `phone_num`='18301557812',`province_id`='130000',`city_id`='130100',`area_id`='130124',`address`='23
+23
+2' WHERE ( phone_num = 18301557812 ) [ RunTime:0.0120s ]
+
+[ 2017-11-27T09:44:45+08:00 ] 127.0.0.1 /Exchange/Goods/order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `piao` FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `goods` WHERE `goods_id` = 37 LIMIT 1   [ RunTime:0.2290s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0570s ]
+SQL: INSERT INTO `order` (`address`,`is_ziti`,`message`,`goods_id`,`business_id`,`goods_name`,`phone_num`,`num`,`piao`,`rebate`,`business_piao`,`sell_business_piao`,`order_sn`,`sell_business_id`,`status`,`add_time`,`pic`,`group_id`) VALUES ('河北省 石家庄市 栾城县 23
+23
+2','1','','37','10002','2017新款韩版男士皮衣 青年休闲翻领修身型拉链时尚潮流','18301557812','1','1200','0.1','1080','120','SN151174708517386800','10001','1','2017-11-27 09:44:45','/Public/business/goods/10002/2017_11_01/IMGDT20171101137872.jpg',NULL) [ RunTime:0.0090s ]
+SQL: UPDATE `member` SET `piao`=piao-1200 WHERE ( phone_num = 18301557812 ) [ RunTime:0.0130s ]
+SQL: UPDATE `goods` SET `nums`=nums-1 WHERE ( goods_id = 37 ) [ RunTime:0.0130s ]
+
+[ 2017-11-27T09:44:46+08:00 ] 127.0.0.1 /Exchange/Member/myorders
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `order` WHERE `phone_num` = '18301557812' ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0230s ]
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 30 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 30 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 31 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 31 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 32 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 32 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 33 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 33 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 133 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:44:50+08:00 ] 127.0.0.1 /exchange/member/order_success
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `order` WHERE `order_id` = 25 LIMIT 1   [ RunTime:0.2260s ]
+SQL: UPDATE `order` SET `status`='4' WHERE `order_id` = 25 [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2250s ]
+SQL: UPDATE `business` SET `piao`=piao+1080 WHERE `business_id` = 10002 [ RunTime:0.0470s ]
+SQL: UPDATE `business` SET `piao`=piao+120 WHERE `business_id` = 10001 [ RunTime:0.0150s ]
+
+[ 2017-11-27T09:44:56+08:00 ] 127.0.0.1 /Exchange/Member/add_evaluate?order_id=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:45:10+08:00 ] 127.0.0.1 /exchange/member/add_evaluate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `order` WHERE `order_id` = 25 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.5710s ]
+SQL: SHOW COLUMNS FROM `eval` [ RunTime:0.0110s ]
+SQL: INSERT INTO `eval` (`level`,`content`,`order_id`,`goods_id`,`phone_num`) VALUES ('4','123456','25','37','18301557812') [ RunTime:0.0110s ]
+SQL: UPDATE `order` SET `is_eval`='1' WHERE `order_id` = 25 AND `phone_num` = '18301557812' [ RunTime:0.0160s ]
+
+[ 2017-11-27T09:45:11+08:00 ] 127.0.0.1 /Exchange/Member/myorders
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `order` WHERE `phone_num` = '18301557812' ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0190s ]
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 30 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 30 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 31 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 31 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 32 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 32 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 33 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 33 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 133 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:45:17+08:00 ] 127.0.0.1 /Exchange/Member/myorders?status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `order` WHERE `status` = 1 AND `phone_num` = '18301557812' ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.2270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:45:21+08:00 ] 127.0.0.1 /Exchange/Member/myorders?status=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `order` WHERE `status` = 2 AND `phone_num` = '18301557812' ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.2270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:45:23+08:00 ] 127.0.0.1 /Exchange/Member/myorders?status=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `order` WHERE `status` = 3 AND `phone_num` = '18301557812' ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.2240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:45:25+08:00 ] 127.0.0.1 /Exchange/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member_10001` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `member_10001` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2250s ]
+SQL: SELECT `business_logo`,`exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0120s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `order` WHERE `status` = 4 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `order` WHERE `status` = 4 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 1 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 2 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 3 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 154 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 160 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 162 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:45:31+08:00 ] 127.0.0.1 /Exchange/Goods/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0130s ]
+SQL: SELECT `goods_id`,`pics`,`goods_name`,`piao`,`sales_volume` FROM `goods` WHERE `is_del` = 0 AND `status` = 1 AND `business_id` = 10001 ORDER BY sales_volume desc LIMIT 0,10   [ RunTime:0.2190s ]
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 24 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 25 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 26 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 28 行.
+NOTIC: [8] Undefined index: order C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 108 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 130 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 134 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 137 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 150 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 154 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 157 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:45:33+08:00 ] 127.0.0.1 /Exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2170s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0180s ]
+SQL: SELECT `goods_id`,`pics`,`goods_name`,`piao`,`is_jian`,`business_id` FROM `goods` WHERE `is_del` = 0 AND `status` = 1 ORDER BY add_time desc  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0190s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 AND `is_jian` = 1 ORDER BY add_time desc  [ RunTime:0.0110s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 ORDER BY add_time desc  [ RunTime:0.0090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:45:35+08:00 ] 127.0.0.1 /Exchange/Goods/detail?goods_id=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods` WHERE `goods_id` = 32 LIMIT 1   [ RunTime:0.2220s ]
+SQL: SHOW COLUMNS FROM `eval` [ RunTime:0.0620s ]
+SQL: SELECT eval.*,member.name FROM `eval`,`member` WHERE eval.goods_id = '32' AND ( eval.phone_num=member.phone_num ) ORDER BY level desc LIMIT 0,3   [ RunTime:0.0120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:45:38+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0290s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0160s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130100 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0120s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130124 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0290s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 32 LIMIT 1   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2510s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:45:40+08:00 ] 127.0.0.1 /Exchange/Goods/detail?goods_id=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `goods` WHERE `goods_id` = 32 LIMIT 1   [ RunTime:0.2240s ]
+SQL: SHOW COLUMNS FROM `eval` [ RunTime:0.0590s ]
+SQL: SELECT eval.*,member.name FROM `eval`,`member` WHERE eval.goods_id = '32' AND ( eval.phone_num=member.phone_num ) ORDER BY level desc LIMIT 0,3   [ RunTime:0.0090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:45:56+08:00 ] 127.0.0.1 /Exchange/Goods/order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `piao` FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods` WHERE `goods_id` = 32 LIMIT 1   [ RunTime:0.2190s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0630s ]
+SQL: INSERT INTO `order` (`address`,`is_ziti`,`message`,`goods_id`,`business_id`,`goods_name`,`phone_num`,`num`,`piao`,`rebate`,`business_piao`,`sell_business_piao`,`order_sn`,`sell_business_id`,`status`,`add_time`,`pic`,`group_id`) VALUES ('河北省 石家庄市 栾城县 23
+23
+2','1','','32','10002','喇叭袖套头宽松腰七分袖不对称蝴蝶结2017年春季连衣裙','18301557812','1','1350','0.1','1215','135','SN151174715603992100','10001','1','2017-11-27 09:45:56','/Public/business/goods/10002/2017_11_01/HJQXX20171101994026.jpg',NULL) [ RunTime:0.0160s ]
+SQL: UPDATE `member` SET `piao`=piao-1350 WHERE ( phone_num = 18301557812 ) [ RunTime:0.0130s ]
+SQL: UPDATE `goods` SET `nums`=nums-1 WHERE ( goods_id = 32 ) [ RunTime:0.0080s ]
+
+[ 2017-11-27T09:45:57+08:00 ] 127.0.0.1 /Exchange/Member/myorders
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `order` WHERE `phone_num` = '18301557812' ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0270s ]
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 30 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 30 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 31 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 31 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 32 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 32 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 33 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 33 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 133 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:02+08:00 ] 127.0.0.1 /Exchange/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member_10001` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `member_10001` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2630s ]
+SQL: SELECT `business_logo`,`exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0190s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `order` WHERE `status` = 4 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `order` WHERE `status` = 4 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 1 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 2 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 3 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 154 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 160 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 162 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:46:04+08:00 ] 127.0.0.1 /Exchange/Member/myorders?status=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `order` WHERE `status` = 3 AND `phone_num` = '18301557812' ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.2250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:46:18+08:00 ] 127.0.0.1 /Exchange/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member_10001` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `member_10001` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2270s ]
+SQL: SELECT `business_logo`,`exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0090s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `order` WHERE `status` = 4 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `order` WHERE `status` = 4 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 1 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 2 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 3 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0160s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 154 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 160 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 162 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:46:20+08:00 ] 127.0.0.1 /Exchange/Member/myorders
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `order` WHERE `phone_num` = '18301557812' ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0250s ]
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 30 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 30 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 31 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 31 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 32 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 32 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 33 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 33 行.
+NOTIC: [8] Undefined index: status C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\myorders.phtml 第 133 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:46:23+08:00 ] 127.0.0.1 /Exchange/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member_10001` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `member_10001` WHERE `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2230s ]
+SQL: SELECT `business_logo`,`exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0120s ]
+SQL: SELECT SUM(piao) AS tp_sum FROM `order` WHERE `status` = 4 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `order` WHERE `status` = 4 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 1 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 2 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `order` WHERE `status` = 3 AND `phone_num` = '18301557812' LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 154 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 160 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\index.phtml 第 162 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:28+08:00 ] 127.0.0.1 /Exchange/Member/mypiao
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select dispense.*,business.exchange_name from dispense left join business on dispense.business_id = business.business_id where dispense.phone_num = 18301557812 [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.0080s ]
+SQL: SELECT `business_id`,`sell_business_id`,`num`,`piao`,`goods_name`,`add_time` FROM `order` WHERE `phone_num` = '18301557812' AND `status` = 4  [ RunTime:0.2200s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2200s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0580s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.3150s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.2330s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.3180s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE ( business_id = 10001 ) LIMIT 1   [ RunTime:0.2280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:34+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT `area_id`,`city_id`,`province_id`,`phone_num`,`address`,`name` FROM `member` WHERE ( phone_num = 18301557812 ) LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `city` WHERE ( province_id = 130000 )  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `area` WHERE ( city_id = 130100 )  [ RunTime:0.0170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:36+08:00 ] 127.0.0.1 /Exchange/Member/repassword
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:39+08:00 ] 127.0.0.1 /Exchange/Member/edit_pay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:42+08:00 ] 127.0.0.1 /Exchange/Member/edit_pay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:45+08:00 ] 127.0.0.1 /Exchange/log/out
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:46:49+08:00 ] 127.0.0.1 /exchange?b=10001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2640s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.2580s ]
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 46 行.
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 51 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SELECT `exchange_name` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0670s ]
+SQL: SELECT `goods_id`,`pics`,`goods_name`,`piao`,`is_jian`,`business_id` FROM `goods` WHERE `is_del` = 0 AND `status` = 1 ORDER BY add_time desc  [ RunTime:0.1060s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0500s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 AND `is_jian` = 1 ORDER BY add_time desc  [ RunTime:0.0160s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 ORDER BY add_time desc  [ RunTime:0.0170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:55+08:00 ] 127.0.0.1 /Exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 46 行.
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 51 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.9331s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.2660s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0240s ]
+SQL: SELECT `goods_id`,`pics`,`goods_name`,`piao`,`is_jian`,`business_id` FROM `goods` WHERE `is_del` = 0 AND `status` = 1 ORDER BY add_time desc  [ RunTime:0.0990s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0750s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 AND `is_jian` = 1 ORDER BY add_time desc  [ RunTime:0.0380s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 ORDER BY add_time desc  [ RunTime:0.0200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:46:56+08:00 ] 127.0.0.1 /Exchange/Goods/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 46 行.
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 51 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0820s ]
+SQL: SELECT `goods_id`,`pics`,`goods_name`,`piao`,`sales_volume` FROM `goods` WHERE `is_del` = 0 AND `status` = 1 AND `business_id` = 10001 ORDER BY sales_volume desc LIMIT 0,10   [ RunTime:0.2640s ]
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 24 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 25 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 26 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 28 行.
+NOTIC: [8] Undefined index: order C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 108 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 130 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 134 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 137 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 150 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 154 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 157 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:46:57+08:00 ] 127.0.0.1 /Exchange/Goods/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 46 行.
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 51 行.
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0190s ]
+SQL: SELECT `goods_id`,`pics`,`goods_name`,`piao`,`sales_volume` FROM `goods` WHERE `is_del` = 0 AND `status` = 1 AND `business_id` = 10001 ORDER BY sales_volume desc LIMIT 0,10   [ RunTime:0.2550s ]
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 24 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 25 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 26 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 28 行.
+NOTIC: [8] Undefined index: order C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 108 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 130 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 134 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 137 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 150 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 154 行.
+NOTIC: [8] Undefined index: type C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Goods\lists.phtml 第 157 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:46:57+08:00 ] 127.0.0.1 /Exchange/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 60 行.
+
+[ 2017-11-27T09:46:57+08:00 ] 127.0.0.1 /exchange/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: phone_num C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Log\in.phtml 第 13 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:46:59+08:00 ] 127.0.0.1 /Exchange/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18610601520' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0110s ]
+
+[ 2017-11-27T09:46:59+08:00 ] 127.0.0.1 /Exchange/log/in
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18610601520' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0160s ]
+
+[ 2017-11-27T09:47:00+08:00 ] 127.0.0.1 /exchange?b=10001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2290s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.2180s ]
+
+[ 2017-11-27T09:47:01+08:00 ] 127.0.0.1 /exchange?b=10001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2300s ]
+SQL: SELECT * FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.2570s ]
+
+[ 2017-11-27T09:47:01+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:47:11+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0090s ]
+SQL: SELECT `password` FROM `member` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.0290s ]
+
+[ 2017-11-27T09:47:15+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0240s ]
+SQL: SELECT `password` FROM `member` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2017-11-27T09:47:28+08:00 ] 127.0.0.1 /exchange/log/pay_pass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0150s ]
+SQL: SELECT `password` FROM `member` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.0250s ]
+SQL: UPDATE `member` SET `pay_pass`='f1887d3f9e6ee7a32fe5e76f4ab80d63' WHERE `phone_num` = '18610601520' [ RunTime:0.0720s ]
+
+[ 2017-11-27T09:47:30+08:00 ] 127.0.0.1 /exchange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: group_id C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\CommonController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.5590s ]
+SQL: SELECT `exchange_name` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.1060s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0690s ]
+SQL: SELECT `goods_id`,`pics`,`goods_name`,`piao`,`is_jian`,`business_id` FROM `goods` WHERE `is_del` = 0 AND `status` = 1 ORDER BY add_time desc  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.0790s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 AND `is_jian` = 1 ORDER BY add_time desc  [ RunTime:0.0110s ]
+SQL: SELECT `goods_id` FROM `agent` WHERE `business_id` = 10001 ORDER BY add_time desc  [ RunTime:0.0170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T09:47:34+08:00 ] 127.0.0.1 /Exchange/Goods/detail?goods_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `goods` WHERE `goods_id` = 29 LIMIT 1   [ RunTime:0.2190s ]
+SQL: SHOW COLUMNS FROM `eval` [ RunTime:0.0910s ]
+SQL: SELECT eval.*,member.name FROM `eval`,`member` WHERE eval.goods_id = '29' AND ( eval.phone_num=member.phone_num ) ORDER BY level desc LIMIT 0,3   [ RunTime:0.0340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T09:47:40+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0150s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 29 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2210s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0200s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0080s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T14:35:08+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.3180s ]
+SQL: SELECT `area_id`,`city_id`,`province_id`,`phone_num`,`address`,`name` FROM `member` WHERE ( phone_num = 18610601520 ) LIMIT 1   [ RunTime:0.3310s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0680s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\address_edit.phtml 第 55 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wnmp\nginx\www\zzlgx\Application\Exchange\View\Member\address_edit.phtml 第 61 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T14:35:12+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `city` WHERE ( province_id = 130000 )  [ RunTime:0.0380s ]
+
+[ 2017-11-27T14:35:14+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.1190s ]
+SQL: SELECT * FROM `area` WHERE ( city_id = 130200 )  [ RunTime:0.0140s ]
+
+[ 2017-11-27T14:35:15+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+SQL: UPDATE `member` SET `phone_num`='18610601520',`province_id`='130000',`city_id`='130200',`area_id`='0',`address`='' WHERE ( phone_num = 18610601520 ) [ RunTime:0.0140s ]
+
+[ 2017-11-27T14:35:54+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.5070s ]
+SQL: UPDATE `member` SET `phone_num`='18610601520',`province_id`='130000',`city_id`='130200',`area_id`='130202',`address`='长安街榆林路小酒馆185号' WHERE ( phone_num = 18610601520 ) [ RunTime:1.2491s ]
+
+[ 2017-11-27T14:36:00+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+NOTIC: [2048] Only variables should be passed by reference C:\wnmp\nginx\www\zzlgx\Application\Exchange\Controller\MemberController.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0170s ]
+SQL: UPDATE `member` SET `phone_num`='18610601520',`province_id`='130000',`city_id`='130200',`area_id`='130202',`address`='长安街榆林路小酒馆185号' WHERE ( phone_num = 18610601520 ) [ RunTime:0.0140s ]
+
+[ 2017-11-27T14:36:04+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0120s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0200s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130200 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130202 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0170s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 29 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2390s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T14:36:10+08:00 ] 127.0.0.1 /Exchange/Member/address_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0100s ]
+SQL: SELECT `area_id`,`city_id`,`province_id`,`phone_num`,`address`,`name` FROM `member` WHERE ( phone_num = 18610601520 ) LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `city` WHERE ( province_id = 130000 )  [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `area` WHERE ( city_id = 130200 )  [ RunTime:0.0120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T14:36:12+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0130s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0130s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130200 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0140s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130202 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0160s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 29 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2300s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0600s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0510s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T14:36:14+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0110s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0100s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130200 ) LIMIT 1   [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0160s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130202 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0140s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 29 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.3180s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0270s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-27T14:36:28+08:00 ] 127.0.0.1 /Exchange/Goods/detail?goods_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods` WHERE `goods_id` = 29 LIMIT 1   [ RunTime:0.3460s ]
+SQL: SHOW COLUMNS FROM `eval` [ RunTime:0.0550s ]
+SQL: SELECT eval.*,member.name FROM `eval`,`member` WHERE eval.goods_id = '29' AND ( eval.phone_num=member.phone_num ) ORDER BY level desc LIMIT 0,3   [ RunTime:0.0120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-27T14:36:34+08:00 ] 127.0.0.1 /Exchange/Goods/order?goods_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `member` WHERE `phone_num` = '18610601520' LIMIT 1   [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0130s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 130000 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0120s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 130200 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0160s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 130202 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0180s ]
+SQL: SELECT `goods_id`,`goods_name`,`pics`,`piao` FROM `goods` WHERE `goods_id` = 29 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.2260s ]
+SQL: SELECT `province_id`,`city_id`,`area_id`,`business_address` FROM `business` WHERE `business_id` = 10001 LIMIT 1   [ RunTime:0.0490s ]
+SQL: SELECT `province_name` FROM `province` WHERE ( province_id = 110000 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT `city_name` FROM `city` WHERE ( city_id = 110100 ) LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `area_name` FROM `area` WHERE ( area_id = 110108 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

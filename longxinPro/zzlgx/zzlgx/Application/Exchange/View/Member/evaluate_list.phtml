@@ -1,0 +1,123 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+<style>
+.wy-header {
+    height: 44px;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #e21323;
+    z-index: 100;
+}
+.wy-header-title {
+    margin: 0 50px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    color: #252525;
+    overflow: hidden;
+}
+</style>
+<body ontouchstart>
+ <header class="wy-header ">
+     <a href="javascript:history.back(-1);" title="返回上一页" style="width: 50px;position: absolute;left: 0;top: 0;z-index: 10; height: 45px;"><div class="wy-header-icon-back"><span></span></div></a>
+       <div class="wy-header-title" style="color: #fff">商品全部评价</div>
+</header>
+<!--主体-->
+<div class="weui-content clear">
+  <!--产品评价列表--> 
+        <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">商品评价</div>
+        <div class="weui-panel__bd" id='evaluate-list'>
+            
+          <?php foreach ($evals as $k => $v): ?>
+          <div class="weui-media-box weui-media-box_text">
+           <div class="order-list-Below clear">
+            <h1><?php echo $v['name']; ?></h1>
+            <ul>
+              <?php for ($i=1; $i <= 5; $i++) { 
+                if ($i <= $v['level']) {
+                    echo '<li class="on"></li>';
+                }else{
+                    echo '<li class=""></li>';
+                }
+            } ?>
+            </ul>
+          </div>
+            <p class="weui-media-box__desc" style="padding-left: 15px;"><?php echo $v['content'] ?></p>
+          </div>
+          <?php endforeach ?>
+
+        </div>
+          <?php if (count($evals) < $page_count): ?>
+          <div class="weui-loadmore weui-loadmore_line">
+            <span class="weui-loadmore__tips">没有更多了</span>
+          </div>
+          <?php else: ?>
+          <div class="weui-loadmore">
+            <i class="weui-loading"></i>
+            <span class="weui-loadmore__tips">正在加载...</span>
+          </div>
+          <?php endif ?>
+      </div>
+  </div>
+
+
+</body>
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+<script>
+    var page = 2;
+    $(function() {
+        FastClick.attach(document.body);
+    });
+    var loading = false;  //状态标记
+    $(document.body).infinite().on("infinite", function() {
+      if(loading) return;
+      loading = true;
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/exchange/member/evaluate_list?goods_id=<?php echo $_GET['goods_id']; ?>",
+            data:{'page':page},
+            dataType: 'json',
+            async: false,
+            error: function(data) {
+                loading = false;
+                $.toast("网络错误", "cancel");
+            },
+            success: function(data) {
+                if (data.error == 0) {
+                    
+                    var result = data.result;
+                    for (var i = 0; i < result.length; i++) {
+                        var li = '';
+                        var result_i = result[i];
+                        for ($i=1; $i <= 5; $i++) { 
+                            if ($i <= result_i.level) {
+                                li += '<li class="on"></li>';
+                            }else{
+                                li += '<li class=""></li>';
+                            }
+                        }
+                        var str = '<div class="weui-media-box weui-media-box_text"> <div class="order-list-Below clear"> <h1><?php echo $v['name']; ?></h1> <ul> '+li+' </ul> </div> <p class="weui-media-box__desc" style="padding-left: 15px;"><?php echo $v['content'] ?></p> </div>';
+                        $("#evaluate-list").append(str);
+                    }
+                    page++;
+                    loading = false;
+                }else{
+                    setTimeout(function(){
+                        $('.weui-loadmore').addClass('weui-loadmore_line');
+                        $('.weui-loadmore').html('<i class=""></i> <span class="weui-loadmore__tips">'+data.msg+'</span>');
+                        loading = false;
+                        $.toast(data.msg, "cancel");
+                    },1000);
+                }
+                
+            }
+        });
+    });
+</script> 
+
+

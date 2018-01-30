@@ -1,0 +1,308 @@
+<?php require_once MODULE_PATH.'/View/Common/header.phtml'; ?>
+
+<style>
+
+
+.footable > thead > tr > th.footable-sorted-desc > span.footable-sort-indicator:before {
+     content: "\e012";
+}
+.footable > thead > tr > th > span.footable-sort-indicator:before {
+     content: "\e022";
+}
+.footable > thead > tr > th.footable-sorted > span.footable-sort-indicator:before {
+    content: "\e013";
+}
+</style>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>临时会员</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="">
+                                
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-12">
+                                    <form method="get" action="/business/member/not_formal_list" class="pull-left" style="">
+                                        <div class="form-group" style="float: left;">
+                                            <label class="col-sm-4 control-label" style="padding-right: 0;margin-top: 6px;    width: 100px;">注册时间：</label>
+                                            <div class="col-sm-8"  style="padding-left: 0;padding-right: 10px;">
+                                                <input placeholder="开始日期" name="add_start_time" value="<?php if($_GET['add_start_time']){echo $_GET['add_start_time'];} ?>" class="form-control layer-date" id="start" style="width:50%;height: 30px;font-size: 12px;" >
+                                                <input placeholder="结束日期" name="add_end_time" value="<?php if($_GET['add_end_time']){echo $_GET['add_end_time'];} ?>" class="form-control layer-date " id="end" style="width:50%;height: 30px;font-size: 12px;" >
+                                            </div>
+                                        </div>
+                                        <select name="sex" class="input-sm form-control input-s-sm inline sex-select" style="float: left; width:10%;font-size:12px;margin-right: 5px;    margin-left: -10px;">
+                                            <option value="">性别</option>
+                                            <option <?php echo $_GET['sex'] == 1 ? 'selected' : ''; ?> value="1">男</option>
+                                            <option <?php echo is_numeric($_GET['sex']) && $_GET['sex'] == 0 ? 'selected' : ''; ?> value="0">女</option>
+                                        </select>
+                                        <input type="text" name="keywords" value="<?php if($_GET['keywords']){echo $_GET['keywords'];} ?>" placeholder="输入姓名或者手机号" class="input-sm form-control " style="width:20%;font-size:12px;" >
+                                        <span class="input-group-btn pull-left">
+                                            <button type="submit" class="btn btn-sm btn-primary search-btn"> 搜索</button>
+                                        </span>
+                                    </form>
+                                     <button type="button" onclick="javascript:window.location.href = '/business/member/not_formal_list';" class="btn btn-danger btn-sm  reset-btn pull-left">刷新</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-warn">
+                            <div class="alert alert-warning alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                <b>提示：</b>临时会员的产生是您在未录入该会员时，对方通过扫码您的推广二维码注册了手机端账号，您可以对其进行转正（<b>转正后会进入会员列表</b>），或者删除。</a>
+                            </div>
+                            <div class="alert alert-info">
+                                您现在共有临时会员： <span class="alert-link"><?php echo $countNum;?></span> 人
+                                <?php if(count($_GET) >= 1): ?>
+                                    ，以下为搜索 
+                                    <?php if($_GET['keywords']): ?>
+                                    包含 “<span class="alert-link"><?php echo $_GET['keywords']; ?></span>”
+                                    <?php endif; ?>
+                                    <?php if($_GET['add_time'] && $_GET['add_time']): ?>
+                                    注册时间介于 “<span class="alert-link"><?php echo $_GET['add_time'].'</span> 至 <span class="alert-link">'.$_GET['add_time']; ?></span>”
+                                    <?php elseif($_GET['add_time']): ?>
+                                    注册时间小于 “<span class="alert-link"><?php echo $_GET['add_time']; ?></span>”
+                                    <?php elseif($_GET['add_time']): ?>
+                                    注册时间大于 “<span class="alert-link"><?php echo $_GET['add_time']; ?></span>”
+                                    <?php endif; ?>
+                                    <?php if(is_numeric($_GET['sex'])): ?>
+                                    性别为 “<span class="alert-link"><?php echo $_GET['sex'] == 1 ? '男' : '女'; ?></span>”
+                                    <?php endif; ?>
+                                     的结果：
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="selectBox">
+                        <button type="button" class="btn btn-primary btn-xs allselect" style="margin-left:8px;margin-right: 20px"  onclick="swapCheck()">全选/反选</button>  
+                        <button type="button" class="btn btn-xs btn-success" onclick="javascript:checkBoxFormal();" style="margin-right: 20px">批量转正</button>  
+                        <button type="button" onclick="javascript:checkBoxDelete();" class="btn btn-xs btn-danger">批量删除</button> 
+                        </div>
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="99999999" data-limit-navigation='99999999'>
+                            <thead>
+                                <tr>
+                                    <th data-toggle="true"> 选中</th>
+                                    <th>序号</th>
+                                    <th>姓名</th>
+                                    <th>性别</th>
+                                    <th>手机号</th>
+                                    <th>添加时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($members as $k => $v): ?>
+                                <tr>
+                                    <td>
+                                        <input phone-number=<?php echo $v['phone_num']; ?> type="checkbox" class="i-checks" name="input[]">
+                                    </td>    
+                                    <!-- <td><?php echo $k + 1 + $page['firstRow']; ?></td> -->
+                                    <td><?php echo $k + 1; ?></td>
+                                    <td><?php echo $v['name']; ?></td>
+                                    <td><?php echo $v['sex']; ?></td>
+                                    <td><?php echo $v['phone_num']; ?></td>
+                                    <td><?php echo $v['add_time']; ?></td>
+                                    <td>
+                                        <a href="javascript:oneFormal('<?php echo $v['name']; ?>',<?php echo $v['phone_num']; ?>);">
+                                            <span class="label label-success ">转正</span>
+                                        </a>
+                                        <a href="javascript:oneDelete('<?php echo $v['name']; ?>',<?php echo $v['phone_num']; ?>);">
+                                            <span class="label label-danger ">删除</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                            <!-- <tfoot>
+                                <tr>
+                                    <td colspan="12">
+                                        <div class="b-page">
+                                            <?php echo $page['page']; ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot> -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<?php require_once MODULE_PATH.'/View/Common/footer.phtml'; ?>
+
+<script>
+    $(document).ready(function(){
+        $(".footable").footable();
+          var start = {
+            elem: "#start",
+            format: "YYYY/MM/DD",
+            min:  "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                end.min = datas;
+                end.start = datas
+            }
+        };
+        var end = {
+            elem: "#end",
+            format: "YYYY/MM/DD",
+            min: "2011-06-16 23:59:59",
+            max: laydate.now(),
+            istime: false,
+            istoday: false,
+            choose: function(datas) {
+                start.max = datas
+            }
+        };
+        laydate(start);
+        laydate(end);
+    });
+    //checkbox 全选/取消全选  
+    var isCheckAll = false;  
+    function swapCheck() {  
+        if (isCheckAll) {  
+            $("input[type='checkbox']").each(function() {  
+                this.checked = false;  
+            });  
+            isCheckAll = false;  
+        } else {  
+            $("input[type='checkbox']").each(function() {  
+                this.checked = true;  
+            });  
+            isCheckAll = true;  
+        }  
+    }  
+    //批量删除会员
+    function checkBoxDelete(){
+        var phone_nums = $('input[name="input[]"]:checked').map(function(){
+          return $(this).attr('phone-number');
+        }).get();
+        if(phone_nums.length <= 0){
+            swal('最少需要勾选一个会员', "", "error");
+            return false;
+        }
+        swal({
+            title: "确定要删除所勾选的会员吗？",
+            text: "该操作不可逆，请谨慎操作",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我要删除",
+            cancelButtonText: "再考虑一下",
+            closeOnConfirm: false,
+            closeOnCancel: true
+            },
+            function(isConfirm) {
+                if (isConfirm) {
+                    $.post('/Business/Member/delete',{phone_nums:phone_nums},function(d){
+                        if(d.error){
+                            swal(d.msg, "", "error");
+                            return false;
+                        }else{
+                            swal(d.msg, "", "success");
+                            setTimeout("window.location.reload();",1000);
+                        }
+                    },'json');          
+                }
+            }
+        )
+    }
+    //批量转正
+    function checkBoxFormal(){
+        var phone_nums = $('input[name="input[]"]:checked').map(function(){
+          return $(this).attr('phone-number');
+        }).get();
+        if(phone_nums.length <= 0){
+            swal('最少需要勾选一个会员', "", "error");
+            return false;
+        }
+        swal({
+            title: "确定要转正所勾选的会员吗？",
+            text: "该操作不可逆，请谨慎操作",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我要转正",
+            cancelButtonText: "再考虑一下",
+            closeOnConfirm: false,
+            closeOnCancel: true
+            },
+            function(isConfirm) {
+                if (isConfirm) {
+                    $.post('/Business/Member/doformal',{phone_nums:phone_nums},function(d){
+                        if(d.error){
+                            swal(d.msg, "", "error");
+                            return false;
+                        }else{
+                            swal(d.msg, "", "success");
+                            setTimeout("window.location.reload();",1000);
+                        }
+                    },'json');          
+                }
+            }
+        )
+    }
+    //单个删除会员
+    function oneDelete(name,phone_nums){
+        swal({
+            title: "确定要删除会员' "+ name +" '吗？",
+            text: "该操作不可逆，请谨慎操作",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我要删除",
+            cancelButtonText: "再考虑一下",
+            closeOnConfirm: false,
+            closeOnCancel: true
+            },
+            function(isConfirm) {
+                if (isConfirm) {
+                    $.post('/Business/Member/delete',{phone_nums:phone_nums},function(d){
+                        if(d.error){
+                            swal(d.msg, "", "error");
+                            return false;
+                        }else{
+                            swal(d.msg, "", "success");
+                            setTimeout("window.location.reload();",1000);
+                        }
+                    },'json');          
+                }
+            }
+        )
+    }
+    //单个转正会员
+    function oneFormal(name,phone_nums){
+        swal({
+            title: "确定要转正会员' "+ name +" '吗？",
+            text: "该操作不可逆，请谨慎操作",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的，我要转正",
+            cancelButtonText: "再考虑一下",
+            closeOnConfirm: false,
+            closeOnCancel: true
+            },
+            function(isConfirm) {
+                if (isConfirm) {
+                    $.post('/Business/Member/doformal',{phone_nums:phone_nums},function(d){
+                        if(d.error){
+                            swal(d.msg, "", "error");
+                            return false;
+                        }else{
+                            swal(d.msg, "", "success");
+                            setTimeout("window.location.reload();",1000);
+                        }
+                    },'json');          
+                }
+            }
+        )
+    }
+</script>
